@@ -40,5 +40,27 @@
             android:entries="@array/status_bar_am_pm_entries"
             android:entryValues="@array/status_bar_am_pm_values" />
 
+        <ListPreference
+            android:key="clock_date_display"
+            android:title="@string/clock_date_display"
+            android:summary="@string/clock_date_display_summary"
+            android:entries="@array/clock_date_display_entries"
+            android:entryValues="@array/clock_date_display_values" />
+
+        <ListPreference
+            android:key="clock_date_style"
+            android:title="@string/clock_date_style"
+            android:entries="@array/clock_date_style_entries"
+            android:entryValues="@array/clock_date_style_values"
+            android:dependency="clock_date_display" />
+
+        <ListPreference
+            android:key="clock_date_format"
+            android:title="@string/clock_date_format"
+            android:entries="@array/clock_date_format_entries_values"
+            android:entryValues="@array/clock_date_format_entries_values"
+            android:dependency="clock_date_display" />
+
+
 </PreferenceScreen>
 
