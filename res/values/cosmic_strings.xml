@@ -252,6 +252,10 @@
     <string name="system_category">System Settings</string>
     <string name="wakelock_blocker_title">Wakelock Blocker</string>
 
+    <!-- Force expanded notifications -->
+    <string name="force_expanded_notifications_title">Force Expanded Notifications</string>
+    <string name="force_expanded_notifications_summary">Available only for apps that support expanded notifications</string>
+
     <!-- Flashlight notification -->
     <string name="flashlight_notification_title">Flashlight notification</string>
     <string name="flashlight_notification_summary">Enable notificiation for when the flashlight is on</string>
