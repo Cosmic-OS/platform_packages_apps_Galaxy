@@ -48,13 +48,17 @@
     <string name="quicksettings_summary">Manage your quick tiles and expanded statusbar</string>
     <string name="expanded_category">Statusbar expanded</string>
 
-    <!--Galaxy navigation-->
+    <!-- Status bar quick qs pulldown -->
+    <string name="status_bar_quick_qs_pulldown_title">Quick pulldown</string>
+    <string name="status_bar_quick_qs_pulldown_summary">Right edge of the status bar pulls down Quick Settings</string>
+
+    <!-- Galaxy navigation -->
     <string name="navigation_title">Navigation bar options</string>
     <string name="navigation_summary">Customize Navbar size,buttons,layout,and colors</string>
     <string name="navigationbuttons_category">Layouts</string>
     <string name="navigation_dimen_category">Navbar size</string>
 
-    <!--Galaxy buttons-->
+    <!-- Galaxy buttons --> 
     <string name="buttons_title">Hardware buttons</string>
     <string name="buttons_summary">Tweak the actions of your volume and power buttons</string>
     <string name="powermenu_category">Power button</string>
