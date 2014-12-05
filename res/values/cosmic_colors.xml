@@ -20,4 +20,9 @@
     <color name="text_color_white">@android:color/white</color>
     <color name="theme_accent">#ff009688</color>
     <color name="white">#FFF</color>
+    <color name="actionbar_icon_color">#ffffff</color>
+
+    <!-- DSLV colors -->
+    <color name="dslv_icon_dark">#ff009688</color>
+    <color name="dslv_float_cackground_color">#ff1b1f23</color>
 </resources>

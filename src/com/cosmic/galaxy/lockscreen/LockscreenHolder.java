@@ -52,6 +52,7 @@ import com.android.settings.SettingsPreferenceFragment;
 import com.android.internal.logging.MetricsProto.MetricsEvent;
 
 import com.cosmic.galaxy.lockscreen.OptionsCategory;
+import com.cosmic.galaxy.lockscreen.ShortcutCategory;
 import com.cosmic.galaxy.PagerSlidingTabStrip;
 
 import java.util.ArrayList;
@@ -107,6 +108,7 @@ public class LockscreenHolder extends SettingsPreferenceFragment {
         public StatusBarAdapter(FragmentManager fm) {
             super(fm);
             frags[0] = new OptionsCategory();
+            frags[1] = new ShortcutCategory();
         }
 
         @Override
@@ -128,7 +130,8 @@ public class LockscreenHolder extends SettingsPreferenceFragment {
     private String[] getTitles() {
         String titleString[];
         titleString = new String[]{
-                    getString(R.string.options_category)};
+                    getString(R.string.options_category),
+                    getString(R.string.shortcut_category)};
         return titleString;
     }
 }
