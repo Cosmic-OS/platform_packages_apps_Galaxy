@@ -21,7 +21,24 @@
         android:title="@string/lockscreen_options_title" >
 
         <PreferenceScreen
-            android:title="@string/lockscreen_targets_message" >
+            android:key="lockscreen_shortcuts"
+            android:fragment="com.cosmic.settings.dslv.ActionListViewSettings"
+            android:summary="@string/lockscreen_shortcuts_summary"
+            android:title="@string/lockscreen_shortcuts_title">
+                <extra android:name="actionMode" android:value="4" />
+                <extra android:name="maxAllowedActions" android:value="5" />
+                <extra android:name="disableLongpress" android:value="true" />
+                <extra android:name="useAppPickerOnly" android:value="true" />
+        </PreferenceScreen>
+
+        <SwitchPreference
+            android:key="lockscreen_shortcuts_longpress"
+            android:title="@string/lockscreen_shorcuts_longpress_title"
+            android:summary="@string/lockscreen_shorcuts_longpress_summary" />
+
+        <PreferenceScreen
+            android:title="@string/lockscreen_targets_message" 
+            android:summary="@string/lockscreen_bottom_summary" >
             <intent
                 android:targetPackage="com.android.systemui"
                 android:targetClass="com.android.systemui.cosmic.LockscreenShortcutsActivity" />
