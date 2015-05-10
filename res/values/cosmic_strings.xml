@@ -143,6 +143,9 @@
     <string name="hide_lockscreen_clock_title">Show lockscreen clock</string>
     <string name="hide_lockscreen_date_title">Show lockscreen date</string>
 
+    <string name="lockscreen_enable_power_menu_title">Show power menu lock screen</string>
+    <string name="lockscreen_enable_power_menu_summary">This option will only disable the power menu on secure lock screens</string>
+
     <!--Galaxy advanced-->
     <string name="advanced_title">Advanced UI</string>
     <string name="advanced_summary">Heavy custom features</string>

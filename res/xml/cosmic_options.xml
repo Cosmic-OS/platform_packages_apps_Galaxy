@@ -35,5 +35,11 @@
             android:title="@string/hide_lockscreen_date_title"
             android:defaultValue="true" />
 
+         <com.cosmic.galaxy.preference.SystemSettingSwitchPreference
+            android:key="lockscreen_enable_power_menu"
+            android:title="@string/lockscreen_enable_power_menu_title"
+            android:summary="@string/lockscreen_enable_power_menu_summary"
+            android:defaultValue="true" />
+
 </PreferenceScreen>
 
