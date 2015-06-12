@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+/<?xml version="1.0" encoding="utf-8"?>
 <!--  Copyright (C) 2016 Cosmic-OS Project
 
   This program is free software: you can redistribute it and/or modify
@@ -27,6 +27,30 @@
             android:targetPackage="com.android.systemui"
             android:targetClass="com.android.systemui.tuner.PowerNotificationControlsActivity" />
     </PreferenceScreen>
+
+    <PreferenceCategory
+        android:key="breathing_notifications"
+        android:title="@string/breathing_notifications_category">
+
+    <com.cosmic.galaxy.preference.SystemSettingSwitchPreference
+        android:key="missed_call_breath"
+        android:title="@string/missed_call_breath_title"
+        android:summary="@string/missed_call_breath_summary"
+        android:persistent="false"/>
+
+    <com.cosmic.galaxy.preference.SystemSettingSwitchPreference
+        android:key="voicemail_breath"
+        android:title="@string/voicemail_breath_title"
+        android:summary="@string/voicemail_breath_summary"
+        android:persistent="false"/>
+
+    <com.cosmic.galaxy.preference.SystemSettingSwitchPreference
+        android:key="sms_breath"
+        android:title="@string/sms_breath_title"
+        android:summary="@string/sms_breath_summary"
+        android:persistent="false"/>
+
+    </PreferenceCategory>
 
 </PreferenceScreen>
 
