@@ -501,4 +501,8 @@
     <!-- Memory bar -->
     <string name="recents_show_membar_title">Memory bar</string>
     <string name="recents_show_membar_summary">Show a bar with the device\'s available memory</string>
+
+    <!-- Three-fingers-swipe to screenshot -->
+    <string name="three_finger_gesture">Three finger gesture</string>
+    <string name="three_finger_gesture_summary">Swipe three finger to screenshot</string>
 </resources>
