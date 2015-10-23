@@ -49,6 +49,12 @@
         android:key="lockscreen_secure_options"
         android:title="@string/lockscreen_secure_options_title" >
 
+        <com.cosmic.settings.preferences.SystemSettingSwitchPreference
+            android:key="lockscreen_scramble_pin_layout"
+            android:title="@string/unlock_scramble_pin_layout_title"
+            android:summary="@string/unlock_scramble_pin_layout_summary"
+            android:defaultValue="false" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>

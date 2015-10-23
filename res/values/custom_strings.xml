@@ -72,6 +72,9 @@
     <string name="lockscreen_settings_title">Lockscreen</string>
     <string name="lockscreen_options_title">Lockscreen options</string>
     <string name="lockscreen_secure_options_title">Secure Lockscreen options</string>
+    <!-- Pin scramble -->
+    <string name="unlock_scramble_pin_layout_title">Scramble layout</string>
+    <string name="unlock_scramble_pin_layout_summary">Scramble PIN layout when unlocking device</string>
     <!-- Lockscreen items clock, date, alarm text -->
     <string name="lockscreen_items_settings_title">Lockscreen Items</string>
     <string name="lockscreen_clock_title">Lockscreen clock</string>
