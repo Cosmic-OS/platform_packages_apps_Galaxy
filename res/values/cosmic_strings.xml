@@ -176,6 +176,10 @@
     <string name="options_category">Various Options</string>
     <string name="shortcut_category">Lockscreen shortcuts</string>
 
+    <!-- Lockscreen cover art -->
+    <string name="media_art_title">Media cover art</string>
+    <string name="media_art_summary">Enable media cover art on the lockscreen</string>
+
     <!-- Lockscreen shortcuts -->
     <string name="lockscreen_shortcuts_title">Center screen Shortcuts</string>
     <string name="lockscreen_shortcuts_summary">Add center shortcuts on lockscreen</string>
