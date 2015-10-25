@@ -64,7 +64,13 @@
     <string name="powermenu_category">Power button</string>
     <string name="volume_category">Volume buttons</string>
 
-    <!-- Powermenu fragment -->
+    <!--- Volume keys cursor control -->
+    <string name="ras_volume_keys_cursor_control_title">Cursor control</string>
+    <string name="ras_volume_keys_cursor_control_off">Disabled</string>
+    <string name="ras_volume_keys_cursor_control_on">Key up/down moves cursor left/right</string>
+    <string name="ras_volume_keys_cursor_control_on_reverse">Key up/down moves cursor right/left</string>
+
+    <!-- Powermenu Fragment -->
     <string name="power_menu_title">Advanced power menu</string>
     <string name="power_menu_reboot_title">Reboot menu</string>
     <string name="power_menu_screenshot_title">Screenshot</string>
