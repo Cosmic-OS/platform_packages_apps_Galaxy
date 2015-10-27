@@ -37,5 +37,10 @@
              android:title="@string/force_expanded_notifications_title"
              android:summary="@string/force_expanded_notifications_summary" />
 
+        <Preference
+            android:key="wakelockblocker"
+            android:fragment="com.android.settings.cosmic.advanced.WakelockBlocker"
+            android:title="@string/wakelockblocker_category" />
+
 </PreferenceScreen>
 
