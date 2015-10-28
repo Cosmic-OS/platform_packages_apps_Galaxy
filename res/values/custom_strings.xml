@@ -51,6 +51,9 @@
 
     <!-- Status Bar fragment -->
     <string name="statusbar_settings_title">Status bar</string>
+    <!-- double tap statusbar to sleep -->
+    <string name="double_tap_to_sleep_title">Double-tap to sleep</string>
+    <string name="double_tap_to_sleep_summary">Double tap on the status bar to put the device to sleep</string>
 
     <!-- Volume Rocker fragment -->
     <string name="volumerocker_settings_title">Volume rocker</string>
