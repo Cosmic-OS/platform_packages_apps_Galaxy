@@ -85,6 +85,11 @@
         android:defaultValue="false" />
 
     <com.cosmic.settings.preferences.SystemSettingSwitchPreference
+        android:key="force_expanded_notifications"
+        android:title="@string/force_expanded_notifications_title"
+        android:summary="@string/force_expanded_notifications_summary" />
+
+    <com.cosmic.settings.preferences.SystemSettingSwitchPreference
         android:key="bluetooth_show_battery"
         android:title="@string/bluetooth_battery_title"
         android:summary="@string/bluetooth_battery_summary"
