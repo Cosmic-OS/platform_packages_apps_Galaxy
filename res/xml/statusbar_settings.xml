@@ -16,6 +16,12 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">	    
 
+    <PreferenceScreen
+        android:fragment="com.cosmic.settings.fragments.NetworkTrafficSettings"
+        android:key="cosmic_nettraffic_settings"
+        android:title="@string/nettraffic_settings_title"
+        android:summary="@string/nettraffic_settings_summary" />
+
     <com.cosmic.settings.preferences.SystemSettingSwitchPreference
         android:key="double_tap_sleep_gesture"
         android:title="@string/double_tap_to_sleep_title"
