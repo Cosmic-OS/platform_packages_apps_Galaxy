@@ -21,6 +21,13 @@
         android:title="@string/lockscreen_options_title" >
 
         <PreferenceScreen
+            android:title="@string/lockscreen_targets_message" >
+            <intent
+                android:targetPackage="com.android.systemui"
+                android:targetClass="com.android.systemui.cosmic.LockscreenShortcutsActivity" />
+        </PreferenceScreen>
+
+        <PreferenceScreen
             android:fragment="com.cosmic.settings.fragments.LockScreenItemsSettings"
             android:key="lockscreen_items"
             android:title="@string/lockscreen_items_settings_title" />
