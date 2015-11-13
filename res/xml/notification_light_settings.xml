@@ -38,6 +38,12 @@
         android:title="@string/advanced">
 
         <com.cosmic.settings.preferences.SystemSettingSwitchPreference
+            android:key="allow_lights"
+            android:title="@string/allow_lights_title"
+            android:dependency="notification_light_pulse"
+            android:defaultValue="true" />
+
+        <com.cosmic.settings.preferences.SystemSettingSwitchPreference
             android:key="notification_light_pulse_custom_enable"
             android:title="@string/notification_light_use_custom"
             android:dependency="notification_light_pulse" />
