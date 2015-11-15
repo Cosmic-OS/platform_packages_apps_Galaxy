@@ -56,7 +56,11 @@
     <string name="icon_category">Icons</string>
     <string name="extra_category">Extras</string>
 
-   <!--Galaxy navigation-->
+    <!-- Notification Count in Statusbar -->
+    <string name="status_bar_notif_count_title">Show notification count</string>
+    <string name="status_bar_notif_count_summary">Display the number of pending notifications</string>
+
+    <!--Galaxy navigation-->
     <string name="navigation_title">Navigation bar options</string>
     <string name="navigation_summary">Customize Navbar size,buttons,layout,and colors</string>
     <string name="navigationbuttons_category">Layouts</string>
