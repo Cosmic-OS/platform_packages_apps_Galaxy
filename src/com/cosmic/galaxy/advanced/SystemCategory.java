@@ -26,6 +26,7 @@ import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceScreen;
 import android.support.v7.preference.PreferenceCategory;
 import android.support.v7.preference.Preference.OnPreferenceChangeListener;
+import android.support.v7.preference.ListPreference;
 import android.support.v14.preference.SwitchPreference;
 
 import com.android.internal.util.cosmic.cosmicUtils;
@@ -37,7 +38,9 @@ public class SystemCategory extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
     private static final String FLASHLIGHT_NOTIFICATION = "flashlight_notification";
+    private static final String PREF_MEDIA_SCANNER_ON_BOOT = "media_scanner_on_boot"; 
 
+    private ListPreference mMsob; 
     private SwitchPreference mFlashlightNotification;
 
     @Override
@@ -49,8 +52,14 @@ public class SystemCategory extends SettingsPreferenceFragment implements
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         PreferenceScreen prefSet = getPreferenceScreen();
-        ContentResolver resolver = getActivity().getContentResolver();
         addPreferencesFromResource(R.xml.cosmic_system);
+        final ContentResolver resolver = getActivity().getContentResolver();
+
+        mMsob = (ListPreference) findPreference(PREF_MEDIA_SCANNER_ON_BOOT);
+        mMsob.setValue(String.valueOf(Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.MEDIA_SCANNER_ON_BOOT, 0)));
+        mMsob.setSummary(mMsob.getEntry());
+        mMsob.setOnPreferenceChangeListener(this);
 
         mFlashlightNotification = (SwitchPreference) findPreference(FLASHLIGHT_NOTIFICATION);
         mFlashlightNotification.setOnPreferenceChangeListener(this);
@@ -74,8 +83,15 @@ public class SystemCategory extends SettingsPreferenceFragment implements
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.FLASHLIGHT_NOTIFICATION, checked ? 1:0);
             return true;
-        }
+        }   else if (preference == mMsob) {
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.MEDIA_SCANNER_ON_BOOT,
+                    Integer.valueOf(String.valueOf(newValue)));
 
+            mMsob.setValue(String.valueOf(newValue));
+            mMsob.setSummary(mMsob.getEntry());
+            return true;
+         }
         return false;
     }
 }
