@@ -20,5 +20,31 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/recent_category" >
 
+    <PreferenceCategory
+        android:id="@+id/omniswitch_section"
+        android:title="@string/omniswitch_category" >
+
+         <PreferenceScreen
+            android:key="omniswitch"
+            android:title="@string/omniswitch_category" >
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetPackage="org.omnirom.omniswitch"
+                android:targetClass="org.omnirom.omniswitch.SettingsActivity" />
+         </PreferenceScreen>
+
+        <SwitchPreference
+            android:key="recents_use_omniswitch"
+            android:title="@string/recents_use_omniswitch_title"
+            android:summary="@string/recents_use_omniswitch_summary"
+            android:persistent="false" />
+
+        <Preference
+            android:key="omniswitch_start_settings"
+            android:title="@string/omniswitch_start_settings_title"
+            android:summary="@string/omniswitch_start_settings_summary"
+            android:persistent="false" />
+    </PreferenceCategory>
+
 </PreferenceScreen>
 
