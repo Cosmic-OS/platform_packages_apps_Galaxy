@@ -310,6 +310,9 @@ device speaker</string>
     <string name="notification_media_settings_title">Media &amp; notifications</string>
     <string name="media_cat_title">Media options</string>
     <string name="notif_cat_title">Notification options</string>
+    <!-- Camera shutter sound -->
+    <string name="camera_sounds_title">Camera shutter sound</string>
+    <string name="camera_sounds_summary">Disabling may not work on 3rd party camera apps and in HDR+ mode</string>
     <!-- low battery notification toggle -->
     <string name="battery_low_notif_title">Low battery notification</string>
     <string name="battery_low_notif_summary">Show low battery notification when enabled</string>
