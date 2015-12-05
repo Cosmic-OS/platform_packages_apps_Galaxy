@@ -11,5 +11,4 @@
     <string name="header_summary">@null</string>
     <!-- Menu Strings -->
     <string name="menu_main_activity_change_locale">Locale</string>
-
 </resources>

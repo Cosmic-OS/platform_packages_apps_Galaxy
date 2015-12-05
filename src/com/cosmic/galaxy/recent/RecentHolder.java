@@ -51,7 +51,6 @@ import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.internal.logging.MetricsProto.MetricsEvent;
 
-;
 import com.cosmic.galaxy.recent.RecentCategory;
 import com.cosmic.galaxy.PagerSlidingTabStrip;
 

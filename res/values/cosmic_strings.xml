@@ -75,9 +75,9 @@
     <string name="volume_rocker_wake_title">Volume rocker wake</string>
     <string name="volume_rocker_wake_summary">Pressing the volume keys will wake your device</string>
 
-    <!-- Volume keys skip track -->
-    <string name="volbtn_music_controls_title">Playback control</string>
-    <string name="volbtn_music_controls_summary">When the screen is off, long pressing the volume keys will seek music tracks</string>
+    <!-- Volume rocker music control -->
+    <string name="volume_rocker_music_controls_title">Playback control</string>
+    <string name="volume_rocker_music_controls_summary">When the screen is off, long-pressing the volume keys will seek music tracks</string>
 
     <!-- Powermenu Fragment -->
     <string name="power_menu_title">Advanced power menu</string>

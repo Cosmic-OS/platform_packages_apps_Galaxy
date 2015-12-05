@@ -53,9 +53,11 @@ public class VolumeCategory extends SettingsPreferenceFragment implements
 
     private static final String KEY_VOLUME_KEY_CURSOR_CONTROL = "volume_key_cursor_control";
     private static final String VOLUME_ROCKER_WAKE = "volume_rocker_wake";
+    public static final String VOLUME_ROCKER_MUSIC_CONTROLS = "volume_rocker_music_controls";
 
     private ListPreference mVolumeKeyCursorControl;
     private SwitchPreference mVolumeRockerWake;
+    private SwitchPreference mVolumeRockerMusicControl;
 
     @Override
     protected int getMetricsCategory() {
@@ -78,6 +80,12 @@ public class VolumeCategory extends SettingsPreferenceFragment implements
         int volumeRockerWake = Settings.System.getInt(getContentResolver(),
                 VOLUME_ROCKER_WAKE, 0);
         mVolumeRockerWake.setChecked(volumeRockerWake != 0);
+
+        mVolumeRockerMusicControl = (SwitchPreference) findPreference(VOLUME_ROCKER_MUSIC_CONTROLS);
+        mVolumeRockerMusicControl.setOnPreferenceChangeListener(this);
+        int volumeRockerMusicControl = Settings.System.getInt(getContentResolver(),
+                VOLUME_ROCKER_MUSIC_CONTROLS, 0);
+        mVolumeRockerMusicControl.setChecked(volumeRockerMusicControl != 0);
     }
 
     private ListPreference initActionList(String key, int value) {
@@ -114,6 +122,11 @@ public class VolumeCategory extends SettingsPreferenceFragment implements
             Settings.System.putInt(getContentResolver(), VOLUME_ROCKER_WAKE,
                     value ? 1 : 0);
          return true;
+        } else if (preference == mVolumeRockerMusicControl) {
+            boolean value = (Boolean) newValue;
+            Settings.System.putInt(getContentResolver(), VOLUME_ROCKER_MUSIC_CONTROLS,
+                    value ? 1 : 0);
+            return true;
         }
         return false;
     }
