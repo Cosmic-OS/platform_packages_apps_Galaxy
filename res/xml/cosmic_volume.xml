@@ -43,5 +43,10 @@
         android:title="@string/volume_key_cursor_control_title"
         />
 
+    <SwitchPreference
+        android:key="swap_volume_buttons"
+        android:title="@string/swap_volume_buttons_title"
+        android:summary="@string/swap_volume_buttons_summary" />
+
 </PreferenceScreen>
 

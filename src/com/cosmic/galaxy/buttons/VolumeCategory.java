@@ -54,10 +54,12 @@ public class VolumeCategory extends SettingsPreferenceFragment implements
     private static final String KEY_VOLUME_KEY_CURSOR_CONTROL = "volume_key_cursor_control";
     private static final String VOLUME_ROCKER_WAKE = "volume_rocker_wake";
     public static final String VOLUME_ROCKER_MUSIC_CONTROLS = "volume_rocker_music_controls";
+    private static final String SWAP_VOLUME_BUTTONS = "swap_volume_buttons";
 
     private ListPreference mVolumeKeyCursorControl;
     private SwitchPreference mVolumeRockerWake;
     private SwitchPreference mVolumeRockerMusicControl;
+    private SwitchPreference mSwapVolumeButtons;
 
     @Override
     protected int getMetricsCategory() {
@@ -86,6 +88,12 @@ public class VolumeCategory extends SettingsPreferenceFragment implements
         int volumeRockerMusicControl = Settings.System.getInt(getContentResolver(),
                 VOLUME_ROCKER_MUSIC_CONTROLS, 0);
         mVolumeRockerMusicControl.setChecked(volumeRockerMusicControl != 0);
+
+        mSwapVolumeButtons = (SwitchPreference) findPreference(SWAP_VOLUME_BUTTONS);
+        mSwapVolumeButtons.setOnPreferenceChangeListener(this);
+        int swapVolumeButtons = Settings.System.getInt(getContentResolver(),
+                SWAP_VOLUME_BUTTONS, 0);
+        mSwapVolumeButtons.setChecked(swapVolumeButtons != 0);
     }
 
     private ListPreference initActionList(String key, int value) {
@@ -121,10 +129,15 @@ public class VolumeCategory extends SettingsPreferenceFragment implements
             boolean value = (Boolean) newValue;
             Settings.System.putInt(getContentResolver(), VOLUME_ROCKER_WAKE,
                     value ? 1 : 0);
-         return true;
+            return true;
         } else if (preference == mVolumeRockerMusicControl) {
             boolean value = (Boolean) newValue;
             Settings.System.putInt(getContentResolver(), VOLUME_ROCKER_MUSIC_CONTROLS,
+                    value ? 1 : 0);
+            return true;
+        } else if (preference == mSwapVolumeButtons) {
+            boolean value = (Boolean) newValue;
+            Settings.System.putInt(getContentResolver(), SWAP_VOLUME_BUTTONS,
                     value ? 1 : 0);
             return true;
         }
