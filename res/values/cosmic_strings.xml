@@ -96,6 +96,8 @@
     <string name="power_menu_bug_report_title">Bug report</string>
     <string name="power_menu_sound_title">Sound panel</string>
     <string name="power_menu_bug_report_disabled">Bug reporting is disabled in development settings</string>
+    <string name="power_menu_screenrecord_title">Screenrecord</string>
+    <string name="power_menu_torch">Flashlight</string>
 
     <!-- Power menu Animations  -->
     <string name="power_menu_animation_title">Power menu animation</string>
@@ -108,7 +110,7 @@
     <!-- Galaxy Recents-Screen -->
     <string name="recent_title">Recents screen</string>
     <string name="recent_summary">Configure your clear all button and misc recent options</string>
-    <string name="stock_recent_category">Stock Recents</string>
+    <string name="stock_recents_category">Stock Recents</string>
 
     <!-- Immersive Recents -->
     <string name="immersive_recents_title">Immersive Recents</string>

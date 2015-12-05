@@ -46,8 +46,10 @@ public class PowerMenuFragment extends PreferenceFragment {
 
     private SwitchPreference mRebootPref;
     private SwitchPreference mScreenshotPref;
+    private SwitchPreference mScreenrecordPref;
     private SwitchPreference mAirplanePref;
     private SwitchPreference mUsersPref;
+    private SwitchPreference mFlashlightPref;
     private SwitchPreference mSettingsPref;
     private SwitchPreference mLockdownPref;
     private SwitchPreference mAssistPref;
@@ -82,10 +84,14 @@ public class PowerMenuFragment extends PreferenceFragment {
                 mRebootPref = (SwitchPreference) findPreference(GLOBAL_ACTION_KEY_REBOOT);
             } else if (action.equals(GLOBAL_ACTION_KEY_SCREENSHOT)) {
                 mScreenshotPref = (SwitchPreference) findPreference(GLOBAL_ACTION_KEY_SCREENSHOT);
+            } else if (action.equals(GLOBAL_ACTION_KEY_SCREENRECORD)) {
+                mScreenrecordPref = (SwitchPreference) findPreference(GLOBAL_ACTION_KEY_SCREENRECORD);
             } else if (action.equals(GLOBAL_ACTION_KEY_AIRPLANE)) {
                 mAirplanePref = (SwitchPreference) findPreference(GLOBAL_ACTION_KEY_AIRPLANE);
             } else if (action.equals(GLOBAL_ACTION_KEY_USERS)) {
                 mUsersPref = (SwitchPreference) findPreference(GLOBAL_ACTION_KEY_USERS);
+            } else if (action.equals(GLOBAL_ACTION_KEY_TORCH)) {
+                mFlashlightPref = (SwitchPreference) findPreference(GLOBAL_ACTION_KEY_TORCH);
             } else if (action.equals(GLOBAL_ACTION_KEY_SETTINGS)) {
                 mSettingsPref = (SwitchPreference) findPreference(GLOBAL_ACTION_KEY_SETTINGS);
             } else if (action.equals(GLOBAL_ACTION_KEY_LOCKDOWN)) {
@@ -118,6 +124,9 @@ public class PowerMenuFragment extends PreferenceFragment {
             mScreenshotPref.setChecked(settingsArrayContains(GLOBAL_ACTION_KEY_SCREENSHOT));
         }
 
+        if (mScreenrecordPref != null) {
+            mScreenrecordPref.setChecked(settingsArrayContains(GLOBAL_ACTION_KEY_SCREENRECORD));
+        }
 
         if (mAirplanePref != null) {
             mAirplanePref.setChecked(settingsArrayContains(GLOBAL_ACTION_KEY_AIRPLANE));
@@ -134,6 +143,10 @@ public class PowerMenuFragment extends PreferenceFragment {
                 mUsersPref.setChecked(settingsArrayContains(GLOBAL_ACTION_KEY_USERS) && enabled);
                 mUsersPref.setEnabled(enabled);
             }
+        }
+
+       if (mScreenrecordPref != null) {
+            mFlashlightPref.setChecked(settingsArrayContains(GLOBAL_ACTION_KEY_TORCH));
         }
 
         if (mSettingsPref != null) {
@@ -181,6 +194,10 @@ public class PowerMenuFragment extends PreferenceFragment {
             value = mScreenshotPref.isChecked();
             updateUserConfig(value, GLOBAL_ACTION_KEY_SCREENSHOT);
 
+        } else if (preference == mScreenrecordPref) {
+            value = mScreenrecordPref.isChecked();
+            updateUserConfig(value, GLOBAL_ACTION_KEY_SCREENRECORD);
+
         } else if (preference == mAirplanePref) {
             value = mAirplanePref.isChecked();
             updateUserConfig(value, GLOBAL_ACTION_KEY_AIRPLANE);
@@ -188,6 +205,10 @@ public class PowerMenuFragment extends PreferenceFragment {
         } else if (preference == mUsersPref) {
             value = mUsersPref.isChecked();
             updateUserConfig(value, GLOBAL_ACTION_KEY_USERS);
+
+        } else if (preference == mFlashlightPref) {
+            value = mFlashlightPref.isChecked();
+            updateUserConfig(value, GLOBAL_ACTION_KEY_TORCH);
 
         } else if (preference == mSettingsPref) {
             value = mSettingsPref.isChecked();
