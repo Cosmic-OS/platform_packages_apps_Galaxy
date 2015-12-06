@@ -31,6 +31,11 @@
             android:title="@string/app_ops_settings"
             android:fragment="com.android.settings.applications.AppOpsSummary"/>
 
+         <PreferenceScreen
+            android:key="systemappremover"
+            android:fragment="com.cosmic.settings.fragments.SystemappRemover"
+            android:title="@string/system_app_remover" />
+
         <com.cosmic.settings.preferences.GlobalSettingSwitchPreference
             android:key="wake_when_plugged_or_unplugged"
             android:title="@string/wakeup_when_plugged_unplugged_title"
