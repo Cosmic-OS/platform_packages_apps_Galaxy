@@ -20,5 +20,9 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/powermenu_category" >
 
+    <PreferenceScreen
+        android:key="power_menu"
+        android:title="@string/power_menu_title"
+        android:fragment="com.cosmic.galaxy.buttons.PowerMenuFragment" />
 </PreferenceScreen>
 
