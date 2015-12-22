@@ -20,6 +20,12 @@
         android:key="media_cat"
         android:title="@string/media_cat_title" >
 
+        <com.cosmic.settings.preferences.SystemSettingSwitchPreference
+            android:key="double_tap_vibrate"
+            android:title="@string/dbl_tap_vib_title"
+            android:summary="@string/dbl_tap_vib_summary"
+            android:defaultValue="true" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
