@@ -86,6 +86,11 @@
     <string name="power_menu_animation_bottom">Bottom</string>
     <string name="power_menu_animation_top">Top</string>
 
+    <!-- Galaxy Recents-Screen -->
+    <string name="recent_title">Recents screen</string>
+    <string name="recent_summary">Configure your clear all button and misc recent options</string>
+    <string name="recent_category">Recent apps</string>
+
     <!-- Galaxy lockscreen -->
     <string name="lockscreen_title">Lockscreen</string>
     <string name="lockscreen_summary">Options for weather</string>
