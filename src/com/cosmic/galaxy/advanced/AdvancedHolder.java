@@ -35,11 +35,11 @@ import android.view.MenuItem;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.preference.CheckBoxPreference;
-import android.preference.Preference;
-import android.preference.PreferenceCategory;
-import android.preference.PreferenceManager;
-import android.preference.Preference.OnPreferenceChangeListener;
-import android.preference.PreferenceScreen;
+import android.support.v7.preference.Preference;
+import android.support.v7.preference.PreferenceCategory;
+import android.support.v7.preference.PreferenceManager;
+import android.support.v7.preference.Preference.OnPreferenceChangeListener;
+import android.support.v7.preference.PreferenceScreen;
 import android.support.v13.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
@@ -51,6 +51,7 @@ import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.internal.logging.MetricsProto.MetricsEvent;
 
+import com.cosmic.galaxy.advanced.AnimationSettings;
 import com.cosmic.galaxy.advanced.GestureanywhereCategory;
 import com.cosmic.galaxy.PagerSlidingTabStrip;
 
@@ -106,7 +107,7 @@ public class AdvancedHolder extends SettingsPreferenceFragment {
 
         public StatusBarAdapter(FragmentManager fm) {
             super(fm);
-            frags[0] = new GestureanywhereCategory();
+            frags[0] = new AnimationSettings();
         }
 
         @Override
@@ -128,7 +129,7 @@ public class AdvancedHolder extends SettingsPreferenceFragment {
     private String[] getTitles() {
         String titleString[];
         titleString = new String[]{
-                    getString(R.string.gestureanywhere_category)};
+                    getString(R.string.animation_category)};
         return titleString;
     }
 }
