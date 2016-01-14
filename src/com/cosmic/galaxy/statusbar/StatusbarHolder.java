@@ -55,6 +55,7 @@ import com.cosmic.galaxy.statusbar.ClockCategory;
 import com.cosmic.galaxy.statusbar.BatteryCategory;
 import com.cosmic.galaxy.statusbar.IconsCategory;
 import com.cosmic.galaxy.statusbar.ExtrasCategory;
+import com.cosmic.galaxy.statusbar.StatusBarTickerSettings;
 import com.cosmic.galaxy.statusbar.TrafficCategory;
 import com.cosmic.galaxy.PagerSlidingTabStrip;
 
@@ -114,7 +115,8 @@ public class StatusbarHolder extends SettingsPreferenceFragment {
             frags[1] = new ClockCategory();
             frags[2] = new ExtrasCategory();
             frags[3] = new IconsCategory();
-            frags[4] = new TrafficCategory();
+            frags[4] = new StatusBarTickerSettings();
+            frags[5] = new TrafficCategory();
         }
 
         @Override
@@ -141,6 +143,7 @@ public class StatusbarHolder extends SettingsPreferenceFragment {
                     getString(R.string.clock_category),
                     getString(R.string.extra_category),
                     getString(R.string.icon_category),
+                    getString(R.string.ticker_screen_title),
                     getString(R.string.network_traffic_title)};
         return titleString;
     }
