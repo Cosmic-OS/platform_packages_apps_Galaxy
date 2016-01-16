@@ -376,6 +376,10 @@
     <string name="hide_lockscreen_date_title">Show lockscreen date</string>
     <string name="hide_lockscreen_alarm_title">Show lockscreen alarm</string>
 
+    <!-- fingerprint authentication vibration -->
+    <string name="fprint_sucess_vib_title">Fingerprint authentication vibration</string>
+    <string name="fprint_sucess_vib_summary">Vibrate on successful fingerprint authentication</string>
+
     <string name="lockscreen_targets_message">Lockscreen shortcuts</string>
     <string name="lockscreen_corner_summary">Customize the shortcut icons in the corners</string>
 
