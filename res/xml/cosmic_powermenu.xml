@@ -24,5 +24,12 @@
         android:key="power_menu"
         android:title="@string/power_menu_title"
         android:fragment="com.cosmic.galaxy.buttons.PowerMenuFragment" />
+
+    <com.cosmic.galaxy.preference.SystemSettingSwitchPreference
+        android:key="keyguard_toggle_torch"
+        android:title="@string/keyguard_torch_title"
+        android:summary="@string/keyguard_torch_summary"
+        android:defaultValue="false" />
+
 </PreferenceScreen>
 

@@ -25,55 +25,55 @@
        android:fragment="com.cosmic.galaxy.statusbar.StatusbarHolder"
        android:title="@string/statusbar_bar_title" 
        android:summary="@string/statusbar_bar_summary" 
-       android:icon="@drawable/ic_cosmic_status" />
+       android:icon="@drawable/ic_cosmic_status"/>
 
     <PreferenceScreen
        android:key="quicksettings"
        android:fragment="com.cosmic.galaxy.qssettings.QsSettingsHolder"
        android:title="@string/quicksettings_title" 
        android:summary="@string/quicksettings_summary"
-       android:icon="@drawable/ic_cosmic_qs" />
+       android:icon="@drawable/ic_cosmic_qs"/>
 
     <PreferenceScreen
        android:key="navigation"
        android:fragment="com.cosmic.galaxy.navigation.NavigationHolder"
        android:title="@string/navigation_title" 
        android:summary="@string/navigation_summary"
-       android:icon="@drawable/ic_cosmic_nav" />
+       android:icon="@drawable/ic_cosmic_nav"/>
 
     <PreferenceScreen
        android:key="buttons"
        android:fragment="com.cosmic.galaxy.buttons.ButtonsHolder"
        android:title="@string/buttons_title" 
        android:summary="@string/buttons_summary"
-       android:icon="@drawable/ic_cosmic_buttons" />
+       android:icon="@drawable/ic_cosmic_buttons"/>
 
     <PreferenceScreen
        android:key="recent"
        android:fragment="com.cosmic.galaxy.recent.RecentHolder"
        android:title="@string/recent_title" 
        android:summary="@string/recent_summary"
-       android:icon="@drawable/ic_cosmic_recents" />
+       android:icon="@drawable/ic_cosmic_recents"/>
 
     <PreferenceScreen
        android:key="lockscreen"
        android:fragment="com.cosmic.galaxy.lockscreen.LockscreenHolder"
        android:title="@string/lockscreen_title" 
        android:summary="@string/lockscreen_summary"
-       android:icon="@drawable/ic_cosmic_lockscreen" />
+       android:icon="@drawable/ic_cosmic_lockscreen"/>
 
     <PreferenceScreen
        android:key="gesture"
        android:fragment="com.cosmic.galaxy.gesture.GestureHolder"
        android:title="@string/gesture_category" 
        android:summary="@string/gesture_summary"
-       android:icon="@drawable/ic_galaxy_gesture" />
+       android:icon="@drawable/ic_galaxy_gesture"/>
 
     <PreferenceScreen
        android:key="advanced"
        android:fragment="com.cosmic.galaxy.advanced.AdvancedHolder"
        android:title="@string/advanced_title" 
        android:summary="@string/advanced_summary"
-       android:icon="@drawable/ic_cosmic_advanced" />
+       android:icon="@drawable/ic_cosmic_advanced"/>
 
 </PreferenceScreen>
