@@ -23,14 +23,25 @@ import com.android.internal.logging.MetricsProto.MetricsEvent;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
+import com.cosmic.settings.utils.Utils;
+import com.cosmic.settings.preferences.SystemSettingSwitchPreference;
 
 public class LockScreenSettings extends SettingsPreferenceFragment {
+
+    private static final String KEYGUARD_TORCH = "keyguard_toggle_torch";
+
+    private SystemSettingSwitchPreference mLsTorch;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.lockscreen_settings);
         PreferenceScreen prefScreen = getPreferenceScreen();
+
+        mLsTorch = (SystemSettingSwitchPreference) findPreference(KEYGUARD_TORCH);
+        if (!Utils.deviceSupportsFlashLight(getActivity())) {
+            prefScreen.removePreference(mLsTorch);
+        }
     }
 
     @Override
