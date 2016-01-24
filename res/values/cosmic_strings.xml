@@ -75,6 +75,8 @@
     <string name="network_traffic_autohide">Auto hide</string>
     <string name="network_traffic_autohide_summary">Hide the traffic monitor when there is no activity</string>
     <string name="network_traffic_autohide_threshold">Inactivity threshold</string>
+    <string name="network_traffic_hidearrow">Hide arrows</string>
+    <string name="network_traffic_hidearrow_summary">Hide the arrows in the traffic indicators</string>
 
     <!-- Notification Count in Statusbar -->
     <string name="status_bar_notif_count_title">Show notification count</string>
