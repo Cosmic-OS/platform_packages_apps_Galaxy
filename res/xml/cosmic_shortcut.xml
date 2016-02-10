@@ -40,5 +40,6 @@
                 android:targetPackage="com.android.systemui"
                 android:targetClass="com.android.systemui.cm.LockscreenShortcutsActivity" />
         </PreferenceScreen>
+
 </PreferenceScreen>
 

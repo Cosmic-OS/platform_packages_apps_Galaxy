@@ -222,10 +222,11 @@
     <string name="shortcut_action_help_delete_last_entry">Removing every %1$s in the list will disable the feature entirely.</string>
     <string name="shortcut_action_help_pie_second_layer_delete_last_entry">Removing every %1$s in the list will disable the second pie layer entirely.</string>
 
-    <!-- Hide Lockscreen clock & date -->
+    <!-- Hide Lockscreen clock, date & alarm -->
     <string name="hide_lockscreen_items_title">Lockscreen items</string>
     <string name="hide_lockscreen_clock_title">Show lockscreen clock</string>
     <string name="hide_lockscreen_date_title">Show lockscreen date</string>
+    <string name="hide_lockscreen_alarm_title">Show lockscreen alarm</string>
 
     <string name="lockscreen_targets_message">Lockscreen shortcuts</string>
     <string name="lockscreen_corner_summary">Customize the shortcut icons in the corners</string>
@@ -249,6 +250,7 @@
     <string name="sidebar_category">App sidebar</string>
     <string name="animation_category">Animations</string>
     <string name="system_category">System Settings</string>
+    <string name="wakelock_blocker_title">Wakelock Blocker</string>
 
     <!-- Flashlight notification -->
     <string name="flashlight_notification_title">Flashlight notification</string>
