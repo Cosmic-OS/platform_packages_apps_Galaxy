@@ -17,6 +17,7 @@
 package com.cosmic.galaxy.advanced;
 
 import android.app.ActivityManager;
+import android.content.ContentResolver;
 import android.content.Context;
 import android.content.res.Resources;
 import android.os.Bundle;
@@ -27,12 +28,17 @@ import android.support.v7.preference.PreferenceCategory;
 import android.support.v7.preference.Preference.OnPreferenceChangeListener;
 import android.support.v14.preference.SwitchPreference;
 
+import com.android.internal.util.cosmic.cosmicUtils;
 import com.android.internal.logging.MetricsProto.MetricsEvent;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
 public class SystemCategory extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
+
+    private static final String FLASHLIGHT_NOTIFICATION = "flashlight_notification";
+
+    private SwitchPreference mFlashlightNotification;
 
     @Override
     protected int getMetricsCategory() {
@@ -42,8 +48,18 @@ public class SystemCategory extends SettingsPreferenceFragment implements
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        PreferenceScreen prefSet = getPreferenceScreen();
+        ContentResolver resolver = getActivity().getContentResolver();
         addPreferencesFromResource(R.xml.cosmic_system);
+
+        mFlashlightNotification = (SwitchPreference) findPreference(FLASHLIGHT_NOTIFICATION);
+        mFlashlightNotification.setOnPreferenceChangeListener(this);
+        if (!cosmicUtils.deviceSupportsFlashLight(getActivity())) {
+            prefSet.removePreference(mFlashlightNotification);
+        } else {
+        mFlashlightNotification.setChecked((Settings.System.getInt(resolver,
+                Settings.System.FLASHLIGHT_NOTIFICATION, 0) == 1));
+        }
 
     }
 
@@ -53,6 +69,13 @@ public class SystemCategory extends SettingsPreferenceFragment implements
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
+        if  (preference == mFlashlightNotification) {
+            boolean checked = ((SwitchPreference)preference).isChecked();
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.FLASHLIGHT_NOTIFICATION, checked ? 1:0);
+            return true;
+        }
+
         return false;
     }
 }

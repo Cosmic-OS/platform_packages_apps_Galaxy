@@ -453,4 +453,7 @@
     <string name="shortcut_action_help_delete_last_entry">Removing every %1$s in the list will disable the feature entirely.</string>
     <string name="shortcut_action_help_pie_second_layer_delete_last_entry">Removing every %1$s in the list will disable the second pie layer entirely.</string>
 
+    <!-- Flashlight notification -->
+    <string name="flashlight_notification_title">Flashlight notification</string>
+    <string name="flashlight_notification_summary">Enable notificiation for when the flashlight is on</string>
 </resources>
