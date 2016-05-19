@@ -22,4 +22,20 @@
         android:summary="@string/wake_when_plugged_or_unplugged_summary"
         android:defaultValue="false" />
 
+    <PreferenceCategory
+        android:key="leds"
+        android:title="@string/led_category" >
+
+        <PreferenceScreen
+            android:key="notification_light"
+            android:title="@string/notification_light_title"
+            android:fragment="com.cosmic.settings.notificationlight.NotificationLightSettings" />
+
+        <PreferenceScreen
+            android:key="battery_light"
+            android:title="@string/battery_light_title"
+            android:fragment="com.cosmic.settings.notificationlight.BatteryLightSettings" />
+
+    </PreferenceCategory>
+
 </PreferenceScreen>
