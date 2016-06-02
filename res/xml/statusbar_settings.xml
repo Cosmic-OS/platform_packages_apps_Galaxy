@@ -17,6 +17,12 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">	    
 
     <PreferenceScreen
+        android:fragment="com.cosmic.settings.fragments.ClockSettings"
+        android:key="cosmic_clock_settings"
+        android:title="@string/clock_settings_title"
+        android:summary="@string/clock_settings_summary" />
+
+    <PreferenceScreen
         android:fragment="com.cosmic.settings.fragments.NetworkTrafficSettings"
         android:key="cosmic_nettraffic_settings"
         android:title="@string/nettraffic_settings_title"
