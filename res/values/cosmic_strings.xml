@@ -17,11 +17,8 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <!-- Cosmic-OS device info settings -->
-    <string name="aosip_version">Cosmic-OS version</string>
-    <string name="aosip_version_default">Unknown</string>
-    <string name="cpu_info">CPU</string>
-    <string name="mem_info">Memory</string>
-    <string name="build_date">Build date</string>
+    <string name="cosmic_version">Cosmic-OS version</string>
+    <string name="cosmic_version_default">Unknown</string>
 
     <!-- Cosmic-OS custom settings main -->
     <string name="header_category_personalization">UI settings</string>
@@ -45,6 +42,11 @@
     <string name="battery_category">Battery</string>
     <string name="icon_category">Icons</string>
     <string name="extra_category">Extras</string>
+
+    <!--Galaxy Quick settings-->
+    <string name="quicksettings_title">Quick settings</string>
+    <string name="quicksettings_summary">Manage your quick tiles and expanded statusbar</string>
+    <string name="expanded_category">Statusbar expanded</string>
 
     <!--Galaxy navigation-->
     <string name="navigation_title">Navigation bar options</string>
