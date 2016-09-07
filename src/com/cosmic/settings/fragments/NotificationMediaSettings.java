@@ -28,14 +28,18 @@ import com.android.internal.logging.MetricsProto.MetricsEvent;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
+import com.cosmic.settings.utils.Utils;
+
 public class NotificationMediaSettings extends SettingsPreferenceFragment implements
          Preference.OnPreferenceChangeListener {
 
     private static final String KEY_CAMERA_SOUNDS = "camera_sounds";
     private static final String PROP_CAMERA_SOUND = "persist.sys.camera-sound";
+    private static final String FLASHLIGHT_NOTIFICATION = "flashlight_notification";
     private static final String KEY_HEADS_UP_SETTINGS = "heads_up_settings";
 
     private SwitchPreference mCameraSounds;
+    private SwitchPreference mFlashlightNotification;
     private PreferenceScreen mHeadsUp;
 
     @Override
@@ -49,6 +53,15 @@ public class NotificationMediaSettings extends SettingsPreferenceFragment implem
         mCameraSounds.setOnPreferenceChangeListener(this);
 
         mHeadsUp = (PreferenceScreen) findPreference(KEY_HEADS_UP_SETTINGS);
+
+        mFlashlightNotification = (SwitchPreference) findPreference(FLASHLIGHT_NOTIFICATION);
+        mFlashlightNotification.setOnPreferenceChangeListener(this);
+        if (!Utils.deviceSupportsFlashLight(getActivity())) {
+            prefScreen.removePreference(mFlashlightNotification);
+        } else {
+        mFlashlightNotification.setChecked((Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.FLASHLIGHT_NOTIFICATION, 0) == 1));
+        }
     }
 
     private boolean getUserHeadsUpState() {
@@ -70,15 +83,24 @@ public class NotificationMediaSettings extends SettingsPreferenceFragment implem
                 ? R.string.summary_heads_up_enabled : R.string.summary_heads_up_disabled);
     }
 
+    @Override
     public boolean onPreferenceChange(Preference preference, Object objValue) {
-        final String key = preference.getKey();
-        if (KEY_CAMERA_SOUNDS.equals(key)) {
-           if ((Boolean) objValue) {
-               SystemProperties.set(PROP_CAMERA_SOUND, "1");
-           } else {
-               SystemProperties.set(PROP_CAMERA_SOUND, "0");
-           }
+        if (preference == mCameraSounds) {
+            final String key = preference.getKey();
+            if (KEY_CAMERA_SOUNDS.equals(key)) {
+               if ((Boolean) objValue) {
+                   SystemProperties.set(PROP_CAMERA_SOUND, "1");
+               } else {
+                   SystemProperties.set(PROP_CAMERA_SOUND, "0");
+               }
+            }
+            return true;
+        } else if (preference == mFlashlightNotification) {
+            boolean checked = ((SwitchPreference)preference).isChecked();
+            Settings.System.putInt(getActivity().getContentResolver(),
+                   Settings.System.FLASHLIGHT_NOTIFICATION, checked ? 1 : 0);
+            return true;
         }
-        return true;
+        return false;
     }
 }

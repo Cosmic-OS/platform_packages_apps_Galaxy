@@ -316,6 +316,9 @@ device speaker</string>
     <!-- low battery notification toggle -->
     <string name="battery_low_notif_title">Low battery notification</string>
     <string name="battery_low_notif_summary">Show low battery notification when enabled</string>
+    <!-- Flashlight notification -->
+    <string name="flashlight_notification_title">Flashlight notification</string>
+    <string name="flashlight_notification_summary">Enable notification for when the flashlight is on</string>
     <!-- double tap power button vibration -->
     <string name="dbl_tap_vib_title">Double tap power for camera vibration</string>
     <string name="dbl_tap_vib_summary">Vibrate on double tap of power button when enabled</string>
