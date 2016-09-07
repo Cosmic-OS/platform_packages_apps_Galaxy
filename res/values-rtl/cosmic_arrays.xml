@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2015 DarkKat
+<!-- Copyright (C) 2016 Cosmic-OS
+
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
      You may obtain a copy of the License at
@@ -16,14 +17,6 @@
 
     <item type="id" name="drag_handle" />
 
-    <!-- Color picker panel view buttons -->
-    <item type="id" name="panel_view_button_1" />
-    <item type="id" name="panel_view_button_2" />
-    <item type="id" name="panel_view_button_3" />
-    <item type="id" name="panel_view_button_4" />
-    <item type="id" name="panel_view_button_5" />
-    <item type="id" name="panel_view_button_6" />
-    <item type="id" name="panel_view_button_7" />
-    <item type="id" name="panel_view_button_8" />
-
 </resources>
+
+
