@@ -44,6 +44,12 @@
              android:entryValues="@array/media_scanner_on_boot_values"
              android:persistent="false" />
 
+        <com.cosmic.galaxy.preference.SystemSettingSwitchPreference
+            android:key="toast_icon"
+            android:title="@string/toast_icon_title"
+            android:summary="@string/toast_icon_summary"
+            android:defaultValue="false" />
+
         <Preference
             android:key="wakelockblocker"
             android:fragment="com.android.settings.cosmic.advanced.WakelockBlocker"
