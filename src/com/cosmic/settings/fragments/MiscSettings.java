@@ -22,7 +22,9 @@ import android.app.IActivityManager;
 import android.content.ContentResolver;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.os.SystemProperties;
 import android.support.v14.preference.SwitchPreference;
+import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceCategory;
 import android.support.v7.preference.PreferenceScreen;
@@ -39,8 +41,12 @@ import com.cosmic.settings.preferences.CustomSeekBarPreference;
 public class MiscSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
+    private static final String SCROLLINGCACHE_PREF = "pref_scrollingcache";
+    private static final String SCROLLINGCACHE_PERSIST_PROP = "persist.sys.scrollingcache";
+    private static final String SCROLLINGCACHE_DEFAULT = "1";
     private static final String SCREENSHOT_DELAY = "screenshot_delay";
 
+    private ListPreference mScrollingCachePref;
     private CustomSeekBarPreference mScreenshotDelay;
 
     @Override
@@ -50,6 +56,11 @@ public class MiscSettings extends SettingsPreferenceFragment implements
 
         final ContentResolver resolver = getActivity().getContentResolver();
         PreferenceScreen prefScreen = getPreferenceScreen();
+
+        mScrollingCachePref = (ListPreference) findPreference(SCROLLINGCACHE_PREF);
+        mScrollingCachePref.setValue(SystemProperties.get(SCROLLINGCACHE_PERSIST_PROP,
+                SystemProperties.get(SCROLLINGCACHE_PERSIST_PROP, SCROLLINGCACHE_DEFAULT)));
+        mScrollingCachePref.setOnPreferenceChangeListener(this);
 
         mScreenshotDelay = (CustomSeekBarPreference) findPreference(SCREENSHOT_DELAY);
         int screenshotDelay = Settings.System.getInt(resolver,
@@ -64,6 +75,11 @@ public class MiscSettings extends SettingsPreferenceFragment implements
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.SCREENSHOT_DELAY, screenshotDelay * 1);
             return true;
+        } else if (preference == mScrollingCachePref) {
+            if (objValue != null) {
+                SystemProperties.set(SCROLLINGCACHE_PERSIST_PROP, (String)objValue);
+            return true;
+            }
         }
         return false;
     }

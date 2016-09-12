@@ -15,6 +15,14 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+    <ListPreference
+         android:key="pref_scrollingcache"
+         android:dialogTitle="@string/pref_scrollingcache_title"
+         android:title="@string/pref_scrollingcache_title"
+         android:summary="@string/pref_scrollingcache_summary"
+         android:entries="@array/entries_scrollingcache"
+         android:entryValues="@array/values_scrollingcache" />
+
     <com.cosmic.settings.preferences.CustomSeekBarPreference
          android:key="screenshot_delay"
          android:title="@string/screenshot_delay_title"
