@@ -34,6 +34,12 @@
         android:fragment="com.cosmic.settings.fragments.ClockDateSettings" />
 
     <Preference
+        android:key="traffic_settings"
+        android:title="@string/traffic_category"
+	android:summary="@string/network_traffic_state_title"
+        android:fragment="com.cosmic.settings.fragments.TrafficSettings" />
+
+    <Preference
         android:key="carrierlabel_settings"
         android:title="@string/carrier_category"
 	android:summary="@string/carrier_label_settings_summary"
