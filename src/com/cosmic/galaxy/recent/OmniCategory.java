@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.cosmic.recent;
+package com.cosmic.galaxy.recent;
 
 import android.app.ActivityManager;
 import android.content.Context;
