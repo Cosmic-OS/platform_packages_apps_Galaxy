@@ -52,6 +52,7 @@ import com.android.settings.SettingsPreferenceFragment;
 import com.android.internal.logging.MetricsProto.MetricsEvent;
 
 import com.cosmic.galaxy.advanced.AnimationSettings;
+import com.cosmic.galaxy.advanced.SystemCategory;
 import com.cosmic.galaxy.PagerSlidingTabStrip;
 
 import java.util.ArrayList;
@@ -107,6 +108,7 @@ public class AdvancedHolder extends SettingsPreferenceFragment {
         public StatusBarAdapter(FragmentManager fm) {
             super(fm);
             frags[0] = new AnimationSettings();
+            frags[1] = new SystemCategory();
         }
 
         @Override
@@ -128,7 +130,8 @@ public class AdvancedHolder extends SettingsPreferenceFragment {
     private String[] getTitles() {
         String titleString[];
         titleString = new String[]{
-                    getString(R.string.animation_category)};
+                    getString(R.string.animation_category),
+                    getString(R.string.system_category)};
         return titleString;
     }
 }

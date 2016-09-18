@@ -243,6 +243,7 @@
     <string name="gestureanywhere_category">Gesture anywhere</string>
     <string name="sidebar_category">App sidebar</string>
     <string name="animation_category">Animations</string>
+    <string name="system_category">System Settings</string>
 
     <!-- AOKP custom system animations -->
     <string name="animation_title">Animations</string>  
