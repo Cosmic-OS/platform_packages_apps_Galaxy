@@ -38,4 +38,3 @@ public class NotificationMediaSettings extends SettingsPreferenceFragment {
         return MetricsEvent.GALAXY;
     }
 }
-

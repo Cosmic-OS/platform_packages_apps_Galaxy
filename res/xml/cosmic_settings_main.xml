@@ -46,7 +46,7 @@
         android:title="@string/cosmic_device">
 
         <PreferenceScreen
-            android:fragment="com.cosmic.settings.fragments.NavBarSettings"
+            android:fragment="com.cosmic.settings.fragments.NavbarSettings"
             android:key="cosmic_navbar_settings"
             android:title="@string/navbar_settings_title"
             android:icon="@drawable/ic_cosmic_navbar" />
