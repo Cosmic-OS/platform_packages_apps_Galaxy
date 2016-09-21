@@ -117,4 +117,3 @@ public class NotificationDrawerSettings extends SettingsPreferenceFragment imple
         }
     }
 }
-
