@@ -72,6 +72,7 @@
     <string name="icon_category">Icons</string>
     <string name="extra_category">Extras</string>
     <string name="traffic_category">Network Traffic</string>
+    <string name="statusbar_items_category">Statusbar items</string>
 
     <!-- Status bar - Clock -->
     <string name="status_bar_clock_style_title">Clock style</string>

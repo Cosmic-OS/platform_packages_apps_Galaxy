@@ -20,6 +20,15 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/icon_category" >
 
+         <PreferenceScreen
+            android:key="systemui_tuner_statusbar"
+            android:title="@string/statusbar_items_category">
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetPackage="com.android.systemui"
+                android:targetClass="com.android.systemui.tuner.TunerActivity" />
+         </PreferenceScreen>
+
      <com.cosmic.galaxy.preference.SystemSettingSwitchPreference
         android:key="status_bar_notif_count"
         android:title="@string/status_bar_notif_count_title"
