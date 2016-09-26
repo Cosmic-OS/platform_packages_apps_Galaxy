@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2018 Cosmic-OS Project
+<!-- Copyright (C) 2018 The Cosmic-OS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
-
      You may obtain a copy of the License at
+
           http://www.apache.org/licenses/LICENSE-2.0
 
      Unless required by applicable law or agreed to in writing, software
@@ -13,16 +13,12 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<PreferenceScreen
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-    <!-- Anonymous statistics - (CMStats) -->
-    <PreferenceScreen
-        android:key="cmstats"
-        android:title="@string/anonymous_statistics_title"
-        android:summary="@string/anonymous_statistics_summary"
-        android:fragment="org.cyanogenmod.cmparts.cmstats.AnonymousStats" >
-    </PreferenceScreen>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-</PreferenceScreen>
+    <!-- Metrics server endpoints -->
+    <string name="stats_cm_url">https://stats.cyanogenmod.org/submit</string>
+    <string name="stats_cyanogen_url">https://shopvac.cyngn.com/community/heartbeat</string>
+    <string name="stats_cyanogen_token_url">https://account.cyngn.com/api/v1/community/heartbeat_token</string>
+
+</resources>
