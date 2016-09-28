@@ -384,6 +384,8 @@ device speaker</string>
     <string name="power_menu_bug_report_disabled">Bug reporting is disabled in development settings</string>
     <!-- Power menu on secure lockscreen -->
     <string name="lockscreen_enable_power_menu_title">Show power menu on secure lock screen</string>
+    <!-- Power menu dialog dim -->
+    <string name="powermenu_dialog_dim">Dialog dim background amount</string>
 
     <!-- Status Bar fragment -->
     <string name="statusbar_settings_title">Status bar</string>

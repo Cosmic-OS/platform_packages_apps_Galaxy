@@ -25,6 +25,14 @@
             android:title="@string/lockscreen_enable_power_menu_title"
             android:defaultValue="true" />
 
+        <com.cosmic.settings.preferences.CustomSeekBarPreference
+            android:key="power_reboot_dialog_dim"
+            android:title="@string/powermenu_dialog_dim"
+            android:max="100"
+            settings:min="0"
+            settings:units=""
+            android:persistent="false" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
