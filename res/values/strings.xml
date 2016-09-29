@@ -132,8 +132,9 @@
     <!--Galaxy navigation-->
     <string name="navigation_title">Navigation bar options</string>
     <string name="navigation_summary">Customize Navbar size,buttons,layout,and colors</string>
-    <string name="navigationbuttons_category">Layouts</string>
+    <string name="navigationbuttons_category">NavBar</string>
     <string name="navigation_dimen_category">Navbar size</string>
+   <string name="navbar_tuner_title">Navbar tuner</string>
 
     <!--Galaxy Quick settings-->
     <string name="quicksettings_title">Quick settings</string>
