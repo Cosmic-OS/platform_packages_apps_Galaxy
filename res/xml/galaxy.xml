@@ -35,6 +35,13 @@
        android:icon="@drawable/ic_cosmic_qs"/>
 
     <PreferenceScreen
+       android:key="notification"
+       android:fragment="com.cosmic.galaxy.notification.NotificationHolder"
+       android:title="@string/notification_title" 
+       android:summary="@string/notification_summary"
+       android:icon="@drawable/ic_galaxy_notif"/>
+
+    <PreferenceScreen
        android:key="navigation"
        android:fragment="com.cosmic.galaxy.navigation.NavigationHolder"
        android:title="@string/navigation_title" 

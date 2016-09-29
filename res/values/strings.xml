@@ -136,6 +136,11 @@
     <string name="navigation_dimen_category">Navbar size</string>
    <string name="navbar_tuner_title">Navbar tuner</string>
 
+    <!--Galaxy Notification-->
+    <string name="notification_title">Notification options</string>
+    <string name="notification_summary">Change notif settings such as leds</string>
+    <string name="notification_category">Notifications</string>
+
     <!--Galaxy Quick settings-->
     <string name="quicksettings_title">Quick settings</string>
     <string name="quicksettings_summary">Manage your quick tiles and expanded statusbar</string>
