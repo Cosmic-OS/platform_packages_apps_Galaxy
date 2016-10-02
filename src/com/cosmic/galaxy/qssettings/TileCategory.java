@@ -31,6 +31,7 @@ import android.support.v7.preference.Preference;
 import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.PreferenceCategory;
 import android.support.v7.preference.PreferenceScreen;
+import android.support.v7.preference.Preference.OnPreferenceChangeListener;
 import android.provider.Settings;
 import android.util.Log;
 import android.view.WindowManagerGlobal;
@@ -41,6 +42,7 @@ import java.util.regex.Pattern;
 import java.util.Locale;
 import android.text.TextUtils;
 import android.view.View;
+import java.util.Date;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
@@ -48,17 +50,35 @@ import com.android.internal.logging.MetricsProto.MetricsEvent;
 import com.android.settings.Utils;
 
 public class TileCategory extends SettingsPreferenceFragment implements
-        Preference.OnPreferenceChangeListener {
+        OnPreferenceChangeListener {
     
-    private static final String PREF_TILE_ANIM_STYLE = "qs_tile_animation_style";
-    private static final String PREF_TILE_ANIM_DURATION = "qs_tile_animation_duration";
-    private static final String PREF_TILE_ANIM_INTERPOLATOR = "qs_tile_animation_interpolator";
+    private static final String PREF_TILE_ANIM_STYLE = 
+            "qs_tile_animation_style";
+    private static final String PREF_TILE_ANIM_DURATION = 
+            "qs_tile_animation_duration";
+    private static final String PREF_TILE_ANIM_INTERPOLATOR = 
+            "qs_tile_animation_interpolator";
+    private static final String PREF_CAT_LANDSCAPE =
+            "qs_cat_landscape";
+    private static final String PREF_ROWS_PORTRAIT =
+            "qs_rows_portrait";
+    private static final String PREF_COLUMNS_PORTRAIT =
+            "qs_columns_portrait";
+    private static final String PREF_ROWS_LANDSCAPE =
+            "qs_rows_landscape";
+    private static final String PREF_COLUMNS_LANDSCAPE =
+            "qs_columns_landscape";
 
     private ListPreference mTileAnimationStyle;
     private ListPreference mTileAnimationDuration;
     private ListPreference mTileAnimationInterpolator;
+    private ListPreference mRowsPortrait;
+    private ListPreference mColumnsPortrait;
+    private ListPreference mRowsLandscape;
+    private ListPreference mColumnsLandscape;
 
     private final Configuration mCurConfig = new Configuration();
+    private ContentResolver mResolver;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -66,7 +86,6 @@ public class TileCategory extends SettingsPreferenceFragment implements
 
         addPreferencesFromResource(R.xml.cosmic_tiles);
         PreferenceScreen prefSet = getPreferenceScreen();
-
         ContentResolver resolver = getActivity().getContentResolver();
 
         // Tile Animations
@@ -94,31 +113,45 @@ public class TileCategory extends SettingsPreferenceFragment implements
         mTileAnimationInterpolator.setValue(String.valueOf(tileAnimationInterpolator));
         updateTileAnimationInterpolatorSummary(tileAnimationInterpolator);
         mTileAnimationInterpolator.setOnPreferenceChangeListener(this);
-    }
 
+        mRowsPortrait = (ListPreference) findPreference(PREF_ROWS_PORTRAIT);
+        int rowsPortrait = Settings.System.getInt(getContentResolver(),
+                Settings.System.QS_ROWS_PORTRAIT, 3);
+        mRowsPortrait.setValue(String.valueOf(rowsPortrait));
+        mRowsPortrait.setSummary(mRowsPortrait.getEntry());
+        mRowsPortrait.setOnPreferenceChangeListener(this);
+
+        mColumnsPortrait = (ListPreference) findPreference(PREF_COLUMNS_PORTRAIT);
+        int columnsPortrait = Settings.System.getInt(getContentResolver(),
+                Settings.System.QS_COLUMNS_PORTRAIT, 4);
+        mColumnsPortrait.setValue(String.valueOf(columnsPortrait));
+        mColumnsPortrait.setSummary(mColumnsPortrait.getEntry());
+        mColumnsPortrait.setOnPreferenceChangeListener(this);
+
+        mRowsLandscape = (ListPreference) findPreference(PREF_ROWS_LANDSCAPE);
+        int rowsLandscape = Settings.System.getInt(getContentResolver(),
+                Settings.System.QS_ROWS_LANDSCAPE, 2);
+        mRowsLandscape.setValue(String.valueOf(rowsLandscape));
+        mRowsLandscape.setSummary(mRowsLandscape.getEntry());
+        mRowsLandscape.setOnPreferenceChangeListener(this);
+
+        mColumnsLandscape = (ListPreference) findPreference(PREF_COLUMNS_LANDSCAPE);
+        int columnsLandscape = Settings.System.getInt(getContentResolver(),
+                Settings.System.QS_COLUMNS_LANDSCAPE, 5);
+        mColumnsLandscape.setValue(String.valueOf(columnsLandscape));
+        mColumnsLandscape.setSummary(mColumnsLandscape.getEntry());
+        mColumnsLandscape.setOnPreferenceChangeListener(this);
+    }
 
     @Override
     protected int getMetricsCategory() {
         return MetricsEvent.GALAXY;
     }
 
-    @Override
-    public void onResume() {
-        super.onResume();
-    }
-
-    @Override
-    public void onPause() {
-        super.onPause();
-    }
-
-    @Override
-    public boolean onPreferenceTreeClick(Preference preference) {
-        return super.onPreferenceTreeClick(preference);
-    }
-
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         final String key = preference.getKey();
+        int intValue;
+        int index;
         if (preference == mTileAnimationStyle) {
             int tileAnimationStyle = Integer.valueOf((String) newValue);
             Settings.System.putIntForUser(getContentResolver(), Settings.System.ANIM_TILE_STYLE,
@@ -138,8 +171,36 @@ public class TileCategory extends SettingsPreferenceFragment implements
                     tileAnimationInterpolator, UserHandle.USER_CURRENT);
             updateTileAnimationInterpolatorSummary(tileAnimationInterpolator);
             return true;
-        }
-        return false;
+        } else if (preference == mRowsPortrait) {
+            intValue = Integer.valueOf((String) newValue);
+            index = mRowsPortrait.findIndexOfValue((String) newValue);
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.QS_ROWS_PORTRAIT, intValue);
+            preference.setSummary(mRowsPortrait.getEntries()[index]);
+            return true;
+        } else if (preference == mColumnsPortrait) {
+            intValue = Integer.valueOf((String) newValue);
+            index = mColumnsPortrait.findIndexOfValue((String) newValue);
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.QS_COLUMNS_PORTRAIT, intValue);
+            preference.setSummary(mColumnsPortrait.getEntries()[index]);
+            return true;
+        } else if (preference == mRowsLandscape) {
+            intValue = Integer.valueOf((String) newValue);
+            index = mRowsLandscape.findIndexOfValue((String) newValue);
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.QS_ROWS_LANDSCAPE, intValue);
+            preference.setSummary(mRowsLandscape.getEntries()[index]);
+            return true;
+        } else if (preference == mColumnsLandscape) {
+            intValue = Integer.valueOf((String) newValue);
+            index = mColumnsLandscape.findIndexOfValue((String) newValue);
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.QS_COLUMNS_LANDSCAPE, intValue);
+            preference.setSummary(mColumnsLandscape.getEntries()[index]);
+            return true;
+       }
+      return false;
     }
 
     private void updateTileAnimationStyleSummary(int tileAnimationStyle) {
