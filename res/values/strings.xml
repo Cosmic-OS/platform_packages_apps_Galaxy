@@ -77,12 +77,34 @@
     <string name="extra_category">Extras</string>
     <string name="traffic_category">Network Traffic</string>
     <string name="statusbar_items_category">Statusbar items</string>
+    <string name="logo_category">Cosmic-OS Logo</string>
 
     <!-- Status Bar Ticker -->
     <string name="ticker_screen_title">Ticker</string>
     <string name="ticker_title">Status Bar Ticker</string>
     <string name="ticker_screen_summary">Customize the ticker style</string>
     <string name="ticker_summary">Enable the old status bar ticker</string>
+
+    <!-- Status Bar Logo -->
+    <string name="status_bar_cosmic_logo_title">Cosmic-OS Logo</string>
+    <string name="status_bar_cosmic_logo_keyguard_title">Show on Lock Screen</string>
+    <string name="status_bar_cosmic_logo_summary">Logo Switch &amp; Color</string>
+    <string name="status_bar_cosmic_logo_color">Logo Color</string>
+    <string name="status_bar_cosmic_logo_color_dark_mode">Logo Color Dark Mode</string>
+    <string name="status_bar_cosmic_logo_position">Location</string>
+    <string name="status_bar_cosmic_logo_position_summary">Choose which side to display the logo on, left or right</string>
+    <string name="status_bar_logo_position_right">Right</string>
+    <string name="status_bar_logo_position_left">Left</string>
+    <string name="logo_cat_notification_icons_title">Notification Icons</string>
+    <string name="logo_hide_logo_title">Hide</string>
+    <string name="logo_hide_logo_summary">Enable to choose a number of visible notification icons to hide the Cosmic-OSo logo on the status bar</string>
+    <string name="logo_number_of_notification_icons_title">Number of notification icons</string>
+    <string name="logo_number_of_notifications_always_title">Always</string>
+    <string name="logo_number_of_notifications_two_title">2</string>
+    <string name="logo_number_of_notifications_three_title">3</string>
+    <string name="logo_number_of_notifications_four_title">4</string>
+    <string name="logo_number_of_notifications_five_title">5</string>
+    <string name="logo_number_of_notifications_six_title">6</string>
 
     <!-- Status bar - Clock -->
     <string name="status_bar_clock_style_title">Clock style</string>
