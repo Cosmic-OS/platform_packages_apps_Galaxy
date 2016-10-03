@@ -308,6 +308,16 @@
     <string name="volume_category">Volume buttons</string>
     <string name="powermenu_dialog_dim">Dialog dim background amount</string>
 
+    <!-- Volume down enter do not disturb -->
+    <string name="volbtn_down_zen_title">Volume down for do not disturb</string>
+    <string name="volbtn_down_zen_summary">allow volume down to enter do not disturb mode</string>
+    <!-- Volume up exit do not disturb -->
+    <string name="volbtn_up_zen_title">Volume up in do not disturb</string>
+    <string name="volbtn_up_zen_summary">allow volume up to exit do not disturb mode</string>
+    <!-- Volume do not disturb switch -->
+    <string name="vol_zen_title">Do not disturb switch</string>
+    <string name="vol_zen_summary">Show do not disturb swith on volume panel</string>
+
     <!--Volume rocker cursor control -->
     <string name="cursor_section_header">Volume rocker</string>
     <string name="volume_key_cursor_control_title">Volume key cursor control</string>
@@ -466,6 +476,26 @@
     <string name="animation_category">Animations</string>
     <string name="system_category">System Settings</string>
     <string name="wakelock_blocker_title">Wakelock Blocker</string>
+
+    <!-- color tuner options -->
+    <string name="display_color_title">Screen color &amp; appearance</string>
+    <string name="display_color_summary">screen color controls and night mode</string>
+
+    <!-- qs brightness slider -->
+    <string name="qs_brightness_slider_title">Brightness slider</string>
+    <string name="qs_brightness_slider_summary">Show brightness slider on quick settings panel</string>
+
+    <!-- Preference to show/hide embedded battery percentage -->
+    <string name="show_battery_percentage">Show battery percentage</string>
+    <string name="show_battery_percentage_summary">Show battery percentage when not charging</string>
+
+    <!-- Power notification controls -->
+    <string name="power_notification_title">Power notification controls</string>
+    <string name="power_notification_summary">Advanced notification controls and information</string>
+
+    <!-- multiwindow navbar gesture -->
+    <string name="nav_gesture_title">Enable multiwindow swipe-up gesture</string>
+    <string name="nav_gesture_summary">Gesture to enter multiwindow by swiping up from the recents button</string>
 
     <!-- Force expanded notifications -->
     <string name="force_expanded_notifications_title">Force Expanded Notifications</string>

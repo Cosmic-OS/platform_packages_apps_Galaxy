@@ -20,5 +20,11 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/battery_category" >
 
+    <com.cosmic.galaxy.preference.SystemSettingSwitchPreference
+        android:key="status_bar_show_battery_percent"
+        android:title="@string/show_battery_percentage"
+        android:summary="@string/show_battery_percentage_summary"
+        android:defaultValue="false" />
+
 </PreferenceScreen>
 
