@@ -68,6 +68,8 @@ public class TileCategory extends SettingsPreferenceFragment implements
             "qs_rows_landscape";
     private static final String PREF_COLUMNS_LANDSCAPE =
             "qs_columns_landscape";
+    private static final String KEY_SYSUI_QQS_COUNT = 
+            "sysui_qqs_count_key";
 
     private ListPreference mTileAnimationStyle;
     private ListPreference mTileAnimationDuration;
@@ -76,6 +78,7 @@ public class TileCategory extends SettingsPreferenceFragment implements
     private ListPreference mColumnsPortrait;
     private ListPreference mRowsLandscape;
     private ListPreference mColumnsLandscape;
+    private ListPreference mSysuiQqsCount;
 
     private final Configuration mCurConfig = new Configuration();
     private ContentResolver mResolver;
@@ -113,6 +116,15 @@ public class TileCategory extends SettingsPreferenceFragment implements
         mTileAnimationInterpolator.setValue(String.valueOf(tileAnimationInterpolator));
         updateTileAnimationInterpolatorSummary(tileAnimationInterpolator);
         mTileAnimationInterpolator.setOnPreferenceChangeListener(this);
+
+        mSysuiQqsCount = (ListPreference) findPreference(KEY_SYSUI_QQS_COUNT);
+        if (mSysuiQqsCount != null) {
+           mSysuiQqsCount.setOnPreferenceChangeListener(this);
+           int SysuiQqsCount = Settings.Secure.getInt(resolver,
+                    Settings.Secure.QQS_COUNT, 5);
+           mSysuiQqsCount.setValue(Integer.toString(SysuiQqsCount));
+           mSysuiQqsCount.setSummary(mSysuiQqsCount.getEntry());
+        }
 
         mRowsPortrait = (ListPreference) findPreference(PREF_ROWS_PORTRAIT);
         int rowsPortrait = Settings.System.getInt(getContentResolver(),
@@ -199,7 +211,14 @@ public class TileCategory extends SettingsPreferenceFragment implements
                     Settings.System.QS_COLUMNS_LANDSCAPE, intValue);
             preference.setSummary(mColumnsLandscape.getEntries()[index]);
             return true;
-       }
+       } else if (preference == mSysuiQqsCount) {
+            String SysuiQqsCount = (String) newValue;
+            int SysuiQqsCountValue = Integer.parseInt(SysuiQqsCount);
+            Settings.Secure.putInt(getContentResolver(), Settings.Secure.QQS_COUNT, SysuiQqsCountValue);
+            int SysuiQqsCountIndex = mSysuiQqsCount.findIndexOfValue(SysuiQqsCount);
+            mSysuiQqsCount.setSummary(mSysuiQqsCount.getEntries()[SysuiQqsCountIndex]);
+            return true;
+      }
       return false;
     }
 

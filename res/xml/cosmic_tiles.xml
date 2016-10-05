@@ -21,6 +21,13 @@
     android:title="@string/tile_category" >
 
     <ListPreference
+        android:dialogTitle="@string/sysui_qqs_count_title"
+        android:entries="@array/sysui_qqs_count_entries"
+        android:entryValues="@array/sysui_qqs_count_values"
+        android:key="sysui_qqs_count_key"
+        android:title="@string/sysui_qqs_count_title" />
+
+    <ListPreference
         android:key="qs_tile_animation_style"
         android:title="@string/qs_tile_animation_style_title"
         android:entries="@array/qs_tile_animation_style_entries"
