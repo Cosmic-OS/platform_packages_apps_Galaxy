@@ -20,11 +20,36 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/battery_category" >
 
-    <com.cosmic.galaxy.preference.SystemSettingSwitchPreference
-        android:key="status_bar_show_battery_percent"
-        android:title="@string/show_battery_percentage"
-        android:summary="@string/show_battery_percentage_summary"
-        android:defaultValue="false" />
+        <ListPreference
+            android:key="statusbar_battery_style"
+            android:title="@string/battery_style_title"
+            android:entries="@*android:array/entries_battery_styles"
+            android:entryValues="@*android:array/values_battery_styles"
+            android:persistent="false"
+            android:defaultValue="0"/>
+        <ListPreference
+            android:key="statusbar_battery_percent"
+            android:title="@string/battery_percent_title"
+            android:entries="@array/entries_battery_percent"
+            android:entryValues="@array/values_battery_percent"
+            android:persistent="false"
+            android:defaultValue="1"/>
+        <com.cosmic.galaxy.preference.SystemSettingSwitchPreference
+            android:key="statusbar_battery_percent_inside"
+            android:title="@string/statusbar_percent_inside_title"
+            android:summary="@string/statusbar_percent_inside_summary"
+            android:defaultValue="false"/>
 
+        <PreferenceCategory
+            android:key="statusbar_category_charging"
+            android:title="@string/statusbar_category_charging_title">
+
+            <com.cosmic.galaxy.preference.SystemSettingSwitchPreference
+                android:key="statusbar_battery_charging_image"
+                android:title="@string/statusbar_charging_image_title"
+                android:summary="@string/statusbar_charging_image_summary"
+                android:defaultValue="true"/>
+
+        </PreferenceCategory>
 </PreferenceScreen>
 
