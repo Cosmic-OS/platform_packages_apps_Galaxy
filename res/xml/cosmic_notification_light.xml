@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+y<?xml version="1.0" encoding="utf-8"?>
 <!-- Copyright (C) 2012 The CyanogenMod Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
@@ -21,11 +21,18 @@
         android:key="general_section"
         android:title="@string/notification_light_general_title">
 
-        <com.aosip.owlsnest.preference.SystemSettingSwitchPreference
+        <com.cosmic.galaxy.preference.SystemSettingSwitchPreference
             android:key="notification_light_pulse"
             android:title="@string/notification_light_title" />
 
-        <com.aosip.owlsnest.notification.NotificationLightPreference
+        <com.cosmic.galaxy.preference.SystemSettingSwitchPreference
+            android:key="notification_light_color_auto"
+            android:title="@string/notification_light_automagic"
+            android:summary="@string/notification_light_automagic_summary"
+            android:dependency="notification_light_pulse"
+            android:defaultValue="true" />
+
+        <com.cosmic.galaxy.notification.NotificationLightPreference
             android:key="default"
             android:title="@string/notification_light_default_value"
             android:persistent="false"
@@ -37,18 +44,18 @@
         android:key="advanced_section"
         android:title="@string/advanced">
 
-        <com.aosip.owlsnest.preference.SystemSettingSwitchPreference
+        <com.cosmic.galaxy.preference.SystemSettingSwitchPreference
             android:key="notification_light_screen_on_enable"
             android:title="@string/notification_light_screen_on"
             android:dependency="notification_light_pulse" />
 
-        <com.aosip.owlsnest.preference.SystemSettingSwitchPreference
+        <com.cosmic.galaxy.preference.SystemSettingSwitchPreference
             android:key="allow_lights"
             android:title="@string/notification_light_zen_mode"
             android:dependency="notification_light_pulse"
             android:defaultValue="true" />
 
-        <com.aosip.owlsnest.preference.SystemSettingSwitchPreference
+        <com.cosmic.galaxy.preference.SystemSettingSwitchPreference
             android:key="notification_light_pulse_custom_enable"
             android:title="@string/notification_light_use_custom"
             android:dependency="notification_light_pulse" />
