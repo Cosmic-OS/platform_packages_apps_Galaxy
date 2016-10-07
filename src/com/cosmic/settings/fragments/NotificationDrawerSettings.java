@@ -23,9 +23,11 @@ import android.os.UserHandle;
 import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceScreen;
+import android.support.v14.preference.SwitchPreference;
 import android.provider.Settings;
 
 import com.android.internal.logging.MetricsProto.MetricsEvent;
+import com.android.internal.widget.LockPatternUtils;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
@@ -35,9 +37,13 @@ public class NotificationDrawerSettings extends SettingsPreferenceFragment imple
 
     private static final String QUICK_PULLDOWN = "quick_pulldown";
     private static final String PREF_SMART_PULLDOWN = "smart_pulldown";
+    private static final String PREF_LOCK_QS_DISABLED = "lockscreen_qs_disabled";
 
     private ListPreference mQuickPulldown;
     ListPreference mSmartPulldown;
+    private SwitchPreference mLockQsDisabled;
+
+    private static final int MY_USER_ID = UserHandle.myUserId();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -45,6 +51,7 @@ public class NotificationDrawerSettings extends SettingsPreferenceFragment imple
         addPreferencesFromResource(R.xml.notification_drawer_settings);
         PreferenceScreen prefScreen = getPreferenceScreen();
         ContentResolver resolver = getActivity().getContentResolver();
+        final LockPatternUtils lockPatternUtils = new LockPatternUtils(getActivity());
 
         mQuickPulldown = (ListPreference) findPreference(QUICK_PULLDOWN);
         mQuickPulldown.setOnPreferenceChangeListener(this);
@@ -59,6 +66,15 @@ public class NotificationDrawerSettings extends SettingsPreferenceFragment imple
                 Settings.System.QS_SMART_PULLDOWN, 0);
         mSmartPulldown.setValue(String.valueOf(smartPulldown));
         updateSmartPulldownSummary(smartPulldown);
+
+        mLockQsDisabled = (SwitchPreference) findPreference(PREF_LOCK_QS_DISABLED);
+        if (lockPatternUtils.isSecure(MY_USER_ID)) {
+            mLockQsDisabled.setChecked((Settings.Secure.getInt(resolver,
+                Settings.Secure.LOCK_QS_DISABLED, 0) == 1));
+            mLockQsDisabled.setOnPreferenceChangeListener(this);
+        } else {
+            prefScreen.removePreference(mLockQsDisabled);
+        }
     }
 
     @Override
@@ -79,6 +95,10 @@ public class NotificationDrawerSettings extends SettingsPreferenceFragment imple
             int smartPulldown = Integer.valueOf((String) newValue);
             Settings.System.putInt(resolver, Settings.System.QS_SMART_PULLDOWN, smartPulldown);
             updateSmartPulldownSummary(smartPulldown);
+            return true;
+        } else if  (preference == mLockQsDisabled) {
+            boolean checked = ((SwitchPreference)preference).isChecked();
+            Settings.Secure.putInt(resolver, Settings.Secure.LOCK_QS_DISABLED, checked ? 1:0);
             return true;
         }
         return false;
