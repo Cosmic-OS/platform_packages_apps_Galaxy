@@ -810,6 +810,10 @@
     <string name="color_picker_help_palette_summary">All palette colors have a fixed value.\nA click sets the palette color as new color, without applying the new color.</string>
     <string name="color_picker_help_do_not_show_title">Don\'t show again</string>
     <string name="color_picker_help_button_ok_title">OK</string>
+	
+	<!-- tap-to-sleep -->
+	<string name="double_tap_to_sleep_title">Tap statusbar to sleep</string>
+	<string name="double_tap_to_sleep_summary">Double tap status bar to put device to sleep</string>
 
 </resources>
 
