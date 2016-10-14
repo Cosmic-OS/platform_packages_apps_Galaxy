@@ -18,6 +18,10 @@
     <!-- Categories -->
     <string name="cosmic_interface">Interface</string>
     <string name="cosmic_buttons">Buttons</string>
+    <string name="cosmic_system">System</string>
+
+    <!-- Display fragment -->
+    <string name="display_settings_title">Display</string>
 
     <!-- Lockscreen Fragment -->
     <string name="lockscreen_settings_title">Lockscreen</string>
@@ -30,6 +34,9 @@
     <!-- Lockscreen double tap to sleep -->
     <string name="double_tap_sleep_anywhere_title">Double-tap to sleep anywhere</string>
     <string name="double_tap_sleep_anywhere_summary">Double tap anywhere on the lockscreen to put the device to sleep</string>
+
+    <!-- Navbar fragment -->
+    <string name="navbar_settings_title">Navigation bar</string>
 
     <!-- Notification drawer fragment -->
     <string name="notification_drawer_settings_title">Notification drawer</string>

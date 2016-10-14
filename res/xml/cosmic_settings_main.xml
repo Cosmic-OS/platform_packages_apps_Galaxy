@@ -43,6 +43,11 @@
         android:title="@string/cosmic_buttons">
 
         <PreferenceScreen
+            android:fragment="com.cosmic.settings.fragments.NavBarSettings"
+            android:key="cosmic_navbar_settings"
+            android:title="@string/navbar_settings_title"/>
+
+        <PreferenceScreen
             android:fragment="com.cosmic.settings.fragments.PowerMenuSettings"
             android:key="cosmic_powermenu_settings"
             android:title="@string/powermenu_settings_title"/>
@@ -51,6 +56,17 @@
             android:fragment="com.cosmic.settings.fragments.VolumeRockerSettings"
             android:key="cosmic_volumerocker_settings"
             android:title="@string/volumerocker_settings_title"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="cosmic_system"
+        android:title="@string/cosmic_system">
+
+        <PreferenceScreen
+            android:fragment="com.cosmic.settings.fragments.DisplaySettings"
+            android:key="cosmic_display_settings"
+            android:title="@string/display_settings_title"/>
 
     </PreferenceCategory>
 
