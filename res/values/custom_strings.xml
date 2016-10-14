@@ -49,6 +49,9 @@
     <!-- Power menu on secure lockscreen -->
     <string name="lockscreen_enable_power_menu_title">Show power menu on secure lock screen</string>
 
+    <!-- Status Bar fragment -->
+    <string name="statusbar_settings_title">Status bar</string>
+
     <!-- Volume Rocker fragment -->
     <string name="volumerocker_settings_title">Volume rocker</string>
     <!-- Volume button wake -->

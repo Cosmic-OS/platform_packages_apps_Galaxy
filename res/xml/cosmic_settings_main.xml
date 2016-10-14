@@ -26,6 +26,11 @@
             android:key="cosmic_lockscreen_settings"
             android:title="@string/lockscreen_settings_title"/>
 
+        <PreferenceScreen
+            android:fragment="com.cosmic.settings.fragments.StatusBarSettings"
+            android:key="cosmic_statusbar_settings"
+            android:title="@string/statusbar_settings_title"/>
+
     </PreferenceCategory>
 
     <PreferenceCategory
