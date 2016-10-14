@@ -386,6 +386,13 @@ device speaker</string>
     <string name="lockscreen_enable_power_menu_title">Show power menu on secure lock screen</string>
     <!-- Power menu dialog dim -->
     <string name="powermenu_dialog_dim">Dialog dim background amount</string>
+    <!-- Power menu Animations  -->
+    <string name="power_menu_animation_title">Power menu animation</string>
+    <string name="power_menu_animation_summary">Change the enter/exit animation of the power menu</string>
+    <string name="power_menu_animation_dialog_title">Select power menu animation</string>
+    <string name="power_menu_animation_aosp">AOSP (default)</string>
+    <string name="power_menu_animation_bottom">Bottom</string>
+    <string name="power_menu_animation_top">Top</string>
 
     <!-- Status Bar fragment -->
     <string name="statusbar_settings_title">Status bar</string>

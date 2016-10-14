@@ -24,6 +24,7 @@ import android.content.pm.UserInfo;
 import android.os.Bundle;
 import android.os.UserHandle;
 import android.os.UserManager;
+import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceCategory;
 import android.support.v7.preference.PreferenceScreen;
@@ -53,8 +54,10 @@ public class PowerMenuSettings extends SettingsPreferenceFragment implements OnP
 
     private static final String ACTION_CATEGORY = "action_category";
     private static final String POWER_CATEGORY = "power_category";
+    private static final String POWER_MENU_ANIMATIONS = "power_menu_animations";
     private static final String POWER_REBOOT_DIALOG_DIM = "power_reboot_dialog_dim";
 
+    private ListPreference mPowerMenuAnimations;
     private CustomSeekBarPreference mPowerRebootDialogDim;
 
     // power items
@@ -95,6 +98,12 @@ public class PowerMenuSettings extends SettingsPreferenceFragment implements OnP
         if (!lockPatternUtils.isSecure(MY_USER_ID)) {
             prefScreen.removePreference(powerCategory);
         }
+
+        mPowerMenuAnimations = (ListPreference) findPreference(POWER_MENU_ANIMATIONS);
+        mPowerMenuAnimations.setValue(String.valueOf(Settings.System.getInt(
+                getActivity().getContentResolver(), Settings.System.POWER_MENU_ANIMATIONS, 0)));
+        mPowerMenuAnimations.setSummary(mPowerMenuAnimations.getEntry());
+        mPowerMenuAnimations.setOnPreferenceChangeListener(this);
 
         mPowerRebootDialogDim = (CustomSeekBarPreference) prefScreen.findPreference(POWER_REBOOT_DIALOG_DIM);
         int powerRebootDialogDim = Settings.System.getInt(getActivity().getContentResolver(),
@@ -230,7 +239,13 @@ public class PowerMenuSettings extends SettingsPreferenceFragment implements OnP
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if (preference == mPowerRebootDialogDim) {
+        if (preference == mPowerMenuAnimations) {
+            Settings.System.putInt(getActivity().getContentResolver(), Settings.System.POWER_MENU_ANIMATIONS,
+                    Integer.valueOf((String) newValue));
+            mPowerMenuAnimations.setValue(String.valueOf(newValue));
+            mPowerMenuAnimations.setSummary(mPowerMenuAnimations.getEntry());
+            return true;
+        } else if (preference == mPowerRebootDialogDim) {
             int alpha = (Integer) newValue;
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.POWER_REBOOT_DIALOG_DIM, alpha * 1);
