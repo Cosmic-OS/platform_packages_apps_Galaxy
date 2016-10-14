@@ -18,6 +18,18 @@
         android:title="@string/cosmic_settings_title" >
 
     <PreferenceCategory
+        android:key="cosmic_interface"
+        android:title="@string/cosmic_interface">
+
+        <PreferenceScreen
+            android:fragment="com.cosmic.settings.fragments.LockScreenSettings"
+            android:key="cosmic_lockscreen_settings"
+            android:title="@string/lockscreen_settings_title"
+            android:icon="@drawable/ic_cosmic_lockscreen" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:key="cosmic_device"
         android:title="@string/cosmic_device">
 
