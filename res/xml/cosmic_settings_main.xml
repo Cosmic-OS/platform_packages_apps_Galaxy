@@ -39,6 +39,12 @@
             android:title="@string/powermenu_settings_title"
             android:icon="@drawable/ic_cosmic_powermenu" />
 
+        <PreferenceScreen
+            android:fragment="com.cosmic.settings.fragments.VolumeRockerSettings"
+            android:key="cosmic_volumerocker_settings"
+            android:title="@string/volumerocker_settings_title"
+            android:icon="@drawable/ic_cosmic_volume" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>
