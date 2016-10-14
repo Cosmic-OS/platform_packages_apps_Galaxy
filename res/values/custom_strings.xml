@@ -42,6 +42,9 @@
     <string name="power_menu_sound_title">Sound panel</string>
     <string name="power_menu_bug_report_disabled">Bug reporting is disabled in development settings</string>
 
+    <!-- Status Bar fragment -->
+    <string name="statusbar_settings_title">Status bar</string>
+
     <!-- Volume Rocker fragment -->
     <string name="volumerocker_settings_title">Volume rocker</string>
     <!-- Volume button wake -->
