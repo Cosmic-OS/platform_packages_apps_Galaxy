@@ -15,4 +15,9 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
+    <!-- Categories -->
+    <string name="cosmic_buttons">Buttons</string>
+
+    <!-- Power Menu fragment -->
+    <string name="powermenu_settings_title">Power menu</string>
 </resources>

@@ -14,18 +14,6 @@
      limitations under the License.
 -->
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
-        android:title="@string/cosmic_settings_title" >
-
-    <PreferenceCategory
-        android:key="cosmic_buttons"
-        android:title="@string/cosmic_buttons">
-
-        <PreferenceScreen
-            android:fragment="com.cosmic.settings.fragments.PowerMenuSettings"
-            android:key="cosmic_powermenu_settings"
-            android:title="@string/powermenu_settings_title"/>
-
-    </PreferenceCategory>
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
 </PreferenceScreen>
