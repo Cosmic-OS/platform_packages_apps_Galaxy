@@ -44,4 +44,7 @@
     <string name="power_menu_bug_report_title">Bug report</string>
     <string name="power_menu_sound_title">Sound panel</string>
     <string name="power_menu_bug_report_disabled">Bug reporting is disabled in development settings</string>
+
+    <!-- Volume Rocker fragment -->
+    <string name="volumerocker_settings_title">Volume rocker</string>
 </resources>
