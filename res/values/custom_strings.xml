@@ -47,6 +47,8 @@
 
     <!-- Notification drawer fragment -->
     <string name="notification_drawer_settings_title">Notification drawer</string>
+    <string name="notification_panel_title">Notification panel</string>
+    <string name="qs_panel_title">Quick settings panel</string>
     <!-- Force expand notifications -->
     <string name="notification_force_expand_title">Force expanded notifications</string>
     <string name="notification_force_expand_summary">Auto expands notifications on apps that support it</string>
@@ -66,6 +68,9 @@
     <string name="smart_pulldown_none">no notifications</string>
     <string name="smart_pulldown_dismissable">no dismissable</string>
     <string name="smart_pulldown_ongoing">no ongoing</string>
+
+    <!-- Notification & Media fragment -->
+    <string name="notification_media_settings_title">Media &amp; notifications</string>
 
     <!-- Power Menu fragment -->
     <string name="powermenu_settings_title">Power menu</string>
