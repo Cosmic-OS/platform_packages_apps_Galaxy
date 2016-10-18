@@ -70,6 +70,8 @@
 
     <!-- Lockscreen Fragment -->
     <string name="lockscreen_settings_title">Lockscreen</string>
+    <string name="lockscreen_options_title">Lockscreen options</string>
+    <string name="lockscreen_secure_options_title">Secure Lockscreen options</string>
     <!-- Lockscreen items clock, date, alarm text -->
     <string name="lockscreen_items_settings_title">Lockscreen Items</string>
     <string name="lockscreen_clock_title">Lockscreen clock</string>

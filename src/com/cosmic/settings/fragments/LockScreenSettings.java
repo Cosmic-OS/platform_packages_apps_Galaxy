@@ -17,9 +17,12 @@
 package com.cosmic.settings.fragments;
 
 import android.os.Bundle;
+import android.os.UserHandle;
+import android.support.v7.preference.PreferenceCategory;
 import android.support.v7.preference.PreferenceScreen;
 
 import com.android.internal.logging.MetricsProto.MetricsEvent;
+import com.android.internal.widget.LockPatternUtils;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
@@ -27,6 +30,11 @@ import com.cosmic.settings.utils.Utils;
 import com.cosmic.settings.preferences.SystemSettingSwitchPreference;
 
 public class LockScreenSettings extends SettingsPreferenceFragment {
+
+    private static final int MY_USER_ID = UserHandle.myUserId();
+
+    private static final String LS_OPTIONS_CAT = "lockscreen_options";
+    private static final String LS_SECURE_CAT = "lockscreen_secure_options";
 
     private static final String KEYGUARD_TORCH = "keyguard_toggle_torch";
 
@@ -37,10 +45,18 @@ public class LockScreenSettings extends SettingsPreferenceFragment {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.lockscreen_settings);
         PreferenceScreen prefScreen = getPreferenceScreen();
+        final LockPatternUtils lockPatternUtils = new LockPatternUtils(getActivity());
+
+        PreferenceCategory optionsCategory = (PreferenceCategory) findPreference(LS_OPTIONS_CAT);
+        PreferenceCategory secureCategory = (PreferenceCategory) findPreference(LS_SECURE_CAT);
 
         mLsTorch = (SystemSettingSwitchPreference) findPreference(KEYGUARD_TORCH);
         if (!Utils.deviceSupportsFlashLight(getActivity())) {
-            prefScreen.removePreference(mLsTorch);
+            optionsCategory.removePreference(mLsTorch);
+        }
+
+        if (!lockPatternUtils.isSecure(MY_USER_ID)) {
+            prefScreen.removePreference(secureCategory);
         }
     }
 
