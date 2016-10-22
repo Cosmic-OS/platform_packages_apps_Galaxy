@@ -30,6 +30,7 @@ import android.support.v7.preference.PreferenceCategory;
 import android.support.v7.preference.Preference.OnPreferenceChangeListener;
 import android.support.v14.preference.SwitchPreference;
 
+import com.android.internal.widget.LockPatternUtils;
 import com.cosmic.galaxy.preference.SystemSettingSwitchPreference;
 import com.android.internal.logging.MetricsProto.MetricsEvent;
 import com.android.settings.R;
@@ -38,6 +39,7 @@ import com.android.settings.SettingsPreferenceFragment;
 public class OptionsCategory extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
+    private static final String LS_SECURE_CAT = "lockscreen_secure_options";
     private static final String FINGERPRINT_VIB = "fingerprint_success_vib";
     private static final String LOCK_CLOCK_FONTS = "lock_clock_fonts";
 
@@ -55,19 +57,21 @@ public class OptionsCategory extends SettingsPreferenceFragment implements
         super.onCreate(savedInstanceState);
         final PreferenceScreen prefScreen = getPreferenceScreen();
         ContentResolver resolver = getActivity().getContentResolver();
-
         addPreferencesFromResource(R.xml.cosmic_options);
 
-        mFingerprintManager = (FingerprintManager) getActivity().getSystemService(Context.FINGERPRINT_SERVICE);
-        mFingerprintVib = (SystemSettingSwitchPreference) findPreference(FINGERPRINT_VIB);
-        if (!mFingerprintManager.isHardwareDetected()){
-            prefScreen.removePreference(mFingerprintVib);
-        }
+        PreferenceCategory secureCategory = (PreferenceCategory) findPreference(LS_SECURE_CAT);
+
         mLockClockFonts = (ListPreference) findPreference(LOCK_CLOCK_FONTS);
         mLockClockFonts.setValue(String.valueOf(Settings.System.getInt(
                 resolver, Settings.System.LOCK_CLOCK_FONTS, 4)));
         mLockClockFonts.setSummary(mLockClockFonts.getEntry());
         mLockClockFonts.setOnPreferenceChangeListener(this);
+
+        mFingerprintManager = (FingerprintManager) getActivity().getSystemService(Context.FINGERPRINT_SERVICE);
+        mFingerprintVib = (SystemSettingSwitchPreference) findPreference(FINGERPRINT_VIB);
+        if (!mFingerprintManager.isHardwareDetected()){
+            secureCategory.removePreference(mFingerprintVib);
+        }
     }
 
     @Override

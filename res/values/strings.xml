@@ -438,6 +438,7 @@
     <string name="weather_category">Lockscreen weather</string>
     <string name="options_category">Various Options</string>
     <string name="shortcut_category">Lockscreen shortcuts</string>
+    <string name="lockscreen_secure_options_title">Secure Lockscreen options</string>
 
     <!-- Lockscreen cover art -->
     <string name="media_art_title">Media cover art</string>
