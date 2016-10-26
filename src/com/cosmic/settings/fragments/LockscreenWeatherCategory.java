@@ -30,6 +30,9 @@ import android.support.v7.preference.PreferenceScreen;
 import android.support.v14.preference.SwitchPreference;
 
 import com.aosip.owlsnest.preference.CustomSeekBarPreference;
+import android.content.pm.PackageManager;
+import android.content.pm.PackageManager.NameNotFoundException;
+
 import com.android.internal.logging.MetricsProto.MetricsEvent;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
@@ -43,6 +46,8 @@ public class LockscreenWeatherCategory extends SettingsPreferenceFragment implem
             "weather_hide_panel";
     private static final String PREF_NUMBER_OF_NOTIFICATIONS =
             "weather_number_of_notifications";
+    private static final String KEY_LOCK_CLOCK =
+            "lock_clock";
 
     private static final int MONOCHROME_ICON = 0;
 
@@ -65,6 +70,11 @@ public class LockscreenWeatherCategory extends SettingsPreferenceFragment implem
 
         mResolver = getActivity().getContentResolver();
         PreferenceScreen prefs = getPreferenceScreen();
+
+        // Remove the lock clock preference if its not installed
+        if (!isPackageInstalled("com.cyanogenmod.lockclock")) {
+            removePreference(KEY_LOCK_CLOCK);
+        }
 
         mConditionIcon =
                 (ListPreference) findPreference(PREF_CONDITION_ICON);
@@ -135,6 +145,18 @@ public class LockscreenWeatherCategory extends SettingsPreferenceFragment implem
             return true;
         }
         return false;
+    }
+
+    private boolean isPackageInstalled(String packageName) {
+        PackageManager pm = getPackageManager();
+        boolean installed = false;
+        try {
+           pm.getPackageInfo(packageName, PackageManager.GET_ACTIVITIES);
+           installed = true;
+        } catch (PackageManager.NameNotFoundException e) {
+           installed = false;
+        }
+        return installed;
     }
 }
 
