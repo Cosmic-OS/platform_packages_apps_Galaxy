@@ -23,6 +23,7 @@ import android.content.ContentResolver;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
 import android.os.Bundle;
+import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceCategory;
 import android.support.v7.preference.PreferenceScreen;
@@ -33,6 +34,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 
 import com.android.internal.logging.MetricsProto.MetricsEvent;
+import com.cosmic.settings.preferences.CustomSeekBarPreference;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
@@ -47,11 +49,15 @@ public class StatusBarTickerSettings extends SettingsPreferenceFragment implemen
         private static final String PREF_TEXT_COLOR = "status_bar_ticker_text_color";
         private static final String PREF_ICON_COLOR = "status_bar_ticker_icon_color";
         private static final String PREF_TICKER_RESTORE_DEFAULTS = "ticker_restore_defaults";
+        private static final String STATUS_BAR_TICKER_FONT_STYLE = "status_bar_ticker_font_style";
+        private static final String STATUS_BAR_TICKER_FONT_SIZE  = "status_bar_ticker_font_size";
 
         private SwitchPreference mShowTicker;
         private ColorPickerPreference mTextColor;
         private ColorPickerPreference mIconColor;
         private Preference mTickerDefaults;
+        private CustomSeekBarPreference mTickerFontSize;
+        private ListPreference mTickerFontStyle;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -82,6 +88,17 @@ public class StatusBarTickerSettings extends SettingsPreferenceFragment implemen
             mIconColor.setSummary(iconHexColor);
             mIconColor.setNewPreviewColor(iconColor);
 
+            mTickerFontSize = (CustomSeekBarPreference) findPreference(STATUS_BAR_TICKER_FONT_SIZE);
+            mTickerFontSize.setValue(Settings.System.getInt(getActivity().getContentResolver(),
+                      Settings.System.STATUS_BAR_TICKER_FONT_SIZE, 14));
+            mTickerFontSize.setOnPreferenceChangeListener(this);
+  
+            mTickerFontStyle = (ListPreference) findPreference(STATUS_BAR_TICKER_FONT_STYLE);
+            mTickerFontStyle.setOnPreferenceChangeListener(this);
+            mTickerFontStyle.setValue(Integer.toString(Settings.System.getInt(getActivity()
+                    .getContentResolver(), Settings.System.STATUS_BAR_TICKER_FONT_STYLE, 0)));
+            mTickerFontStyle.setSummary(mTickerFontStyle.getEntry());
+
             mTickerDefaults = prefSet.findPreference(PREF_TICKER_RESTORE_DEFAULTS);
         }
 
@@ -107,6 +124,18 @@ public class StatusBarTickerSettings extends SettingsPreferenceFragment implemen
                 int intHex = ColorPickerPreference.convertToColorInt(hex);
                 Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
                         Settings.System.STATUS_BAR_TICKER_ICON_COLOR, intHex);
+                return true;
+        } else if (preference == mTickerFontSize) {
+                int width = ((Integer)newValue).intValue();
+                Settings.System.putInt(getActivity().getContentResolver(),
+                          Settings.System.STATUS_BAR_TICKER_FONT_SIZE, width);
+                  return true;
+            } else if (preference == mTickerFontStyle) {
+                int val = Integer.parseInt((String) newValue);
+                int index = mTickerFontStyle.findIndexOfValue((String) newValue);
+                Settings.System.putInt(getActivity().getContentResolver(),
+                        Settings.System.STATUS_BAR_TICKER_FONT_STYLE, val);
+                mTickerFontStyle.setSummary(mTickerFontStyle.getEntries()[index]);
                 return true;
             }
             return false;
