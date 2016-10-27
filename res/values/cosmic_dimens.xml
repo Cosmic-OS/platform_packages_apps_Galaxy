@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2016 Cosmic-OS
+<!--
+     Copyright (C) 2016 Cosmic-OS
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -13,9 +14,12 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
+<resources>
+    <!-- ActionBar height -->
+    <dimen name="actionbar_size">56dip</dimen>
 
-<shape xmlns:android="http://schemas.android.com/apk/res/android"
-        android:shape="rectangle">
-   <size android:width="32dip" android:height="32dip" />
-   <solid android:color="@android:color/transparent" />
-</shape>
+    <!-- ActionBar contentInsetStart -->
+    <dimen name="actionbar_contentInsetStart">16dp</dimen>
+    <dimen name="actionbar_subsettings_contentInsetStart">72dp</dimen>
+</resources>
+
