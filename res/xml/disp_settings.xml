@@ -16,16 +16,22 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-    <PreferenceScreen
-        android:key="expanded_desktop"
-        android:title="@string/power_menu_expanded_desktop"
-        android:fragment="com.android.settings.applications.ExpandedDesktopPreferenceFragment" />
+    <PreferenceCategory
+        android:key="disp"
+        android:title="@string/display_category" >
 
-    <com.cosmic.settings.preferences.GlobalSettingSwitchPreference
-        android:key="wake_when_plugged_or_unplugged"
-        android:title="@string/wake_when_plugged_or_unplugged_title"
-        android:summary="@string/wake_when_plugged_or_unplugged_summary"
-        android:defaultValue="false" />
+        <PreferenceScreen
+            android:key="expanded_desktop"
+            android:title="@string/power_menu_expanded_desktop"
+            android:fragment="com.android.settings.applications.ExpandedDesktopPreferenceFragment" />
+
+        <com.cosmic.settings.preferences.GlobalSettingSwitchPreference
+            android:key="wake_when_plugged_or_unplugged"
+            android:title="@string/wake_when_plugged_or_unplugged_title"
+            android:summary="@string/wake_when_plugged_or_unplugged_summary"
+            android:defaultValue="false" />
+
+    </PreferenceCategory>
 
     <PreferenceCategory
         android:key="leds"
