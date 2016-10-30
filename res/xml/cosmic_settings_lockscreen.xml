@@ -57,7 +57,7 @@
             android:entries="@array/lockscreen_clock_selection_entries"
             android:entryValues="@array/lockscreen_clock_selection_values"
             android:dependency="lockscreen_clock"
-            android:defaultValue="14" />
+            android:defaultValue="17" />
 
         <ListPreference
             android:key="lock_clock_fonts"
@@ -85,10 +85,16 @@
             android:defaultValue="true" />
 
 	<com.cosmic.settings.preferences.SystemSettingSwitchPreference
-          android:key="charging_animation"
-          android:title="@string/charging_animation_title"
-          android:summary="@string/charging_animation_summary"
-          android:defaultValue="true" />
+            android:key="charging_animation"
+            android:title="@string/charging_animation_title"
+            android:summary="@string/charging_animation_summary"
+            android:defaultValue="true" />
+
+        <com.cosmic.settings.preferences.SystemSettingSwitchPreference
+            android:key="lockscreen_battery_info"
+            android:title="@string/lockscreen_charging_current_title"
+            android:summary="@string/lockscreen_charging_current_summary"
+            android:defaultValue="true" />
 
         <com.cosmic.settings.preferences.SystemSettingListPreference
             android:key="lockscreen_date_selection"
