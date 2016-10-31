@@ -19,6 +19,7 @@
     <string name="app_name">Galaxy</string>
     <string name="header_category">Galaxy</string>
     <string name="title">Galaxy</string>
+    <string name="galaxy_summary_title">Customisations from another Space-Time Continuum</string>
 
     <!-- Activity titles defined in AndroidManifest.xml -->
     <string name="title_clipboard_share">Copy to Clipboard</string>

@@ -148,7 +148,5 @@ public class StatusbarHolder extends SettingsPreferenceFragment {
                     getString(R.string.network_traffic_title),
                     getString(R.string.ticker_screen_title)};
         return titleString;
+        }
     }
-}
-
-
