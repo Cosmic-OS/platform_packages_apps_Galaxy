@@ -316,6 +316,11 @@ device speaker</string>
     <!-- double tap power button vibration -->
     <string name="dbl_tap_vib_title">Double tap power for camera vibration</string>
     <string name="dbl_tap_vib_summary">Vibrate on double tap of power button when enabled</string>
+    <!-- Heads up settings -->
+    <string name="headsup_settings_title">Peeking notifications</string>
+    <string name="summary_heads_up_enabled">Peeking notifications are enabled</string>
+    <string name="summary_heads_up_disabled">Peeking notifications are disabled</string>
+    <string name="heads_up_disabled_notice">To allow applications to display interactive notifications in a pop-up window on your screen, enable Peeking notifications.</string>
 
     <!-- Power Menu fragment -->
     <string name="powermenu_settings_title">Power menu</string>
