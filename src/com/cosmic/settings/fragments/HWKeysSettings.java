@@ -19,6 +19,8 @@ package com.cosmic.settings.fragments;
 import android.content.ContentResolver;
 import android.os.Bundle;
 import android.os.UserHandle;
+import android.os.Handler;
+import android.os.Vibrator;
 import android.support.v7.preference.PreferenceCategory;
 import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
@@ -31,6 +33,7 @@ import com.android.internal.logging.MetricsLogger;
 import com.android.internal.logging.MetricsProto.MetricsEvent;
 import com.android.internal.utils.du.ActionConstants;
 import com.android.internal.utils.du.DUActionUtils;
+import com.cosmic.settings.preferences.CustomSeekBarPreference;
 
 import com.android.settings.R;
 
@@ -67,7 +70,9 @@ public class HWKeysSettings extends ActionFragment implements OnPreferenceChange
     private ListPreference mScreenrecordChordType;
     private SwitchPreference mHwKeyDisable;
     private ListPreference mBacklightTimeout;
-    private SwitchPreference mButtonBrightness;
+    private CustomSeekBarPreference mButtonBrightness;
+
+    private Handler mHandler;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -117,7 +122,9 @@ public class HWKeysSettings extends ActionFragment implements OnPreferenceChange
         mBacklightTimeout =
                 (ListPreference) findPreference(KEY_BACKLIGHT_TIMEOUT);
         mButtonBrightness =
-                (SwitchPreference) findPreference(KEY_BUTTON_BRIGHTNESS);
+                (CustomSeekBarPreference) findPreference(KEY_BUTTON_BRIGHTNESS);
+
+        mHandler = new Handler();
 
         // back key
         if (!hasBackKey) {
@@ -155,9 +162,10 @@ public class HWKeysSettings extends ActionFragment implements OnPreferenceChange
             }
 
             if (mButtonBrightness != null) {
-        	mButtonBrightness.setChecked((Settings.System.getInt(getContentResolver(),
-            	    Settings.System.BUTTON_BRIGHTNESS, 1) == 1));
-        	mButtonBrightness.setOnPreferenceChangeListener(this);
+                int ButtonBrightness = Settings.System.getInt(getContentResolver(),
+                                Settings.System.BUTTON_BRIGHTNESS, 255);
+                mButtonBrightness.setValue(ButtonBrightness / 1);
+                mButtonBrightness.setOnPreferenceChangeListener(this);
             }
         } else {
             prefScreen.removePreference(mBacklightTimeout);
@@ -233,9 +241,9 @@ public class HWKeysSettings extends ActionFragment implements OnPreferenceChange
                     .setSummary(mBacklightTimeout.getEntries()[BacklightTimeoutIndex]);
             return true;
         } else if (preference == mButtonBrightness) {
-            boolean value = (Boolean) newValue;
+            int value = (Integer) newValue;
             Settings.System.putInt(getActivity().getContentResolver(),
-                    Settings.System.BUTTON_BRIGHTNESS, value ? 1 : 0);
+                    Settings.System.BUTTON_BRIGHTNESS, value * 1);
             return true;
         }
         return false;
