@@ -298,15 +298,6 @@
     <string name="expanded_category">Statusbar expanded</string>
     <string name="tile_category">Tile Options</string>
 
-    <!--- Small tiles count -->
-    <string name="sysui_qqs_count_title">Small quick tiles count</string>
-    <string name="sysui_qqs_count_3">3</string>
-    <string name="sysui_qqs_count_4">4</string>
-    <string name="sysui_qqs_count_5_default">5 (default)</string>
-    <string name="sysui_qqs_count_6">6</string>
-    <string name="sysui_qqs_count_7">7</string>
-    <string name="sysui_qqs_count_8">8</string>
-
     <!-- Disable QS on secure Lockscreen -->
     <string name="lockscreen_qs_disabled_title">No QS when secured</string>
     <string name="lockscreen_qs_disabled_summary">Disable quick settings tiles on secured lockscreen</string>
@@ -364,21 +355,12 @@
     <string name="qs_set_animation_duration">%1$s</string>
     <string name="qs_set_animation_interpolator">%1$s</string>
 
-    <!-- QS settings -->
-    <string name="status_bar_expanded_qs_settings">Layout</string>
-    <string name="status_bar_expanded_qs_settings_summary">Choose the number of rows and columns</string>
-    <string name="qs_cat_portrait_title">Portrait</string>
-    <string name="qs_cat_landscape_title">Landscape</string>
-    <string name="qs_rows_title">Rows</string>
+    <!-- Quick settings tiles columns and rows config -->
+    <string name="qs_layout_category">QS tiles layout</string>
+    <string name="qs_rows_portrait_title">Rows (portrait)</string>
+    <string name="qs_rows_landscape_title">Rows (landscape)</string>
     <string name="qs_columns_title">Columns</string>
-    <string name="qs_rows_columns_1_title">1</string>
-    <string name="qs_rows_columns_2_title">2</string>
-    <string name="qs_rows_columns_3_title">3</string>
-    <string name="qs_rows_columns_4_title">4</string>
-    <string name="qs_rows_columns_5_title">5</string>
-    <string name="qs_rows_columns_6_title">6</string>
-    <string name="qs_rows_columns_7_title">7</string>
-    <string name="qs_rows_columns_8_title">8</string>
+    <string name="sysui_qqs_count_title">Small QS tiles</string>
 
     <!--Galaxy buttons-->
     <string name="buttons_title">Hardware Buttons</string>

@@ -48,37 +48,26 @@ import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.internal.logging.MetricsProto.MetricsEvent;
 import com.android.settings.Utils;
+import com.cosmic.galaxy.preference.CustomSeekBarPreference;
 
-public class TileCategory extends SettingsPreferenceFragment implements
-        OnPreferenceChangeListener {
-    
-    private static final String PREF_TILE_ANIM_STYLE = 
-            "qs_tile_animation_style";
-    private static final String PREF_TILE_ANIM_DURATION = 
-            "qs_tile_animation_duration";
-    private static final String PREF_TILE_ANIM_INTERPOLATOR = 
-            "qs_tile_animation_interpolator";
-    private static final String PREF_CAT_LANDSCAPE =
-            "qs_cat_landscape";
-    private static final String PREF_ROWS_PORTRAIT =
-            "qs_rows_portrait";
-    private static final String PREF_COLUMNS_PORTRAIT =
-            "qs_columns_portrait";
-    private static final String PREF_ROWS_LANDSCAPE =
-            "qs_rows_landscape";
-    private static final String PREF_COLUMNS_LANDSCAPE =
-            "qs_columns_landscape";
-    private static final String KEY_SYSUI_QQS_COUNT = 
-            "sysui_qqs_count_key";
+public class TileCategory extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
+
+    private static final String PREF_TILE_ANIM_STYLE = "qs_tile_animation_style";
+    private static final String PREF_TILE_ANIM_DURATION = "qs_tile_animation_duration";
+    private static final String PREF_TILE_ANIM_INTERPOLATOR = "qs_tile_animation_interpolator";
+    private static final String PREF_QUICK_PULLDOWN = "quick_pulldown";
+    private static final String PREF_ROWS_PORTRAIT = "qs_rows_portrait";
+    private static final String PREF_ROWS_LANDSCAPE = "qs_rows_landscape";
+    private static final String PREF_COLUMNS = "qs_columns";
+    private static final String KEY_SYSUI_QQS_COUNT = "sysui_qqs_count_key";
 
     private ListPreference mTileAnimationStyle;
     private ListPreference mTileAnimationDuration;
     private ListPreference mTileAnimationInterpolator;
-    private ListPreference mRowsPortrait;
-    private ListPreference mColumnsPortrait;
-    private ListPreference mRowsLandscape;
-    private ListPreference mColumnsLandscape;
-    private ListPreference mSysuiQqsCount;
+    private CustomSeekBarPreference mRowsPortrait;
+    private CustomSeekBarPreference mRowsLandscape;
+    private CustomSeekBarPreference mQsColumns;
+    private CustomSeekBarPreference mSysuiQqsCount;
 
     private final Configuration mCurConfig = new Configuration();
     private ContentResolver mResolver;
@@ -90,6 +79,8 @@ public class TileCategory extends SettingsPreferenceFragment implements
         addPreferencesFromResource(R.xml.cosmic_tiles);
         PreferenceScreen prefSet = getPreferenceScreen();
         ContentResolver resolver = getActivity().getContentResolver();
+
+        int defaultValue;
 
         // Tile Animations
         mTileAnimationStyle = (ListPreference) findPreference(PREF_TILE_ANIM_STYLE);
@@ -117,42 +108,30 @@ public class TileCategory extends SettingsPreferenceFragment implements
         updateTileAnimationInterpolatorSummary(tileAnimationInterpolator);
         mTileAnimationInterpolator.setOnPreferenceChangeListener(this);
 
-        mSysuiQqsCount = (ListPreference) findPreference(KEY_SYSUI_QQS_COUNT);
-        if (mSysuiQqsCount != null) {
-           mSysuiQqsCount.setOnPreferenceChangeListener(this);
-           int SysuiQqsCount = Settings.Secure.getInt(resolver,
-                    Settings.Secure.QQS_COUNT, 5);
-           mSysuiQqsCount.setValue(Integer.toString(SysuiQqsCount));
-           mSysuiQqsCount.setSummary(mSysuiQqsCount.getEntry());
-        }
-
-        mRowsPortrait = (ListPreference) findPreference(PREF_ROWS_PORTRAIT);
-        int rowsPortrait = Settings.System.getInt(getContentResolver(),
-                Settings.System.QS_ROWS_PORTRAIT, 3);
-        mRowsPortrait.setValue(String.valueOf(rowsPortrait));
-        mRowsPortrait.setSummary(mRowsPortrait.getEntry());
+        mRowsPortrait = (CustomSeekBarPreference) findPreference(PREF_ROWS_PORTRAIT);
+        int rowsPortrait = Settings.Secure.getInt(resolver,
+                Settings.Secure.QS_ROWS_PORTRAIT, 3);
+        mRowsPortrait.setValue(rowsPortrait / 1);
         mRowsPortrait.setOnPreferenceChangeListener(this);
 
-        mColumnsPortrait = (ListPreference) findPreference(PREF_COLUMNS_PORTRAIT);
-        int columnsPortrait = Settings.System.getInt(getContentResolver(),
-                Settings.System.QS_COLUMNS_PORTRAIT, 4);
-        mColumnsPortrait.setValue(String.valueOf(columnsPortrait));
-        mColumnsPortrait.setSummary(mColumnsPortrait.getEntry());
-        mColumnsPortrait.setOnPreferenceChangeListener(this);
-
-        mRowsLandscape = (ListPreference) findPreference(PREF_ROWS_LANDSCAPE);
-        int rowsLandscape = Settings.System.getInt(getContentResolver(),
-                Settings.System.QS_ROWS_LANDSCAPE, 2);
-        mRowsLandscape.setValue(String.valueOf(rowsLandscape));
-        mRowsLandscape.setSummary(mRowsLandscape.getEntry());
+        defaultValue = getResources().getInteger(com.android.internal.R.integer.config_qs_num_rows_landscape_default);
+        mRowsLandscape = (CustomSeekBarPreference) findPreference(PREF_ROWS_LANDSCAPE);
+        int rowsLandscape = Settings.Secure.getInt(resolver,
+                Settings.Secure.QS_ROWS_LANDSCAPE, defaultValue);
+        mRowsLandscape.setValue(rowsLandscape / 1);
         mRowsLandscape.setOnPreferenceChangeListener(this);
 
-        mColumnsLandscape = (ListPreference) findPreference(PREF_COLUMNS_LANDSCAPE);
-        int columnsLandscape = Settings.System.getInt(getContentResolver(),
-                Settings.System.QS_COLUMNS_LANDSCAPE, 5);
-        mColumnsLandscape.setValue(String.valueOf(columnsLandscape));
-        mColumnsLandscape.setSummary(mColumnsLandscape.getEntry());
-        mColumnsLandscape.setOnPreferenceChangeListener(this);
+        mQsColumns = (CustomSeekBarPreference) findPreference(PREF_COLUMNS);
+        int columnsQs = Settings.Secure.getInt(resolver,
+                Settings.Secure.QS_COLUMNS, 3);
+        mQsColumns.setValue(columnsQs / 1);
+        mQsColumns.setOnPreferenceChangeListener(this);
+
+        mSysuiQqsCount = (CustomSeekBarPreference) findPreference(KEY_SYSUI_QQS_COUNT);
+        int SysuiQqsCount = Settings.Secure.getInt(resolver,
+                Settings.Secure.QQS_COUNT, 5);
+        mSysuiQqsCount.setValue(SysuiQqsCount / 1);
+        mSysuiQqsCount.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -184,39 +163,24 @@ public class TileCategory extends SettingsPreferenceFragment implements
             updateTileAnimationInterpolatorSummary(tileAnimationInterpolator);
             return true;
         } else if (preference == mRowsPortrait) {
-            intValue = Integer.valueOf((String) newValue);
-            index = mRowsPortrait.findIndexOfValue((String) newValue);
-            Settings.System.putInt(getContentResolver(),
-                    Settings.System.QS_ROWS_PORTRAIT, intValue);
-            preference.setSummary(mRowsPortrait.getEntries()[index]);
-            return true;
-        } else if (preference == mColumnsPortrait) {
-            intValue = Integer.valueOf((String) newValue);
-            index = mColumnsPortrait.findIndexOfValue((String) newValue);
-            Settings.System.putInt(getContentResolver(),
-                    Settings.System.QS_COLUMNS_PORTRAIT, intValue);
-            preference.setSummary(mColumnsPortrait.getEntries()[index]);
+            int rowsPortrait = (Integer) newValue;
+            Settings.Secure.putInt(getActivity().getContentResolver(),
+                    Settings.Secure.QS_ROWS_PORTRAIT, rowsPortrait * 1);
             return true;
         } else if (preference == mRowsLandscape) {
-            intValue = Integer.valueOf((String) newValue);
-            index = mRowsLandscape.findIndexOfValue((String) newValue);
-            Settings.System.putInt(getContentResolver(),
-                    Settings.System.QS_ROWS_LANDSCAPE, intValue);
-            preference.setSummary(mRowsLandscape.getEntries()[index]);
+            int rowsLandscape = (Integer) newValue;
+            Settings.Secure.putInt(getActivity().getContentResolver(),
+                    Settings.Secure.QS_ROWS_LANDSCAPE, rowsLandscape * 1);
             return true;
-        } else if (preference == mColumnsLandscape) {
-            intValue = Integer.valueOf((String) newValue);
-            index = mColumnsLandscape.findIndexOfValue((String) newValue);
-            Settings.System.putInt(getContentResolver(),
-                    Settings.System.QS_COLUMNS_LANDSCAPE, intValue);
-            preference.setSummary(mColumnsLandscape.getEntries()[index]);
+        } else if (preference == mQsColumns) {
+            int qsColumns = (Integer) newValue;
+            Settings.Secure.putInt(getActivity().getContentResolver(),
+                    Settings.Secure.QS_COLUMNS, qsColumns * 1);
             return true;
-       } else if (preference == mSysuiQqsCount) {
-            String SysuiQqsCount = (String) newValue;
-            int SysuiQqsCountValue = Integer.parseInt(SysuiQqsCount);
-            Settings.Secure.putInt(getContentResolver(), Settings.Secure.QQS_COUNT, SysuiQqsCountValue);
-            int SysuiQqsCountIndex = mSysuiQqsCount.findIndexOfValue(SysuiQqsCount);
-            mSysuiQqsCount.setSummary(mSysuiQqsCount.getEntries()[SysuiQqsCountIndex]);
+        } else if (preference == mSysuiQqsCount) {
+            int SysuiQqsCount = (Integer) newValue;
+            Settings.Secure.putInt(getActivity().getContentResolver(),
+                    Settings.Secure.QQS_COUNT, SysuiQqsCount * 1);
             return true;
       }
       return false;

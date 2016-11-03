@@ -21,13 +21,6 @@
     android:title="@string/tile_category" >
 
     <ListPreference
-        android:dialogTitle="@string/sysui_qqs_count_title"
-        android:entries="@array/sysui_qqs_count_entries"
-        android:entryValues="@array/sysui_qqs_count_values"
-        android:key="sysui_qqs_count_key"
-        android:title="@string/sysui_qqs_count_title" />
-
-    <ListPreference
         android:key="qs_tile_animation_style"
         android:title="@string/qs_tile_animation_style_title"
         android:entries="@array/qs_tile_animation_style_entries"
@@ -78,38 +71,40 @@
         android:summary="@string/lockscreen_qs_disabled_summary" />
 
     <PreferenceCategory
-        android:key="qs_cat_portrait"
-        android:title="@string/qs_cat_portrait_title">
+        android:key="qs_layout_category"
+        android:title="@string/qs_layout_category">
 
-        <ListPreference
-            android:key="qs_rows_portrait"
-            android:title="@string/qs_rows_title"
-            android:entries="@array/qs_rows_portrait_entries"
-            android:entryValues="@array/qs_rows_portrait_values" />
+    <com.cosmic.galaxy.preference.CustomSeekBarPreference
+        android:key="sysui_qqs_count_key"
+        android:title="@string/sysui_qqs_count_title"
+        settings:max="8"
+        settings:min="1"
+        settings:units=""
+        android:persistent="false" />
 
-        <ListPreference
-            android:key="qs_columns_portrait"
-            android:title="@string/qs_columns_title"
-            android:entries="@array/qs_columns_portrait_entries"
-            android:entryValues="@array/qs_columns_portrait_values" />
+    <com.cosmic.galaxy.preference.CustomSeekBarPreference
+        android:key="qs_rows_portrait"
+        android:title="@string/qs_rows_portrait_title"
+        settings:max="8"
+        settings:min="1"
+        settings:units=""
+        android:persistent="false" />
 
-    </PreferenceCategory>
+    <com.cosmic.galaxy.preference.CustomSeekBarPreference
+        android:key="qs_rows_landscape"
+        android:title="@string/qs_rows_landscape_title"
+        settings:max="3"
+        settings:min="1"
+        settings:units=""
+        android:persistent="false" />
 
-    <PreferenceCategory
-        android:key="qs_cat_landscape"
-        android:title="@string/qs_cat_landscape_title">
-
-        <ListPreference
-            android:key="qs_rows_landscape"
-            android:title="@string/qs_rows_title"
-            android:entries="@array/qs_rows_landscape_entries"
-            android:entryValues="@array/qs_rows_landscape_values" />
-
-        <ListPreference
-            android:key="qs_columns_landscape"
-            android:title="@string/qs_columns_title"
-            android:entries="@array/qs_columns_landscape_entries"
-            android:entryValues="@array/qs_columns_landscape_values" />
+    <com.cosmic.galaxy.preference.CustomSeekBarPreference
+        android:key="qs_columns"
+        android:title="@string/qs_columns_title"
+        settings:max="10"
+        settings:min="1"
+        settings:units=""
+        android:persistent="false" />
 
     </PreferenceCategory>
 
