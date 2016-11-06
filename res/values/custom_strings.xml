@@ -246,6 +246,9 @@
 
     <!-- Miscellaneous fragment -->
     <string name="misc_settings_title">Miscellaneous</string>
+    <!-- Screenshot delay -->
+    <string name="screenshot_delay_title">Screenshot delay</string>
+    <string name="screenshot_delay_summary">Adjust the time for when a screenshot is captured</string>
 
     <!-- Power Menu fragment -->
     <string name="powermenu_settings_title">Power Menu</string>
