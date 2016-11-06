@@ -350,6 +350,9 @@ device speaker</string>
     <!-- Toast Icons -->
     <string name="toast_icon_title">Toast icon</string>
     <string name="toast_icon_summary">Display the app icon corresponding with the toast</string>
+    <!-- Screenshot delay -->
+    <string name="screenshot_delay_title">Screenshot delay</string>
+    <string name="screenshot_delay_summary">Adjust the time for when a screenshot is captured</string>
 
     <!-- Power Menu fragment -->
     <string name="powermenu_settings_title">Power menu</string>
