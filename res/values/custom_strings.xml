@@ -82,6 +82,8 @@
     <!-- Keyguard Statusbar Clock -->
     <string name="keyguard_statusbar_clock_title">Keyguard statusbar clock</string>
     <string name="keyguard_statusbar_clock_summary">Show the left statusbar clock on the keyguard</string>
+    <!-- Lockscreen Visualizer -->
+    <string name="lockscreen_visualizer_title">Display music visualizer</string>
 
     <!-- Navbar fragment -->
     <string name="navbar_settings_title">Navigation bar</string>

@@ -40,5 +40,9 @@
         android:summary="@string/unlock_scramble_pin_layout_summary"
         android:defaultValue="false" />
 
+    <com.cosmic.settings.preferences.SecureSettingSwitchPreference
+        android:key="lockscreen_visualizer"
+        android:title="@string/lockscreen_visualizer_title"
+        android:defaultValue="true"/>
 
 </PreferenceScreen>
