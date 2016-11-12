@@ -48,4 +48,10 @@
         android:entryValues="@array/volbtn_cursor_control_values"
         android:persistent="false" />
 
+    <ListPreference
+        android:key="screenrecord_chord_type"
+        android:title="@string/screen_record_chord_title"
+        android:entries="@array/screen_record_chord_entries"
+        android:entryValues="@array/screen_record_chord_values" />
+
 </PreferenceScreen>
