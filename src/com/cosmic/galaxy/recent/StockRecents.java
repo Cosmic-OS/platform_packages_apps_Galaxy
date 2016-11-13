@@ -34,7 +34,7 @@ import com.android.internal.logging.MetricsProto.MetricsEvent;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.Utils;
 
-public class Recents extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
+public class StockRecents extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
 
     private static final String IMMERSIVE_RECENTS = "immersive_recents";
 

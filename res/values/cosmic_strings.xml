@@ -108,7 +108,6 @@
     <!-- Galaxy Recents-Screen -->
     <string name="recent_title">Recents screen</string>
     <string name="recent_summary">Configure your clear all button and misc recent options</string>
-    <string name="recent_category">Recent apps</string>
     <string name="stock_recent_category">Stock Recents</string>
 
     <!-- Immersive Recents -->
@@ -130,7 +129,6 @@
     <string name="omniswitch_first_time_message">Make sure you have enabled OmniSwitch. You can do this by using \"Settings\" below</string>
     <string name="omniswitch_settings_title">OmniSwitch</string>
     <string name="omniswitch_category">OmniSwitch</string>
-    <string name="stock_recents">Stock Recents</string>
 
     <!-- Galaxy lockscreen -->
     <string name="lockscreen_title">Lockscreen</string>

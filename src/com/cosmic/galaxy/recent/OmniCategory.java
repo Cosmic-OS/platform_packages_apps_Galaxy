@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.cosmic.galaxy.recent;
+package com.android.settings.cosmic.recent;
 
 import android.app.ActivityManager;
 import android.content.Context;
@@ -39,7 +39,7 @@ import com.android.internal.logging.MetricsProto.MetricsEvent;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
-public class RecentCategory extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
+public class OmniCategory extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
 
     private static final String KEY_OMNISWITCH = "omniswitch";
     private static final String KEY_OMNI_SWITCH_PACKAGE_NAME = "org.omnirom.omniswitch";
@@ -63,7 +63,7 @@ public class RecentCategory extends SettingsPreferenceFragment implements OnPref
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        addPreferencesFromResource(R.xml.cosmic_recent);
+        addPreferencesFromResource(R.xml.cosmic_omni);
         ContentResolver resolver = getActivity().getContentResolver();
         PreferenceScreen prefSet = getPreferenceScreen();
 
