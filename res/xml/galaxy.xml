@@ -63,6 +63,13 @@
        android:icon="@drawable/ic_cosmic_lockscreen" />
 
     <PreferenceScreen
+       android:key="gesture"
+       android:fragment="com.cosmic.galaxy.gesture.GestureHolder"
+       android:title="@string/gesture_category" 
+       android:summary="@string/gesture_summary"
+       android:icon="@drawable/ic_galaxy_gesture" />
+
+    <PreferenceScreen
        android:key="advanced"
        android:fragment="com.cosmic.galaxy.advanced.AdvancedHolder"
        android:title="@string/advanced_title" 

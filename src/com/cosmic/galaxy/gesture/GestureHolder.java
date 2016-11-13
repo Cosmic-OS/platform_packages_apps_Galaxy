@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2016 Cosmic-OS
+ * Copyright (C) 2016 Cosmic-OS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.cosmic.galaxy.advanced;
+package com.cosmic.galaxy.gesture;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -34,12 +34,11 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.os.Bundle;
 import android.provider.Settings;
-import android.preference.CheckBoxPreference;
-import android.support.v7.preference.Preference;
-import android.support.v7.preference.PreferenceCategory;
 import android.support.v7.preference.PreferenceManager;
-import android.support.v7.preference.Preference.OnPreferenceChangeListener;
+import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceScreen;
+import android.support.v7.preference.PreferenceCategory;
+import android.support.v7.preference.Preference.OnPreferenceChangeListener;
 import android.support.v13.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
@@ -51,13 +50,13 @@ import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.internal.logging.MetricsProto.MetricsEvent;
 
-import com.cosmic.galaxy.advanced.AnimationSettings;
+import com.cosmic.galaxy.gesture.GestureCategory;
 import com.cosmic.galaxy.PagerSlidingTabStrip;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class AdvancedHolder extends SettingsPreferenceFragment {
+public class GestureHolder extends SettingsPreferenceFragment {
 
     ViewPager mViewPager;
     String titleString[];
@@ -106,7 +105,7 @@ public class AdvancedHolder extends SettingsPreferenceFragment {
 
         public StatusBarAdapter(FragmentManager fm) {
             super(fm);
-            frags[0] = new AnimationSettings();
+            frags[0] = new GestureCategory();
         }
 
         @Override
@@ -128,7 +127,7 @@ public class AdvancedHolder extends SettingsPreferenceFragment {
     private String[] getTitles() {
         String titleString[];
         titleString = new String[]{
-                    getString(R.string.animation_category)};
+                    getString(R.string.gesture_category)};
         return titleString;
     }
 }

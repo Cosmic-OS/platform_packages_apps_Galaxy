@@ -43,6 +43,12 @@
     <string name="icon_category">Icons</string>
     <string name="extra_category">Extras</string>
 
+   <!--Galaxy navigation-->
+    <string name="navigation_title">Navigation bar options</string>
+    <string name="navigation_summary">Customize Navbar size,buttons,layout,and colors</string>
+    <string name="navigationbuttons_category">Layouts</string>
+    <string name="navigation_dimen_category">Navbar size</string>
+
     <!--Galaxy Quick settings-->
     <string name="quicksettings_title">Quick settings</string>
     <string name="quicksettings_summary">Manage your quick tiles and expanded statusbar</string>
@@ -165,6 +171,10 @@
     <string name="lockscreen_enable_power_menu_title">Show power menu lock screen</string>
     <string name="lockscreen_enable_power_menu_summary">This option will only disable the power menu on secure lock screens</string>
 
+    <!--Galaxy Gestures-->
+    <string name="gesture_category">Gesture</string>
+    <string name="gesture_summary">Gesture based options/actions</string>
+
     <!--Galaxy advanced-->
     <string name="advanced_title">Advanced UI</string>
     <string name="advanced_summary">Heavy custom features</string>
@@ -233,6 +243,7 @@
     <string name="listview_overshoot_interpolator">Overshoot</string>
     <string name="listview_anticipate_overshoot_interpolator">Anticipate and overshoot</string>
     <string name="listview_bounce_interpolator">Bounce</string>
+
     <!-- Power menu Animations  -->
     <string name="power_menu_animation_title">Power menu animation</string>
     <string name="power_menu_animation_summary">Change the enter/exit animation of the power menu</string>
