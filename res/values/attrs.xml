@@ -73,16 +73,6 @@
         <attr name="useDefaultController" format="boolean" />
     </declare-styleable>
 
-    <!-- Color picker preference -->
-    <declare-styleable name="ColorPickerPreference">
-        <attr name="defaultColor" format="color" />
-        <attr name="resetColor1" format="color" />
-        <attr name="resetColor2" format="color" />
-        <attr name="resetColor1Title" format="string" />
-        <attr name="resetColor2Title" format="string" />
-        <attr name="alphaSliderVisible" format="boolean" />
-    </declare-styleable>
-
     <!-- Base attributes available to CustomSeekBarPreference. -->
     <declare-styleable name="CustomSeekBarPreference">
         <attr name="interval" format="integer" />
@@ -90,4 +80,5 @@
         <attr name="max" format="integer" />
         <attr name="units" format="string|reference" />
     </declare-styleable>
+
 </resources>
