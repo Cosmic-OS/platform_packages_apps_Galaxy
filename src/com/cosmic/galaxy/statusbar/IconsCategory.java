@@ -17,6 +17,7 @@
 package com.cosmic.galaxy.statusbar;
 
 import android.app.ActivityManager;
+import android.content.ContentResolver;
 import android.content.Context;
 import android.content.res.Resources;
 import android.os.Bundle;
@@ -58,8 +59,6 @@ public class IconsCategory extends SettingsPreferenceFragment implements
         int EnableNC = Settings.System.getInt(getContentResolver(),
                 STATUS_BAR_NOTIF_COUNT, 0);
         mEnableNC.setChecked(EnableNC != 0);
-    }
-
     }
 
     @Override

@@ -52,7 +52,7 @@
 
         <Preference
             android:key="wakelockblocker"
-            android:fragment="com.android.settings.cosmic.advanced.WakelockBlocker"
+            android:fragment="com.cosmic.galaxy.advanced.WakelockBlocker"
             android:title="@string/wakelockblocker_category" />
 
 </PreferenceScreen>
