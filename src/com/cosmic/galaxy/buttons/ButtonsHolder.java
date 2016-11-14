@@ -51,8 +51,8 @@ import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.internal.logging.MetricsProto.MetricsEvent;
 
-import com.cosmic.buttons.PowermenuCategory;
-import com.cosmic.buttons.PowerMenuFragment;
+import com.cosmic.galaxy.buttons.PowermenuCategory;
+import com.cosmic.galaxy.buttons.PowerMenuFragment;
 import com.cosmic.galaxy.buttons.VolumeCategory;
 import com.cosmic.galaxy.PagerSlidingTabStrip;
 

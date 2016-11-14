@@ -43,7 +43,7 @@ public class PowermenuCategory extends SettingsPreferenceFragment implements
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        addPreferencesFromResource(R.xml.aosip_powermenu);
+        addPreferencesFromResource(R.xml.cosmic_powermenu);
 
     }
 
