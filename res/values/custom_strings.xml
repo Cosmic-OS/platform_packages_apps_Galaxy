@@ -312,6 +312,9 @@ device speaker</string>
     <string name="smart_pulldown_none">no notifications</string>
     <string name="smart_pulldown_dismissable">no dismissable</string>
     <string name="smart_pulldown_ongoing">no ongoing</string>
+    <!-- Quick settings tiles columns and rows config -->
+    <string name="qs_layout_category">QS tiles layout</string>
+    <string name="qs_columns_title">Columns</string>
 
     <!-- Notification & Media fragment -->
     <string name="notification_media_settings_title">Media &amp; notifications</string>

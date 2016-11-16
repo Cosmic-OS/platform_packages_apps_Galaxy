@@ -32,16 +32,20 @@ import com.android.internal.widget.LockPatternUtils;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
+import com.flash.settings.preferences.CustomSeekBarPreference;
+
 public class NotificationDrawerSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
     private static final String QUICK_PULLDOWN = "quick_pulldown";
     private static final String PREF_SMART_PULLDOWN = "smart_pulldown";
     private static final String PREF_LOCK_QS_DISABLED = "lockscreen_qs_disabled";
+    private static final String PREF_COLUMNS = "qs_layout_columns";
 
     private ListPreference mQuickPulldown;
     ListPreference mSmartPulldown;
     private SwitchPreference mLockQsDisabled;
+    private CustomSeekBarPreference mQsColumns;
 
     private static final int MY_USER_ID = UserHandle.myUserId();
 
@@ -75,6 +79,12 @@ public class NotificationDrawerSettings extends SettingsPreferenceFragment imple
         } else {
             prefScreen.removePreference(mLockQsDisabled);
         }
+
+        mQsColumns = (CustomSeekBarPreference) findPreference(PREF_COLUMNS);
+        int columnsQs = Settings.System.getInt(resolver,
+                Settings.System.QS_LAYOUT_COLUMNS, 3);
+        mQsColumns.setValue(columnsQs / 1);
+        mQsColumns.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -99,6 +109,10 @@ public class NotificationDrawerSettings extends SettingsPreferenceFragment imple
         } else if  (preference == mLockQsDisabled) {
             boolean checked = ((SwitchPreference)preference).isChecked();
             Settings.Secure.putInt(resolver, Settings.Secure.LOCK_QS_DISABLED, checked ? 1:0);
+            return true;
+        } else if (preference == mQsColumns) {
+            int qsColumns = (Integer) newValue;
+            Settings.System.putInt(resolver, Settings.System.QS_LAYOUT_COLUMNS, qsColumns * 1);
             return true;
         }
         return false;

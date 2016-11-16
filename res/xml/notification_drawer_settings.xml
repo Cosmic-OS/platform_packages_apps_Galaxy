@@ -61,6 +61,14 @@
             android:title="@string/lockscreen_qs_disabled_title"
             android:summary="@string/lockscreen_qs_disabled_summary"/>
 
+        <com.cosmic.settings.preferences.CustomSeekBarPreference
+            android:key="qs_layout_columns"
+            android:title="@string/qs_columns_title"
+            android:max="7"
+            settings:min="1"
+            settings:units=""
+            android:persistent="false" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>
