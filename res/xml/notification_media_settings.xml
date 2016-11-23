@@ -39,6 +39,14 @@
         android:title="@string/notif_cat_title" >
 
         <PreferenceScreen
+               android:title="@string/power_notification_title"
+               android:summary="@string/power_notification_summary">
+            <intent android:action="android.intent.action.MAIN"
+               android:targetPackage="com.android.systemui"
+               android:targetClass="com.android.systemui.tuner.PowerNotificationControlsActivity" />
+        </PreferenceScreen>
+
+        <PreferenceScreen
             android:fragment="com.cosmic.settings.fragments.HeadsUpSettings"
             android:key="heads_up_settings"
             android:title="@string/headsup_settings_title" />
