@@ -41,11 +41,15 @@ public class NotificationDrawerSettings extends SettingsPreferenceFragment imple
     private static final String PREF_SMART_PULLDOWN = "smart_pulldown";
     private static final String PREF_LOCK_QS_DISABLED = "lockscreen_qs_disabled";
     private static final String PREF_COLUMNS = "qs_layout_columns";
+    private static final String PREF_ROWS_PORTRAIT = "qs_rows_portrait";
+    private static final String PREF_ROWS_LANDSCAPE = "qs_rows_landscape";
 
     private ListPreference mQuickPulldown;
     ListPreference mSmartPulldown;
     private SwitchPreference mLockQsDisabled;
     private CustomSeekBarPreference mQsColumns;
+    private CustomSeekBarPreference mRowsPortrait;
+    private CustomSeekBarPreference mRowsLandscape;
 
     private static final int MY_USER_ID = UserHandle.myUserId();
 
@@ -85,6 +89,19 @@ public class NotificationDrawerSettings extends SettingsPreferenceFragment imple
                 Settings.System.QS_LAYOUT_COLUMNS, 3);
         mQsColumns.setValue(columnsQs / 1);
         mQsColumns.setOnPreferenceChangeListener(this);
+
+        mRowsPortrait = (CustomSeekBarPreference) findPreference(PREF_ROWS_PORTRAIT);
+        int rowsPortrait = Settings.System.getInt(resolver,
+                Settings.System.QS_ROWS_PORTRAIT, 3);
+        mRowsPortrait.setValue(rowsPortrait / 1);
+        mRowsPortrait.setOnPreferenceChangeListener(this);
+
+        int defaultValue = getResources().getInteger(com.android.internal.R.integer.config_qs_num_rows_landscape_default);
+        mRowsLandscape = (CustomSeekBarPreference) findPreference(PREF_ROWS_LANDSCAPE);
+        int rowsLandscape = Settings.System.getInt(resolver,
+                Settings.System.QS_ROWS_LANDSCAPE, defaultValue);
+        mRowsLandscape.setValue(rowsLandscape / 1);
+        mRowsLandscape.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -113,6 +130,14 @@ public class NotificationDrawerSettings extends SettingsPreferenceFragment imple
         } else if (preference == mQsColumns) {
             int qsColumns = (Integer) newValue;
             Settings.System.putInt(resolver, Settings.System.QS_LAYOUT_COLUMNS, qsColumns * 1);
+            return true;
+        } else if (preference == mRowsPortrait) {
+            int rowsPortrait = (Integer) newValue;
+            Settings.System.putInt(resolver, Settings.System.QS_ROWS_PORTRAIT, rowsPortrait * 1);
+            return true;
+        } else if (preference == mRowsLandscape) {
+            int rowsLandscape = (Integer) newValue;
+            Settings.System.putInt(resolver, Settings.System.QS_ROWS_LANDSCAPE, rowsLandscape * 1);
             return true;
         }
         return false;
