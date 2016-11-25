@@ -188,7 +188,11 @@
     <string name="navigation_summary">Customize Navbar size,buttons,layout,and colors</string>
     <string name="navigationbuttons_category">NavBar</string>
     <string name="navigation_dimen_category">Navbar size</string>
-   <string name="navbar_tuner_title">Navbar tuner</string>
+    <string name="navbar_tuner_title">Navbar tuner</string>
+
+    <!-- multiwindow navbar gesture -->
+    <string name="nav_gesture_title">Enable multiwindow swipe-up gesture</string>
+    <string name="nav_gesture_summary">Gesture to enter multiwindow by swiping up from the recents button</string>
 
     <!-- qs brightness slider -->
     <string name="qs_brightness_slider_title">Brightness slider</string>
