@@ -131,7 +131,7 @@ public class NotificationHolder extends SettingsPreferenceFragment {
     private String[] getTitles() {
         String titleString[];
         titleString = new String[]{
-                    getString(R.string.notification_category),
+                    getString(R.string.notification_title),
                     getString(R.string.omni_battery_light_settings),
                     getString(R.string.notification_light_title)};
         return titleString;

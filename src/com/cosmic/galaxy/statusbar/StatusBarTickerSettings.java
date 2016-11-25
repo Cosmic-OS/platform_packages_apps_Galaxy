@@ -51,7 +51,7 @@ public class StatusBarTickerSettings extends SettingsPreferenceFragment implemen
             "status_bar_ticker_icon_color";
 
     private static final int WHITE                  = 0xffffffff;
-    private static final int VRTOXIN_BLUE           = 0xff1976D2;
+    private static final int BLUE                   = 0xff1976D2;
 
     private static final int MENU_RESET = Menu.FIRST;
     private static final int DLG_RESET  = 0;
@@ -100,7 +100,7 @@ public class StatusBarTickerSettings extends SettingsPreferenceFragment implemen
             mTextColor.setNewPreviewColor(intColor);
             hexColor = String.format("#%08x", (0xffffffff & intColor));
             mTextColor.setSummary(hexColor);
-            mTextColor.setResetColors(WHITE, VRTOXIN_BLUE);
+            mTextColor.setResetColors(WHITE, WHITE);
             mTextColor.setOnPreferenceChangeListener(this);
 
             mIconColor =
@@ -220,10 +220,10 @@ public class StatusBarTickerSettings extends SettingsPreferenceFragment implemen
                                     Settings.System.STATUS_BAR_SHOW_TICKER, 1);
                             Settings.System.putInt(getOwner().mResolver,
                                     Settings.System.STATUS_BAR_TICKER_TEXT_COLOR,
-                                    VRTOXIN_BLUE);
+                                    BLUE);
                             Settings.System.putInt(getOwner().mResolver,
                                     Settings.System.STATUS_BAR_TICKER_ICON_COLOR,
-                                    VRTOXIN_BLUE);
+                                    BLUE);
                             getOwner().refreshSettings();
                         }
                     })

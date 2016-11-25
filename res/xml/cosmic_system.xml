@@ -28,23 +28,6 @@
             android:targetClass="com.android.systemui.tuner.ColorAndAppearanceActivity" />
     </PreferenceScreen>
 
-        <com.cosmic.galaxy.preference.SystemSettingSwitchPreference
-            android:key="disable_fc_notifications"
-            android:title="@string/disable_fc_notifications_title"
-            android:summary="@string/disable_fc_notifications_summary"
-            android:defaultValue="false" />
-
-        <com.cosmic.galaxy.preference.SystemSettingSwitchPreference
-            android:key="flashlight_notification"
-            android:title="@string/flashlight_notification_title"
-            android:summary="@string/flashlight_notification_summary"
-            android:defaultValue="false" />
-
-        <com.cosmic.galaxy.preference.SystemSettingSwitchPreference
-             android:key="force_expanded_notifications"
-             android:title="@string/force_expanded_notifications_title"
-             android:summary="@string/force_expanded_notifications_summary" />
-
         <ListPreference
              android:key="media_scanner_on_boot"
              android:title="@string/media_scanner_on_boot_title"

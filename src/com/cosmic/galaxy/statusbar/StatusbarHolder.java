@@ -55,7 +55,6 @@ import com.cosmic.galaxy.statusbar.CarrierLabelSettings;
 import com.cosmic.galaxy.statusbar.ClockCategory;
 import com.cosmic.galaxy.statusbar.BatteryCategory;
 import com.cosmic.galaxy.statusbar.IconsCategory;
-import com.cosmic.galaxy.statusbar.ExtrasCategory;
 import com.cosmic.galaxy.statusbar.StatusBarTickerSettings;
 import com.cosmic.galaxy.statusbar.StatusBarLogo;
 import com.cosmic.galaxy.statusbar.TrafficCategory;
@@ -113,14 +112,13 @@ public class StatusbarHolder extends SettingsPreferenceFragment {
 
         public StatusBarAdapter(FragmentManager fm) {
             super(fm);
-            frags[0] = new CarrierLabelSettings();
-            frags[1] = new StatusBarLogo();
-            frags[2] = new BatteryCategory();
+            frags[0] = new StatusBarLogo();
+            frags[1] = new BatteryCategory();
+            frags[2] = new CarrierLabelSettings();
             frags[3] = new ClockCategory();
-            frags[4] = new ExtrasCategory();
-            frags[5] = new IconsCategory();
-            frags[6] = new TrafficCategory();
-            frags[7] = new StatusBarTickerSettings();
+            frags[4] = new IconsCategory();
+            frags[5] = new TrafficCategory();
+            frags[6] = new StatusBarTickerSettings();
         }
 
         @Override
@@ -142,11 +140,10 @@ public class StatusbarHolder extends SettingsPreferenceFragment {
     private String[] getTitles() {
         String titleString[];
         titleString = new String[]{
-                    getString(R.string.carrier_label_settings_title),
                     getString(R.string.logo_category),
                     getString(R.string.battery_category),
+                    getString(R.string.carrier_label_settings_title),
                     getString(R.string.clock_category),
-                    getString(R.string.extra_category),
                     getString(R.string.icon_category),
                     getString(R.string.network_traffic_title),
                     getString(R.string.ticker_screen_title)};

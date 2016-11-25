@@ -49,7 +49,6 @@ public class StatusBarLogo extends SettingsPreferenceFragment implements OnPrefe
     private static final String PREF_HIDE_LOGO = "logo_hide_logo";
 
     private static final int DEFAULT_COLOR = 0xffffffff;
-    private static final int CYANIDE_BLUE = 0xff1976D2;
 
     private static final int MENU_RESET = Menu.FIRST;
     private static final int DLG_RESET = 0;
@@ -131,7 +130,7 @@ public class StatusBarLogo extends SettingsPreferenceFragment implements OnPrefe
                 (ColorPickerPreference) findPreference(STATUS_BAR_COSMIC_LOGO_COLOR_DARK_MODE);
         mLogoColorDarkMode.setOnPreferenceChangeListener(this);
         intColor = Settings.System.getInt(mResolver,
-                "status_bar_cosmic_logo_color_dark_mode", 0xffffffff);
+                "status_bar_cosmic_logo_color_dark_mode", 0xff000000);
         hexColor = String.format("#%08x", (0xffffffff & intColor));
         mLogoColorDarkMode.setSummary(hexColor);
         mLogoColorDarkMode.setNewPreviewColor(intColor);
@@ -283,7 +282,7 @@ public class StatusBarLogo extends SettingsPreferenceFragment implements OnPrefe
                                     "status_bar_cosmic_logo_number_of_notification_icons", 4);
                             Settings.System.putInt(getOwner().mResolver,
                                     "status_bar_cosmic_logo_color",
-                                    CYANIDE_BLUE);
+                                    0xffffffff);
                             Settings.System.putInt(getOwner().mResolver,
                                     "status_bar_cosmic_logo_color_dark_mode",
                                     0xffff0000);

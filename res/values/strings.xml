@@ -60,30 +60,24 @@
     <string name="position_centered_title">Centered</string>
     <string name="help">Help</string>
     <string name="reset_message">Reset all entries to default?</string>
-    <string name="profiles_add">Add</string>
     <string name="profile_choose_app">Choose app</string>
     <string name="profile_reset_title">Reset</string>
     <string name="show_title">Show</string>
-    <string name="choose_app">Choose app</string>
     <string name="text_title">Text</string>
     <string name="icon_title">Icon</string>
     <string name="color_title">Color</string>
     <string name="colors_title">Colors</string>
 
     <!--Galaxy statusbar-->
-    <string name="statusbar_bar_title">Statusbar options</string>
-    <string name="statusbar_bar_summary">Adjust items like battery,clock,icons,and colors</string>
+    <string name="statusbar_bar_title">Status Bar</string>
+    <string name="statusbar_bar_summary">Adjust various statusbar elements</string>
     <string name="clock_category">Clock</string>
     <string name="battery_category">Battery</string>
     <string name="icon_category">Icons</string>
-    <string name="extra_category">Extras</string>
     <string name="traffic_category">Network Traffic</string>
     <string name="statusbar_items_category">Statusbar items</string>
     <string name="logo_category">Cosmic-OS Logo</string>
 
-    <!-- Clock settings -->
-    <string name="clock_settings_title">Clock settings</string>
-    <string name="clock_settings_summary">Custom clock and date options</string>
     <!-- clock date options -->
     <string name="clock_title_enable">Alignment</string>
     <string name="status_bar_show_clock_title">Show clock and date</string>
@@ -186,16 +180,19 @@
     <string name="status_bar_notif_count_summary">Display the number of pending notifications</string>
 
     <!--Galaxy navigation-->
-    <string name="navigation_title">Navigation bar options</string>
+    <string name="navigation_title">Navigation</string>
     <string name="navigation_summary">Customize Navbar size,buttons,layout,and colors</string>
     <string name="navigationbuttons_category">NavBar</string>
     <string name="navigation_dimen_category">Navbar size</string>
    <string name="navbar_tuner_title">Navbar tuner</string>
 
-    <!--Galaxy Notification-->
-    <string name="notification_title">Notification options</string>
-    <string name="notification_summary">Change notif settings such as leds</string>
-    <string name="notification_category">Notifications</string>
+    <!-- qs brightness slider -->
+    <string name="qs_brightness_slider_title">Brightness slider</string>
+    <string name="qs_brightness_slider_summary">Show brightness slider on quick settings panel</string>
+
+   <!-- Galaxy Notification -->
+    <string name="notification_title">Notification</string>
+    <string name="notification_summary">Change settings such as leds and breathing</string>
     <string name="breathing_notifications_category">Breathing Notifications</string>
 
     <!-- Breathing Notifications -->
@@ -224,9 +221,9 @@
     <string name="led_color_green">Green</string>
     <string name="led_color_red">Red</string>
     <string name="led_color_blue">Blue</string>
-    <string name="ok">OK</string>
     <string name="advanced">Advanced</string>
     <string name="profiles_add">Add...</string>
+
     <!-- Notification light dialogs -->
     <string name="edit_light_settings">Edit light settings</string>
     <string name="pulse_speed_title">Pulse length and speed</string>
@@ -234,6 +231,7 @@
     <string name="custom_time">Custom</string>
     <string name="dialog_delete_title">Delete</string>
     <string name="dialog_delete_message">Remove selected item?</string>
+
     <!-- Values for the notification light pulse spinners -->
     <string name="pulse_length_always_on">Always on</string>
     <string name="pulse_length_very_short">Very short</string>
@@ -246,6 +244,7 @@
     <string name="pulse_speed_normal">Normal</string>
     <string name="pulse_speed_slow">Slow</string>
     <string name="pulse_speed_very_slow">Very slow</string>
+
     <!-- Lights settings screen, notification light settings -->
     <string name="notification_light_title">Notification light</string>
     <string name="notificationlight_title">Notification LED settings</string>
@@ -263,18 +262,35 @@
     <string name="keywords_lights_brightness_level">dim leds brightness</string>
     <string name="notification_light_automagic">AutoColor</string>
     <string name="notification_light_automagic_summary">Automatically set a proper color for the led notification if the app has no custom values</string>
+
     <!-- Lights settings, LED notification -->
     <string name="led_notification_title">Light settings</string>
     <string name="led_notification_text">LED light enabled by settings</string>
     <string name="notification_light_no_apps_summary">To add per app control, activate \'%1$s\' and press \'\u002b\' on the menu bar</string>
     <string name="font_sample_text">11:57</string>
+
     <!-- Add application dialog box title -->
     <string name="profile_choose_app">Choose app</string>
-    <string name="reset">Reset</string>
     <string name="color_picker_dialog_title">Color</string>
 
+    <!-- Power notification controls -->
+    <string name="power_notification_title">Power notification controls</string>
+    <string name="power_notification_summary">Advanced notification controls and information</string>
+
+    <!-- Force expanded notifications -->
+    <string name="force_expanded_notifications_title">Force Expanded Notifications</string>
+    <string name="force_expanded_notifications_summary">Available only for apps that support expanded notifications</string>
+
+    <!-- Flashlight notification -->
+    <string name="flashlight_notification_title">Flashlight notification</string>
+    <string name="flashlight_notification_summary">Enable notificiation for when the flashlight is on</string>
+
+    <!-- Disabling FC notifications -->
+    <string name="disable_fc_notifications_title">Disable FC Notifications</string>
+    <string name="disable_fc_notifications_summary">This will hide all force close notificaitons</string>
+
     <!--Galaxy Quick settings-->
-    <string name="quicksettings_title">Quick settings</string>
+    <string name="quicksettings_title">Quick Settings</string>
     <string name="quicksettings_summary">Manage your quick tiles and expanded statusbar</string>
     <string name="expanded_category">Statusbar expanded</string>
     <string name="tile_category">Tile Options</string>
@@ -307,6 +323,9 @@
     <!-- QuickSettings haptic feedback -->
     <string name="quick_settings_vibrate_title">Vibrate on touch</string>
     <string name="quick_settings_vibrate_summary">Vibrate when touching tiles</string>
+
+    <!-- Option to show brightness bar in quick settings -->
+    <string name="show_brightness">Show brightness slider</string>
 
     <!-- Status bar quick qs pulldown -->
     <string name="status_bar_quick_qs_pulldown_title">Quick pulldown</string>
@@ -359,18 +378,20 @@
     <string name="qs_rows_columns_8_title">8</string>
 
     <!--Galaxy buttons-->
-    <string name="buttons_title">Hardware buttons</string>
+    <string name="buttons_title">Hardware Buttons</string>
     <string name="buttons_summary">Tweak the actions of your volume and power buttons</string>
-    <string name="powermenu_category">Power button</string>
-    <string name="volume_category">Volume buttons</string>
+    <string name="powermenu_category">Power</string>
+    <string name="volume_category">Volume</string>
     <string name="powermenu_dialog_dim">Dialog dim background amount</string>
 
     <!-- Volume down enter do not disturb -->
     <string name="volbtn_down_zen_title">Volume down for do not disturb</string>
     <string name="volbtn_down_zen_summary">allow volume down to enter do not disturb mode</string>
+
     <!-- Volume up exit do not disturb -->
     <string name="volbtn_up_zen_title">Volume up in do not disturb</string>
     <string name="volbtn_up_zen_summary">allow volume up to exit do not disturb mode</string>
+
     <!-- Volume do not disturb switch -->
     <string name="vol_zen_title">Do not disturb switch</string>
     <string name="vol_zen_summary">Show do not disturb swith on volume panel</string>
@@ -418,10 +439,11 @@
     <string name="power_menu_animation_bottom">Bottom</string>
     <string name="power_menu_animation_top">Top</string>
 
-    <!-- Galaxy Recents-Screen -->
-    <string name="recent_title">Recents screen</string>
-    <string name="recent_summary">Configure your clear all button and misc recent options</string>
+    <!--Galaxy recentscreen-->
+    <string name="recent_title">Recents</string>
+    <string name="recent_summary">Choose Stock or OmniSwitch and settings</string>
     <string name="stock_recents_category">Stock Recents</string>
+    <string name="omniswitch_category">OmniSwitch</string>
 
     <!-- Immersive Recents -->
     <string name="immersive_recents_title">Immersive Recents</string>
@@ -433,22 +455,19 @@
     <string name="immersive_recents_navbar">Navbar only</string>
 
     <!-- OmniSwitch -->
-    <string name="omniswitch_category">OmniSwitch</string>
     <string name="recents_use_omniswitch_title">Use for recents</string>
     <string name="recents_use_omniswitch_summary">Use OmniSwitch instead of default recents view</string>
     <string name="omniswitch_start_settings_title">Settings</string>
     <string name="omniswitch_start_settings_summary">Open OmniSwitch settings</string>
     <string name="omniswitch_first_time_title">Information</string>
     <string name="omniswitch_first_time_message">Make sure you have enabled OmniSwitch. You can do this by using \"Settings\" below</string>
-    <string name="omniswitch_settings_title">OmniSwitch</string>
-    <string name="omniswitch_category">OmniSwitch</string>
 
     <!-- Galaxy lockscreen -->
     <string name="lockscreen_title">Lockscreen</string>
-    <string name="lockscreen_summary">Customize lockscreen layout</string>
-    <string name="weather_category">Lockscreen weather</string>
-    <string name="options_category">Various Options</string>
-    <string name="shortcut_category">Lockscreen shortcuts</string>
+    <string name="lockscreen_summary">Customize lockscreen layout and elements</string>
+    <string name="weather_category">Weather</string>
+    <string name="options_category">Options</string>
+    <string name="shortcut_category">Shortcuts</string>
     <string name="lockscreen_secure_options_title">Secure Lockscreen options</string>
 
     <!-- Lockscreen cover art -->
@@ -502,7 +521,6 @@
     <string name="shortcut_action_help_pie_second_layer_delete_last_entry">Removing every %1$s in the list will disable the second pie layer entirely.</string>
 
     <!-- Lockscreen weather -->
-    <string name="display_category_weather_title">Lockscreen weather options</string>
     <string name="lock_screen_weather_settings_title">Weather</string>
     <string name="weather_cat_notifications_title">Notifications</string>
     <string name="weather_show_weather_title">Show weather</string>
@@ -519,7 +537,6 @@
     <string name="icons_title">Icons</string>
     <string name="position_right_title">Right</string>
     <string name="position_centered_title">Centered</string>
-    <string name="hidden_title">Hidden</string>
     <string name="weather_hide_panel_title">Hide weather panel</string>
     <string name="weather_hide_panel_dlg_title">Choose when the weather panel should be hidden</string>
     <string name="weather_hide_panel_auto_title">Auto</string>
@@ -572,7 +589,7 @@
     <string name="fprint_sucess_vib_title">Fingerprint authentication vibration</string>
     <string name="fprint_sucess_vib_summary">Vibrate on successful fingerprint authentication</string>
 
-    <string name="lockscreen_targets_message">Lockscreen shortcuts</string>
+    <string name="lockscreen_targets_message">Bottom Shortcuts</string>
     <string name="lockscreen_corner_summary">Customize the shortcut icons in the corners</string>
 
     <string name="lockscreen_enable_power_menu_title">Show power menu lock screen</string>
@@ -581,6 +598,10 @@
     <!--Galaxy Gestures-->
     <string name="gesture_category">Gesture</string>
     <string name="gesture_summary">Gesture based options/actions</string>
+	
+	<!-- tap-to-sleep -->
+	<string name="double_tap_to_sleep_title">Tap statusbar to sleep</string>
+	<string name="double_tap_to_sleep_summary">Double tap status bar to put device to sleep</string>
 
     <!-- Status bar brightness control -->
     <string name="status_bar_brightness_control_title">Brightness control</string>
@@ -590,8 +611,6 @@
     <!--Galaxy advanced-->
     <string name="advanced_title">Advanced</string>
     <string name="advanced_summary">Extra features</string>
-    <string name="gestureanywhere_category">Gesture anywhere</string>
-    <string name="sidebar_category">App sidebar</string>
     <string name="animation_category">Animations</string>
     <string name="system_category">System Settings</string>
     <string name="wakelock_blocker_title">Wakelock Blocker</string>
@@ -599,34 +618,6 @@
     <!-- color tuner options -->
     <string name="display_color_title">Screen color &amp; appearance</string>
     <string name="display_color_summary">screen color controls and night mode</string>
-
-    <!-- qs brightness slider -->
-    <string name="qs_brightness_slider_title">Brightness slider</string>
-    <string name="qs_brightness_slider_summary">Show brightness slider on quick settings panel</string>
-
-    <!-- Preference to show/hide embedded battery percentage -->
-    <string name="show_battery_percentage">Show battery percentage</string>
-    <string name="show_battery_percentage_summary">Show battery percentage when not charging</string>
-
-    <!-- Power notification controls -->
-    <string name="power_notification_title">Power notification controls</string>
-    <string name="power_notification_summary">Advanced notification controls and information</string>
-
-    <!-- multiwindow navbar gesture -->
-    <string name="nav_gesture_title">Enable multiwindow swipe-up gesture</string>
-    <string name="nav_gesture_summary">Gesture to enter multiwindow by swiping up from the recents button</string>
-
-    <!-- Force expanded notifications -->
-    <string name="force_expanded_notifications_title">Force Expanded Notifications</string>
-    <string name="force_expanded_notifications_summary">Available only for apps that support expanded notifications</string>
-
-    <!-- Flashlight notification -->
-    <string name="flashlight_notification_title">Flashlight notification</string>
-    <string name="flashlight_notification_summary">Enable notificiation for when the flashlight is on</string>
-
-    <!-- Disabling FC notifications -->
-    <string name="disable_fc_notifications_title">Diable FC Notifications</string>
-    <string name="disable_fc_notifications_summary">This will hide all force close notificaitons</string>
 
     <!-- AOKP custom system animations -->
     <string name="animation_title">Animations</string>  
@@ -844,9 +835,6 @@
     <string name="wakelock_blocker_warning_title">Proceed with caution</string>
     <string name="wakelock_blocker_warning">Blocking wakelocks have the potential to cause instability, crashes or data loss</string>
 
-    <!-- Option to show brightness bar in quick settings -->
-    <string name="show_brightness">Show brightness slider</string>
-
     <!-- MediaScanner behavior on boot -->
     <string name="media_scanner_on_boot_title">MediaScanner behavior on boot</string>
     <string name="media_scanner_on_boot_enabled">Scan media</string>
@@ -873,7 +861,6 @@
     <string name="show_favorites_title">Show favorites</string>
     <string name="hide_help_title">Hide help</string>
     <string name="show_help_title">Show help</string>
-    <string name="empty_title">Empty</string>
 
     <!-- Color picker help screen -->
     <string name="color_picker_help_screen_title">Color Picker help</string>
@@ -903,11 +890,7 @@
     <string name="color_picker_help_palette_summary">All palette colors have a fixed value.\nA click sets the palette color as new color, without applying the new color.</string>
     <string name="color_picker_help_do_not_show_title">Don\'t show again</string>
     <string name="color_picker_help_button_ok_title">OK</string>
-	
-	<!-- tap-to-sleep -->
-	<string name="double_tap_to_sleep_title">Tap statusbar to sleep</string>
-	<string name="double_tap_to_sleep_summary">Double tap status bar to put device to sleep</string>
-	
+
 	<!-- Option to enable/disable scrolling cache -->
     <string name="pref_scrollingcache_title">Scrolling cache</string>
     <string name="pref_scrollingcache_summary">Scrolling cache may improve scrolling performance at the cost of memory</string>
@@ -915,5 +898,5 @@
     <string name="pref_scrollingcache_default_enable">Default enable</string>
     <string name="pref_scrollingcache_default_disable">Default disable</string>
     <string name="pref_scrollingcache_force_disable">Force disable</string>
- 
+
 </resources>

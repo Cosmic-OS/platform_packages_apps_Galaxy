@@ -20,7 +20,8 @@
 
     <SwitchPreference
         android:key="status_bar_cosmic_logo_show"
-        android:title="@string/status_bar_cosmic_logo_title" />
+        android:title="@string/status_bar_cosmic_logo_title" 
+        android:defaultValue="false" />
 
     <SwitchPreference
         android:key="status_bar_cosmic_logo_show_on_lock_screen"

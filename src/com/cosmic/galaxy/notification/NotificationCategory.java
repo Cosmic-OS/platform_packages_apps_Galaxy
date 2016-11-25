@@ -30,10 +30,11 @@ import android.support.v7.preference.PreferenceGroup;
 import android.support.v14.preference.SwitchPreference;
 import android.provider.Settings;
 import android.view.Gravity;
+
 import com.android.settings.R;
 import android.provider.Settings.SettingNotFoundException; 
+import com.android.internal.util.cosmic.cosmicUtils;
 import com.android.settings.SettingsPreferenceFragment;
-
 import com.android.internal.logging.MetricsProto.MetricsEvent;
 import com.android.internal.util.cosmic.cosmicUtils;
 
@@ -41,11 +42,13 @@ public class NotificationCategory extends SettingsPreferenceFragment implements
         OnPreferenceChangeListener {
     private static final String TAG = "NotificationCategory";
 
+    private static final String FLASHLIGHT_NOTIFICATION = "flashlight_notification";
     private static final String MISSED_CALL_BREATH = "missed_call_breath";
     private static final String VOICEMAIL_BREATH = "voicemail_breath";
     private static final String SMS_BREATH = "sms_breath";
     private static final String BREATHING_NOTIFICATIONS = "breathing_notifications";
 
+    private SwitchPreference mFlashlightNotification;
     private SwitchPreference mMissedCallBreath;
     private SwitchPreference mVoicemailBreath;
     private SwitchPreference mSmsBreath;
@@ -62,7 +65,6 @@ public class NotificationCategory extends SettingsPreferenceFragment implements
         super.onCreate(savedInstanceState);
 
         addPreferencesFromResource(R.xml.cosmic_notification);
-
         final PreferenceScreen prefSet = getPreferenceScreen();
         final ContentResolver resolver = getActivity().getContentResolver();
 
@@ -71,6 +73,15 @@ public class NotificationCategory extends SettingsPreferenceFragment implements
         mSmsBreath = (SwitchPreference) findPreference(SMS_BREATH);
 
         mBreathingNotifications = (PreferenceGroup) findPreference(BREATHING_NOTIFICATIONS);
+
+        mFlashlightNotification = (SwitchPreference) findPreference(FLASHLIGHT_NOTIFICATION);
+        mFlashlightNotification.setOnPreferenceChangeListener(this);
+        if (!cosmicUtils.deviceSupportsFlashLight(getActivity())) {
+            prefSet.removePreference(mFlashlightNotification);
+        } else {
+        mFlashlightNotification.setChecked((Settings.System.getInt(resolver,
+                Settings.System.FLASHLIGHT_NOTIFICATION, 0) == 1));
+        }
 
         Context context = getActivity();
         ConnectivityManager cm = (ConnectivityManager)
@@ -103,7 +114,12 @@ public class NotificationCategory extends SettingsPreferenceFragment implements
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if (preference == mMissedCallBreath) {
+        if  (preference == mFlashlightNotification) {
+            boolean checked = ((SwitchPreference)preference).isChecked();
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.FLASHLIGHT_NOTIFICATION, checked ? 1:0);
+            return true;			
+		} else if (preference == mMissedCallBreath) {
             boolean value = (Boolean) newValue;
             Settings.System.putInt(getContentResolver(), MISSED_CALL_BREATH,
                     value ? 1 : 0);
