@@ -42,4 +42,11 @@
         android:persistent="false"
         android:defaultValue="0xffffff" />
 
+    <com.cosmic.settings.preferences.SecureSettingSwitchPreference
+        android:key="force_charge_battery_text"
+        android:title="@string/force_charge_battery_text_title"
+        android:summaryOn="@string/force_charge_battery_text_summary_on"
+        android:summaryOff="@string/force_charge_battery_text_summary_off"
+        android:defaultValue="true" />
+
 </PreferenceScreen>
