@@ -103,19 +103,6 @@
     <string name="clock_date_style_uppercase">Uppercase</string>
     <string name="clock_date_format_custom">Custom java format</string>
 
-    <!-- Battery Customization -->
-    <string name="battery_style_title">Style</string>
-    <string name="battery_percent_title">Show percent</string>
-    <string name="battery_percent_none">Never</string>
-    <string name="battery_percent_always">Always</string>
-    <string name="battery_percent_expanded">Expanded</string>
-    <string name="statusbar_percent_inside_title">Percent overlay</string>
-    <string name="statusbar_percent_inside_summary">Display percent on top of the the battery image</string>
-    <string name="statusbar_charging_image_title">Charging indicator</string>
-    <string name="statusbar_category_charging_title">Charging</string>
-    <string name="statusbar_charging_image_summary">Display bolt indicator while charging. Hides percent overlay</string>
-    <string name="statusbar_battery_charging_color_title">Color</string>
-
     <!-- Status Bar Ticker -->
     <string name="ticker_screen_title">Ticker</string>
     <string name="ticker_title">Status Bar Ticker</string>
