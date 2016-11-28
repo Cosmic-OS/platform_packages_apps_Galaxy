@@ -320,6 +320,9 @@ device speaker</string>
     <string name="qs_columns_title">Columns</string>
     <string name="qs_rows_portrait_title">Rows (portrait)</string>
     <string name="qs_rows_landscape_title">Rows (landscape)</string>
+    <string name="qs_tile_title_visibility_title">QS tile titles</string>
+    <string name="qs_tile_title_visibility_summary_on">QS tile titles are on</string>
+    <string name="qs_tile_title_visibility_summary_off">QS tile titles are off</string>
 
     <!-- Notification & Media fragment -->
     <string name="notification_media_settings_title">Media &amp; notifications</string>

@@ -68,10 +68,17 @@
             android:title="@string/lockscreen_qs_disabled_title"
             android:summary="@string/lockscreen_qs_disabled_summary"/>
 
+        <com.cosmic.settings.preferences.SystemSettingSwitchPreference
+            android:key="qs_tile_title_visibility"
+            android:title="@string/qs_tile_title_visibility_title"
+            android:summaryOn="@string/qs_tile_title_visibility_summary_on"
+            android:summaryOff="@string/qs_tile_title_visibility_summary_off"
+            android:defaultValue="true"/>
+
         <com.cosmic.settings.preferences.CustomSeekBarPreference
             android:key="qs_layout_columns"
             android:title="@string/qs_columns_title"
-            android:max="7"
+            android:max="9"
             settings:min="1"
             settings:units=""
             android:persistent="false" />
