@@ -84,20 +84,50 @@
             android:persistent="false" />
 
         <com.cosmic.settings.preferences.CustomSeekBarPreference
-           android:key="qs_rows_portrait"
-           android:title="@string/qs_rows_portrait_title"
-           android:max="7"
-           settings:min="1"
-           settings:units=""
-           android:persistent="false" />
+            android:key="qs_rows_portrait"
+            android:title="@string/qs_rows_portrait_title"
+            android:max="7"
+            settings:min="1"
+            settings:units=""
+            android:persistent="false" />
 
         <com.cosmic.settings.preferences.CustomSeekBarPreference
-           android:key="qs_rows_landscape"
-           android:title="@string/qs_rows_landscape_title"
-           android:max="3"
-           settings:min="1"
-           settings:units=""
-           android:persistent="false" />
+            android:key="qs_rows_landscape"
+            android:title="@string/qs_rows_landscape_title"
+            android:max="3"
+            settings:min="1"
+            settings:units=""
+            android:persistent="false" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/qs_header_title">
+
+        <com.cosmic.settings.preferences.SystemSettingSwitchPreference
+            android:key="qs_settings_icon_toggle"
+            android:title="@string/qs_settings_icon_title"
+            android:summary="@string/qs_settings_icon_summary"
+            android:disableDependentsState="true"
+            android:defaultValue="false" />
+
+        <com.cosmic.settings.preferences.SystemSettingSwitchPreference
+            android:key="qs_edit_toggle"
+            android:title="@string/qs_edit_title"
+            android:summary="@string/qs_edit_summary"
+            android:defaultValue="false" />
+
+        <com.cosmic.settings.preferences.SystemSettingSwitchPreference
+            android:key="qs_multiuser_switch_toggle"
+            android:title="@string/qs_multiuser_switch_title"
+            android:summary="@string/qs_multiuser_switch_summary"
+            android:defaultValue="false" />
+
+        <com.cosmic.settings.preferences.SystemSettingSwitchPreference
+            android:key="qs_expand_indicator_toggle"
+            android:title="@string/qs_expand_indicator_title"
+            android:summary="@string/qs_expand_indicator_summary"
+            android:defaultValue="false" />
 
     </PreferenceCategory>
 
