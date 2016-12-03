@@ -95,10 +95,6 @@ public class PowerMenuSettings extends SettingsPreferenceFragment implements OnP
         final PreferenceCategory powerCategory =
                 (PreferenceCategory) prefScreen.findPreference(POWER_CATEGORY);
 
-        if (!lockPatternUtils.isSecure(MY_USER_ID)) {
-            prefScreen.removePreference(powerCategory);
-        }
-
         mPowerMenuAnimations = (ListPreference) findPreference(POWER_MENU_ANIMATIONS);
         mPowerMenuAnimations.setValue(String.valueOf(Settings.System.getInt(
                 getActivity().getContentResolver(), Settings.System.POWER_MENU_ANIMATIONS, 0)));
