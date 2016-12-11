@@ -51,6 +51,7 @@ public class NotificationDrawerSettings extends SettingsPreferenceFragment imple
     private static final String PREF_ROWS_PORTRAIT = "qs_rows_portrait";
     private static final String PREF_ROWS_LANDSCAPE = "qs_rows_landscape";
     private static final String PREF_QS_EASY_TOGGLE = "qs_easy_toggle";
+    private static final String PREF_SYSUI_QQS_COUNT = "sysui_qqs_count_key";
     private static final String DAYLIGHT_HEADER_PACK = "daylight_header_pack";
     private static final String DEFAULT_HEADER_PACKAGE = "com.android.systemui";
     private static final String CUSTOM_HEADER_IMAGE_SHADOW = "status_bar_custom_header_shadow";
@@ -63,6 +64,7 @@ public class NotificationDrawerSettings extends SettingsPreferenceFragment imple
     private CustomSeekBarPreference mQsColumns;
     private CustomSeekBarPreference mRowsPortrait;
     private CustomSeekBarPreference mRowsLandscape;
+    private CustomSeekBarPreference mSysuiQqsCount;
     private ListPreference mDaylightHeaderPack;
     private ListPreference mHeaderProvider;
     private CustomSeekBarPreference mHeaderShadow;
@@ -121,6 +123,12 @@ public class NotificationDrawerSettings extends SettingsPreferenceFragment imple
                 Settings.System.QS_ROWS_LANDSCAPE, defaultValue);
         mRowsLandscape.setValue(rowsLandscape / 1);
         mRowsLandscape.setOnPreferenceChangeListener(this);
+
+        mSysuiQqsCount = (CustomSeekBarPreference) findPreference(PREF_SYSUI_QQS_COUNT);
+        int SysuiQqsCount = Settings.Secure.getInt(getContentResolver(),
+                Settings.Secure.QQS_COUNT, 6);
+        mSysuiQqsCount.setValue(SysuiQqsCount / 1);
+        mSysuiQqsCount.setOnPreferenceChangeListener(this);
 
         mEasyToggle = (SwitchPreference) findPreference(PREF_QS_EASY_TOGGLE);
         mEasyToggle.setOnPreferenceChangeListener(this);
@@ -208,6 +216,11 @@ public class NotificationDrawerSettings extends SettingsPreferenceFragment imple
         } else if (preference == mRowsLandscape) {
             int rowsLandscape = (Integer) newValue;
             Settings.System.putInt(resolver, Settings.System.QS_ROWS_LANDSCAPE, rowsLandscape * 1);
+            return true;
+        } else if (preference == mSysuiQqsCount) {
+            int SysuiQqsCount = (Integer) objValue;
+            Settings.Secure.putInt(getActivity().getContentResolver(),
+                    Settings.Secure.QQS_COUNT, SysuiQqsCount * 1);
             return true;
         } else if (preference == mEasyToggle) {
             boolean checked = ((SwitchPreference)preference).isChecked();

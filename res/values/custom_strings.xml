@@ -908,4 +908,11 @@
     <string name="blur_colors_notice_summary">These colors are the ones tiniting the BlurBackground. Instead of the normal Grey, you can now choose the colors in the way you like. \n There are three color filters: One used for light backgrounds, one used for Dark backgrounds and one used for light/dark backgrounds. \n So how are these colors working?? \n Simple, as the titles say, the Light filter will be used for Lighter backgrounds, Dark filter for dark backgrounds and the mixed filter one will be used for backgrounds not too dark but neither too light. \n These colors are used for both BlurBackgrounds: StatusBar one and RecentsApps one </string>
     <string name="blur_colors_cat">Blur Color Filters</string>
 
+    <!-- Quick settings tiles columns and rows config -->
+    <string name="qs_layout_category">QS tiles layout</string>
+    <string name="qs_rows_portrait_title">Rows (portrait)</string>
+    <string name="qs_rows_landscape_title">Rows (landscape)</string>
+    <string name="qs_columns_title">Columns</string>
+    <string name="qs_small_tiles_title">Small QS tiles</string>
+
 </resources>
