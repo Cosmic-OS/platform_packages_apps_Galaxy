@@ -873,4 +873,8 @@
     <string name="systemui_recents_mem_display_title">Show memory bar</string>
     <string name="systemui_recents_mem_display_summary">Show how much RAM is used in recents view</string>
 
+   <!-- Dynamic Navbar Color -->
+   <string name="nav_bar_dynamic_title">Dynamic navbar color</string>
+   <string name="nav_bar_dynamic_summary">Enable to adapt navbar color to apps primary dark color.Restart your desired app to see effect</string>
+
 </resources>
