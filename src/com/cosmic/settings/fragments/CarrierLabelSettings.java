@@ -34,6 +34,7 @@ import com.android.internal.logging.MetricsProto.MetricsEvent;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
+import com.cosmic.settings.preferences.CustomSeekBarPreference;
 
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
@@ -44,12 +45,14 @@ public class CarrierLabelSettings extends SettingsPreferenceFragment
     private static final String CUSTOM_CARRIER_LABEL = "custom_carrier_label";
     private static final String STATUS_BAR_CARRIER_COLOR = "status_bar_carrier_color";
 
+    private static final String STATUS_BAR_CARRIER_FONT_SIZE  = "status_bar_carrier_font_size";
     static final int DEFAULT_STATUS_CARRIER_COLOR = 0xffffffff;
 
     private PreferenceScreen mCustomCarrierLabel;
     private ListPreference mShowCarrierLabel;
     private String mCustomCarrierLabelText;
     private ColorPickerPreference mCarrierColorPicker;
+    private CustomSeekBarPreference mStatusBarCarrierSize;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -78,6 +81,12 @@ public class CarrierLabelSettings extends SettingsPreferenceFragment
             hexColor = String.format("#%08x", (0xffffffff & intColor));
             mCarrierColorPicker.setSummary(hexColor);
             mCarrierColorPicker.setNewPreviewColor(intColor);
+
+        mStatusBarCarrierSize = (CustomSeekBarPreference) findPreference(STATUS_BAR_CARRIER_FONT_SIZE);
+        int StatusBarCarrierSize = Settings.System.getInt(resolver,
+                Settings.System.STATUS_BAR_CARRIER_FONT_SIZE, 10);
+        mStatusBarCarrierSize.setValue(StatusBarCarrierSize / 1);
+        mStatusBarCarrierSize.setOnPreferenceChangeListener(this);
         updateCustomLabelTextSummary();
     }
 
@@ -106,7 +115,7 @@ public class CarrierLabelSettings extends SettingsPreferenceFragment
                 STATUS_BAR_SHOW_CARRIER, showCarrierLabel);
             mShowCarrierLabel.setSummary(mShowCarrierLabel.getEntries()[index]);
             return true;
-         } else if (preference == mCarrierColorPicker) {
+        } else if (preference == mCarrierColorPicker) {
                 String hex = ColorPickerPreference.convertToARGB(
                         Integer.valueOf(String.valueOf(newValue)));
                 preference.setSummary(hex);
@@ -114,7 +123,12 @@ public class CarrierLabelSettings extends SettingsPreferenceFragment
                 Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
                         Settings.System.STATUS_BAR_CARRIER_COLOR, intHex);
                 return true;
-         }
+        }  else if (preference == mStatusBarCarrierSize) {
+            int width = ((Integer)newValue).intValue();
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.STATUS_BAR_CARRIER_FONT_SIZE, width);
+            return true;
+        }
          return false;
     }
 
