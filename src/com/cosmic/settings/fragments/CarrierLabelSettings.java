@@ -34,16 +34,19 @@ import com.android.internal.logging.MetricsProto.MetricsEvent;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
+import com.cosmic.settings.preferences.CustomSeekBarPreference;
 
 public class CarrierLabelSettings extends SettingsPreferenceFragment
         implements OnPreferenceChangeListener {
 
     private static final String SHOW_CARRIER_LABEL = "status_bar_show_carrier";
     private static final String CUSTOM_CARRIER_LABEL = "custom_carrier_label";
+    private static final String STATUS_BAR_CARRIER_FONT_SIZE  = "status_bar_carrier_font_size";
 
     private PreferenceScreen mCustomCarrierLabel;
     private ListPreference mShowCarrierLabel;
     private String mCustomCarrierLabelText;
+    private CustomSeekBarPreference mStatusBarCarrierSize;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -62,6 +65,12 @@ public class CarrierLabelSettings extends SettingsPreferenceFragment
         mShowCarrierLabel.setOnPreferenceChangeListener(this);
 
         mCustomCarrierLabel = (PreferenceScreen) findPreference(CUSTOM_CARRIER_LABEL);
+
+        mStatusBarCarrierSize = (CustomSeekBarPreference) findPreference(STATUS_BAR_CARRIER_FONT_SIZE);
+        int StatusBarCarrierSize = Settings.System.getInt(resolver,
+                Settings.System.STATUS_BAR_CARRIER_FONT_SIZE, 10);
+        mStatusBarCarrierSize.setValue(StatusBarCarrierSize / 1);
+        mStatusBarCarrierSize.setOnPreferenceChangeListener(this);
         updateCustomLabelTextSummary();
     }
 
@@ -90,7 +99,12 @@ public class CarrierLabelSettings extends SettingsPreferenceFragment
                 STATUS_BAR_SHOW_CARRIER, showCarrierLabel);
             mShowCarrierLabel.setSummary(mShowCarrierLabel.getEntries()[index]);
             return true;
-         }
+        }  else if (preference == mStatusBarCarrierSize) {
+            int width = ((Integer)newValue).intValue();
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.STATUS_BAR_CARRIER_FONT_SIZE, width);
+            return true;
+        }
          return false;
     }
 
