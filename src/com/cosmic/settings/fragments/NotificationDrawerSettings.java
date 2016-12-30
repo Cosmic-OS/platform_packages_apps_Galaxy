@@ -32,7 +32,7 @@ import com.android.internal.widget.LockPatternUtils;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
-import com.flash.settings.preferences.CustomSeekBarPreference;
+import com.cosmic.settings.preferences.CustomSeekBarPreference;
 
 public class NotificationDrawerSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
