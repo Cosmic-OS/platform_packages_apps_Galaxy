@@ -49,12 +49,6 @@
             android:summary="@string/battery_low_notif_summary"
             android:defaultValue="true" />
 
-        <com.cosmic.settings.preferences.SystemSettingSwitchPreference
-            android:key="toast_icon"
-            android:title="@string/toast_icon_title"
-            android:summary="@string/toast_icon_summary"
-            android:defaultValue="false" />
-
     </PreferenceCategory>
 
 </PreferenceScreen>
