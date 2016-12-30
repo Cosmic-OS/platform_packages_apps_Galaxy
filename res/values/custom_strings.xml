@@ -77,13 +77,13 @@
     <string name="unlock_scramble_pin_layout_title">Scramble layout</string>
     <string name="unlock_scramble_pin_layout_summary">Scramble PIN layout when unlocking device</string>
     <!-- Pin scramble -->
-    <string name="lockscreen_pin_ripple_title">Lockscreen Pin Ripple</string>
-    <string name="lockscreen_pin_ripple_summary">Disable to remove ripple when entering pin numbers</string>
+    <string name="lockscreen_pin_ripple_title">Lockscreen PIN Ripple</string>
+    <string name="lockscreen_pin_ripple_summary">Disable to remove ripple when entering PIN numbers</string>
     <!-- fingerprint authentication vibration -->
     <string name="fprint_sucess_vib_title">Fingerprint authentication vibration</string>
     <string name="fprint_sucess_vib_summary">Vibrate on successful fingerprint authentication</string>
     <!-- Lockscreen items clock, date, alarm text -->
-    <string name="lockscreen_items_settings_title">Lockscreen Items</string>
+    <string name="lockscreen_items_settings_title">Lockscreen items</string>
     <string name="lockscreen_clock_title">Lockscreen clock</string>
     <string name="lockscreen_date_title">Lockscreen date</string>
     <string name="lockscreen_alarm_title">Lockscreen alarm text</string>
@@ -344,7 +344,7 @@ device speaker</string>
     <string name="status_bar_toggle_brightness">Brightness control</string>
     <string name="status_bar_toggle_brightness_summary">Adjust brightness by sliding across the status bar</string>
     <!-- Custom carrier label and position -->
-    <string name="carrier_label_settings_title">Carrier Label</string>
+    <string name="carrier_label_settings_title">Carrier label</string>
     <string name="carrier_label_settings_summary">Customize the carrier label</string>
     <string name="custom_carrier_label_title">Custom carrier label</string>
     <string name="custom_carrier_label_explain">Please enter a new label. Leave blank to revert to stock label.</string>
