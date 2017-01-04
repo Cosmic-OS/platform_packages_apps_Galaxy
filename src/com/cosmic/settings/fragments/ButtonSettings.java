@@ -20,6 +20,7 @@ import android.content.ContentResolver;
 import android.content.res.Resources;
 import android.content.Context;
 import android.os.Bundle;
+import android.os.UserHandle;
 import android.os.Vibrator;
 import android.support.v7.preference.PreferenceCategory;
 import android.support.v7.preference.ListPreference;
@@ -32,14 +33,17 @@ import android.provider.Settings;
 import com.android.internal.logging.MetricsLogger;
 import com.android.internal.logging.MetricsProto.MetricsEvent;
 import com.android.internal.utils.du.ActionConstants;
+import com.android.internal.utils.du.DUActionUtils;
 
 import com.android.settings.R;
 
 public class ButtonSettings extends ActionFragment implements OnPreferenceChangeListener {
 
+    private static final String HWKEY_DISABLE = "hardware_keys_disable";
     private static final String KEY_VOLUME_KEY_CURSOR_CONTROL = "volume_key_cursor_control";
 
     // category keys
+    private static final String CATEGORY_HWKEY = "hardware_keys";
     private static final String CATEGORY_BACK = "back_key";
     private static final String CATEGORY_HOME = "home_key";
     private static final String CATEGORY_MENU = "menu_key";
@@ -59,6 +63,7 @@ public class ButtonSettings extends ActionFragment implements OnPreferenceChange
     public static final int KEY_MASK_VOLUME = 0x40;
 
     private ListPreference mVolumeKeyCursorControl;
+    private SwitchPreference mHwKeyDisable;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -66,6 +71,25 @@ public class ButtonSettings extends ActionFragment implements OnPreferenceChange
         addPreferencesFromResource(R.xml.button_settings);
         final ContentResolver resolver = getActivity().getContentResolver();
         final PreferenceScreen prefScreen = getPreferenceScreen();
+
+        final boolean needsNavbar = DUActionUtils.hasNavbarByDefault(getActivity());
+        final PreferenceCategory hwkeyCat = (PreferenceCategory) prefScreen
+                .findPreference(CATEGORY_HWKEY);
+        int keysDisabled = 0;
+        if (!needsNavbar) {
+            mHwKeyDisable = (SwitchPreference) findPreference(HWKEY_DISABLE);
+            keysDisabled = Settings.Secure.getIntForUser(getContentResolver(),
+                    Settings.Secure.HARDWARE_KEYS_DISABLE, 0,
+                    UserHandle.USER_CURRENT);
+            mHwKeyDisable.setChecked(keysDisabled != 0);
+            mHwKeyDisable.setOnPreferenceChangeListener(this);
+        } else {
+            prefScreen.removePreference(hwkeyCat);
+        }
+
+        // bits for hardware keys present on device
+        final int deviceKeys = getResources().getInteger(
+                com.android.internal.R.integer.config_deviceHardwareKeys);
 
         // read bits for present hardware keys
         final boolean hasHomeKey = (deviceKeys & KEY_MASK_HOME) != 0;
@@ -117,6 +141,9 @@ public class ButtonSettings extends ActionFragment implements OnPreferenceChange
         mVolumeKeyCursorControl = initActionList(KEY_VOLUME_KEY_CURSOR_CONTROL,
                 cursorControlAction);
 
+        // load preferences first
+        setActionPreferencesEnabled(keysDisabled == 0);
+
         // let super know we can load ActionPreferences
         onPreferenceScreenLoaded(ActionConstants.getDefaults(ActionConstants.HWKEYS));
     }
@@ -151,6 +178,12 @@ public class ButtonSettings extends ActionFragment implements OnPreferenceChange
         if (preference == mVolumeKeyCursorControl) {
             handleActionListChange(mVolumeKeyCursorControl, newValue,
                     Settings.System.VOLUME_KEY_CURSOR_CONTROL);
+            return true;
+        } else if (preference == mHwKeyDisable) {
+            boolean value = (Boolean) newValue;
+            Settings.Secure.putInt(getContentResolver(), Settings.Secure.HARDWARE_KEYS_DISABLE,
+                    value ? 1 : 0);
+            setActionPreferencesEnabled(!value);
             return true;
         }
         return false;
