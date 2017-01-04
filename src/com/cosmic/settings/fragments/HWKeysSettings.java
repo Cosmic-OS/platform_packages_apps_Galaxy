@@ -18,6 +18,7 @@ package com.cosmic.settings.fragments;
 
 import android.content.ContentResolver;
 import android.os.Bundle;
+import android.os.UserHandle;
 import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.Preference.OnPreferenceChangeListener;
@@ -27,15 +28,18 @@ import android.provider.Settings;
 import com.android.internal.logging.MetricsLogger;
 import com.android.internal.logging.MetricsProto.MetricsEvent;
 import com.android.internal.utils.du.ActionConstants;
+import com.android.internal.utils.du.DUActionUtils;
 
 import com.android.settings.R;
 
 public class HWKeysSettings extends ActionFragment implements OnPreferenceChangeListener {
 
+    private static final String HWKEY_DISABLE = "hardware_keys_disable";
     private static final String KEY_VOLUME_KEY_CURSOR_CONTROL = "volume_key_cursor_control";
     private static final String SCREENRECORD_CHORD_TYPE = "screenrecord_chord_type";
 
     // category keys
+    private static final String CATEGORY_HWKEY = "hardware_keys";
     private static final String CATEGORY_BACK = "back_key";
     private static final String CATEGORY_HOME = "home_key";
     private static final String CATEGORY_MENU = "menu_key";
@@ -56,6 +60,7 @@ public class HWKeysSettings extends ActionFragment implements OnPreferenceChange
 
     private ListPreference mVolumeKeyCursorControl;
     private ListPreference mScreenrecordChordType;
+    private SwitchPreference mHwKeyDisable;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -63,6 +68,21 @@ public class HWKeysSettings extends ActionFragment implements OnPreferenceChange
         addPreferencesFromResource(R.xml.hwkeys_settings);
         final ContentResolver resolver = getActivity().getContentResolver();
         final PreferenceScreen prefScreen = getPreferenceScreen();
+
+        final boolean needsNavbar = DUActionUtils.hasNavbarByDefault(getActivity());
+        final PreferenceCategory hwkeyCat = (PreferenceCategory) prefScreen
+                .findPreference(CATEGORY_HWKEY);
+        int keysDisabled = 0;
+        if (!needsNavbar) {
+            mHwKeyDisable = (SwitchPreference) findPreference(HWKEY_DISABLE);
+            keysDisabled = Settings.Secure.getIntForUser(getContentResolver(),
+                    Settings.Secure.HARDWARE_KEYS_DISABLE, 0,
+                    UserHandle.USER_CURRENT);
+            mHwKeyDisable.setChecked(keysDisabled != 0);
+            mHwKeyDisable.setOnPreferenceChangeListener(this);
+        } else {
+            prefScreen.removePreference(hwkeyCat);
+        }
 
         // bits for hardware keys present on device
         final int deviceKeys = getResources().getInteger(
@@ -123,6 +143,9 @@ public class HWKeysSettings extends ActionFragment implements OnPreferenceChange
         mScreenrecordChordType = initActionList(SCREENRECORD_CHORD_TYPE,
                 recordChordValue);
 
+        // load preferences first
+        setActionPreferencesEnabled(keysDisabled == 0);
+
         // let super know we can load ActionPreferences
         onPreferenceScreenLoaded(ActionConstants.getDefaults(ActionConstants.HWKEYS));
     }
@@ -161,6 +184,12 @@ public class HWKeysSettings extends ActionFragment implements OnPreferenceChange
         } else if  (preference == mScreenrecordChordType) {
             handleActionListChange(mScreenrecordChordType, newValue,
                     Settings.System.SCREENRECORD_CHORD_TYPE);
+            return true;
+        } else if (preference == mHwKeyDisable) {
+            boolean value = (Boolean) newValue;
+            Settings.Secure.putInt(getContentResolver(), Settings.Secure.HARDWARE_KEYS_DISABLE,
+                    value ? 1 : 0);
+            setActionPreferencesEnabled(!value);
             return true;
         }
         return false;
