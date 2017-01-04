@@ -58,9 +58,9 @@
             android:title="@string/powermenu_settings_title"/>
 
         <PreferenceScreen
-            android:fragment="com.cosmic.settings.fragments.VolumeRockerSettings"
-            android:key="cosmic_volumerocker_settings"
-            android:title="@string/volumerocker_settings_title"/>
+            android:fragment="com.cosmic.settings.fragments.HWKeysSettings"
+            android:key="cosmic_hwkeys_settings"
+            android:title="@string/hwkeys_settings_title"/>
 
     </PreferenceCategory>
 

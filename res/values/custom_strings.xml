@@ -525,8 +525,8 @@
     <string name="bluetooth_battery_title">Show Bluetooth battery status</string>
     <string name="bluetooth_battery_summary">Show battery status for the currently connected bluetooth device, if available.</string>
 
-    <!-- Volume Rocker fragment -->
-    <string name="volumerocker_settings_title">Volume rocker</string>
+    <!-- Hardware Keys fragment -->
+    <string name="hwkeys_settings_title">Hardware Keys</string>
     <!-- Volume button wake -->
     <string name="volbtn_wake_device_title">Volume button wake</string>
     <string name="button_wake_summary">May not wake device if music control is active and music is playing</string>
