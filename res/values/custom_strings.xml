@@ -895,5 +895,8 @@
     <string name="blurred_radius_summary">Amount of blur</string>
     <string name="blur_cat_notice">Notice</string>
     <string name="blur_cat_notice_summary">Blur personlizations are disabled during Keyguard view! Only Translucent Notifications are enabled!</string>
+    <string name="blurred_recent_app_enabled_pref">Blurred Recent Apps</string>
+    <string name="blurred_recent_app_enabled_pref_summary">Blur the background of Recent Apps activity</string>
+    <string name="blur_recents_cat">Recent Apps</string> 
 
 </resources>
