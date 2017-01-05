@@ -46,6 +46,12 @@
             android:icon="@drawable/ic_cosmic_recents" />
         
         <PreferenceScreen
+            android:fragment="com.cosmic.settings.fragments.BlurPersonalizations"
+            android:key="blur_personalization"
+            android:title="@string/settings_blur_cat"
+            android:icon="@drawable/ic_cosmic_blur" />
+
+        <PreferenceScreen
             android:fragment="com.cosmic.settings.fragments.BatteryBar"
             android:key="batterybar"
             android:title="@string/battery_bar_title"
