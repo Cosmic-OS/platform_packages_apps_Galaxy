@@ -24,22 +24,26 @@
         <PreferenceScreen
             android:fragment="com.cosmic.settings.fragments.LockScreenSettings"
             android:key="cosmic_lockscreen_settings"
-            android:title="@string/lockscreen_settings_title"/>
+            android:title="@string/lockscreen_settings_title"
+            android:icon="@drawable/ic_cosmic_lockscreen" />
 
         <PreferenceScreen
             android:fragment="com.cosmic.settings.fragments.NotificationDrawerSettings"
             android:key="cosmic_notification_drawer_settings"
-            android:title="@string/notification_drawer_settings_title"/>
+            android:title="@string/notification_drawer_settings_title"
+            android:icon="@drawable/ic_cosmic_notification" />
 
         <PreferenceScreen
             android:fragment="com.cosmic.settings.fragments.StatusBarSettings"
             android:key="cosmic_statusbar_settings"
-            android:title="@string/statusbar_settings_title"/>
+            android:title="@string/statusbar_settings_title"
+            android:icon="@drawable/ic_cosmic_statusbar" />
         
         <PreferenceScreen
             android:fragment="com.cosmic.settings.fragments.BatteryBar"
             android:key="batterybar"
-            android:title="@string/battery_bar_title"/>
+            android:title="@string/battery_bar_title"
+            android:icon="@drawable/ic_cosmic_batterybar" />
 
     </PreferenceCategory>
 
@@ -50,17 +54,20 @@
         <PreferenceScreen
             android:fragment="com.cosmic.settings.fragments.NavbarSettings"
             android:key="cosmic_navbar_settings"
-            android:title="@string/navbar_settings_title"/>
+            android:title="@string/navbar_settings_title"
+            android:icon="@drawable/ic_cosmic_navbar" />
 
         <PreferenceScreen
             android:fragment="com.cosmic.settings.fragments.PowerMenuSettings"
             android:key="cosmic_powermenu_settings"
-            android:title="@string/powermenu_settings_title"/>
+            android:title="@string/powermenu_settings_title"
+            android:icon="@drawable/ic_cosmic_powermenu" />
 
         <PreferenceScreen
             android:fragment="com.cosmic.settings.fragments.HWKeysSettings"
             android:key="cosmic_hwkeys_settings"
-            android:title="@string/hwkeys_settings_title"/>
+            android:title="@string/hwkeys_settings_title"
+            android:icon="@drawable/ic_cosmic_hwkeys" />
 
     </PreferenceCategory>
 
@@ -71,17 +78,20 @@
         <PreferenceScreen
             android:fragment="com.cosmic.settings.fragments.DisplaySettings"
             android:key="cosmic_display_settings"
-            android:title="@string/display_settings_title"/>
+            android:title="@string/display_settings_title"
+            android:icon="@drawable/ic_cosmic_display" />
 
         <PreferenceScreen
             android:fragment="com.cosmic.settings.fragments.NotificationMediaSettings"
             android:key="cosmic_notification_media_settings"
-            android:title="@string/notification_media_settings_title"/>
+            android:title="@string/notification_media_settings_title"
+            android:icon="@drawable/ic_cosmic_notification_media" />
 
         <PreferenceScreen
             android:fragment="com.cosmic.settings.fragments.MiscSettings"
             android:key="cosmic_misc_settings"
-            android:title="@string/misc_settings_title"/>
+            android:title="@string/misc_settings_title"
+            android:icon="@drawable/ic_cosmic_misc" />
 
     </PreferenceCategory>
 
