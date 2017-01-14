@@ -829,4 +829,7 @@
     <string name="custom_header_browse_title">Browse installed headers</string>
     <string name="custom_header_browse_summary">Long press on any image to use for static mode</string>
 
+    <!-- Recents fragment -->
+    <string name="recents_settings_title">Recents</string>
+
 </resources>
