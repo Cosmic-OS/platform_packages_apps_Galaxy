@@ -39,6 +39,12 @@
             android:title="@string/statusbar_settings_title"
             android:icon="@drawable/ic_cosmic_statusbar" />
 
+        <PreferenceScreen
+            android:fragment="com.cosmic.settings.fragments.RecentsSettings"
+            android:key="cosmic_recents_settings"
+            android:title="@string/recents_settings_title"
+            android:icon="@drawable/ic_cosmic_recents" />
+        
     </PreferenceCategory>
 
     <PreferenceCategory

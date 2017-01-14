@@ -491,4 +491,7 @@
     <string name="set">Set</string>
     <string name="color_default">Default</string>
 
+    <!-- Recents fragment -->
+    <string name="recents_settings_title">Recents</string>
+
 </resources>
