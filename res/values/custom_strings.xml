@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2016 Cosmic-OS Project
+<!-- Copyright (C) 2016-2017 Cosmic-OS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -296,6 +296,9 @@
     <string name="wakelock_blocker_reload">Reload</string>
     <string name="wakelock_blocker_warning_title">Proceed with caution</string>
     <string name="wakelock_blocker_warning">Blocking wakelocks have the potential to cause instability, crashes or data loss</string>
+    <!-- QS easy toggles -->
+    <string name="qs_easy_toggle_title">Advanced QS Easy Toggle</string>
+    <string name="qs_easy_toggle_summary">Enable one tap action to enable or disable mobile data, Wi-Fi, and Bluetooth</string>
 
     <!-- Miscellaneous fragment -->
     <string name="misc_settings_title">Miscellaneous</string>

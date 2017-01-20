@@ -35,9 +35,11 @@ public class NotificationDrawerSettings extends SettingsPreferenceFragment imple
 
     private static final String QUICK_PULLDOWN = "quick_pulldown";
     private static final String PREF_SMART_PULLDOWN = "smart_pulldown";
+    private static final String PREF_QS_EASY_TOGGLE = "qs_easy_toggle";
 
     private ListPreference mQuickPulldown;
     ListPreference mSmartPulldown;
+    private SwitchPreference mEasyToggle;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -59,6 +61,11 @@ public class NotificationDrawerSettings extends SettingsPreferenceFragment imple
                 Settings.System.QS_SMART_PULLDOWN, 0);
         mSmartPulldown.setValue(String.valueOf(smartPulldown));
         updateSmartPulldownSummary(smartPulldown);
+
+        mEasyToggle = (SwitchPreference) findPreference(PREF_QS_EASY_TOGGLE);
+        mEasyToggle.setOnPreferenceChangeListener(this);
+        mEasyToggle.setChecked((Settings.Secure.getInt(resolver,
+                Settings.Secure.QS_EASY_TOGGLE, 0) == 1));
     }
 
     @Override
@@ -79,6 +86,10 @@ public class NotificationDrawerSettings extends SettingsPreferenceFragment imple
             int smartPulldown = Integer.valueOf((String) newValue);
             Settings.System.putInt(resolver, Settings.System.QS_SMART_PULLDOWN, smartPulldown);
             updateSmartPulldownSummary(smartPulldown);
+            return true;
+        } else if (preference == mEasyToggle) {
+            boolean checked = ((SwitchPreference)preference).isChecked();
+            Settings.Secure.putInt(resolver, Settings.Secure.QS_EASY_TOGGLE, checked ? 1:0);
             return true;
         }
         return false;
