@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2016 Cosmic-OS Project
+<!-- Copyright (C) 2016-2017 Cosmic-OS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -343,6 +343,9 @@
     <string name="smart_pulldown_none">no notifications</string>
     <string name="smart_pulldown_dismissable">no dismissable</string>
     <string name="smart_pulldown_ongoing">no ongoing</string>
+    <!-- QS easy toggles -->
+    <string name="qs_easy_toggle_title">Advanced QS Easy Toggle</string>
+    <string name="qs_easy_toggle_summary">Enable one tap action to enable or disable mobile data, Wi-Fi, and Bluetooth</string>
     <!-- Quick settings tiles columns and rows config -->
     <string name="qs_layout_category">QS tiles layout</string>
     <string name="qs_columns_title">Columns</string>
