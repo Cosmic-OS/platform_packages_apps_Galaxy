@@ -168,8 +168,7 @@ public class HWKeysSettings extends ActionFragment implements OnPreferenceChange
                 mButtonBrightness.setOnPreferenceChangeListener(this);
             }
         } else {
-            prefScreen.removePreference(mBacklightTimeout);
-            prefScreen.removePreference(mButtonBrightness);
+            prefScreen.removePreference(hwkeyCat);
         }
 
         int cursorControlAction = Settings.System.getInt(resolver,
