@@ -639,6 +639,7 @@
     <string name="ticker_font_style_title">Font Style</string>
     <string name="ticker_font_size_title">Font Size</string>
     <!-- Cosmic Logo --> 
+    <string name="cosmic_logo_summary">Cosmic-OS logo Customisations</string>
     <string name="status_bar_cosmic_logo_title">Enable logo</string>
     <string name="status_bar_cosmic_logo_summary">Enable to show Cosmic-OS logo on the status bar</string>
     <string name="status_bar_cosmic_logo_color">Logo color</string>
@@ -648,6 +649,52 @@
     <string name="status_bar_logo_position_right">Right</string>
     <string name="status_bar_logo_position_left">Left</string>
     <string name="status_bar_logo_position_center">Center</string>
+    <!--Custom logos-->
+    <string name="cosmic_custom_logo_summary">Custom logos/images Customisations</string>
+    <string name="sb_custom_logos">Custom Icons</string>
+    <string name="custom_logo_style"> Logos</string>
+    <string name="custom_logos">Take your Pick</string>
+    <string name="show_custom_logo_title">Show Custom Logo</string>
+    <string name="show_custom_logo_summary">Show Logos in Statusbar from a wide range of icons available in System</string>
+    <string name="custom_logo_color">Color</string>
+    <string name="logo0">Tuner </string>
+    <string name="logo1">BugDroid Minimal </string>
+    <string name="logo2">Drupal</string>
+    <string name="logo3">Cool Smile</string>
+    <string name="logo4">Ghost</string>
+    <string name="logo5">Flash</string>
+    <string name="logo6">Windows</string>
+    <string name="logo7">Xbox</string>
+    <string name="logo8">Emoji</string>
+    <string name="logo9">Happy Smile</string>
+    <string name="logo10">FingerPrint</string>
+    <string name="logo11">Pugmark</string>
+    <string name="logo12">Owl</string>
+    <string name="logo13">Weather Off </string>
+    <string name="logo14">Blender </string>
+    <string name="logo15">Cake</string>
+    <string name="logo16">Electric Guitar</string>
+    <string name="logo17">Smiley Tag</string>
+    <string name="logo18">Run</string>
+    <string name="logo19">Toxic</string>
+    <string name="logo20">Pro User</string>
+    <string name="logo21">Pokeball</string>
+    <string name="logo22">Box Open</string>
+    <string name="logo23">Box Closed</string>
+    <string name="logo24">Weather On</string>
+    <string name="logo25">Cat</string>
+    <string name="logo26">Bug Droid</string>
+    <string name="logo27">Biker</string>
+    <string name="logo28">Candy cane</string>
+    <string name="logo29">Shit smiley</string>
+    <string name="logo30">Chart bubble</string>
+    <string name="logo31">Google</string>
+    <string name="logo32">Fish</string>
+    <string name="logo33">Gender male</string>
+    <string name="logo34">Gender female</string>
+    <string name="logo35">Spider 1</string>
+    <string name="logo36">Spider 2</string>
+    <string name="logo37">Orioles</string>
 
     <!-- Hardware Keys fragment -->
     <string name="hwkeys_settings_title">Hardware Keys</string>

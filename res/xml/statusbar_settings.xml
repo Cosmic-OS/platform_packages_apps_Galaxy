@@ -37,7 +37,14 @@
     <PreferenceScreen
         android:key="cosmic_logo"
         android:title="@string/status_bar_cosmic_logo_title"
-	android:fragment="com.cosmic.settings.fragments.LogoSettings" />
+	android:fragment="com.cosmic.settings.fragments.LogoSettings" 
+        android:summary="@string/cosmic_logo_summary" />
+
+    <PreferenceScreen
+        android:key="custom_logo"
+        android:title="@string/sb_custom_logos"
+ 	android:fragment="com.cosmic.settings.fragments.CustomLogo" 
+        android:summary="@string/cosmic_custom_logo_summary" />
 
     <PreferenceScreen
         android:fragment="com.cosmic.settings.fragments.StatusbarTickerSettings"
