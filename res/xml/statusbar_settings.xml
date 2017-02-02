@@ -35,6 +35,11 @@
         android:summary="@string/clock_settings_summary" />
 
     <PreferenceScreen
+        android:key="cosmic_logo"
+        android:title="@string/status_bar_cosmic_logo_title"
+	android:fragment="com.cosmic.settings.fragments.LogoSettings" />
+
+    <PreferenceScreen
         android:fragment="com.cosmic.settings.fragments.StatusbarTickerSettings"
         android:key="cosmic_ticker_settings"
         android:title="@string/ticker_screen_title"

@@ -638,6 +638,16 @@
     <string name="ticker_restore_defaults_title">Restore defaults</string>
     <string name="ticker_font_style_title">Font Style</string>
     <string name="ticker_font_size_title">Font Size</string>
+    <!-- Cosmic Logo --> 
+    <string name="status_bar_cosmic_logo_title">Enable logo</string>
+    <string name="status_bar_cosmic_logo_summary">Enable to show Cosmic-OS logo on the status bar</string>
+    <string name="status_bar_cosmic_logo_color">Logo color</string>
+    <string name="status_bar_logo">Cosmic-OS logo</string>
+    <string name="status_bar_cosmic_logo_position">Logo location</string>
+    <string name="status_bar_cosmic_logo_position_summary">Choose which side to display the logo on, left or right</string>
+    <string name="status_bar_logo_position_right">Right</string>
+    <string name="status_bar_logo_position_left">Left</string>
+    <string name="status_bar_logo_position_center">Center</string>
 
     <!-- Hardware Keys fragment -->
     <string name="hwkeys_settings_title">Hardware Keys</string>
