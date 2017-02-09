@@ -84,7 +84,7 @@
         <com.cosmic.settings.preferences.CustomSeekBarPreference
             android:key="sysui_qqs_count_key"
             android:title="@string/qs_small_tiles_title"
-            settings:max="8"
+            android:max="8"
             settings:min="3"
             settings:units=""
             android:persistent="false" />

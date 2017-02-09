@@ -218,7 +218,7 @@ public class NotificationDrawerSettings extends SettingsPreferenceFragment imple
             Settings.System.putInt(resolver, Settings.System.QS_ROWS_LANDSCAPE, rowsLandscape * 1);
             return true;
         } else if (preference == mSysuiQqsCount) {
-            int SysuiQqsCount = (Integer) objValue;
+            int SysuiQqsCount = (Integer) newValue;
             Settings.Secure.putInt(getActivity().getContentResolver(),
                     Settings.Secure.QQS_COUNT, SysuiQqsCount * 1);
             return true;
