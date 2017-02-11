@@ -113,6 +113,12 @@
             settings:units=""
             android:persistent="false" />
 
+        <com.cosmic.settings.preferences.SystemSettingSwitchPreference
+            android:key="qs_quickbar_scroll_enabled"
+            android:title="@string/qqs_scroll_title"
+            android:summary="@string/qqs_scroll_summary"
+            android:defaultValue="false"/>
+
     </PreferenceCategory>
 
     <PreferenceCategory
