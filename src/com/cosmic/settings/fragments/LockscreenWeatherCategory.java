@@ -29,7 +29,7 @@ import android.support.v7.preference.PreferenceCategory;
 import android.support.v7.preference.PreferenceScreen;
 import android.support.v14.preference.SwitchPreference;
 
-import com.aosip.owlsnest.preference.CustomSeekBarPreference;
+import com.cosmic.settings.preferences.CustomSeekBarPreference;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 

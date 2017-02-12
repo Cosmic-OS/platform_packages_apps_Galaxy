@@ -40,7 +40,7 @@ import com.android.settings.SettingsPreferenceFragment;
 
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
-public class StatusBarTickerSettings extends SettingsPreferenceFragment implements
+public class StatusbarTickerSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
         private static final String TAG = "Ticker";
