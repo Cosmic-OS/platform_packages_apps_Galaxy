@@ -42,6 +42,10 @@
     <string name="show_title">Show</string>
     <string name="choose_app">Choose app</string>
     <string name="general">General</string>
+    <string name="text_title">Text</string>
+    <string name="icon_title">Icon</string>
+    <string name="color_title">Color</string>
+    <string name="colors_title">Colors</string>
 
     <!-- Display fragment -->
     <string name="display_settings_title">Display</string>
@@ -559,6 +563,12 @@
     <!-- Bluetooth status -->
     <string name="bluetooth_battery_title">Show Bluetooth battery status</string>
     <string name="bluetooth_battery_summary">Show battery status for the currently connected bluetooth device, if available.</string>
+    <!-- Status Bar Ticker -->
+    <string name="ticker_screen_title">Ticker</string>
+    <string name="ticker_title">Status Bar Ticker</string>
+    <string name="ticker_screen_summary">Customize the ticker style</string>
+    <string name="ticker_summary">Enable the old status bar ticker</string>
+    <string name="ticker_restore_defaults_title">Restore defaults</string>
 
     <!-- Hardware Keys fragment -->
     <string name="hwkeys_settings_title">Hardware Keys</string>

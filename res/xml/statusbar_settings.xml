@@ -35,6 +35,12 @@
         android:summary="@string/clock_settings_summary" />
 
     <PreferenceScreen
+        android:fragment="com.cosmic.settings.fragments.StatusbarTickerSettings"
+        android:key="cosmic_ticker_settings"
+        android:title="@string/ticker_screen_title"
+        android:summary="@string/ticker_screen_summary" />
+
+    <PreferenceScreen
         android:fragment="com.cosmic.settings.fragments.NetworkTrafficSettings"
         android:key="cosmic_nettraffic_settings"
         android:title="@string/nettraffic_settings_title"
