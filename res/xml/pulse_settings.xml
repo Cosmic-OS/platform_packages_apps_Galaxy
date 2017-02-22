@@ -121,9 +121,16 @@
         android:title="@string/pulse_solid_dimen_category" >
 
         <com.cosmic.settings.preferences.CustomSeekBarPreference
+            android:key="pulse_solid_units_opacity"
+            android:title="@string/pulse_solid_units_opacity"
+            android:max="255"
+            settings:min="0"
+            android:dependency="pulse_2"/>
+
+        <com.cosmic.settings.preferences.CustomSeekBarPreference
             android:key="pulse_solid_units_count"
             android:title="@string/pulse_solid_units_count"
-            settings:max="128"
+            android:max="128"
             settings:interval="16"
             settings:min="32"
             android:dependency="pulse_2"/>
