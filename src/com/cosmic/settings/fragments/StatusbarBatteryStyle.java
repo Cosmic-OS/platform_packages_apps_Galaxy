@@ -85,7 +85,7 @@ public class StatusbarBatteryStyle extends SettingsPreferenceFragment implements
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        int lowBatteryWarningLevel = getResources().getInteger(com.android.internal.R.integer.config_batteryPercentLowOnlyLevel);
+        int lowBatteryWarningLevel = getResources().getInteger(com.android.internal.R.integer.config_lowBatteryWarningLevel);
         addPreferencesFromResource(R.xml.statusbar_battery_style);
 
         PreferenceScreen prefScreen = getPreferenceScreen();
@@ -124,8 +124,8 @@ public class StatusbarBatteryStyle extends SettingsPreferenceFragment implements
 
         mStatusBarBatteryShowPercentLowOnly =
                 (SwitchPreference) findPreference(STATUS_BAR_SHOW_BATTERY_PERCENT_LOW_ONLY);
-        int batteryShowPercentLowOnly = Settings.Secure.getInt(resolver,
-                Settings.Secure.STATUS_BAR_SHOW_BATTERY_PERCENT_LOW_ONLY, 0);
+        int batteryShowPercentLowOnly = Settings.System.getInt(resolver,
+                Settings.System.STATUS_BAR_SHOW_BATTERY_PERCENT_LOW_ONLY, 0);
         mStatusBarBatteryShowPercentLowOnly.setChecked(batteryShowPercentLowOnly == 1);
         mStatusBarBatteryShowPercentLowOnly.setOnPreferenceChangeListener(this);
         String showPercentLowOnlySummary = String.format(
@@ -171,8 +171,8 @@ public class StatusbarBatteryStyle extends SettingsPreferenceFragment implements
             enableStatusBarBatteryDependents();
             return true;
         } else if (preference == mStatusBarBatteryShowPercentLowOnly) {
-            Settings.Secure.putInt(getActivity().getContentResolver(),
-                    Settings.Secure.STATUS_BAR_SHOW_BATTERY_PERCENT_LOW_ONLY,
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.STATUS_BAR_SHOW_BATTERY_PERCENT_LOW_ONLY,
                     (Boolean) newValue ? 1 : 0);
         } else if  (preference == mQsBatteryTitle) {
             boolean checked = ((SwitchPreference)preference).isChecked();
