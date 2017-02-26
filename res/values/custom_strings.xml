@@ -1055,6 +1055,9 @@
     <string name="qs_columns_title">Columns</string>
     <string name="qs_small_tiles_title">Small QS tiles</string>
 
-
-
+    <!-- OmniJaws -->
+    <string name="weather_title">Weather</string>
+    <string name="weather_config_title">Service settings</string>
+    <string name="weather_config_summary"></string>
+    <string name="weather_icon_pack_title">Condition icon pack</string>
 </resources>
