@@ -28,6 +28,7 @@ import android.os.Bundle;
 import android.os.UserHandle;
 import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
+import android.support.v7.preference.PreferenceCategory;
 import android.support.v7.preference.PreferenceScreen;
 import android.support.v14.preference.SwitchPreference;
 import android.provider.Settings;
@@ -93,6 +94,7 @@ public class NotificationDrawerSettings extends SettingsPreferenceFragment imple
         PreferenceScreen prefScreen = getPreferenceScreen();
         ContentResolver resolver = getActivity().getContentResolver();
         final LockPatternUtils lockPatternUtils = new LockPatternUtils(getActivity());
+        final PreferenceScreen prefSet = getPreferenceScreen();
 
         mQuickPulldown = (ListPreference) findPreference(QUICK_PULLDOWN);
         mQuickPulldown.setOnPreferenceChangeListener(this);

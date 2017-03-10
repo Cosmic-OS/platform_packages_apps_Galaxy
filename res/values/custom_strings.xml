@@ -1056,6 +1056,7 @@
     <string name="qs_small_tiles_title">Small QS tiles</string>
 
     <!-- OmniJaws -->
+    <string name="qs">Quick Settings</string>
     <string name="weather_title">Weather</string>
     <string name="weather_config_title">Service settings</string>
     <string name="weather_config_summary"></string>
