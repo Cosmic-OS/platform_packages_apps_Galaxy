@@ -424,8 +424,6 @@
     <string name="qs_tile_title_visibility_title">QS tile titles</string>
     <string name="qs_tile_title_visibility_summary_on">QS tile titles are on</string>
     <string name="qs_tile_title_visibility_summary_off">QS tile titles are off</string>
-    <string name="qqs_scroll_title">Scroll small QS tiles</string>
-    <string name="qqs_scroll_summary">Allow scrolling through the small QS tiles</string>
     <!-- QS Header Icons -->
     <string name="qs_settings_icon_title">Settings Shortcut</string>
     <string name="qs_settings_icon_summary">Disable the settings shortcut in the header</string>
