@@ -628,6 +628,9 @@
     <!-- Notification count -->
     <string name="status_bar_notif_count_title">Show notification count</string>
     <string name="status_bar_notif_count_summary">Display the number of pending notifications</string>
+    <!-- Force expanded notifications -->
+    <string name="force_expanded_notifications_title">Force Expanded Notifications</string>
+    <string name="force_expanded_notifications_summary">Available only for apps that support expanded notifications</string>
     <!-- Bluetooth status -->
     <string name="bluetooth_battery_title">Show Bluetooth battery status</string>
     <string name="bluetooth_battery_summary">Show battery status for the currently connected bluetooth device, if available.</string>
