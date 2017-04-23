@@ -51,4 +51,11 @@
         android:summary="@string/roaming_indicator_icon_summary"
         android:defaultValue="true"/>
 
+   <!-- System APP Remover -->
+   <PreferenceScreen
+        android:id="@+id/system_app_remover"
+        android:title="@string/system_app_remover"
+        android:fragment="com.cosmic.settings.fragments.SystemappRemover" />
+   </PreferenceCategory>
+
 </PreferenceScreen>
