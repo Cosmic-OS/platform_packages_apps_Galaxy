@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2016 Cosmic-OS Project
+<!-- Copyright (C) 2016-2017 Cosmic-OS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -18,8 +18,13 @@
         android:title="@string/cosmic_settings_title" >
 
     <PreferenceCategory
-        android:key="cosmic_buttons"
-        android:title="@string/cosmic_buttons">
+        android:key="cosmic_device"
+        android:title="@string/cosmic_device">
+
+        <PreferenceScreen
+            android:fragment="com.cosmic.settings.fragments.ButtonSettings"
+            android:key="cosmic_buttons_settings"
+            android:title="@string/buttons_settings_title"/>
 
         <PreferenceScreen
             android:fragment="com.cosmic.settings.fragments.PowerMenuSettings"
