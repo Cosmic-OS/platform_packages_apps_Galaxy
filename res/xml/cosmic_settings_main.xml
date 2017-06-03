@@ -24,12 +24,14 @@
         <PreferenceScreen
             android:fragment="com.cosmic.settings.fragments.ButtonSettings"
             android:key="cosmic_buttons_settings"
-            android:title="@string/buttons_settings_title"/>
+            android:title="@string/buttons_settings_title"
+            android:icon="@drawable/ic_cosmic_buttons" />
 
         <PreferenceScreen
             android:fragment="com.cosmic.settings.fragments.PowerMenuSettings"
             android:key="cosmic_powermenu_settings"
-            android:title="@string/powermenu_settings_title"/>
+            android:title="@string/powermenu_settings_title"
+            android:icon="@drawable/ic_cosmic_powermenu" />
 
     </PreferenceCategory>
 
