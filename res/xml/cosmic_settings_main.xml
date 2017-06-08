@@ -30,7 +30,8 @@
         <PreferenceScreen
             android:fragment="com.cosmic.settings.fragments.NotificationDrawerSettings"
             android:key="cosmic_notification_drawer_settings"
-            android:title="@string/notification_drawer_settings_title"/>
+            android:title="@string/notification_drawer_settings_title"
+            android:icon="@drawable/ic_cosmic_notification" />
 
         <PreferenceScreen
             android:fragment="com.cosmic.settings.fragments.StatusBarSettings"
@@ -47,7 +48,8 @@
         <PreferenceScreen
             android:fragment="com.cosmic.settings.fragments.NavBarSettings"
             android:key="cosmic_navbar_settings"
-            android:title="@string/navbar_settings_title"/>
+            android:title="@string/navbar_settings_title"
+            android:icon="@drawable/ic_cosmic_navbar" />
 
         <PreferenceScreen
             android:fragment="com.cosmic.settings.fragments.PowerMenuSettings"
@@ -70,12 +72,14 @@
         <PreferenceScreen
             android:fragment="com.cosmic.settings.fragments.DisplaySettings"
             android:key="cosmic_display_settings"
-            android:title="@string/display_settings_title"/>
+            android:title="@string/display_settings_title"
+            android:icon="@drawable/ic_cosmic_display" />
 
         <PreferenceScreen
             android:fragment="com.cosmic.settings.fragments.NotificationMediaSettings"
             android:key="cosmic_notification_media_settings"
-            android:title="@string/notification_media_settings_title"/>
+            android:title="@string/notification_media_settings_title"
+            android:icon="@drawable/ic_cosmic_notification_media" />
 
     </PreferenceCategory>
 
