@@ -135,8 +135,7 @@
 
     <!-- Pulse navigation bar music visualizer -->
     <string name="pulse_help_policy_notice_title">About Pulse</string>
-    <string name="pulse_help_policy_notice_summary">Pulse is a brilliant audio graphic equalizer on the navigation bar when music plays. Pulse does not work with some audio sources when listening on 
-device speaker</string>
+    <string name="pulse_help_policy_notice_summary">Pulse is a brilliant audio graphic equalizer on the navigation bar when music plays. Pulse does not work with some audio sources when listening on device speaker</string>
     <string name="pulse_settings">Pulse</string>
     <string name="pulse_settings_summary">Navigation bar audio graphic equalizer</string>
     <string name="fling_show_pulse_title">Show Pulse</string>
@@ -285,8 +284,8 @@ device speaker</string>
     <string name="status_bar_notif_count_title">Show notification count</string>
     <string name="status_bar_notif_count_summary">Display the number of pending notifications</string>
 
-    <!-- Volume Rocker fragment -->
-    <string name="volumerocker_settings_title">Volume rocker</string>
+    <!-- Buttonsettings Fragment -->
+    <string name="button_settings_title">Buttons</string>
     <!-- Volume button wake -->
     <string name="volbtn_wake_device_title">Volume button wake</string>
     <string name="button_wake_summary">May not wake device if music control is active and music is playing</string>

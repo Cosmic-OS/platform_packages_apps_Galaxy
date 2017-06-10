@@ -58,10 +58,10 @@
             android:icon="@drawable/ic_cosmic_powermenu" />
 
         <PreferenceScreen
-            android:fragment="com.cosmic.settings.fragments.VolumeRockerSettings"
-            android:key="cosmic_volumerocker_settings"
-            android:title="@string/volumerocker_settings_title"
-            android:icon="@drawable/ic_cosmic_volume" />
+            android:fragment="com.cosmic.settings.fragments.ButtonSettings"
+            android:key="cosmic_button_settings"
+            android:title="@string/button_settings_title"
+            android:icon="@drawable/ic_cosmic_buttons" />
 
     </PreferenceCategory>
 
