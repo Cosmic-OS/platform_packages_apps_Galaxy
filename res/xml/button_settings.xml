@@ -87,7 +87,7 @@
             android:key="hwkeys_button_back_long_press"
             android:summary="@string/hardware_keys_long_press_summary"
             android:title="@string/hardware_keys_long_press_title" >
-        </com.com.cosmic.settings.preferences.ActionPreference>
+        </com.cosmic.settings.preferences.ActionPreference>
 
         <com.cosmic.settings.preferences.ActionPreference
             android:key="hwkeys_button_back_double_tap"
