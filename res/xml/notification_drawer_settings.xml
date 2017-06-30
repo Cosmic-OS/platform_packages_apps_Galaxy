@@ -44,10 +44,24 @@
             android:fragment="com.cosmic.settings.fragments.WakelockBlocker"
             android:title="@string/wakelockblocker_category" />
 
+        <PreferenceScreen
+               android:title="@string/power_notification_title"
+               android:summary="@string/power_notification_summary">
+            <intent android:action="android.intent.action.MAIN"
+               android:targetPackage="com.android.systemui"
+               android:targetClass="com.android.systemui.tuner.PowerNotificationControlsActivity" />
+        </PreferenceScreen>
+
     </PreferenceCategory>
 
     <PreferenceCategory
         android:title="@string/qs_panel_title">
+
+        <com.cosmic.settings.preferences.SystemSettingSwitchPreference
+            android:key="qs_show_brightness"
+            android:title="@string/qs_brightness_slider_title"
+            android:summary="@string/qs_brightness_slider_summary"
+            android:defaultValue="true"/>
 
     </PreferenceCategory>
 
