@@ -9,8 +9,7 @@ All our assets including but not limited to images, are licensed under Creative 
     android:viewportHeight="24">
 
     <path
-        android:name="Icon"
-        android:fillColor="#4285F4"
+        android:fillColor="?android:attr/colorAccent"
         android:pathData="M12,5 C13.1045695,5 14,4.1045695 14,3 C14,1.8954305 13.1045695,1 12,1
                 C10.8954305,1 10,1.8954305 10,3 C10,4.1045695 10.8954305,5 12,5 Z M12,23
                 C13.1045695,23 14,22.1045695 14,21 C14,19.8954305 13.1045695,19 12,19
