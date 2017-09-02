@@ -17,6 +17,11 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+        <Preference
+             android:key="wakelock_blocker"
+             android:fragment="com.nitrogen.settings.fragments.WakeLockBlocker"
+             android:title="@string/wakelock_blocker_title" />
+
         <com.cosmic.settings.preferences.SystemSettingSwitchPreference
             android:key="mtp_dirty_hack"
             android:title="@string/enable_mtp_dirtyhack_title"
