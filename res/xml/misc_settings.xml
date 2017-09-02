@@ -17,4 +17,9 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+        <Preference
+             android:key="wakelock_blocker"
+             android:fragment="com.cosmic.settings.fragments.WakeLockBlocker"
+             android:title="@string/wakelock_blocker_title" />
+
 </PreferenceScreen>
