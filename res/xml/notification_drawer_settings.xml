@@ -16,4 +16,10 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+   <com.cosmic.settings.preferences.SecureSettingSwitchPreference
+        android:key="qs_show_brightness"
+        android:title="@string/qs_brightness_slider_title"
+        android:summary="@string/qs_brightness_slider_summary"
+        android:defaultValue="true"/>
+
 </PreferenceScreen>
