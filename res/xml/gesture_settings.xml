@@ -22,6 +22,12 @@
         android:title="@string/dtts_category_header" >
 
     <com.cosmic.settings.preferences.SystemSettingSwitchPreference
+        android:key="double_tap_sleep_gesture"
+        android:title="@string/double_tap_to_sleep_title"
+        android:summary="@string/double_tap_to_sleep_summary"
+        android:defaultValue="true" />
+
+    <com.cosmic.settings.preferences.SystemSettingSwitchPreference
         android:key="double_tap_sleep_navbar"
         android:title="@string/double_tap_sleep_navbar"
         android:summary="@string/double_tap_sleep_navbar_summary"
