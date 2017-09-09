@@ -27,9 +27,15 @@
                 android:targetClass="com.android.systemui.tuner.LockscreenActivity" />
     </Preference>
 
-    <com.nitrogen.settings.preferences.SystemSettingSwitchPreference
+    <com.cosmic.settings.preferences.SystemSettingSwitchPreference
         android:key="lockscreen_media_metadata"
         android:title="@string/media_art_title"
         android:summary="@string/media_art_summary"
         android:defaultValue="false" />
+
+    <com.cosmic.settings.preferences.SystemSettingSwitchPreference
+        android:key="lockscreen_battery_info"
+        android:title="@string/lockscreen_battery_info_title"
+        android:summary="@string/lockscreen_battery_info_summary"
+        android:defaultValue="true" />
 </PreferenceScreen>
