@@ -222,4 +222,7 @@
     <string name="network_traffic_state_summary">Show net activity in statusbar</string>
     <string name="network_traffic_autohide_threshold_title">Net activity autohide threshold (KB/s)</string>
 
+    <!-- Notification Light -->
+    <string name="notification_light_settings">Notifications light</string>
+
 </resources>
