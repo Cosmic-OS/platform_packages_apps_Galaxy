@@ -59,12 +59,12 @@
             android:fragment="com.cosmic.settings.fragments.NotificationsSettings"
             android:icon="@drawable/ic_cosmic_notifications"/>
 
-        <!-- Notification Drawer -->
+        <!-- Quick Settings -->
         <Preference
-            android:key="cosmic_notification_drawer_settings"
-            android:title="@string/notification_drawer_settings_title"
-            android:fragment="com.cosmic.settings.fragments.NotificationDrawerSettings"
-            android:icon="@drawable/ic_cosmic_notification_drawer"/>
+            android:key="cosmic_quick_settings"
+            android:title="@string/quick_settings_title"
+            android:fragment="com.cosmic.settings.fragments.QuickSettings"
+            android:icon="@drawable/ic_cosmic_quicksettings"/>
 
         <!-- VolumeRocker -->
         <Preference
