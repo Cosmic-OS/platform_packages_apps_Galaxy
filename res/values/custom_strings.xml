@@ -568,7 +568,10 @@
 
     <!-- Statusbar logo --> 
     <string name="status_bar_logo_title">Galaxy Logo</string> 
-    <string name="status_bar_logo_summary">Enable to show Galaxy icon in the statusbar</string>
+    <string name="status_bar_logo_dialog_title">Galaxy logo position</string>
+    <string name="status_bar_logo_disabled">Disabled</string>
+    <string name="status_bar_logo_left">Left</string>
+    <string name="status_bar_logo_right">Right</string>
 
 </resources>
 
