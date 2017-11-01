@@ -23,6 +23,11 @@
         android:title="@string/heads_up_notifications"
         android:fragment="com.cosmic.settings.fragments.HeadsUpSettings" />
 
+   <PreferenceScreen
+        android:key="ticker"
+        android:fragment="com.cosmic.settings.fragments.Ticker"
+        android:title="@string/ticker_title" />
+
     <Preference
         android:key="charging_light"
         android:fragment="com.cosmic.settings.BatteryLightSettings"
