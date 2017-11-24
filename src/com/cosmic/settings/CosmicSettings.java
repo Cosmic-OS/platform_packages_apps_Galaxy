@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2016 Cosmic-OS Project
+ * Copyright (C) 2017 Cosmic-OS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,7 +19,7 @@ package com.cosmic.settings;
 import android.os.Bundle;
 import android.support.v7.preference.PreferenceScreen;
 
-import com.android.internal.logging.MetricsProto.MetricsEvent;
+import com.android.internal.logging.nano.MetricsProto;
 
 import com.android.settings.SettingsPreferenceFragment;
 
@@ -33,8 +33,8 @@ public class CosmicSettings extends SettingsPreferenceFragment {
     }
 
     @Override
-    protected int getMetricsCategory() {
-        return MetricsEvent.GALAXY;
+    public int getMetricsCategory() {
+        return MetricsProto.MetricsEvent.GALAXY;
     }
 }
 
