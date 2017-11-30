@@ -24,6 +24,13 @@
             android:fragment="com.cosmic.settings.fragments.RecentsSettings"
             android:icon="@drawable/ic_cosmic_recents"/>
 
+        <!-- Notifications -->
+        <Preference
+            android:key="cosmic_notifications_settings"
+            android:title="@string/notifications_settings_title" 
+            android:fragment="com.cosmic.settings.fragments.NotificationsSettings"
+            android:icon="@drawable/ic_cosmic_notifications"/>
+
         <!-- Misc -->
         <Preference
             android:key="cosmic_misc_settings"
