@@ -16,6 +16,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <!-- Categories -->
+    <string name="gesture_settings_title">Gestures</string>
     <string name="misc_settings_title">Miscellaneous</string>
     <string name="recents_settings_title">Recents</string>
     <string name="notifications_settings_title">Notifications</string>

@@ -17,6 +17,13 @@
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
         android:title="@string/cosmic_settings_title" >
 
+        <!-- Gestures -->
+        <Preference
+            android:key="cosmic_gesture_settings"
+            android:title="@string/gesture_settings_title" 
+            android:fragment="com.cosmic.settings.fragments.GestureSettings"
+            android:icon="@drawable/ic_cosmic_gesture"/>
+
         <!-- Recents -->
         <Preference
             android:key="cosmic_recents_settings"
