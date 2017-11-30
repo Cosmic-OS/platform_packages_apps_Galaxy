@@ -15,4 +15,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
+    <!-- Categories -->
+    <string name="misc_settings_title">Miscellaneous</string>
+
 </resources>
