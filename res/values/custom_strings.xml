@@ -15,6 +15,9 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
+    <!-- Categories -->
+    <string name="misc_settings_title">Miscellaneous</string>
+
     <!-- Color Picker -->
     <string name="dialog_color_picker">Color Picker</string>
     <string name="press_color_to_apply">Press on color below to apply</string>
