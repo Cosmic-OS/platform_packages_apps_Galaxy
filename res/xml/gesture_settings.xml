@@ -17,4 +17,9 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+    <Preference
+        android:key="gestures_dashboard"
+        android:title="@string/gesture_preference"
+        android:fragment="com.android.settings.system.GesturesFragment" />
+
 </PreferenceScreen>
