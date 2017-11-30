@@ -17,6 +17,7 @@
 
     <!-- Categories -->
     <string name="misc_settings_title">Miscellaneous</string>
+    <string name="recents_settings_title">Recents</string>
 
     <!-- Color Picker -->
     <string name="dialog_color_picker">Color Picker</string>
