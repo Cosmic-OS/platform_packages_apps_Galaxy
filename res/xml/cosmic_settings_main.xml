@@ -45,6 +45,13 @@
             android:fragment="com.cosmic.settings.fragments.LockScreenSettings"
             android:icon="@drawable/ic_cosmic_lockscreen"/>
 
+        <!-- Gestures -->
+        <Preference
+            android:key="cosmic_gesture_settings"
+            android:title="@string/gesture_settings_title" 
+            android:fragment="com.cosmic.settings.fragments.GestureSettings"
+            android:icon="@drawable/ic_cosmic_gesture"/>
+
         <!-- Notifications -->
         <Preference
             android:key="cosmic_notifications_settings"
