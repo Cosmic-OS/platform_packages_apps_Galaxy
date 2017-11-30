@@ -17,6 +17,13 @@
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
         android:title="@string/cosmic_settings_title" >
 
+        <!-- Recents -->
+        <Preference
+            android:key="cosmic_recents_settings"
+            android:title="@string/recents_settings_title" 
+            android:fragment="com.cosmic.settings.fragments.RecentsSettings"
+            android:icon="@drawable/ic_cosmic_recents"/>
+
         <!-- Misc -->
         <Preference
             android:key="cosmic_misc_settings"
