@@ -45,6 +45,13 @@
             android:fragment="com.cosmic.settings.fragments.NotificationsSettings"
             android:icon="@drawable/ic_cosmic_notifications"/>
 
+        <!-- VolumeRocker -->
+        <Preference
+            android:fragment="com.cosmic.settings.fragments.VolumeRockerSettings"
+            android:key="cosmic_volumerocker_settings"
+            android:title="@string/volumerocker_settings_title"
+            android:icon="@drawable/ic_cosmic_volume" />
+
         <!-- Misc -->
         <Preference
             android:key="cosmic_misc_settings"
