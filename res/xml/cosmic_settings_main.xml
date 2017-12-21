@@ -19,6 +19,7 @@
 
         <!-- StatusBar -->
         <Preference
+
             android:key="cosmic_statusbar_settings"
             android:title="@string/statusbar_settings_title"
             android:fragment="com.cosmic.settings.fragments.StatusBarSettings"
@@ -45,11 +46,18 @@
             android:fragment="com.cosmic.settings.fragments.NotificationsSettings"
             android:icon="@drawable/ic_cosmic_notifications"/>
 
+        <!-- Notification Drawer -->
+        <Preference
+            android:key="cosmic_notification_drawer_settings"
+            android:title="@string/notification_drawer_settings_title"
+            android:fragment="com.cosmic.settings.fragments.NotificationDrawerSettings"
+            android:icon="@drawable/ic_cosmic_notification_drawer"/>
+
         <!-- VolumeRocker -->
         <Preference
-            android:fragment="com.cosmic.settings.fragments.VolumeRockerSettings"
             android:key="cosmic_volumerocker_settings"
             android:title="@string/volumerocker_settings_title"
+            android:fragment="com.cosmic.settings.fragments.VolumeRockerSettings"
             android:icon="@drawable/ic_cosmic_volume" />
 
         <!-- Misc -->
