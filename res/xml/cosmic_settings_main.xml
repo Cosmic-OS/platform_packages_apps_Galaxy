@@ -17,6 +17,13 @@
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
         android:title="@string/cosmic_settings_title" >
 
+        <!-- StatusBar -->
+        <Preference
+            android:key="cosmic_statusbar_settings"
+            android:title="@string/statusbar_settings_title"
+            android:fragment="com.cosmic.settings.fragments.StatusBarSettings"
+            android:icon="@drawable/ic_cosmic_statusbar" />
+
         <!-- Recents -->
         <Preference
             android:key="cosmic_recents_settings"
