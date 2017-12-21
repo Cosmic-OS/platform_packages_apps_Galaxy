@@ -23,6 +23,7 @@
     <string name="statusbar_settings_title">Status bar</string>
     <string name="volumerocker_settings_title">Volume rocker</string>
     <string name="notification_drawer_settings_title">Notification drawer</string>
+    <string name="navbar_settings_title">Navigation bar</string>
 
     <!-- Color Picker -->
     <string name="dialog_color_picker">Color Picker</string>

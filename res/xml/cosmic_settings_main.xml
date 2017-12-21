@@ -19,11 +19,17 @@
 
         <!-- StatusBar -->
         <Preference
-
             android:key="cosmic_statusbar_settings"
             android:title="@string/statusbar_settings_title"
             android:fragment="com.cosmic.settings.fragments.StatusBarSettings"
             android:icon="@drawable/ic_cosmic_statusbar" />
+
+        <!-- Navigation Bar -->
+        <Preference
+            android:key="cosmic_navbar_settings"
+            android:title="@string/navbar_settings_title"
+            android:fragment="com.cosmic.settings.fragments.NavbarSettings"
+            android:icon="@drawable/ic_cosmic_navbar" />
 
         <!-- Recents -->
         <Preference
