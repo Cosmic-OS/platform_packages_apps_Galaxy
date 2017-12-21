@@ -19,6 +19,7 @@
     <string name="misc_settings_title">Miscellaneous</string>
     <string name="recents_settings_title">Recents</string>
     <string name="notifications_settings_title">Notifications</string>
+    <string name="lockscreen_settings_title">Lockscreen</string>
 
     <!-- Color Picker -->
     <string name="dialog_color_picker">Color Picker</string>
