@@ -38,6 +38,13 @@
             android:fragment="com.cosmic.settings.fragments.RecentsSettings"
             android:icon="@drawable/ic_cosmic_recents"/>
 
+       <!-- Buttons -->
+        <Preference
+            android:key="cosmic_button_settings"
+            android:title="@string/button_settings_title"
+            android:fragment="com.cosmic.settings.fragments.ButtonSettings"
+            android:icon="@drawable/ic_cosmic_button"/>
+
        <!-- Lockscreen -->
         <Preference
             android:key="cosmic_lockscreen_settings"

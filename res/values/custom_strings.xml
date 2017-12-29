@@ -25,6 +25,7 @@
     <string name="quick_settings_title">Quick Settings</string>
     <string name="navbar_settings_title">Navigation bar</string>
     <string name="gesture_settings_title">Gestures</string>
+    <string name="button_settings_title">Buttons</string>
 
     <!-- Color Picker -->
     <string name="dialog_color_picker">Color Picker</string>
