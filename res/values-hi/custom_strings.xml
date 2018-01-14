@@ -16,7 +16,13 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Categories -->
+  <string name="misc_settings_title">विविध</string>
+  <string name="recents_settings_title">हाल ही के</string>
+  <string name="notifications_settings_title">सूचनाएँ</string>
+  <string name="lockscreen_settings_title_custom">लॉकस्क्रीन</string>
+  <string name="gesture_settings_title">इशारे</string>
   <!-- General strings -->
+  <string name="ok">ठीक है</string>
   <!-- Color Picker -->
   <!-- Wakelock blocker -->
   <!-- Alarm blocker -->
