@@ -613,4 +613,8 @@
     <string name="no_iconpacks_summary">No icon packs installed</string>
     <string name="dialog_pick_iconpack_title">Pick icon pack</string>
     <string name="default_iconpack_title">Default icons</string>
+
+    <!-- Show 4G instead of LTE -->
+    <string name="show_4g_title">Show 4G</string>
+    <string name="show_4g_summary">Show 4G instead of LTE in signal icons</string>
 </resources>
