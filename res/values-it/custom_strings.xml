@@ -103,9 +103,6 @@
     <string name="weather_icon_pack_title">Pacchetto icone delle condizioni</string>
 
     <!-- Statusbar Tuner -->
-    <string name="statusbar_items_title">Statusbar items</string>
-
-    <!-- Power notification controls -->
     <string name="statusbar_items_title">Elementi della barra di stato</string>
 
     <!-- Volume down enter do not disturb -->
