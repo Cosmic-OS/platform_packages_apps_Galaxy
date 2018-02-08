@@ -250,7 +250,7 @@
     <string name="navbar_buttons_summary">导航栏布局和自定义按钮</string>
 
     <!-- DUI -->
-    string name="navbar_interface_title">界面</string>
+    <string name="navbar_interface_title">界面</string>
     <string name="navbar_size">大小</string>
     <string name="navbar_mode">导航栏模式</string>
     <string name="navbar_mode_summary">选择要在设备上使用的导航栏模式。</string>
