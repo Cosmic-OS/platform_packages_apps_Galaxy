@@ -124,8 +124,8 @@
 
     <!-- Double Tap -->
     <string name="dtts_category_header">Doppio tocco per spegnere</string>
-    <string name="double_tap_sleep_navbar">Doppio tocco per spegnere sulla barra di navigazione</string>
-    <string name="double_tap_sleep_navbar_summary">Tocca due volte la barra di navigazione per spegnere lo schermo del dispositivo</string>
+    <string name="double_tap_sleep_navbar">Barra di navigazione</string>
+    <string name="double_tap_sleep_navbar_summary">Doppio tocco sulla barra di navigazione per spegnere lo schermo del dispositivo</string>
     <!-- Double Tap Lockscreen to Sleep -->
     <string name="double_tap_to_sleep_lockscreen_title">Schermata di blocco</string>
     <string name="double_tap_to_sleep_lockscreen_summary">Doppio tocco sull\'area superiore o inferiore della schermata di blocco per spegnere lo schermo del dispositivo</string>
@@ -197,15 +197,15 @@
     <string name="ime_switcher_notify_summary">Visualizza il metodo d\'ingresso di selezione della notifica</string>
 	
     <!-- Battery saver color -->
-    <string name="battery_saver_color_title">Colore di avviso</string>
-    <string name="battery_saver_color_summary">Abilita lo stato arancione sulle barre di navigazione quando è attivato il risparmio batteria</string>
+    <string name="battery_saver_color_title">Colore risparmio batteria</string>
+    <string name="battery_saver_color_summary">Abilita lo stato arancione su entrambi le barre quando è attivato il risparmio della batteria</string>
 
     <!-- The volume key answer -->
     <string name="volume_answer_call_title">Rispondi alla chiamata</string>
     <string name="volume_answer_call_summary">Rispondi alle chiamate quando vengono premuti i tasti del volume</string>
 
     <!-- Battery light -->
-    <string name="battery_light_settings">Indicatore di carica della batteria</string>
+    <string name="battery_light_settings">Indicatori di carica della batteria</string>
     <string name="battery_light_enable">Abilita</string>
     <string name="battery_light_allow_on_dnd_title">La spia della batteria si accende in modalità Non disturbare</string>
     <string name="battery_light_low_blinking_title">Luce lampeggiante su batteria scarica</string>
@@ -218,18 +218,18 @@
     <!-- Statusbar net monitor -->
     <string name="network_traffic_state_title">Traffico di rete</string>
     <string name="network_traffic_state_summary">Mostra l\'attività di rete nella barra di stato</string>
-    <string name="network_traffic_autohide_threshold_title">Nascondi automaticamente alla soglia per inattività (KB/s)</string>
+    <string name="network_traffic_autohide_threshold_title">Nascondi soglia per inattività (KB/s)</string>
 
     <!-- Notification Light -->
     <string name="notification_light_settings">Luce di notifiche</string>
 	
     <!-- Heads up -->
-    <string name="heads_up_notifications">Heads up</string>
-    <string name="summary_heads_up_enabled">Le notifiche Pop-up sono abilitate</string>
-    <string name="summary_heads_up_disabled">Le notifiche Pop-up sono disabilitate</string>
+    <string name="heads_up_notifications">Notifiche fluttuanti</string>
+    <string name="summary_heads_up_enabled">Le notifiche fluttuanti sono abilitate</string>
+    <string name="summary_heads_up_disabled">Le notifiche fluttuanti sono disabilitate</string>
     <string name="add_heads_up_package">Aggiungi app</string>
-    <string name="add_heads_up_stoplist_summary">Disabilita le notifiche Heads up in queste applicazioni</string>
-    <string name="add_heads_up_blacklist_summary">Disabilita le heads up da queste applicazioni</string>
+    <string name="add_heads_up_stoplist_summary">Disabilita le notifiche fluttuanti in queste applicazioni</string>
+    <string name="add_heads_up_blacklist_summary">Disabilita le notifiche fluttuanti da queste applicazioni</string>
     <string name="heads_up_stoplist_title">Lista bloccata</string>
     <string name="heads_up_blacklist_title">Lista nera</string>
     <string name="profile_choose_app">Scegli app</string>
@@ -365,7 +365,7 @@
     <!-- SmartBar -->
     <string name="smartbar_category">SmartBar</string>
     <string name="smartbar_settings_title">Impostazioni Smartbar</string>
-	<string name="smartbar_settings_summary">Barra di navigazione completamente personalizzabile</string>
+    <string name="smartbar_settings_summary">Barra di navigazione completamente personalizzabile</string>
     <string name="smartbar_editor_title">Avvia la modalità modifica</string>
     <string name="smartbar_editor_summary">Apri per la modifica dei pulsanti della smartbar</string>
     <string name="smartbar_help_policy_notice_summary">Tieni premuto e trascina per cambiare la posizione. Tieni premuto a lungo per visualizzare il menù di modifica. La posizione del pulsante potrebbe cambiare durante la visualizzazione del menù.</string>
@@ -449,11 +449,11 @@
     <string name="anbi_title">Tocco accidentale</string>
     <string name="anbi_summary">Impedire l\'interazione con i pulsanti di navigazione mentre si tocca lo schermo</string>
     <!-- Brightness icon-->
-    <string name="brightness_icon_title">Icona luminosità </string>
+    <string name="brightness_icon_title">Icona luminosità</string>
     <string name="brightness_icon_summary">Visualizza un\'icona a sinistra dello slider per regolare la luminosità automatica</string>
 
     <!-- Disable QS on secure Lockscreen -->
-    <string name="lockscreen_qs_disabled_title">Disabilita impostazioni rapide </string>
+    <string name="lockscreen_qs_disabled_title">Disabilita impostazioni rapide</string>
     <string name="lockscreen_qs_disabled_summary">Disabilita le impostazioni rapide sulla schermata di blocco</string>
 
     <!-- SlimSizer  -->
@@ -473,7 +473,7 @@
     <string name="sizer_message_filesuccess">Profilo creato.</string>
     <string name="sizer_message_filefail">Impossibile creare il profilo.</string>
     <string name="sizer_message_noselect">Nulla selezionato.</string>
-    <string name="system_app_remover">Dispositivo di rimozione app di sistema</string>
+    <string name="system_app_remover">Rimozione app di sistema</string>
 
     <!-- Brightness control -->
     <string name="status_bar_toggle_brightness">Controllo della luminosità</string>
@@ -497,8 +497,8 @@
     <string name="status_bar_clock_seconds_summary">Visualizza i secondi accanto all\'orologio nella barra di stato</string>
     <string name="status_bar_am_pm_title">AM/PM</string>
     <string name="status_bar_am_pm_info">Orologio a 24 ore è abilitato</string>
-    <string name="am_pm_clock_normal">Dimensione del carattere normale</string>
-    <string name="am_pm_clock_small">Dimensione del carattere piccolo</string>
+    <string name="am_pm_clock_normal">Dimensione carattere normale</string>
+    <string name="am_pm_clock_small">Dimensione carattere piccolo</string>
     <string name="am_pm_clock_none">Non mostrare</string>
     <string name="clock_date_display">Data</string>
     <string name="clock_date_display_summary">Mostra la data personalizzata prima dell\'orologio</string>
@@ -507,8 +507,8 @@
     <string name="clock_date_string_edittext_title">Deve essere in formato data es. MM/dd/yy</string>
     <string name="clock_date_string_edittext_summary">Inserisci una stringa</string>
     <string name="clock_date_display_none">Non mostrare</string>
-    <string name="clock_date_display_small">Dimensione del carattere piccolo</string>
-    <string name="clock_date_display_normal">Dimensione del carattere normale</string>
+    <string name="clock_date_display_small">Dimensione carattere piccolo</string>
+    <string name="clock_date_display_normal">Dimensione carattere normale</string>
     <string name="clock_date_style_normal">Normale</string>
     <string name="clock_date_style_lowercase">Minuscolo</string>
     <string name="clock_date_style_uppercase">Maiuscolo</string>
@@ -548,11 +548,11 @@
     <string name="heads_up_snooze_20min">20 minuti</string>
 
     <!-- Statusbar logo --> 
-    <string name="status_bar_logo_title">Galaxy Logo</string> 
-    <string name="status_bar_logo_dialog_title">Galaxy logo position</string>
-    <string name="status_bar_logo_disabled">Disabled</string>
-    <string name="status_bar_logo_left">Left</string>
-    <string name="status_bar_logo_right">Right</string>
+    <string name="status_bar_logo_title">Logo Galaxy</string> 
+    <string name="status_bar_logo_dialog_title">Posizione del logo Galaxy</string>
+    <string name="status_bar_logo_disabled">Disabilitato</string>
+    <string name="status_bar_logo_left">Sinistra</string>
+    <string name="status_bar_logo_right">Destra</string>
 
     <!-- Carrier Label -->
     <string name="carrier_category">Etichetta operatore</string>
