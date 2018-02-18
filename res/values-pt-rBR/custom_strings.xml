@@ -19,7 +19,7 @@
     <string name="notifications_settings_title">"Notificações"</string>
     <string name="lockscreen_settings_title_custom">"Tela de Bloqueio"</string>
     <string name="statusbar_settings_title">"Barra de Status"</string>
-    <string name="volumerocker_settings_title">"Volume roqueiro"</string>
+    <string name="volumerocker_settings_title">"Volume rocker"</string>
     <string name="quick_settings_title">"Configurações rápidas"</string>
     <string name="navbar_settings_title">"Barra de navegação"</string>
     <string name="gesture_settings_title">"Gestos"</string>
@@ -27,7 +27,7 @@
 
     <!-- General strings -->
     <string name="ok">"OK"</string>
-    <string name="reset">"Reset"</string>
+    <string name="reset">"Resetar"</string>
     <string name="cancel">"Cancelar"</string>
     <string name="save">"Salvo"</string>
 
@@ -61,7 +61,7 @@
     <string name="alarm_blocker_warning">"Bloquear alarmes tem potencial para causar instabilidade, falhas ou perda de dados."</string>
 
     <!-- Recents panel settings -->
-    <string name="show_clear_all_recents_button_title">"Botão de Limpar Tudo"</string>
+    <string name="show_clear_all_recents_button_title">"Botão Limpar Tudo"</string>
     <string name="show_clear_all_recents_button_summary">"Mostrar botão \"Limpar Tudo\""</string>
     <string name="recents_clear_all_location_title">"Localização do Botão \"Limpar Tudo\""</string>
     <string name="recents_clear_all_location_top_right">"Superior direito"</string>
@@ -73,13 +73,13 @@
 
     <!-- Incall vibrate options -->
     <string name="incall_vibration_category">"Opções de vibração em chamada"</string>
-    <string name="incall_vibrate_connect_title">"Vibrar na conexão"</string>
+    <string name="incall_vibrate_connect_title">"Vibrar ao conectar"</string>
     <string name="incall_vibrate_call_wait_title">"Vibrar em chamada em espera"</string>
-    <string name="incall_vibrate_disconnect_title">"Vibrar ao disconectar"</string>
+    <string name="incall_vibrate_disconnect_title">"Vibrar ao desconectar"</string>
 
     <!-- Wakeup options -->
-    <string name="wakeup_when_plugged_unplugged_title">"Acorde em carga"</string>
-    <string name="wakeup_when_plugged_unplugged_summary">"Acorde o dispositivo se o carregador estiver conectado / desconectado."</string>
+    <string name="wakeup_when_plugged_unplugged_title">"Acorde ao carregar"</string>
+    <string name="wakeup_when_plugged_unplugged_summary">"Acorde o dispositivo se o carregador estiver conectado/desconectado."</string>
 
     <!-- Immersive Recents -->
     <string name="immersive_recents_title">"Recentes imersivos"</string>
@@ -97,7 +97,7 @@
 
     <!-- Lockscreen weather -->
     <string name="lock_screen_weather_settings_title">"Clima"</string>
-    <string name="weather_show_weather_title">"Mostre o tempo"</string>
+    <string name="weather_show_weather_title">"Mostre o clima"</string>
     <string name="weather_show_weather_summary">"Permitir mostrar informações meteorológicas"</string>
     <string name="weather_show_location_title">"Mostrar localização"</string>
     <string name="weather_show_location_summary">"Permitir mostrar a localização"</string>
@@ -108,7 +108,7 @@
     <string name="statusbar_items_title">"Itens da barra de status"</string>
 
     <!-- Power notification controls -->
-    <string name="power_notification_title">"Controles de notificação de poder"</string>
+    <string name="power_notification_title">"Power Notification Controls"</string>
 
     <!-- Volume down enter do not disturb -->
     <string name="volbtn_down_zen_title">"Volume para baixo para não incomodar"</string>
@@ -122,7 +122,7 @@
     <string name="qs_brightness_slider_summary">"Mostra um controle deslizante de brilho no painel de configurações rápidas"</string>
 
     <!-- Lockscreen icons -->
-    <string name="lockscreen_tuner_title">"Atalhos de bloqueio"</string>
+    <string name="lockscreen_tuner_title">"Atalhos na tela de bloqueio"</string>
 
     <!-- Navbar tuner -->
     <string name="navbar_tuner_title">"Botões Navbar"</string>
@@ -172,7 +172,7 @@
 
     <!-- Lockscreen battery info indicator  -->
     <string name="lockscreen_battery_info_title">"Informação de carregamento na tela de bloqueio"</string>
-    <string name="lockscreen_battery_info_summary">"Exibir carga máxima carregada do carregador e tensão e temperatura da bateria na tela de bloqueio durante o carregamento"</string>
+    <string name="lockscreen_battery_info_summary">"Exibir carga máxima do carregador e tensão e temperatura da bateria na tela de bloqueio durante o carregamento"</string>
 
     <!-- Language options - Volume rocker cursor control -->
     <string name="cursor_section_header">"Cursor"</string>
@@ -214,7 +214,7 @@
     <!-- Battery light -->
     <string name="battery_light_settings">"Luz de carregamento da bateria"</string>
     <string name="battery_light_enable">"Ativar"</string>
-    <string name="battery_light_allow_on_dnd_title">"Luz de bateria no modo Não perturbe"</string>
+    <string name="battery_light_allow_on_dnd_title">"Luz de bateria no modo não perturbe"</string>
     <string name="battery_light_low_blinking_title">"Luz piscando em bateria fraca"</string>
     <string name="battery_light_cat">"Cor da luz da bateria ao carregar"</string>
     <string name="battery_light_low_color">"Bateria fraca"</string>
@@ -380,7 +380,7 @@
 
     <!-- SmartBar -->
     <string name="smartbar_category">"Smartbar"</string>
-    <string name="smartbar_settings_title">"Configurações da barra inteligente"</string>
+    <string name="smartbar_settings_title">"Configurações da Smartbar"</string>
     <string name="smartbar_settings_summary">"Barra de navegação totalmente personalizável"</string>
     <string name="smartbar_editor_title">"Iniciar modo de edição"</string>
     <string name="smartbar_editor_summary">"Abrir o editor de botões smartbar"</string>
@@ -397,7 +397,7 @@
     <string name="smartbar_button_animation_pixel_home">"Pixel (apenas botão Home)"</string>
     <string name="smartbar_button_animation_pixel_home_ripple">"Pixel (somente botão Home) e Ripple"</string>
     <string name="smartbar_factory_reset_title">"Redefinir para padão"</string>
-    <string name="smartbar_factory_reset_confirm">"Tem certeza de que deseja redefinir a barra inteligente para as configurações de estoque?"</string>
+    <string name="smartbar_factory_reset_confirm">"Tem certeza de que deseja redefinir a barra inteligente para as configurações padão?"</string>
     <string name="smartbar_ime_action_title">"Método de entrada e ações de mídia"</string>
     <string name="smartbar_ime_action_summary">"Defina quais botões para mostrar quando um teclado na tela está sendo exibido ou a música está sendo reproduzida"</string>
     <string name="smartbar_ime_action_none">"Nenhum"</string>
@@ -483,7 +483,7 @@
     <string name="delete_progress_title">"Excluindo"</string>
     <string name="delete_progress">"Os arquivos selecionados estão sendo excluídos ..."</string>
     <string name="delete_success">"Excluído"</string>
-    <string name="delete_fail">"Não foi possível deletar"</string>
+    <string name="delete_fail">"Não foi possível excluir"</string>
     <string name="btn_profile">"Perfil"</string>
     <string name="sizer_message_sdnowrite">"Não é possível gravar no cartão SD."</string>
     <string name="sizer_message_sdnoread">"Não é possível ler o cartão SD."</string>
@@ -555,7 +555,7 @@
 
     <!-- Heads up snooze -->
     <string name="heads_up_snooze_title">"Temporizador de soneca"</string>
-    <string name="heads_up_snooze_summary_one_minute">"A limpeza das notificações de espreitadelas repetidirá as cabeças desse aplicativo por 1 minuto"</string>
+    <string name="heads_up_snooze_summary_one_minute">"Clearing snooze notifications will repeat the heads of this application for 1 minute"</string>
     <string name="heads_up_snooze_summary">"Swiping up on peeking notifications will snooze heads up from that application for &lt;xliff:g id=\"number\"&gt;%d&lt;/xliff:g&gt; minutes"</string>
     <string name="heads_up_snooze_disabled_summary">"O temporizador de soneca está desativado"</string>
     <string name="heads_up_snooze_1min">"1 minuto"</string>
