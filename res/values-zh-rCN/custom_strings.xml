@@ -20,7 +20,7 @@
     <string name="recents_settings_title">最近任务面板</string>
     <string name="notifications_settings_title">通知栏</string>
     <string name="lockscreen_settings_title_custom">锁屏界面</string>
-    <string name="statusbar_settings_title">状态了</string>
+    <string name="statusbar_settings_title">状态栏</string>
     <string name="volumerocker_settings_title">音量键</string>
     <string name="quick_settings_title">快捷设置面板</string>
     <string name="navbar_settings_title">导航栏</string>
@@ -188,7 +188,7 @@
     <!-- UI debug setting: show CPU info? [CHAR LIMIT=25] -->
     <string name="show_cpu_info">显示处理器信息</string>
     <!-- UI debug setting: show cpu usage summary [CHAR LIMIT=50] -->
-    <string name="show_cpu_info_summary">处理器信息显示在最上层(Screen overlay showing current CPU info)</string>
+    <string name="show_cpu_info_summary">将处理器信息显示在最上层</string>
 
     <!-- Smart pulldown-->
     <string name="smart_pulldown_title">智能下拉</string>
@@ -246,7 +246,7 @@
     <!-- Navigation -->
     <string name="navigationbar_title">导航栏</string>
     <string name="navigationbar_summary">配置SmartBar, Fling和Pulse</string>
-    <string name="navbar_buttons_title">导航栏按钮</string>
+    <string name="navbar_buttons_title">默认导航栏</string>
     <string name="navbar_buttons_summary">导航栏布局和自定义按钮</string>
 
     <!-- DUI -->
@@ -261,7 +261,7 @@
     <string name="navbar_general_title">高级</string>
     <string name="navigation_bar_left_title">左手模式</string>
     <string name="navigation_bar_left_summary">将导航条放置在屏幕左侧的横屏模式中。</string>
-    <string name="smartbar_interface">智能导航栏</string>
+    <string name="smartbar_interface">Smart Bar</string>
     <string name="icon_pack_picker_dialog_title">图标包</string>
     <string name="image_exceeds_max_allowed_size">图标大小不能超过 512x512</string>
     <string name="invalid_icon_from_uri">无法从内容提供程序加载图像。</string>
@@ -269,9 +269,9 @@
     <string name="select_custom_app_title">选择自定义应用</string>
     <string name="select_custom_activity_title">选择自定义活动</string>
     <string name="profile_applist_title">应用</string>
-    <string name="default_string">Stock</string>
-    <string name="default_settings">Stock 设置</string>
-    <string name="default_settings_summary">Stock AOSP 导航栏</string>
+    <string name="default_string">默认</string>
+    <string name="default_settings">默认导航栏设置</string>
+    <string name="default_settings_summary">系统默认的导航栏</string>
 
     <!-- Actions dialog and default task values set in ActionPreference xml-->
     <string name="choose_action_title">选择操作</string>
@@ -293,7 +293,7 @@
     <string name="fling_settings_summary">一个非常独特且完全可定制的基于手势的导航栏</string>
     <string name="fling_interface">Fling</string>
     <string name="fling_enable_title">开启 Fling</string>
-    <string name="fling_back_home_policy">在任何时候都必须设置返回和主页键。要更改返回或主页操作，首先设置所需的操作。\n\n同时，设置双击动作会延迟单击会慢一点</string>
+    <string name="fling_back_home_policy">在任何时候都必须设置返回和主页键。要更改返回或主页操作，首先设置所需的操作。同时，设置双击动作会延迟单击会慢一点</string>
     <string name="fling_split_bar_policy">当只分配一个左右动作时，动作就应用于整个栏。</string>
     <string name="fling_def_summary">未设置动作</string>
     <string name="fling_swipe_actions">滑动手势</string>
@@ -373,11 +373,11 @@
 
 
     <!-- Navbar height -->
-    <string name="navigation_bar_size_title">Bar size</string>
-    <string name="portrait_title">Portrait height</string>
-    <string name="land_vert_title">Landscape width</string>
-    <string name="land_hor_title">Landscape height</string>
-    <string name="positive_done">Done</string>
+    <string name="navigation_bar_size_title">导航栏大小</string>
+    <string name="portrait_title">导航栏高度</string>
+    <string name="land_vert_title">竖屏时的高度</string>
+    <string name="land_hor_title">横向时的宽度</string>
+    <string name="positive_done">完成</string>
 
     <!-- SmartBar -->
     <string name="smartbar_category">Smart Bar</string>
@@ -386,10 +386,10 @@
     <string name="smartbar_editor_title">开启编辑</string>
     <string name="smartbar_editor_summary">打开SmartBar按钮编辑</string>
     <string name="smartbar_help_policy_notice_summary">在编辑模式下，中媒体拖动一个按钮来改变它的位置或者长按一个按钮来显示编辑菜单。当菜单显示时，按钮位置可能会改变。双击操作将会延迟单次点击。</string>
-    <string name="smartbar_context_menu_position_title">上下文按钮布局位置</string>
-    <string name="smartbar_context_menu_position_summary">设置上下文按钮的位置，如菜单和ime选择器</string>
-    <string name="smartbar_right">右</string>
-    <string name="smartbar_left">左</string>
+    <string name="smartbar_context_menu_position_title">特殊按钮的位置</string>
+    <string name="smartbar_context_menu_position_summary">设置特殊按钮的位置，如菜单和输入法选择器</string>
+    <string name="smartbar_right">在右侧</string>
+    <string name="smartbar_left">在左侧</string>
     <string name="smartbar_button_animation_title">按钮触摸动画</string>
     <string name="smartbar_button_animation_summary">设置主按钮按下时的动画样式。</string>
     <string name="smartbar_button_animation_ripple">波纹</string>
@@ -491,7 +491,7 @@
     <string name="sizer_message_filesuccess">创建配置文件。</string>
     <string name="sizer_message_filefail">不可创建配置文件。</string>
     <string name="sizer_message_noselect">未选择</string>
-    <string name="system_app_remover">系统应用移除</string>
+    <string name="system_app_remover">卸载系统应用</string>
 
     <!-- Brightness control -->
     <string name="status_bar_toggle_brightness">亮度控制</string>
@@ -530,6 +530,58 @@
     <string name="clock_date_style_normal">正常</string>
     <string name="clock_date_style_lowercase">小写</string>
     <string name="clock_date_style_uppercase">大写</string>
-    <string name="clock_date_format_custom">自定义java格式</string>
+    <string name="clock_date_format_custom">自定义Java格式</string>
     <string name="menu_cancel">取消</string>
+	
+	<!-- Status bar ticker -->
+    <string name="ticker_title">通知预览</string>
+    <string name="ticker_mode_title">状态栏通知预览</string>
+    <string name="ticker_disabled">禁用</string>
+    <string name="ticker_enabled">仅显示通知的预览</string>
+    <string name="ticker_media_enabled">通知和音乐的预览</string>
+
+    <!-- Face auto unlock -->
+    <string name="face_auto_unlock_title">面部识别自动解锁</string>
+    <string name="face_auto_unlock_summary">当识别到您的脸的时候自动解锁</string>
+
+    <!-- Heads up timeout -->
+    <string name="heads_up_time_out_title">显示时长</string>
+    <string name="heads_up_time_out_summary">悬浮通知会在屏幕上方显示 <xliff:g id="number">%d</xliff:g> 秒</string>
+    <string name="heads_up_time_out_2sec">2 秒</string>
+    <string name="heads_up_time_out_4sec">4 秒</string>
+    <string name="heads_up_time_out_5sec">5 秒</string>
+    <string name="heads_up_time_out_6sec">6 秒</string>
+    <string name="heads_up_time_out_8sec">8 秒</string>
+    <string name="heads_up_time_out_10sec">10 秒</string>
+
+    <!-- Heads up snooze -->
+    <string name="heads_up_snooze_title">暂停悬浮通知时长</string>
+    <string name="heads_up_snooze_summary_one_minute">把悬浮通知向上轻扫一下就能使这个应用暂时停用悬浮通知1分钟</string>
+    <string name="heads_up_snooze_summary">把悬浮通知向上轻扫一下就能使这个应用暂时停用悬浮通知 <xliff:g id="number">%d</xliff:g> 分钟</string>
+    <string name="heads_up_snooze_disabled_summary">不需要暂停</string>
+    <string name="heads_up_snooze_1min">1 分钟</string>
+    <string name="heads_up_snooze_5min">5 分钟</string>
+    <string name="heads_up_snooze_10min">10 分钟</string>
+    <string name="heads_up_snooze_15min">15 分钟</string>
+    <string name="heads_up_snooze_20min">20 分钟</string>
+
+    <!-- Statusbar logo --> 
+    <string name="status_bar_logo_title">Galaxy Logo</string> 
+    <string name="status_bar_logo_dialog_title">Galaxy Logo的位置</string>
+    <string name="status_bar_logo_disabled">禁用</string>
+    <string name="status_bar_logo_left">在左边</string>
+    <string name="status_bar_logo_right">在右边</string>
+
+    <!-- Carrier Label -->
+    <string name="carrier_category">运营商标签</string>
+    <string name="carrier_options">选择显示位置</string>
+    <string name="custom_carrier_label_title">自定义标签</string>
+    <string name="custom_carrier_label_explain">请输入一个新的标签。 保留空白以恢复到原来的标签。.</string>
+    <string name="custom_carrier_label_notset">自定义标签目前没有设置</string>
+    <string name="show_carrier_title">显示在哪里</string>
+    <string name="show_carrier_disabled">我不想看到它</string>
+    <string name="show_carrier_keyguard">只在锁屏上</string>
+    <string name="show_carrier_statusbar">只在状态栏上</string>
+    <string name="show_carrier_enabled">在锁屏和状态栏上</string>
+
 </resources>
