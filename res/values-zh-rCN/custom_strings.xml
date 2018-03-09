@@ -147,7 +147,7 @@
     <string name="volume_keys_control_media_stream_title">音量键控制媒体音量。</string>
     <string name="volume_keys_control_media_stream_summary">强制音量键控制媒体流。</string>
 
-    <string name="status_bar_quick_qs_pulldown_title">快速下拉</string>
+    <string name="status_bar_quick_qs_pulldown">快速下拉</string>
 	<string name="status_bar_quick_qs_pulldown_summary">沿状态栏的边缘下拉开启快速设置面板</string>
     <!-- Volume rocker music control -->
     <string name="volume_rocker_music_controls_title">播放控制</string>
