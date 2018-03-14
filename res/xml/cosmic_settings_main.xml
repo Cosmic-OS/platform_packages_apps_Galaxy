@@ -73,13 +73,6 @@
             android:fragment="com.cosmic.settings.fragments.QuickSettings"
             android:icon="@drawable/ic_cosmic_quicksettings"/>
 
-        <!-- VolumeRocker -->
-        <Preference
-            android:key="cosmic_volumerocker_settings"
-            android:title="@string/volumerocker_settings_title"
-            android:fragment="com.cosmic.settings.fragments.VolumeRockerSettings"
-            android:icon="@drawable/ic_cosmic_volume" />
-
         <!-- Misc -->
         <Preference
             android:key="cosmic_misc_settings"
