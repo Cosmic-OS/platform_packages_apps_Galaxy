@@ -28,7 +28,7 @@
         android:key="status_bar_clock"
         android:fragment="com.cosmic.settings.fragments.StatusBarClockSettings"
         android:summary="@string/status_bar_clock_summary"
-        android:title="@string/status_bar_clock_title" />
+        android:title="@string/status_bar_clock" />
 
      <Preference
         android:key="battery_settings"
