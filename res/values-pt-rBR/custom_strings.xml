@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Copyright (C) 2017 Cosmic-OS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
@@ -11,7 +12,8 @@
      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
      See the License for the specific language governing permissions and
      limitations under the License.
---><resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <!-- Categories -->
     <string name="misc_settings_title">"Diversos"</string>
@@ -19,7 +21,6 @@
     <string name="notifications_settings_title">"Notificações"</string>
     <string name="lockscreen_settings_title_custom">"Tela de Bloqueio"</string>
     <string name="statusbar_settings_title">"Barra de Status"</string>
-    <string name="volumerocker_settings_title">"Volume rocker"</string>
     <string name="quick_settings_title">"Configurações rápidas"</string>
     <string name="navbar_settings_title">"Barra de navegação"</string>
     <string name="gesture_settings_title">"Gestos"</string>
@@ -150,6 +151,7 @@
     <string name="status_bar_quick_qs_pulldown_summary">"Barra de status de deslocamento do lado direito para mostrar o painel QS"</string>
 
     <!-- Volume rocker music control -->
+    <string name="volumerocker_category">Volume rocker</string>
     <string name="volume_rocker_music_controls_title">"Controle de reprodução"</string>
     <string name="volume_rocker_music_controls_summary">"Quando a tela está desligada, pressione as teclas de volume pressionando longamente para procurar músicas"</string>
 
@@ -504,33 +506,38 @@
     <string name="three_finger_gesture">"Gesto de três dedos"</string>
     <string name="three_finger_gesture_summary">"Deslize três dedos para a captura de tela"</string>
 
-    <!-- Statusbar Clock options -->
-    <string name="status_bar_clock_title">"Opções de relógio"</string>
-    <string name="status_bar_show_clock_title">"Mostrar relógio e data"</string>
+    <!-- Status bar clock options -->
+    <string name="status_bar_clock">Relógio e Data</string>
+    <string name="status_bar_clock_summary">Configurar o relógio na barra de status e a aparência da data</string>
     <string name="clock_title_enable">"Alinhamento"</string>
-    <string name="right_clock">"Direita"</string>
-    <string name="center_clock">"Centralizar"</string>
-    <string name="status_bar_clock_seconds_title">"Relógio de segundos"</string>
-    <string name="status_bar_clock_seconds_summary">"Exibir segundos ao lado do relógio na barra de status"</string>
-    <string name="status_bar_am_pm_title">"Das 10h às 18h"</string>
+    <string name="status_bar_show_clock_title">Mostrar Relógio e Data</string>
+    <string name="status_bar_clock_seconds_title">Mostrar segundos</string>
+    <string name="status_bar_am_pm_title">"AM/PM"</string>
     <string name="status_bar_am_pm_info">"O relógio de 24 horas está ativado"</string>
-    <string name="am_pm_clock_normal">"Fonte de tamanho Normal"</string>
-    <string name="am_pm_clock_small">"Tamanho de letra pequeno"</string>
-    <string name="am_pm_clock_none">"Não mostre"</string>
+    <string name="enable_clock_weekday">Dia da semana</string>
+    <string name="enable_clock_weekday_summary">Dia abreviado da semana antes do horário</string>
+    <string name="right_clock">Relógio a Direita</string>
+    <string name="left_clock">Relógio a Esquerda</string>
+    <string name="dont_show">Não mostrar</string>
     <string name="clock_date_display">"Data"</string>
     <string name="clock_date_display_summary">"Exibir data personalizada antes do relógio"</string>
     <string name="clock_date_style">"Estilo de Data"</string>
     <string name="clock_date_format">"Formato de Data"</string>
     <string name="clock_date_string_edittext_title">"Deve estar em DateFormat, por exemplo. MM / dd / aa"</string>
     <string name="clock_date_string_edittext_summary">"Digite a string"</string>
-    <string name="clock_date_display_none">"Não mostre"</string>
+    <string name="am_pm_clock_normal">Fonte de tamanho Normal</string>
+    <string name="am_pm_clock_small">Tamanho de letra pequeno</string>
+    <string name="am_pm_clock_none">Não mostrar</string>
+    <string name="clock_date_display_none">"Não mostrar"</string>
     <string name="clock_date_display_small">"Tamanho de letra pequeno"</string>
     <string name="clock_date_display_normal">"Fonte de tamanho Normal"</string>
     <string name="clock_date_style_normal">"Normal"</string>
     <string name="clock_date_style_lowercase">"Minúsculas"</string>
     <string name="clock_date_style_uppercase">"Maiúscula"</string>
     <string name="clock_date_format_custom">"Formato java personalizado"</string>
-    <string name="menu_cancel">"Cancelar"</string>
+    <string name="clock_date_right">Direita do Tempo</string>
+    <string name="clock_date_left">Esquerda do Tempo</string>
+    <string name="clock_date_position">Date position</string>
 
     <!-- Status bar ticker -->
     <string name="ticker_title">"Ticker"</string>
@@ -582,5 +589,20 @@
     <string name="show_carrier_keyguard">"Apenas tela de bloqueio"</string>
     <string name="show_carrier_statusbar">"Apenas barra de status"</string>
     <string name="show_carrier_enabled">"Bloqueio e barra de status"</string>
+     
+    <!-- Battery percentage -->
+    <string name="battery_style_category_title">Ícones de Bateria</string>
+    <string name="status_bar_battery_percentage_title">Porcentagem da Bateria</string>
+    <string name="status_bar_battery_percentage_default">Escondido</string>
+    <string name="status_bar_battery_percentage_text_next">Ao lado do ícone</string>
+    <string name="status_bar_battery_percentage_text_inside">Dentro do ícone</string>
 
+    <!-- Status bar battery style-->
+    <string name="status_bar_battery_style_title">Estilo da Bateria</string>
+    <string name="status_bar_battery_style_port">Retrato</string>
+    <string name="status_bar_battery_style_circle">Círculo</string>
+    <string name="status_bar_battery_style_dotted_circle">Círculo pontilhado</string>
+    <string name="status_bar_battery_style_text">Texto</string>
+    <string name="status_bar_battery_style_hidden">Escondido</string>
+    <string name="status_bar_battery_style_square">Quadrado</string>
 </resources>
