@@ -1,10 +1,12 @@
-
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Copyright (C) 2017 Cosmic-OS Project
+
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
      You may obtain a copy of the License at
+
           http://www.apache.org/licenses/LICENSE-2.0
+
      Unless required by applicable law or agreed to in writing, software
      distributed under the License is distributed on an "AS IS" BASIS,
      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -525,7 +527,7 @@
     <string name="clock_date_string_edittext_summary">"Digite a string"</string>
     <string name="am_pm_clock_normal">Fonte de tamanho Normal</string>
     <string name="am_pm_clock_small">Tamanho de letra pequeno</string>
-    <string name="am_pm_clock_none">Não mostre</string>
+    <string name="am_pm_clock_none">Não mostrar</string>
     <string name="clock_date_display_none">"Não mostrar"</string>
     <string name="clock_date_display_small">"Tamanho de letra pequeno"</string>
     <string name="clock_date_display_normal">"Fonte de tamanho Normal"</string>
