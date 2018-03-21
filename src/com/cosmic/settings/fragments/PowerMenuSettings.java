@@ -47,10 +47,8 @@ public class PowerMenuSettings extends SettingsPreferenceFragment
                 implements Preference.OnPreferenceChangeListener {
 
     private static final String KEY_POWERMENU_TORCH = "powermenu_torch";
-    private static final String SCREEN_OFF_ANIMATION = "screen_off_animation";
 
     private SwitchPreference mPowermenuTorch;
-    private ListPreference mScreenOffAnimation;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -69,13 +67,6 @@ public class PowerMenuSettings extends SettingsPreferenceFragment
         mPowermenuTorch.setChecked((Settings.System.getInt(resolver,
                 Settings.System.POWERMENU_TORCH, 0) == 1));
         }
-
-        mScreenOffAnimation = (ListPreference) findPreference(SCREEN_OFF_ANIMATION);
-        int screenOffAnimation = Settings.Global.getInt(getContentResolver(),
-                Settings.Global.SCREEN_OFF_ANIMATION, 0);
-        mScreenOffAnimation.setValue(Integer.toString(screenOffAnimation));
-        mScreenOffAnimation.setSummary(mScreenOffAnimation.getEntry());
-        mScreenOffAnimation.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -86,13 +77,7 @@ public class PowerMenuSettings extends SettingsPreferenceFragment
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.POWERMENU_TORCH, value ? 1 : 0);
             return true;
-        } else if (preference == mScreenOffAnimation) {
-            int value = Integer.valueOf((String) newValue);
-            int index = mScreenOffAnimation.findIndexOfValue((String) newValue);
-            mScreenOffAnimation.setSummary(mScreenOffAnimation.getEntries()[index]);
-            Settings.Global.putInt(getContentResolver(), Settings.Global.SCREEN_OFF_ANIMATION, value);
-            return true;
-        }
+        } 
         return false;
     }
 

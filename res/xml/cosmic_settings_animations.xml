@@ -18,11 +18,17 @@
 
      <PreferenceCategory
         android:title="@string/animations">
+		
+	    <ListPreference
+        android:key="screen_off_animation"
+        android:title="@string/screen_off_animation_title"
+        android:entries="@array/screen_off_animation_entries"
+        android:entryValues="@array/screen_off_animation_values" />
 
-        <SwitchPreference
+     <!--   <SwitchPreference
             android:key="animation_no_override"
             android:title="@string/title_animation_no_override"
-            android:summary="@string/summary_animation_no_override" />
+            android:summary="@string/summary_animation_no_override" /> -->
 
         <ListPreference
             android:key="activity_open"
