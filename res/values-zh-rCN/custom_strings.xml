@@ -506,32 +506,38 @@
     <string name="three_finger_gesture_summary">三指下滑截屏</string>
 
     <!-- Statusbar Clock options -->
-    <string name="status_bar_clock_title">时钟设置</string>
+    <string name="status_bar_clock">时间和日期</string>
+    <string name="status_bar_clock_summary">设置状态栏时钟和日期的样式</string>
+    <string name="clock_title_enable">时钟位置</string>
     <string name="status_bar_show_clock_title">显示时钟和日期</string>
-    <string name="clock_title_enable">对齐位置</string>
-    <string name="right_clock">右边</string>
-    <string name="center_clock">中间</string>
-    <string name="status_bar_clock_seconds_title">显示秒钟</string>
-    <string name="status_bar_clock_seconds_summary">在状态栏中显示时钟旁边的秒钟</string>
-    <string name="status_bar_am_pm_title">上午/下午</string>
-    <string name="status_bar_am_pm_info">24小时制启用</string>
-    <string name="am_pm_clock_normal">标准字体大小</string>
-    <string name="am_pm_clock_small">小字体</string>
-    <string name="am_pm_clock_none">不要显示</string>
+    <string name="status_bar_clock_seconds_title">显示秒</string>
+    <string name="status_bar_am_pm_title">显示上午/下午</string>
+    <string name="status_bar_am_pm_info">24小时制显示已启用</string>
+    <string name="enable_clock_weekday">一周的起始日</string>
+    <string name="enable_clock_weekday_summary">时间前当日的缩写</string>
+    <string name="right_clock">右侧</string>
+    <string name="center_clock">中心</string>
+    <string name="left_clock">左侧</string>
+    <string name="dont_show">不显示</string>
     <string name="clock_date_display">日期</string>
-    <string name="clock_date_display_summary">在时钟前显示自定义日期</string>
+    <string name="clock_date_display_summary">在时钟前显示自定义的日期</string>
     <string name="clock_date_style">日期样式</string>
     <string name="clock_date_format">日期格式</string>
-    <string name="clock_date_string_edittext_title">必须在日期格式中，例如。MM / DD / YY</string>
-    <string name="clock_date_string_edittext_summary">输入格式</string>
-    <string name="clock_date_display_none">不要显示</string>
-    <string name="clock_date_display_small">小字体</string>
-    <string name="clock_date_display_normal">标准字体大小</string>
-    <string name="clock_date_style_normal">正常</string>
+    <string name="clock_date_string_edittext_title">日期格式必须为如下方式：MM/DD/YY</string>
+    <string name="clock_date_string_edittext_summary">输入日期格式</string>
+    <string name="am_pm_clock_normal">正常的字体</string>
+    <string name="am_pm_clock_small">较小的字体</string>
+    <string name="am_pm_clock_none">不显示</string>
+    <string name="clock_date_display_none">不显示</string>
+    <string name="clock_date_display_small">较小的字体</string>
+    <string name="clock_date_display_normal">正常的字体</string>
+    <string name="clock_date_style_normal">标准</string>
     <string name="clock_date_style_lowercase">小写</string>
     <string name="clock_date_style_uppercase">大写</string>
-    <string name="clock_date_format_custom">自定义Java格式</string>
-    <string name="menu_cancel">取消</string>
+    <string name="clock_date_format_custom">用户自定义的格式</string>
+    <string name="clock_date_right">在时间的右边</string>
+    <string name="clock_date_left">在时间的左边</string>
+    <string name="clock_date_position">日期位置</string>
 	
 	<!-- Status bar ticker -->
     <string name="ticker_title">通知预览</string>
@@ -583,5 +589,20 @@
     <string name="show_carrier_keyguard">只在锁屏上</string>
     <string name="show_carrier_statusbar">只在状态栏上</string>
     <string name="show_carrier_enabled">在锁屏和状态栏上</string>
+    
+    <!-- Battery percentage -->
+    <string name="battery_style_category_title">状态栏电池图标</string>
+    <string name="status_bar_battery_percentage_title">电池百分比</string>
+    <string name="status_bar_battery_percentage_default">隐藏</string>
+    <string name="status_bar_battery_percentage_text_next">在电池图标旁</string>
+    <string name="status_bar_battery_percentage_text_inside">在电池图标里面</string>
 
+    <!-- Status bar battery style-->
+    <string name="status_bar_battery_style_title">状态栏电池样式</string>
+    <string name="status_bar_battery_style_port">竖直</string>
+    <string name="status_bar_battery_style_circle">圆环</string>
+    <string name="status_bar_battery_style_dotted_circle">实心圆</string>
+    <string name="status_bar_battery_style_text">文字</string>
+    <string name="status_bar_battery_style_hidden">隐藏</string>
+    <string name="status_bar_battery_style_square">横向</string>
 </resources>
