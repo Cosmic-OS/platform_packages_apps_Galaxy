@@ -634,4 +634,8 @@
     <string name="expanded_enabled_for_all">Enabled for all</string>
     <string name="expanded_user_configurable">User configurable</string>
 
+    <!-- System default animation -->
+    <string name="system_default_animation_title">Android P animation style</string>
+    <string name="system_default_animation_summary">Enable Android P \"Default\" animations</string>
+
 </resources>
