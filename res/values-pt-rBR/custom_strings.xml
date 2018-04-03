@@ -455,7 +455,7 @@
     <string name="button_backlight_on_touch_only_title">"Toque de botão"</string>
     <string name="button_backlight_on_touch_only_summary">"Ativar retroiluminação com tempo limite apenas no botão tocar"</string>
 
-    <!-- Incall Home button behavior--> 
+    <!-- Incall Home button behavior-->
     <string name="allow_incall_home_title">"Botão inicial ao tocar"</string>
     <string name="allow_incall_home_summary">"Permitir usar o botão Home quando o dispositivo estiver tocando"</string>
 
@@ -517,6 +517,7 @@
     <string name="enable_clock_weekday">Dia da semana</string>
     <string name="enable_clock_weekday_summary">Dia abreviado da semana antes do horário</string>
     <string name="right_clock">Relógio a Direita</string>
+    <string name="center_clock">Relógio Centralizado</string>
     <string name="left_clock">Relógio a Esquerda</string>
     <string name="dont_show">Não mostrar</string>
     <string name="clock_date_display">"Data"</string>
@@ -571,8 +572,8 @@
     <string name="heads_up_snooze_15min">"15 minutos"</string>
     <string name="heads_up_snooze_20min">"20 minutos"</string>
 
-    <!-- Statusbar logo --> 
-    <string name="status_bar_logo_title">"Logotipo Galaxy"</string> 
+    <!-- Statusbar logo -->
+    <string name="status_bar_logo_title">"Logotipo Galaxy"</string>
     <string name="status_bar_logo_dialog_title">"Posição logo Galaxy"</string>
     <string name="status_bar_logo_disabled">"Desativado"</string>
     <string name="status_bar_logo_left">"Esquerda"</string>
@@ -605,4 +606,8 @@
     <string name="status_bar_battery_style_text">Texto</string>
     <string name="status_bar_battery_style_hidden">Escondido</string>
     <string name="status_bar_battery_style_square">Quadrado</string>
+
+    <!-- Show 4G instead of LTE -->
+    <string name="show_4g_title">Mostrar 4G</string>
+    <string name="show_4g_summary">Mostrar 4G em vez de LTE nos ícones de sinal</string>
 </resources>
