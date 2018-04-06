@@ -18,7 +18,7 @@
     <!-- Categories -->
     <string name="misc_settings_title">杂项</string>
     <string name="recents_settings_title">最近任务面板</string>
-    <string name="notifications_settings_title">通知栏</string>
+    <string name="notifications_settings_title">通知</string>
     <string name="lockscreen_settings_title_custom">锁屏界面</string>
     <string name="statusbar_settings_title">状态栏</string>
     <string name="volumerocker_settings_title">音量键</string>
@@ -89,13 +89,13 @@
     <string name="immersive_recents_dialog_title">选择样式</string>
     <string name="immersive_recents_default">默认</string>
     <string name="immersive_recents_fullscreen">全屏</string>
-    <string name="immersive_recents_statusbar">仅状态栏</string>
-    <string name="immersive_recents_navbar">仅导航栏</string>
+    <string name="immersive_recents_statusbar">仅显示状态栏</string>
+    <string name="immersive_recents_navbar">仅显示导航栏</string>
 
     <!-- Hide Apps from Recents -->
     <string name="hide_apps_from_recents_title">隐藏应用</string>
     <string name="hide_from_recents_add_app">添加应用</string>
-    <string name="hide_apps_from_recents_summary">选择哪些应用程序隐藏最近任务界面</string>
+    <string name="hide_apps_from_recents_summary">选择一些应用程序在最近任务界面中隐藏</string>
 
     <!-- Lockscreen weather -->
     <string name="lock_screen_weather_settings_title">天气</string>
@@ -113,11 +113,11 @@
     <string name="power_notification_title">通知级别控制</string>
 
     <!-- Volume down enter do not disturb -->
-    <string name="volbtn_down_zen_title">音量降低至请勿打扰模式</string>
-    <string name="volbtn_down_zen_summary">允许音量降低到最低后进入请勿打扰模式</string>
+    <string name="volbtn_down_zen_title">降低音量进入勿扰模式</string>
+    <string name="volbtn_down_zen_summary">允许降低铃声到最低后进入勿扰模式</string>
     <!-- Volume up exit do not disturb -->
-    <string name="volbtn_up_zen_title">音量升高至退出请勿打扰模式</string>
-    <string name="volbtn_up_zen_summary">允许音量升高并退出请勿打扰模式</string>
+    <string name="volbtn_up_zen_title">升高音量退出勿扰模式</string>
+    <string name="volbtn_up_zen_summary">在勿扰模式打开时，允许升高铃声音量并退出勿扰模式</string>
 
     <!-- Quick Settings brightness slider -->
     <string name="qs_brightness_slider_title">亮度调节</string>
@@ -135,33 +135,33 @@
     <string name="double_tap_sleep_navbar_summary">双击导航栏以关闭屏幕</string>
     <!-- Double Tap Lockscreen to Sleep -->
     <string name="double_tap_to_sleep_lockscreen_title">双击息屏</string>
-    <string name="double_tap_to_sleep_lockscreen_summary">双击锁屏上的顶部1/3位置或底部的快捷区域，让设备进入睡眠状态。</string>
+    <string name="double_tap_to_sleep_lockscreen_summary">双击屏锁上方1/3位置或底部的快捷区域，让设备进入睡眠状态</string>
     <!-- Double tap-to-sleep -->
     <string name="double_tap_to_sleep_title">双击息屏</string>
-    <string name="double_tap_to_sleep_summary">双击状态栏，让设备进入睡眠状态。</string>
+    <string name="double_tap_to_sleep_summary">双击状态栏，让设备进入睡眠状态</string>
 
     <!-- Volume button orientation based on current rotation -->
     <string name="swap_volume_buttons_title">交换音量键</string>
     <string name="swap_volume_buttons_summary">根据当前旋转调整音量键方向。</string>
     <!-- Volume key controls media stream -->
-    <string name="volume_keys_control_media_stream_title">音量键控制媒体音量。</string>
-    <string name="volume_keys_control_media_stream_summary">强制音量键控制媒体流。</string>
+    <string name="volume_keys_control_media_stream_title">音量键控制媒体音量</string>
+    <string name="volume_keys_control_media_stream_summary">强制音量键控制媒音量</string>
 
     <string name="status_bar_quick_qs_pulldown">快速下拉</string>
-	<string name="status_bar_quick_qs_pulldown_summary">沿状态栏的边缘下拉开启快速设置面板</string>
+	<string name="status_bar_quick_qs_pulldown_summary">沿状态栏的右边缘下拉开启快速设置面板</string>
     <!-- Volume rocker music control -->
     <string name="volume_rocker_music_controls_title">播放控制</string>
-    <string name="volume_rocker_music_controls_summary">当屏幕关闭时，长按音量键会切换音乐曲目。</string>
+    <string name="volume_rocker_music_controls_summary">当屏幕关闭时，长按音量键会切换音乐曲目</string>
 
     <!-- Media art -->
 	<string name="media_art_title">媒体封面</string>
     <string name="media_art_summary">锁屏开启媒体封面</string>
 
     <!-- Torch Power button gestures -->
-    <string name="torch_power_button_gesture_title">屏幕电源按钮手电筒</string>
-    <string name="torch_power_button_gesture_none">无</string>
-    <string name="torch_power_button_gesture_dt">双击开启手电筒</string>
-    <string name="torch_power_button_gesture_lp">长按开启手电筒</string>
+    <string name="torch_power_button_gesture_title">关屏手电筒</string>
+    <string name="torch_power_button_gesture_none">不开启</string>
+    <string name="torch_power_button_gesture_dt">双击电源键开启</string>
+    <string name="torch_power_button_gesture_lp">长按电源键开启</string>
 
     <!-- QS rows and columns -->
      <string name="qs_rows_columns_title">快捷设置行与列</string>
@@ -172,7 +172,7 @@
 
     <!-- Lockscreen battery info indicator  -->
     <string name="lockscreen_battery_info_title">锁屏充电信息</string>
-    <string name="lockscreen_battery_info_summary">在充电时，在锁屏上显示充电时最大电流和电压和电池温度。</string>
+    <string name="lockscreen_battery_info_summary">充电时在屏锁上显示充电时的最大电流和电压和电池温度</string>
 
     <!-- Language options - Volume rocker cursor control -->
     <string name="cursor_section_header">音量光标</string>
@@ -183,33 +183,33 @@
 	
     <!-- Volume rocker wake -->
     <string name="volume_rocker_wake_title">音量唤醒</string>
-    <string name="volume_rocker_wake_summary">按音量键将唤醒您的设备。</string>
+    <string name="volume_rocker_wake_summary">按音量键唤醒您的设备</string>
 
     <!-- UI debug setting: show CPU info? [CHAR LIMIT=25] -->
     <string name="show_cpu_info">显示处理器信息</string>
     <!-- UI debug setting: show cpu usage summary [CHAR LIMIT=50] -->
-    <string name="show_cpu_info_summary">将处理器信息显示在最上层</string>
+    <string name="show_cpu_info_summary">将处理器信息显示在屏幕右上角</string>
 
     <!-- Smart pulldown-->
     <string name="smart_pulldown_title">智能下拉</string>
-    <string name="smart_pulldown_summary">当有 %1$s 个通知时，打开快速设置。</string>
-    <string name="smart_pulldown_none_summary">在没有通知时打开快速设置。</string>
+    <string name="smart_pulldown_summary">当有 %1$s 个通知时，打开快速设置</string>
+    <string name="smart_pulldown_none_summary">在没有通知时打开快速设置</string>
     <string name="smart_pulldown_off">关闭</string>
     <string name="smart_pulldown_none">无通知</string>
-    <string name="smart_pulldown_dismissable">不可忽略</string>
-    <string name="smart_pulldown_ongoing">无正在运行</string>
+    <string name="smart_pulldown_dismissable">无可清除通知</string>
+    <string name="smart_pulldown_ongoing">无正在进行通知</string>
 
     <!-- Whether to display IME switcher notifcation -->
-    <string name="ime_switcher_notify">输入法通知</string>
-    <string name="ime_switcher_notify_summary">显示输入法选择器图标</string>
+    <string name="ime_switcher_notify">输入法选择通知</string>
+    <string name="ime_switcher_notify_summary">显示输入法选择通知</string>
 
     <!-- Battery saver color -->
     <string name="battery_saver_color_title">警告颜色</string>
-  <string name="battery_saver_color_summary">在节电模式启用时显示橙色的状态栏和导航栏</string>
+  <string name="battery_saver_color_summary">在省电模式启用时显示橙色的状态栏和导航栏</string>
 
     <!-- The volume key answer -->
-    <string name="volume_answer_call_title">接通电话</string>
-    <string name="volume_answer_call_summary">当音量键按下时接听电话</string>
+    <string name="volume_answer_call_title">音量键接通电话</string>
+    <string name="volume_answer_call_summary">按音量键接听电话</string>
 
     <!-- Battery light -->
     <string name="battery_light_settings">电量指示灯</string>
@@ -451,7 +451,7 @@
     <string name="backlight_timeout_20s">20 秒</string>
     <string name="backlight_timeout_30s">30 秒</string>
 
-    <string name="button_backlight_on_touch_only_title">触摸按钮</string>
+    <string name="button_backlight_on_touch_only_title">触摸按钮背光</string>
     <string name="button_backlight_on_touch_only_summary">使仅在触摸按钮时使用背光超时</string>
 
     <!-- Incall Home button behavior--> 
@@ -502,7 +502,7 @@
     <string name="recents_show_membar_summary">在最近任务界面显示运存条</string>
 
     <!-- Three-fingers-swipe to screenshot -->
-    <string name="three_finger_gesture">三指下滑</string>
+    <string name="three_finger_gesture">三指截图</string>
     <string name="three_finger_gesture_summary">三指下滑截屏</string>
 
     <!-- Statusbar Clock options -->
@@ -584,8 +584,8 @@
     <string name="custom_carrier_label_title">自定义标签</string>
     <string name="custom_carrier_label_explain">请输入一个新的标签。 保留空白以恢复到原来的标签。.</string>
     <string name="custom_carrier_label_notset">自定义标签目前没有设置</string>
-    <string name="show_carrier_title">显示在哪里</string>
-    <string name="show_carrier_disabled">我不想看到它</string>
+    <string name="show_carrier_title">显示位置</string>
+    <string name="show_carrier_disabled">禁用</string>
     <string name="show_carrier_keyguard">只在锁屏上</string>
     <string name="show_carrier_statusbar">只在状态栏上</string>
     <string name="show_carrier_enabled">在锁屏和状态栏上</string>
@@ -601,8 +601,8 @@
     <string name="status_bar_battery_style_title">状态栏电池样式</string>
     <string name="status_bar_battery_style_port">竖直</string>
     <string name="status_bar_battery_style_circle">圆环</string>
-    <string name="status_bar_battery_style_dotted_circle">实心圆</string>
+    <string name="status_bar_battery_style_dotted_circle">虚拟圆环</string>
     <string name="status_bar_battery_style_text">文字</string>
     <string name="status_bar_battery_style_hidden">隐藏</string>
-    <string name="status_bar_battery_style_square">横向</string>
+    <string name="status_bar_battery_style_square">方形</string>
 </resources>
