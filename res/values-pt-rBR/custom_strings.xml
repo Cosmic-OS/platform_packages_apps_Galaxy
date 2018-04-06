@@ -607,7 +607,30 @@
     <string name="status_bar_battery_style_hidden">Escondido</string>
     <string name="status_bar_battery_style_square">Quadrado</string>
 
+    <!-- Stock Recents Icon Pack -->
+    <string name="recents_icon_pack_title">Pacote de ícones</string>
+    <string name="recents_icon_pack_summary">Aplicar um pacote de ícones personalizado ao painel Recentes</string>
+    <string name="no_iconpacks_summary">Nenhum pacote de ícones instalado</string>
+    <string name="dialog_pick_iconpack_title">Escolha o pacote de ícones</string>
+    <string name="default_iconpack_title">Ícones padrão</string>
+
     <!-- Show 4G instead of LTE -->
     <string name="show_4g_title">Mostrar 4G</string>
     <string name="show_4g_summary">Mostrar 4G em vez de LTE nos ícones de sinal</string>
+ 
+    <!-- Lockscreen visualizer -->
+    <string name="lockscreen_visualizer_title">Visualizador de bloqueio de tela</string>
+    <string name="lockscreen_visualizer_summary">Exibe um design ao vivo na tela de bloqueio enquanto a música está tocando</string>
+
+<!-- Expanded desktop -->
+    <string name="expanded_desktop_title">Área de trabalho expandida</string>
+    <string name="expanded_desktop_summary">Configuração por aplicativo da barra de status e da visualização de chave de navegação</string>
+    <string name="expanded_hide_nothing">Não esconde nada</string>
+    <string name="expanded_hide_status">Ocultar barra de status</string>
+    <string name="expanded_hide_navigation">Ocultar barra de navegação</string>
+    <string name="expanded_hide_both">Esconda ambos</string>
+    <string name="expanded_nothing_to_show">Para adicionar uma configuração personalizada por aplicativo para o estado expandido, defina "Habilitado para todos" para a posição desativada</string>
+    <string name="expanded_desktop_state">Estado expandido</string>
+    <string name="expanded_enabled_for_all">Habilitado para todos</string>
+    <string name="expanded_user_configurable">Configurável pelo usuário</string>
 </resources>
