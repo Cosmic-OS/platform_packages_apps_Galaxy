@@ -601,7 +601,7 @@
     <string name="status_bar_battery_style_title">状态栏电池样式</string>
     <string name="status_bar_battery_style_port">竖直</string>
     <string name="status_bar_battery_style_circle">圆环</string>
-    <string name="status_bar_battery_style_dotted_circle">虚拟圆环</string>
+    <string name="status_bar_battery_style_dotted_circle">实心圆</string>
     <string name="status_bar_battery_style_text">文字</string>
     <string name="status_bar_battery_style_hidden">隐藏</string>
     <string name="status_bar_battery_style_square">方形</string>
