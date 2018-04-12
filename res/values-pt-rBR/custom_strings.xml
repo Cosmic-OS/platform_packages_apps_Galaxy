@@ -633,4 +633,8 @@
     <string name="expanded_desktop_state">Estado expandido</string>
     <string name="expanded_enabled_for_all">Habilitado para todos</string>
     <string name="expanded_user_configurable">Configurável pelo usuário</string>
+
+    <!-- System default animation -->
+    <string name="system_default_animation_title">Android P animação style</string>
+    <string name="system_default_animation_summary">Ativar Android P \"Default\" animações</string>
 </resources>
