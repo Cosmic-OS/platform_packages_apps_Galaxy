@@ -113,10 +113,10 @@
     <string name="power_notification_title">通知级别控制</string>
 
     <!-- Volume down enter do not disturb -->
-    <string name="volbtn_down_zen_title">降低音量进入勿扰模式</string>
-    <string name="volbtn_down_zen_summary">允许降低铃声到最低后进入勿扰模式</string>
+    <string name="volbtn_down_zen_title">降低铃声音量进入勿扰模式</string>
+    <string name="volbtn_down_zen_summary">允许降低铃声音量到最低后进入勿扰模式</string>
     <!-- Volume up exit do not disturb -->
-    <string name="volbtn_up_zen_title">升高音量退出勿扰模式</string>
+    <string name="volbtn_up_zen_title">升高铃声音量退出勿扰模式</string>
     <string name="volbtn_up_zen_summary">在勿扰模式打开时，允许升高铃声音量并退出勿扰模式</string>
 
     <!-- Quick Settings brightness slider -->
@@ -135,7 +135,7 @@
     <string name="double_tap_sleep_navbar_summary">双击导航栏以关闭屏幕</string>
     <!-- Double Tap Lockscreen to Sleep -->
     <string name="double_tap_to_sleep_lockscreen_title">双击息屏</string>
-    <string name="double_tap_to_sleep_lockscreen_summary">双击屏锁上方1/3位置或底部的快捷区域，让设备进入睡眠状态</string>
+    <string name="double_tap_to_sleep_lockscreen_summary">双击锁屏上方1/3位置或底部的快捷区域，让设备进入睡眠状态</string>
     <!-- Double tap-to-sleep -->
     <string name="double_tap_to_sleep_title">双击息屏</string>
     <string name="double_tap_to_sleep_summary">双击状态栏，让设备进入睡眠状态</string>
@@ -145,10 +145,10 @@
     <string name="swap_volume_buttons_summary">根据当前旋转调整音量键方向。</string>
     <!-- Volume key controls media stream -->
     <string name="volume_keys_control_media_stream_title">音量键控制媒体音量</string>
-    <string name="volume_keys_control_media_stream_summary">强制音量键控制媒音量</string>
+    <string name="volume_keys_control_media_stream_summary">强制音量键控制媒体音量</string>
 
     <string name="status_bar_quick_qs_pulldown">快速下拉</string>
-	<string name="status_bar_quick_qs_pulldown_summary">沿状态栏的右边缘下拉开启快速设置面板</string>
+	<string name="status_bar_quick_qs_pulldown_summary">沿状态栏的右侧下拉开启快速设置面板</string>
     <!-- Volume rocker music control -->
     <string name="volume_rocker_music_controls_title">播放控制</string>
     <string name="volume_rocker_music_controls_summary">当屏幕关闭时，长按音量键会切换音乐曲目</string>
@@ -158,7 +158,7 @@
     <string name="media_art_summary">锁屏开启媒体封面</string>
 
     <!-- Torch Power button gestures -->
-    <string name="torch_power_button_gesture_title">关屏手电筒</string>
+    <string name="torch_power_button_gesture_title">息屏手电筒</string>
     <string name="torch_power_button_gesture_none">不开启</string>
     <string name="torch_power_button_gesture_dt">双击电源键开启</string>
     <string name="torch_power_button_gesture_lp">长按电源键开启</string>
@@ -172,7 +172,7 @@
 
     <!-- Lockscreen battery info indicator  -->
     <string name="lockscreen_battery_info_title">锁屏充电信息</string>
-    <string name="lockscreen_battery_info_summary">充电时在屏锁上显示充电时的最大电流和电压和电池温度</string>
+    <string name="lockscreen_battery_info_summary">充电时在锁屏上显示充电时的最大电流和电压和电池温度</string>
 
     <!-- Language options - Volume rocker cursor control -->
     <string name="cursor_section_header">音量光标</string>
@@ -183,7 +183,7 @@
 	
     <!-- Volume rocker wake -->
     <string name="volume_rocker_wake_title">音量唤醒</string>
-    <string name="volume_rocker_wake_summary">按音量键唤醒您的设备</string>
+    <string name="volume_rocker_wake_summary">使用音量键来唤醒您的设备</string>
 
     <!-- UI debug setting: show CPU info? [CHAR LIMIT=25] -->
     <string name="show_cpu_info">显示处理器信息</string>
@@ -209,7 +209,7 @@
 
     <!-- The volume key answer -->
     <string name="volume_answer_call_title">音量键接通电话</string>
-    <string name="volume_answer_call_summary">按音量键接听电话</string>
+    <string name="volume_answer_call_summary">使用音量键接听电话</string>
 
     <!-- Battery light -->
     <string name="battery_light_settings">电量指示灯</string>
@@ -503,7 +503,7 @@
 
     <!-- Three-fingers-swipe to screenshot -->
     <string name="three_finger_gesture">三指截图</string>
-    <string name="three_finger_gesture_summary">三指下滑截屏</string>
+    <string name="three_finger_gesture_summary">三指下滑截图</string>
 
     <!-- Statusbar Clock options -->
     <string name="status_bar_clock">时间和日期</string>
@@ -601,7 +601,7 @@
     <string name="status_bar_battery_style_title">状态栏电池样式</string>
     <string name="status_bar_battery_style_port">竖直</string>
     <string name="status_bar_battery_style_circle">圆环</string>
-    <string name="status_bar_battery_style_dotted_circle">虚拟圆环</string>
+    <string name="status_bar_battery_style_dotted_circle">实心圆</string>
     <string name="status_bar_battery_style_text">文字</string>
     <string name="status_bar_battery_style_hidden">隐藏</string>
     <string name="status_bar_battery_style_square">方形</string>
