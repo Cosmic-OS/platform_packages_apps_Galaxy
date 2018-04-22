@@ -59,6 +59,39 @@ public class ThemesFragment extends SettingsPreferenceFragment implements Prefer
         mOverlayService = ServiceManager.getService(Context.OVERLAY_SERVICE) != null
                 ? new OverlayManager() : null;
         mContext = getContext();
+        setupAccentPreference();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+    }
+
+
+    public boolean onPreferenceChange(Preference preference, Object objValue) {
+        if (preference == mSystemThemeColor)
+        {
+            String current = getTheme();
+            if (Objects.equal(objValue, current)) {
+                return true;
+            }
+            try {
+                mOverlayService.setEnabledExclusive((String) objValue, true, UserHandle.myUserId());
+            } catch (RemoteException e) {
+                return false;
+            }
+            return true;
+        }
+        return true;
+    }
+
+    private void setupAccentPreference()
+    {
         mPackageManager = mContext.getPackageManager();
         String[] pkgs = getAvailableThemes();
         CharSequence[] labels = new CharSequence[pkgs.length];
@@ -72,7 +105,7 @@ public class ThemesFragment extends SettingsPreferenceFragment implements Prefer
         }
         mSystemThemeColor.setEntries(labels);
         mSystemThemeColor.setEntryValues(pkgs);
-        String theme = getCurrentTheme();
+        String theme = getTheme();
         CharSequence themeLabel = null;
 
         for (int i = 0; i < pkgs.length; i++) {
@@ -92,37 +125,6 @@ public class ThemesFragment extends SettingsPreferenceFragment implements Prefer
     }
 
     @Override
-    public void onResume() {
-        super.onResume();
-    }
-
-    @Override
-    public void onPause() {
-        super.onPause();
-    }
-
-
-    public boolean onPreferenceChange(Preference preference, Object objValue) {
-        if (preference == mSystemThemeColor)
-        {
-            String current = getTheme();
-            Log.i("FAB_THEMER", " objValue: " + (String) objValue);
-            Log.i("FAB_THEMER", " current: " + current);
-            if (Objects.equal(objValue, current)) {
-                return true;
-            }
-            try {
-                mOverlayService.setEnabledExclusive((String) objValue, true, UserHandle.myUserId());
-            } catch (RemoteException e) {
-                return false;
-            }
-            return true;
-        }
-        return true;
-    }
-
-
-    @Override
     public int getMetricsCategory() {
         return MetricsProto.MetricsEvent.GALAXY;
     }
@@ -136,17 +138,14 @@ public class ThemesFragment extends SettingsPreferenceFragment implements Prefer
         }
     }
 
-    String getCurrentTheme() {
-        return getTheme();
-    }
-
     private String getTheme() {
         try {
             List<OverlayInfo> infos = mOverlayService.getOverlayInfosForTarget("android",
                     UserHandle.myUserId());
             for (int i = 0, size = infos.size(); i < size; i++) {
                 if (infos.get(i).isEnabled() &&
-                        isChangeableOverlay(infos.get(i).packageName)) {
+                        isChangeableOverlay(infos.get(i).packageName) &&
+                            infos.get(i).packageName.contains("com.potato.overlay.accent")) {
                     return infos.get(i).packageName;
                 }
             }
@@ -161,7 +160,8 @@ public class ThemesFragment extends SettingsPreferenceFragment implements Prefer
                     UserHandle.myUserId());
             List<String> pkgs = new ArrayList(infos.size());
             for (int i = 0, size = infos.size(); i < size; i++) {
-                if (isChangeableOverlay(infos.get(i).packageName)) {
+                if (isChangeableOverlay(infos.get(i).packageName) &&
+                            infos.get(i).packageName.contains("com.potato.overlay.accent")) {
                     pkgs.add(infos.get(i).packageName);
                 }
             }
@@ -182,6 +182,11 @@ public class ThemesFragment extends SettingsPreferenceFragment implements Prefer
         public void setEnabledExclusive(String pkg, boolean enabled, int userId)
                 throws RemoteException {
             mService.setEnabledExclusive(pkg, enabled, userId);
+        }
+
+        public void setEnabled(String pkg, boolean enabled, int userId)
+                throws RemoteException {
+            mService.setEnabled(pkg, enabled, userId);
         }
 
         public List<OverlayInfo> getOverlayInfosForTarget(String target, int userId)
