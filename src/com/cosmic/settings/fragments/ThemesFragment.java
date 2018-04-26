@@ -47,6 +47,8 @@ public class ThemesFragment extends SettingsPreferenceFragment implements Prefer
 
     private static final String KEY_THEME_COLOR = "theme_color";
     private static final String KEY_THEME_BASE = "theme_base";
+    private static final String KEY_SYSTEM_THEME_STYLE = "system_theme_style";
+
     private static final String accentPrefix = "com.cosmic.overlay.accent";
     private static final String basePrefix = "com.cosmic.overlay.base";
 
@@ -54,6 +56,7 @@ public class ThemesFragment extends SettingsPreferenceFragment implements Prefer
     private PackageManager mPackageManager;
     private ListPreference mSystemThemeColor;
     private ListPreference mSystemThemeBase;
+    private ListPreference mSystemThemeStyle;
     private Context mContext;
 
     @Override
@@ -67,6 +70,13 @@ public class ThemesFragment extends SettingsPreferenceFragment implements Prefer
         mContext = getContext();
         setupBasePreference();
         setupAccentPreference();
+        mSystemThemeStyle = (ListPreference) findPreference(KEY_SYSTEM_THEME_STYLE);
+        int systemThemeStyle = Settings.System.getInt(getContentResolver(),
+                Settings.System.SYSTEM_THEME, 0);
+        valueIndex = mSystemThemeStyle.findIndexOfValue(String.valueOf(systemThemeStyle));
+        mSystemThemeStyle.setValueIndex(valueIndex >= 0 ? valueIndex : 0);
+        mSystemThemeStyle.setSummary(mSystemThemeStyle.getEntry());
+        mSystemThemeStyle.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -102,6 +112,11 @@ public class ThemesFragment extends SettingsPreferenceFragment implements Prefer
                 return false;
             }
 
+        } else if (preference == mSystemThemeStyle) {
+            String value = (String) newValue;
+            Settings.System.putInt(getContentResolver(), Settings.System.SYSTEM_THEME_STYLE, Integer.valueOf(value));
+            int valueIndex = mSystemThemeStyle.findIndexOfValue(value);
+            mSystemThemeStyle.setSummary(mSystemThemeStyle.getEntries()[valueIndex]);
         }
         return true;
 

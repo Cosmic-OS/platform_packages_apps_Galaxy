@@ -35,6 +35,13 @@
         android:key="styles_category"
         android:title="@string/styles_category" >
 
+        <ListPreference
+            android:key="system_theme_style"
+            android:title="@string/system_theme_style_title"
+            android:persistent="false"
+            android:entries="@array/system_theme_style_entries"
+            android:entryValues="@array/system_theme_style_values" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>
