@@ -30,4 +30,11 @@
         android:title="@string/theme_color" />
 
     </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="styles_category"
+        android:title="@string/styles_category" >
+
+    </PreferenceCategory>
+
 </PreferenceScreen>

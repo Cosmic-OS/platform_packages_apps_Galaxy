@@ -644,4 +644,6 @@
     <string name="theme_color">Accent colors</string>
     <string name="theme_base">Base colors</string>
 
+    <string name="styles_category">Styles</string>
+
 </resources>
