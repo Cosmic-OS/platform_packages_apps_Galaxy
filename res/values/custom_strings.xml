@@ -642,6 +642,6 @@
     <!-- Themes -->
     <string name="colors_category">Color settings</string>
     <string name="theme_color">Accent colors</string>
-    <string name="theme_color_summary">Control primary accent colors</string>
+    <string name="theme_base">Base colors</string>
 
 </resources>

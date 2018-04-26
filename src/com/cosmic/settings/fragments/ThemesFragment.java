@@ -46,19 +46,26 @@ public class ThemesFragment extends SettingsPreferenceFragment implements Prefer
 
 
     private static final String KEY_THEME_COLOR = "theme_color";
+    private static final String KEY_THEME_BASE = "theme_base";
+    private static final String accentPrefix = "com.cosmic.overlay.accent";
+    private static final String basePrefix = "com.cosmic.overlay.base";
+
     private OverlayManager mOverlayService;
     private PackageManager mPackageManager;
     private ListPreference mSystemThemeColor;
+    private ListPreference mSystemThemeBase;
     private Context mContext;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.themes);
+        mSystemThemeBase = (ListPreference) findPreference(KEY_THEME_BASE);
         mSystemThemeColor = (ListPreference) findPreference(KEY_THEME_COLOR);
         mOverlayService = ServiceManager.getService(Context.OVERLAY_SERVICE) != null
                 ? new OverlayManager() : null;
         mContext = getContext();
+        setupBasePreference();
         setupAccentPreference();
     }
 
@@ -74,26 +81,70 @@ public class ThemesFragment extends SettingsPreferenceFragment implements Prefer
 
 
     public boolean onPreferenceChange(Preference preference, Object objValue) {
-        if (preference == mSystemThemeColor)
-        {
-            String current = getTheme();
+        if (preference == mSystemThemeBase) {
+            String current = getTheme(basePrefix);
             if (Objects.equal(objValue, current)) {
                 return true;
             }
             try {
-                mOverlayService.setEnabledExclusive((String) objValue, true, UserHandle.myUserId());
+                mOverlayService.setEnabled((String) objValue, true, UserHandle.myUserId());
             } catch (RemoteException e) {
                 return false;
             }
-            return true;
+        } else if (preference == mSystemThemeColor) {
+            String current = getTheme(accentPrefix);
+            if (Objects.equal(objValue, current)) {
+                return true;
+            }
+            try {
+                mOverlayService.setEnabled((String) objValue, true, UserHandle.myUserId());
+            } catch (RemoteException e) {
+                return false;
+            }
+
         }
         return true;
+
+    }
+
+    private void setupBasePreference()
+    {
+        mPackageManager = mContext.getPackageManager();
+        String[] pkgs = getAvailableThemes(basePrefix);
+        CharSequence[] labels = new CharSequence[pkgs.length];
+        for (int i = 0; i < pkgs.length; i++) {
+            try {
+                labels[i] = mPackageManager.getApplicationInfo(pkgs[i], 0)
+                        .loadLabel(mPackageManager);
+            } catch (NameNotFoundException e) {
+                labels[i] = pkgs[i];
+            }
+        }
+        mSystemThemeBase.setEntries(labels);
+        mSystemThemeBase.setEntryValues(pkgs);
+        String theme = getTheme(basePrefix);
+        CharSequence themeLabel = null;
+
+        for (int i = 0; i < pkgs.length; i++) {
+            if (TextUtils.equals(pkgs[i], theme)) {
+                themeLabel = labels[i];
+                break;
+            }
+        }
+
+        if (TextUtils.isEmpty(themeLabel)) {
+            themeLabel = mContext.getString(R.string.default_theme);
+        }
+
+        mSystemThemeBase.setSummary(themeLabel);
+        mSystemThemeBase.setValue(theme);
+        mSystemThemeBase.setOnPreferenceChangeListener(this);
     }
 
     private void setupAccentPreference()
     {
         mPackageManager = mContext.getPackageManager();
-        String[] pkgs = getAvailableThemes();
+        String[] pkgs = getAvailableThemes(accentPrefix);
         CharSequence[] labels = new CharSequence[pkgs.length];
         for (int i = 0; i < pkgs.length; i++) {
             try {
@@ -105,7 +156,7 @@ public class ThemesFragment extends SettingsPreferenceFragment implements Prefer
         }
         mSystemThemeColor.setEntries(labels);
         mSystemThemeColor.setEntryValues(pkgs);
-        String theme = getTheme();
+        String theme = getTheme(accentPrefix);
         CharSequence themeLabel = null;
 
         for (int i = 0; i < pkgs.length; i++) {
@@ -138,14 +189,14 @@ public class ThemesFragment extends SettingsPreferenceFragment implements Prefer
         }
     }
 
-    private String getTheme() {
+    private String getTheme(String overlayPrefix) {
         try {
             List<OverlayInfo> infos = mOverlayService.getOverlayInfosForTarget("android",
                     UserHandle.myUserId());
             for (int i = 0, size = infos.size(); i < size; i++) {
                 if (infos.get(i).isEnabled() &&
                         isChangeableOverlay(infos.get(i).packageName) &&
-                            infos.get(i).packageName.contains("com.potato.overlay.accent")) {
+                            infos.get(i).packageName.contains(overlayPrefix)) {
                     return infos.get(i).packageName;
                 }
             }
@@ -154,14 +205,14 @@ public class ThemesFragment extends SettingsPreferenceFragment implements Prefer
         return null;
     }
 
-    String[] getAvailableThemes() {
+    String[] getAvailableThemes(String overlayPrefix) {
         try {
             List<OverlayInfo> infos = mOverlayService.getOverlayInfosForTarget("android",
                     UserHandle.myUserId());
             List<String> pkgs = new ArrayList(infos.size());
             for (int i = 0, size = infos.size(); i < size; i++) {
                 if (isChangeableOverlay(infos.get(i).packageName) &&
-                            infos.get(i).packageName.contains("com.potato.overlay.accent")) {
+                            infos.get(i).packageName.contains(overlayPrefix)) {
                     pkgs.add(infos.get(i).packageName);
                 }
             }
@@ -194,6 +245,4 @@ public class ThemesFragment extends SettingsPreferenceFragment implements Prefer
             return mService.getOverlayInfosForTarget(target, userId);
         }
     }
-
-
 }

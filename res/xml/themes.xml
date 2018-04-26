@@ -22,9 +22,12 @@
         android:title="@string/colors_category" >
 
     <ListPreference
+        android:key="theme_base"
+        android:title="@string/theme_base" />
+
+    <ListPreference
         android:key="theme_color"
-        android:title="@string/theme_color"
-        android:summary="@string/theme_color_summary" />
+        android:title="@string/theme_color" />
 
     </PreferenceCategory>
 </PreferenceScreen>
