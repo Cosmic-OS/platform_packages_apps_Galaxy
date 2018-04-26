@@ -26,6 +26,7 @@ import android.os.ServiceManager;
 import android.os.UserHandle;
 import android.os.RemoteException;
 import android.text.TextUtils;
+import android.provider.Settings;
 import android.util.Log;
 import android.content.Context;
 import android.content.om.IOverlayManager;
@@ -72,8 +73,8 @@ public class ThemesFragment extends SettingsPreferenceFragment implements Prefer
         setupAccentPreference();
         mSystemThemeStyle = (ListPreference) findPreference(KEY_SYSTEM_THEME_STYLE);
         int systemThemeStyle = Settings.System.getInt(getContentResolver(),
-                Settings.System.SYSTEM_THEME, 0);
-        valueIndex = mSystemThemeStyle.findIndexOfValue(String.valueOf(systemThemeStyle));
+                Settings.System.SYSTEM_THEME_STYLE, 0);
+        int valueIndex = mSystemThemeStyle.findIndexOfValue(String.valueOf(systemThemeStyle));
         mSystemThemeStyle.setValueIndex(valueIndex >= 0 ? valueIndex : 0);
         mSystemThemeStyle.setSummary(mSystemThemeStyle.getEntry());
         mSystemThemeStyle.setOnPreferenceChangeListener(this);
@@ -113,7 +114,7 @@ public class ThemesFragment extends SettingsPreferenceFragment implements Prefer
             }
 
         } else if (preference == mSystemThemeStyle) {
-            String value = (String) newValue;
+            String value = (String) objValue;
             Settings.System.putInt(getContentResolver(), Settings.System.SYSTEM_THEME_STYLE, Integer.valueOf(value));
             int valueIndex = mSystemThemeStyle.findIndexOfValue(value);
             mSystemThemeStyle.setSummary(mSystemThemeStyle.getEntries()[valueIndex]);
