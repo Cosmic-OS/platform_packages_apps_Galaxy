@@ -97,6 +97,7 @@ public class ThemesFragment extends SettingsPreferenceFragment implements Prefer
             if (Objects.equal(objValue, current)) {
                 return true;
             }
+            disableOverlaysFromPrefix(basePrefix);
             try {
                 mOverlayService.setEnabled((String) objValue, true, UserHandle.myUserId());
             } catch (RemoteException e) {
@@ -107,6 +108,7 @@ public class ThemesFragment extends SettingsPreferenceFragment implements Prefer
             if (Objects.equal(objValue, current)) {
                 return true;
             }
+            disableOverlaysFromPrefix(accentPrefix);
             try {
                 mOverlayService.setEnabled((String) objValue, true, UserHandle.myUserId());
             } catch (RemoteException e) {
@@ -189,6 +191,18 @@ public class ThemesFragment extends SettingsPreferenceFragment implements Prefer
         mSystemThemeColor.setSummary(themeLabel);
         mSystemThemeColor.setValue(theme);
         mSystemThemeColor.setOnPreferenceChangeListener(this);
+    }
+
+    private void disableOverlaysFromPrefix(String prefix)
+    {
+        mPackageManager = mContext.getPackageManager();
+        String[] pkgs = getAvailableThemes(prefix);
+        for (int i = 0; i < pkgs.length; i++) {
+            try {
+                mOverlayService.setEnabled(pkgs[i], false, UserHandle.myUserId());
+            } catch (RemoteException e) {
+            }
+        }
     }
 
     @Override
