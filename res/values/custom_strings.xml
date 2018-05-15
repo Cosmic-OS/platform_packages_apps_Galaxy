@@ -131,5 +131,6 @@
 
     <!-- QS themes -->
     <string name="qs_themes_category_title">Quick Settings colors</string>
+    <string name="qs_panel_alpha_title">Transparency</string>
 
 </resources>

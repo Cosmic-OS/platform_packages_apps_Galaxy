@@ -65,6 +65,9 @@ public class ThemeFragment extends SettingsPreferenceFragment
     private CustomSeekBarPreference mContentPadding;
     private ListPreference mSystemUiThemePref;
 
+    private static final String QS_PANEL_ALPHA = "qs_panel_alpha";
+    private CustomSeekBarPreference mQsPanelAlpha;
+
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (preference == mSystemThemeBase) {
@@ -83,6 +86,11 @@ public class ThemeFragment extends SettingsPreferenceFragment
             int value = Integer.parseInt((String) newValue);
             Settings.Secure.putInt(getContext().getContentResolver(), Settings.Secure.THEME_MODE, value);
             mSystemUiThemePref.setSummary(mSystemUiThemePref.getEntries()[value]);
+        } else if (preference == mQsPanelAlpha) {
+            int bgAlpha = (Integer) newValue;
+            Settings.System.putIntForUser(getContentResolver(),
+                    Settings.System.QS_PANEL_BG_ALPHA, bgAlpha,
+                    UserHandle.USER_CURRENT);
         }
         return true;
     }
@@ -99,6 +107,7 @@ public class ThemeFragment extends SettingsPreferenceFragment
         setupBasePref();
         setupCornerPrefs();
         setupStylePref();
+        setupQsPrefs();
     }
 
     private void setupAccentPicker() {
@@ -164,6 +173,14 @@ public class ThemeFragment extends SettingsPreferenceFragment
         mSystemUiThemePref.setValue(Integer.toString(value));
         mSystemUiThemePref.setSummary(mSystemUiThemePref.getEntries()[index]);
         mSystemUiThemePref.setOnPreferenceChangeListener(this);
+    }
+
+    private void setupQsPrefs() {
+        mQsPanelAlpha = (CustomSeekBarPreference) findPreference(QS_PANEL_ALPHA);
+        int qsPanelAlpha = Settings.System.getIntForUser(getContentResolver(),
+                Settings.System.QS_PANEL_BG_ALPHA, 255, UserHandle.USER_CURRENT);
+        mQsPanelAlpha.setValue(qsPanelAlpha);
+        mQsPanelAlpha.setOnPreferenceChangeListener(this);
     }
 
     public void updateEnableState() {

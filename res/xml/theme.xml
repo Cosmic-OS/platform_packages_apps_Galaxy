@@ -74,6 +74,13 @@
     <PreferenceCategory
         android:key="qs_category"
         android:title="@string/qs_themes_category_title" >
+        <com.android.settings.cosmic.CustomSeekBarPreference
+            android:key="qs_panel_alpha"
+            android:title="@string/qs_panel_alpha_title"
+            android:max="255"
+            settings:min="0"
+            settings:units=""
+            android:persistent="false" />
     </PreferenceCategory>
 
 </PreferenceScreen>
