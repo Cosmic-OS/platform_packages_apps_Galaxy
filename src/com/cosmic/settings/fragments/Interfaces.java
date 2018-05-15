@@ -71,11 +71,13 @@ public class Interfaces extends SettingsPreferenceFragment implements
     private static final String SYSUI_ROUNDED_CONTENT_PADDING = "sysui_rounded_content_padding";
     private static final String SYSUI_ROUNDED_FWVALS = "sysui_rounded_fwvals";
     private static final String ACCENT_COLOR = "accent_color";
+    private static final String QS_PANEL_COLOR = "qs_panel_color";
     private static final String ACCENT_COLOR_PROP = "persist.sys.theme.accentcolor";
 
     private Handler mHandler;
 
     private ColorPickerPreference mThemeColor;
+    private ColorPickerPreference mQsPanelColor;
     private Fragment mCurrentFragment = this;
     private OverlayManagerWrapper mOverlayService;
     private PackageManager mPackageManager;
@@ -129,6 +131,12 @@ public class Interfaces extends SettingsPreferenceFragment implements
         mRoundedFwvals = (SecureSettingSwitchPreference) findPreference(SYSUI_ROUNDED_FWVALS);
         mRoundedFwvals.setOnPreferenceChangeListener(this);
 
+        mQsPanelColor = (ColorPickerPreference) findPreference(QS_PANEL_COLOR);
+        int QsColor = Settings.System.getIntForUser(getContentResolver(),
+                Settings.System.QS_PANEL_BG_COLOR, Color.WHITE, UserHandle.USER_CURRENT);
+        mQsPanelColor.setNewPreviewColor(QsColor);
+        mQsPanelColor.setOnPreferenceChangeListener(this);
+
     }
 
     private void setupAccentPref() {
@@ -171,6 +179,12 @@ public class Interfaces extends SettingsPreferenceFragment implements
         } else if (preference == mRoundedFwvals) {
             restoreCorners();
 		return true;
+        } else if (preference == mQsPanelColor) {
+            int bgColor = (Integer) newValue;
+            Settings.System.putIntForUser(getContentResolver(),
+                    Settings.System.QS_PANEL_BG_COLOR, bgColor,
+                    UserHandle.USER_CURRENT);
+              return true;
         } else if (preference == mThemeColor) {
             int color = (Integer) newValue;
             String hexColor = String.format("%08X", (0xFFFFFFFF & color));
