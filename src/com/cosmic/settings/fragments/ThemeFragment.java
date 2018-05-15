@@ -24,6 +24,7 @@ import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
+import android.graphics.Color;
 import android.provider.SearchIndexableResource;
 import android.provider.Settings;
 import android.support.v7.preference.ListPreference;
@@ -44,6 +45,8 @@ import com.android.settings.cosmic.CustomSeekBarPreference;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
 public class ThemeFragment extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener, Indexable {
@@ -66,7 +69,9 @@ public class ThemeFragment extends SettingsPreferenceFragment
     private ListPreference mSystemUiThemePref;
 
     private static final String QS_PANEL_ALPHA = "qs_panel_alpha";
+    private static final String QS_PANEL_COLOR = "qs_panel_color";
     private CustomSeekBarPreference mQsPanelAlpha;
+    private ColorPickerPreference mQsPanelColor;
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
@@ -90,6 +95,11 @@ public class ThemeFragment extends SettingsPreferenceFragment
             int bgAlpha = (Integer) newValue;
             Settings.System.putIntForUser(getContentResolver(),
                     Settings.System.QS_PANEL_BG_ALPHA, bgAlpha,
+                    UserHandle.USER_CURRENT);
+        } else if (preference == mQsPanelColor) {
+            int bgColor = (Integer) newValue;
+            Settings.System.putIntForUser(getContentResolver(),
+                    Settings.System.QS_PANEL_BG_COLOR, bgColor,
                     UserHandle.USER_CURRENT);
         }
         return true;
@@ -181,6 +191,12 @@ public class ThemeFragment extends SettingsPreferenceFragment
                 Settings.System.QS_PANEL_BG_ALPHA, 255, UserHandle.USER_CURRENT);
         mQsPanelAlpha.setValue(qsPanelAlpha);
         mQsPanelAlpha.setOnPreferenceChangeListener(this);
+
+        mQsPanelColor = (ColorPickerPreference) findPreference(QS_PANEL_COLOR);
+        int QsColor = Settings.System.getIntForUser(getContentResolver(),
+                Settings.System.QS_PANEL_BG_COLOR, Color.WHITE, UserHandle.USER_CURRENT);
+        mQsPanelColor.setNewPreviewColor(QsColor);
+        mQsPanelColor.setOnPreferenceChangeListener(this);
     }
 
     public void updateEnableState() {
