@@ -27,12 +27,18 @@
             android:defaultValue="0xffffff"
             android:persistent="false" />
 			
-		<net.margaritov.preference.colorpicker.ColorPickerPreference
+	<net.margaritov.preference.colorpicker.ColorPickerPreference
             android:key="qs_panel_color"
-			android:icon="@drawable/ic_paint1"
+	    android:icon="@drawable/ic_paint1"
             android:title="@string/qs_panel_color_title"
             android:defaultValue="0xffffff"
             android:persistent="false" />
+
+       <com.cosmic.settings.preferences.SystemSettingSwitchPreference
+            android:key="qs_panel_bg_use_wall"
+            android:title="@string/qs_bg_wall_title"
+            android:summary="@string/qs_bg_wall_summary"
+            android:defaultValue="false"/>
 
 	</PreferenceCategory>
 

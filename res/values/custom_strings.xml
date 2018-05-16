@@ -51,6 +51,8 @@
     <string name="color_default">Default</string>
     <string name="system_colors">Colors</string>
     <string name="accent_color">Accent color</string>
+	<string name="qs_bg_wall_title">Use Wallpaper colors</string>
+    <string name="qs_bg_wall_summary">Set QS background color from Wallpaper</string>
 
     <string name="battery_category">Battery</string>
     <string name="notifications_category_title">Annoying notifications protection</string>
