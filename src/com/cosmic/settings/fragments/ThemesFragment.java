@@ -67,6 +67,7 @@ public class ThemesFragment extends SettingsPreferenceFragment implements Prefer
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.themes);
+        mFooterPreferenceMixin.createFooterPreference().setTitle(R.string.themes_warning_text);
         mSystemThemeBase = (ListPreference) findPreference(KEY_THEME_BASE);
         mSystemThemeColor = (ListPreference) findPreference(KEY_THEME_COLOR);
         mOverlayService = ServiceManager.getService(Context.OVERLAY_SERVICE) != null
