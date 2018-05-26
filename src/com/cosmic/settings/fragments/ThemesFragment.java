@@ -42,6 +42,7 @@ import libcore.util.Objects;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.internal.logging.nano.MetricsProto;
+import com.cosmic.settings.preferences.SystemSettingSwitchPreference;
 
 public class ThemesFragment extends SettingsPreferenceFragment implements Preference.OnPreferenceChangeListener {
 
@@ -49,6 +50,7 @@ public class ThemesFragment extends SettingsPreferenceFragment implements Prefer
     private static final String KEY_THEME_COLOR = "theme_color";
     private static final String KEY_THEME_BASE = "theme_base";
     private static final String KEY_SYSTEM_THEME_STYLE = "system_theme_style";
+    private static final String SETTINGS_ICON_TINT = "settings_icon_tint";
 
     private static final String accentPrefix = "com.cosmic.overlay.accent";
     private static final String basePrefix = "com.cosmic.overlay.base";
@@ -59,6 +61,7 @@ public class ThemesFragment extends SettingsPreferenceFragment implements Prefer
     private ListPreference mSystemThemeBase;
     private ListPreference mSystemThemeStyle;
     private Context mContext;
+    private SystemSettingSwitchPreference mIconTint;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -78,6 +81,20 @@ public class ThemesFragment extends SettingsPreferenceFragment implements Prefer
         mSystemThemeStyle.setValueIndex(valueIndex >= 0 ? valueIndex : 0);
         mSystemThemeStyle.setSummary(mSystemThemeStyle.getEntry());
         mSystemThemeStyle.setOnPreferenceChangeListener(this);
+
+        Resources res = null;
+        try {
+            res = mContext.getPackageManager().getResourcesForApplication("com.android.systemui");
+        } catch (NameNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        mIconTint = (SystemSettingSwitchPreference) findPreference(SETTINGS_ICON_TINT);
+        if (isDark()) {
+            mIconTint.setEnabled(true);
+        } else {
+            mIconTint.setEnabled(false);
+        }
     }
 
     @Override
@@ -120,6 +137,11 @@ public class ThemesFragment extends SettingsPreferenceFragment implements Prefer
             Settings.System.putInt(getContentResolver(), Settings.System.SYSTEM_THEME_STYLE, Integer.valueOf(value));
             int valueIndex = mSystemThemeStyle.findIndexOfValue(value);
             mSystemThemeStyle.setSummary(mSystemThemeStyle.getEntries()[valueIndex]);
+        }
+        if (isDark()) {
+            mIconTint.setEnabled(true);
+        } else {
+            mIconTint.setEnabled(false);
         }
         return true;
 
@@ -252,6 +274,17 @@ public class ThemesFragment extends SettingsPreferenceFragment implements Prefer
         return new String[0];
     }
 
+    public boolean isDark() {
+        OverlayInfo themeInfo = null;
+        try {
+            themeInfo = mOverlayService.getOverlayInfo("com.android.system.theme.dark",
+                    UserHandle.myUserId());
+        } catch (RemoteException e) {
+            e.printStackTrace();
+        }
+        return themeInfo != null && themeInfo.isEnabled();
+    }
+
     public static class OverlayManager {
         private final IOverlayManager mService;
 
@@ -273,6 +306,11 @@ public class ThemesFragment extends SettingsPreferenceFragment implements Prefer
         public List<OverlayInfo> getOverlayInfosForTarget(String target, int userId)
                 throws RemoteException {
             return mService.getOverlayInfosForTarget(target, userId);
+        }
+
+        public OverlayInfo getOverlayInfo(String target, int userId)
+                throws RemoteException {
+            return mService.getOverlayInfo(target, userId);
         }
     }
 }

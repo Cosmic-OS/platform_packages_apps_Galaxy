@@ -42,6 +42,12 @@
             android:entries="@array/system_theme_style_entries"
             android:entryValues="@array/system_theme_style_values" />
 
+        <com.cosmic.settings.preferences.SystemSettingSwitchPreference
+            android:key="settings_icon_tint"
+            android:title="@string/settings_icon_tint_title"
+            android:summary="@string/settings_icon_tint_summary"
+            android:defaultValue="false"/>
+
     </PreferenceCategory>
 
 </PreferenceScreen>

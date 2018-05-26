@@ -646,6 +646,9 @@
 
     <string name="styles_category">Styles</string>
 
+    <string name="settings_icon_tint_title">Tint settings icons</string>
+    <string name="settings_icon_tint_summary">Apply accent colors to settings icons</string>
+
     <!-- System theme style -->
     <string name="system_theme_style_title">System style</string>
     <string name="system_theme_style_auto">Wallpaper based</string>
