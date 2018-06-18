@@ -73,6 +73,13 @@
             android:fragment="com.cosmic.settings.fragments.QuickSettings"
             android:icon="@drawable/ic_cosmic_quicksettings"/>
 
+        <!-- Themes Settings -->
+        <Preference
+            android:key="cosmic_themes"
+            android:title="@string/themes_title"
+            android:fragment="com.cosmic.settings.fragments.ThemesFragment"
+            android:icon="@drawable/ic_cosmic_themes"/>
+
         <!-- Misc -->
         <Preference
             android:key="cosmic_misc_settings"
