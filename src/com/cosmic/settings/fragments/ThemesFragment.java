@@ -34,6 +34,7 @@ import android.content.om.OverlayInfo;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
+import android.content.res.Resources;
 import android.support.v7.preference.ListPreference;
 import java.util.ArrayList;
 import java.util.List;
