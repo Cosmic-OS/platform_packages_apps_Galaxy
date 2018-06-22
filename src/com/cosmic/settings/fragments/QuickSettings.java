@@ -50,10 +50,7 @@ public class QuickSettings extends SettingsPreferenceFragment implements
     private static final String PREF_TILE_ANIM_STYLE = "qs_tile_animation_style";
     private static final String PREF_TILE_ANIM_DURATION = "qs_tile_animation_duration";
     private static final String PREF_TILE_ANIM_INTERPOLATOR = "qs_tile_animation_interpolator";
-    private static final String QS_PANEL_BG_ALPHA = "qs_panel_bg_alpha";
     private static final String QS_TILE_STYLE = "qs_tile_style";
-
-    private CustomSeekBarPreference mQsPanelAlpha;
 
     private ListPreference mQsTileStyle;
     private ListPreference mTileAnimationStyle;
@@ -90,12 +87,6 @@ public class QuickSettings extends SettingsPreferenceFragment implements
         updateTileAnimationInterpolatorSummary(tileAnimationInterpolator);
         mTileAnimationInterpolator.setOnPreferenceChangeListener(this);
 
-        mQsPanelAlpha = (CustomSeekBarPreference) findPreference(QS_PANEL_BG_ALPHA);
-        int qsPanelAlpha = Settings.System.getIntForUser(resolver,
-                Settings.System.QS_PANEL_BG_ALPHA, 255, UserHandle.USER_CURRENT);
-        mQsPanelAlpha.setValue(qsPanelAlpha);
-        mQsPanelAlpha.setOnPreferenceChangeListener(this);
-
         mQsTileStyle = (ListPreference) findPreference(QS_TILE_STYLE);
         int qsTileStyle = Settings.System.getIntForUser(resolver,
                 Settings.System.QS_TILE_STYLE, 0,
@@ -126,12 +117,6 @@ public class QuickSettings extends SettingsPreferenceFragment implements
             Settings.System.putIntForUser(resolver, Settings.System.ANIM_TILE_INTERPOLATOR,
                     tileAnimationInterpolator, UserHandle.USER_CURRENT);
             updateTileAnimationInterpolatorSummary(tileAnimationInterpolator);
-            return true;
-        } else if (preference == mQsPanelAlpha) {
-            int bgAlpha = (Integer) newValue;
-            Settings.System.putIntForUser(getContentResolver(),
-                    Settings.System.QS_PANEL_BG_ALPHA, bgAlpha,
-                    UserHandle.USER_CURRENT);
             return true;
         } else if (preference == mQsTileStyle) {
             int qsTileStyleValue = Integer.valueOf((String) newValue);

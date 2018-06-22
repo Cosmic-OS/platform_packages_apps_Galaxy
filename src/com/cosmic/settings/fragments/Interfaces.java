@@ -73,6 +73,7 @@ public class Interfaces extends SettingsPreferenceFragment implements
     private static final String ACCENT_COLOR = "accent_color";
     private static final String QS_PANEL_COLOR = "qs_panel_color";
     private static final String ACCENT_COLOR_PROP = "persist.sys.theme.accentcolor";
+    private static final String QS_PANEL_BG_ALPHA = "qs_panel_bg_alpha";
 
     private Handler mHandler;
 
@@ -84,6 +85,7 @@ public class Interfaces extends SettingsPreferenceFragment implements
     private CustomSeekBarPreference mCornerRadius;
     private CustomSeekBarPreference mContentPadding;
     private SecureSettingSwitchPreference mRoundedFwvals;
+    private CustomSeekBarPreference mQsPanelAlpha;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -137,6 +139,12 @@ public class Interfaces extends SettingsPreferenceFragment implements
         mQsPanelColor.setNewPreviewColor(QsColor);
         mQsPanelColor.setOnPreferenceChangeListener(this);
 
+        mQsPanelAlpha = (CustomSeekBarPreference) findPreference(QS_PANEL_BG_ALPHA);
+        int qsPanelAlpha = Settings.System.getIntForUser(resolver,
+                Settings.System.QS_PANEL_BG_ALPHA, 255, UserHandle.USER_CURRENT);
+        mQsPanelAlpha.setValue(qsPanelAlpha);
+        mQsPanelAlpha.setOnPreferenceChangeListener(this);
+
     }
 
     private void setupAccentPref() {
@@ -185,6 +193,12 @@ public class Interfaces extends SettingsPreferenceFragment implements
                     Settings.System.QS_PANEL_BG_COLOR, bgColor,
                     UserHandle.USER_CURRENT);
               return true;
+        } else if (preference == mQsPanelAlpha) {
+            int bgAlpha = (Integer) newValue;
+            Settings.System.putIntForUser(getContentResolver(),
+                    Settings.System.QS_PANEL_BG_ALPHA, bgAlpha,
+                    UserHandle.USER_CURRENT);
+            return true;
         } else if (preference == mThemeColor) {
             int color = (Integer) newValue;
             String hexColor = String.format("%08X", (0xFFFFFFFF & color));

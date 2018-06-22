@@ -46,14 +46,6 @@
             android:entries="@array/qs_selector_entries"
             android:entryValues="@array/qs_selector_values" />
 
-        <com.cosmic.settings.preferences.CustomSeekBarPreference
-            android:key="qs_panel_bg_alpha"
-            android:title="@string/qs_panel_alpha_title"
-            android:max="255"
-            settings:min="0"
-            settings:units=""
-            android:persistent="false" />
-
         <com.cosmic.settings.preferences.SecureSettingSwitchPreference
             android:key="qs_show_info_header"
             android:title="@string/show_info_header_title"
