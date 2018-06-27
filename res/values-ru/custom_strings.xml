@@ -589,7 +589,7 @@
     <string name="show_carrier_disabled">Нигде</string>
     <string name="show_carrier_keyguard">Экран блокировки</string>
     <string name="show_carrier_statusbar">Статус бар</string>
-    <string name="show_carrier_enabled">Экран блокировки &amp; статус бар</string>
+    <string name="show_carrier_enabled">Экран блокировки и статус бар</string>
 
     <!-- Battery percentage -->
     <string name="battery_style_category_title">Иконка батареи</string>
