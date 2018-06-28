@@ -248,7 +248,7 @@
 
     <!-- Navigation -->
     <string name="navigationbar_title">Панель навигации</string>
-    <string name="navigationbar_summary">Настройте smartbar, fling и pulse</string>
+    <string name="navigationbar_summary">Настроить smartbar, fling и pulse</string>
     <string name="navbar_buttons_title">Кнопки панели навигации</string>
     <string name="navbar_buttons_summary">Слои и кнопки панели навигации</string>
 
@@ -256,21 +256,21 @@
     <string name="navbar_interface_title">Интерфейс</string>
     <string name="navbar_size">Размер</string>
     <string name="navbar_mode">Режим навигации</string>
-    <string name="navbar_mode_summary">Выберите, какой режим навигации использовать</string>
+    <string name="navbar_mode_summary">Выбрать, какой режим навигации использовать</string>
     <string name="navbar_visibility">Активировать панель навигации</string>
     <string name="navigationbar_settings_title">Панель навигации</string>
     <string name="bottom_nav_navigation_title">Панель навигации</string>
-    <string name="navigationbar_settings_summary">Настройте стиль и поведение навигационной панели</string>
+    <string name="navigationbar_settings_summary">Настроить стиль и поведение навигационной панели</string>
     <string name="navbar_general_title">Расширенные</string>
-    <string name="navigation_bar_left_title">Режим для левой руки</string>
+    <string name="navigation_bar_left_title">Режим левой руки</string>
     <string name="navigation_bar_left_summary">Сместить панель навигации влево при ландшафтном режиме</string>
     <string name="smartbar_interface">SmartBar</string>
     <string name="icon_pack_picker_dialog_title">Набор иконок</string>
     <string name="image_exceeds_max_allowed_size">Изображение не должно превышать 512x512</string>
-    <string name="invalid_icon_from_uri">Не удалось загрузить изображение из провайдера</string>
-    <string name="picker_activities">Активити</string>
+    <string name="invalid_icon_from_uri">Не удалось загрузить изображение</string>
+    <string name="picker_activities">Действия</string>
     <string name="select_custom_app_title">Выбрать приложение</string>
-    <string name="select_custom_activity_title">Выбрать активити</string>
+    <string name="select_custom_activity_title">Выбрать действие</string>
     <string name="profile_applist_title">Приложения</string>
     <string name="default_string">Stock</string>
     <string name="default_settings">Настройки Stock</string>
@@ -296,7 +296,7 @@
     <string name="fling_settings_summary">Уникальная и настраиваемая панель навигации, основанная на жестах</string>
     <string name="fling_interface">Fling</string>
     <string name="fling_enable_title">Активировать Fling</string>
-    <string name="fling_back_home_policy">Назад и Домой необходимо ставить каждый раз. Чтобы изменить наначение Назад и Домой, установите желаемое расположение.\n\nТакже, установка двойного нажатия создаст небольшую задержку одного нажатия.</string>
+    <string name="fling_back_home_policy">\"Назад\" и \"Домой\" необходимо ставить каждый раз. Чтобы изменить наначение \"Назад\" и \"Домой\", установите желаемое расположение.\n\nТакже, установка двойного нажатия создаст небольшую задержку одного нажатия.</string>
     <string name="fling_split_bar_policy">Когда только левое или только правое действие активно, оно применяется на всю панель.</string>
     <string name="fling_def_summary">Действие не установлено</string>
     <string name="fling_swipe_actions">Жесты свайпа</string>
@@ -325,7 +325,7 @@
     <string name="down_swipe_title">Свайп вниз</string>
     <string name="long_swipe_reset">Сброс</string>
     <string name="fling_advanced">Расширенные</string>
-    <string name="fling_long_swipe_title">Порог длинного свайпа</string>
+    <string name="fling_long_swipe_title">Порог длинны свайпа</string>
     <string name="fling_long_swipe_summary">Настройка порога длины свайпа, основанная на проценте ширины и высоты Fling</string>
     <string name="fling_appearance">Внешний вид</string>
     <string name="fling_show_logo_title">Отображать логотип Fling</string>
@@ -338,8 +338,8 @@
     <string name="fling_show_ripple_title">Отображать пульсацию</string>
     <string name="fling_show_ripple_summary">Панель пульсирует при каждом действии</string>
     <string name="fling_ripple_color">Цвет пульсации</string>
-    <string name="fling_longpress_timeout_label_left">Меньше задержка</string>
-    <string name="fling_longpress_timeout_label_right">Больше задержка</string>
+    <string name="fling_longpress_timeout_label_left">Задержка меньше</string>
+    <string name="fling_longpress_timeout_label_right">Задержка больше</string>
     <string name="fling_longpress_title">Зажержка долгого нажатия</string>
     <string name="fling_longpress_summary">Увеличить или уменьшить время долгого нажатия</string>
     <string name="fling_keyboard_cursors_title">Динамические действия с курсором</string>
@@ -348,7 +348,7 @@
     <!-- Pulse navigation bar music visualizer -->
     <string name="pulse_help_policy_notice_summary">Pulse не работает с некоторыми звуковыми источниками</string>
     <string name="pulse_settings">Pulse</string>
-    <string name="pulse_settings_summary">Аудиографический эквалайзер в панели навигации</string>
+    <string name="pulse_settings_summary">Аудиографический эквалайзер на панели навигации</string>
     <string name="fling_show_pulse_title">Активировать Pulse</string>
     <string name="fling_show_pulse_summary">Аудиографический эквалайзер в панели навигации</string>
     <string name="pulse_render_mode_title">Режим рендера</string>
@@ -365,7 +365,7 @@
     <string name="pulse_solid_lines_count">Количество плотных линий</string>
     <string name="pulse_solid_units_opacity">Затемнение плотных линий</string>
     <string name="pulse_solid_dimen_category">Настройка плотных линий</string>
-    <string name="pulse_custom_buttons_opacity_title">Затемнение кнопок Smartbar при Pulse</string>
+    <string name="pulse_custom_buttons_opacity_title">Затемнение кнопок Smartbar при использовании Pulse</string>
 
     <!-- Pulse config -->
     <string name="pulse_custom_dimen">Ширина панели</string>
@@ -384,14 +384,14 @@
     <string name="smartbar_category">Smartbar</string>
     <string name="smartbar_settings_title">Настройки Smartbar</string>
     <string name="smartbar_settings_summary">Полностью настраиваемая панель навигации</string>
-    <string name="smartbar_editor_title">Редим редактирования</string>
+    <string name="smartbar_editor_title">Режим редактирования</string>
     <string name="smartbar_editor_summary">Редактор кнопок панели</string>
-    <string name="smartbar_help_policy_notice_summary">Когда вы в режиме редактирования, зажмите и перемещайте кнопку, чтобы сменить её позицию, либо нажмите и удерживайте, чтобы показать меню. Вы можете изменять позицию кнопки даже при открытом меню.\n\nУстановка двойного нажатия добавит задержку на одно.</string>
+    <string name="smartbar_help_policy_notice_summary">Когда вы в режиме редактирования, зажмите и перемещайте кнопку, чтобы сменить её позицию, либо нажмите и удерживайте, чтобы показать меню. Вы можете изменять позицию кнопки даже при раскрытом меню.\n\nУстановка двойного нажатия добавит задержку на одно нажатие.</string>
     <string name="smartbar_context_menu_position_title">Расположение контекстуальных кнопок</string>
     <string name="smartbar_context_menu_position_summary">Выбрать расположение контекстуальных кнопок, таких как меню и селектор ввода</string>
     <string name="smartbar_right">Справа</string>
     <string name="smartbar_left">Слева</string>
-    <string name="smartbar_button_animation_title">Анимация касания кнопки</string>
+    <string name="smartbar_button_animation_title">Анимация нажатия кнопок</string>
     <string name="smartbar_button_animation_summary">Выбрать анимацию нажатия основных кнопок</string>
     <string name="smartbar_button_animation_ripple">Пульсация</string>
     <string name="smartbar_button_animation_flip">Переворот</string>
@@ -425,14 +425,14 @@
     <string name="one_handed_mode_title">Режим одной руки</string>
     <string name="one_handed_mode_summary">При свайпе по панели активируется режим одной руки</string>
     <string name="smartbar_double_tap_sleep_title">Двойное нажатие для сна</string>
-    <string name="smartbar_double_tap_sleep_summary">Двойное нажатие по пустым участкам панели для сна</string>
+    <string name="smartbar_double_tap_sleep_summary">Двойное нажатие по пустой области панели для сна</string>
 
     <!-- Hardware keys -->
-    <string name="hardware_keys_home_key_title">Кнопка домой</string>
-    <string name="hardware_keys_menu_key_title">Кнопка меню</string>
-    <string name="hardware_keys_assist_key_title">Кнопка поиск</string>
-    <string name="hardware_keys_appswitch_key_title">Кнопка действие</string>
-    <string name="hardware_keys_back_key_title">Кнопка назад</string>
+    <string name="hardware_keys_home_key_title">Кнопка \"Домой\"</string>
+    <string name="hardware_keys_menu_key_title">Кнопка \"Меню\"</string>
+    <string name="hardware_keys_assist_key_title">Кнопка \"Помощник\"</string>
+    <string name="hardware_keys_appswitch_key_title">Кнопка \"Действие\"</string>
+    <string name="hardware_keys_back_key_title">Кнопка \"Назад\"</string>
     <string name="hardware_keys_double_tap_summary">Установить действие на двойное нажатие</string>
     <string name="hardware_keys_single_tap_summary">Установить действие на нажатие</string>
     <string name="hardware_keys_long_press_summary">Установить действие на долгое нажатие</string>
@@ -452,34 +452,34 @@
     <string name="backlight_timeout_20s">20 сек</string>
     <string name="backlight_timeout_30s">30 сек</string>
 
-    <string name="button_backlight_on_touch_only_title">Нажатие кнопки</string>
+    <string name="button_backlight_on_touch_only_title">При нажатии кнопки</string>
     <string name="button_backlight_on_touch_only_summary">Включать подсветку только при нажатии кнопки</string>
 
     <!-- Incall Home button behavior-->
-    <string name="allow_incall_home_title">Кнопка домой во время звонка</string>
-    <string name="allow_incall_home_summary">Разрешить использование кнопки домой во время звонка</string>
+    <string name="allow_incall_home_title">Кнопка \"Домой\" во время звонка</string>
+    <string name="allow_incall_home_summary">Разрешить использование кнопки \"Домой\" во время звонка</string>
 
     <!-- Enable keys backlight-->
-    <string name="button_brightness_title">Подсветка</string>
-    <string name="button_brightness_sw_title">Включить подсветку</string>
+    <string name="button_brightness_title">Подсветка кнопок</string>
+    <string name="button_brightness_sw_title">Включить подсветку кнопок</string>
 
     <!-- ANBI -->
     <string name="anbi_title">Случайное нажатие</string>
-    <string name="anbi_summary">Предотвратить случайное нажатие навигационных кнопок, когда палец на экране</string>
+    <string name="anbi_summary">Предотвратить случайное нажатие навигационных кнопок, когда палец касается экрана</string>
 
     <!-- Brightness icon-->
-    <string name="brightness_icon_title">Значок яркости</string>
-    <string name="brightness_icon_summary">Отображать значок авто-яркости слева от слайдера</string>
+    <string name="brightness_icon_title">Иконка авто-яркости</string>
+    <string name="brightness_icon_summary">Показывать иконку авто-яркости слева от слайдера</string>
 
     <!-- Disable QS on secure Lockscreen -->
     <string name="lockscreen_qs_disabled_title">Запрет быстрых настроек</string>
-    <string name="lockscreen_qs_disabled_summary">Выключить плитки быстрых настроек, когда телефон заблокирован</string>
+    <string name="lockscreen_qs_disabled_summary">Запретить быстрые настройки, когда телефон заблокирован</string>
 
     <!-- SlimSizer  -->
     <string name="listsystem">список</string>
     <string name="sizer_title">Удаление приложений</string>
     <string name="caution">Внимание!</string>
-    <string name="sizer_message_startup">Этот инструмент позволяет удалять системные приложения. Используйте с осторожностью и удаляйте только те приложения, назначение которых вы полностью понимаете.</string>
+    <string name="sizer_message_startup">Этот инструмент позволяет удалять системные приложения. Используйте его с осторожностью и удаляйте только те приложения, назначение которых вы понимаете.</string>
     <string name="sizer_message_delete">Вы уверены, что хотите удалить эти приложения?</string>
     <string name="btn_delete">Удалить системные приложения!</string>
     <string name="delete_progress_title">Удаление</string>
@@ -496,15 +496,15 @@
 
     <!-- Brightness control -->
     <string name="status_bar_toggle_brightness">Регулировка яркости</string>
-    <string name="status_bar_toggle_brightness_summary">Регулировка яркости свайпами влево и вправо по статус бару</string>
+    <string name="status_bar_toggle_brightness_summary">Регулировка яркости свайпом влево и вправо по статус бару</string>
 
     <!-- Memory bar -->
-    <string name="recents_show_membar_title">Панель памяти</string>
-    <string name="recents_show_membar_summary">Отображать панель с доступной памятью устройства</string>
+    <string name="recents_show_membar_title">Панель ОЗУ</string>
+    <string name="recents_show_membar_summary">Показывать панель с доступной ОЗУ устройства в недавних</string>
 
     <!-- Three-fingers-swipe to screenshot -->
-    <string name="three_finger_gesture">Жест с тремя пальцами</string>
-    <string name="three_finger_gesture_summary">Смахнуть тремя пальцами для скриншота</string>
+    <string name="three_finger_gesture">Жест тремя пальцами</string>
+    <string name="three_finger_gesture_summary">Провести тремя пальцами для скриншота</string>
 
     <!-- Status bar clock options -->
     <string name="status_bar_clock">Часы и Дата</string>
@@ -524,13 +524,13 @@
     <string name="clock_date_display_summary">Отображать свою дату перед часами</string>
     <string name="clock_date_style">Стиль даты</string>
     <string name="clock_date_format">Формат даты</string>
-    <string name="clock_date_string_edittext_title">Должно быть форматом даты, как ММ/дд/гг</string>
+    <string name="clock_date_string_edittext_title">Должен быть форматом даты, например ММ/дд/гг</string>
     <string name="clock_date_string_edittext_summary">Введите текст</string>
     <string name="am_pm_clock_normal">Средний размер шрифта</string>
-    <string name="am_pm_clock_small">Маленький размер шрифта</string>
+    <string name="am_pm_clock_small">Мелкий размер шрифта</string>
     <string name="am_pm_clock_none">Скрыть</string>
     <string name="clock_date_display_none">Скрыть</string>
-    <string name="clock_date_display_small">Маленький размер шрифта</string>
+    <string name="clock_date_display_small">Мелкий размер шрифта</string>
     <string name="clock_date_display_normal">Средний размер шрифта</string>
     <string name="clock_date_style_normal">Средний</string>
     <string name="clock_date_style_lowercase">Нижний регистр</string>
@@ -544,8 +544,8 @@
     <string name="ticker_title">Бегущая строка</string>
     <string name="ticker_mode_title">Бегущая строка уведомлений в статус баре</string>
     <string name="ticker_disabled">Выключена</string>
-    <string name="ticker_enabled">Строка уведомлений</string>
-    <string name="ticker_media_enabled">Строка уведомлений и музыки</string>
+    <string name="ticker_enabled">Строка для уведомлений</string>
+    <string name="ticker_media_enabled">Строка для уведомлений и музыки</string>
 
     <!-- Face auto unlock -->
     <string name="face_auto_unlock_title">Автоматический Face Unlock</string>
@@ -574,14 +574,14 @@
 
     <!-- Statusbar logo -->
     <string name="status_bar_logo_title">Логотип Galaxy</string>
-    <string name="status_bar_logo_dialog_title">Позиция логотипа Galaxy</string>
+    <string name="status_bar_logo_dialog_title">Расположение логотипа Galaxy</string>
     <string name="status_bar_logo_disabled">Выключен</string>
     <string name="status_bar_logo_left">Слева</string>
     <string name="status_bar_logo_right">Справа</string>
 
     <!-- Carrier Label -->
     <string name="carrier_category">Имя оператора</string>
-    <string name="carrier_options">Выбрать позицию отображения</string>
+    <string name="carrier_options">Выбрать расположение</string>
     <string name="custom_carrier_label_title">Пользовательское имя оператора</string>
     <string name="custom_carrier_label_explain">Пожалуйста, введите новое имя. Оставьте пустым, чтобы вернуть стандартное.</string>
     <string name="custom_carrier_label_notset">Пользовательское имя не установлено</string>
@@ -615,21 +615,21 @@
     <string name="default_iconpack_title">Стандартные иконки</string>
 
     <!-- Show 4G instead of LTE -->
-    <string name="show_4g_title">Отображать 4G</string>
-    <string name="show_4g_summary">Отображать 4G вместо LTE в статус баре</string>
+    <string name="show_4g_title">Показывать 4G</string>
+    <string name="show_4g_summary">Показывать 4G вместо LTE в статус баре</string>
 
     <!-- Lockscreen visualizer -->
     <string name="lockscreen_visualizer_title">Визуализатор на экране блокировки</string>
-    <string name="lockscreen_visualizer_summary">Отображать анимированный эквалайзер на экране блокировки при воспроизведении музыки</string>
+    <string name="lockscreen_visualizer_summary">Показывать анимированный эквалайзер на экране блокировки при воспроизведении музыки</string>
 
     <!-- Expanded desktop -->
     <string name="expanded_desktop_title">Расширенный экран</string>
-    <string name="expanded_desktop_summary">Настроить видимость статус бара и панели навигации по приложениям</string>
+    <string name="expanded_desktop_summary">Настроить видимость статус бара и панели навигации в приложениях</string>
     <string name="expanded_hide_nothing">Ничего не скрывать</string>
     <string name="expanded_hide_status">Скрыть статус бар</string>
     <string name="expanded_hide_navigation">Скрыть панель навигации</string>
     <string name="expanded_hide_both">Скрыть всё</string>
-    <string name="expanded_nothing_to_show">Чтобы регулировать расширенное состояние по приложениям, отключите опцию "Включить для всех"</string>
+    <string name="expanded_nothing_to_show">Чтобы регулировать расширенный экран по приложениям, отключите опцию "Включить для всех"</string>
     <string name="expanded_desktop_state">Расширенное состояние</string>
     <string name="expanded_enabled_for_all">Включить для всех</string>
     <string name="expanded_user_configurable">Настраиваемое</string>
@@ -639,20 +639,20 @@
     <string name="system_default_animation_summary">Включить \"Стандартные\" анимации из Android P</string>
 
     <!-- Themes -->
-    <string name="colors_category">Настройка цветов</string>
-    <string name="theme_color">Цвета акцента</string>
+    <string name="colors_category">Настройки цвета</string>
+    <string name="theme_color">Цвет акцента</string>
     <string name="theme_base">Цвет основы</string>
 
     <string name="styles_category">Темы</string>
 
-    <string name="settings_icon_tint_title">Красить иконки в настройках</string>
+    <string name="settings_icon_tint_title">Покрасить иконки настроек</string>
     <string name="settings_icon_tint_summary">Применить цвет акцента к иконкам настроек</string>
 
     <string name="themes_warning_text">В редких случаях вам может потребоваться перезагрузить System UI, чтобы тема отображалась правильно. Вы можете сделать это, перезагрузив ваше устройство.</string>
  
     <!-- System theme style -->
     <string name="system_theme_style_title">Системная тема</string>
-    <string name="system_theme_style_auto">Основанная на обоях</string>
+    <string name="system_theme_style_auto">Основана на обоях</string>
     <string name="system_theme_style_light">Светлая тема</string>
     <string name="system_theme_style_dark">Темная тема</string>
     <string name="system_theme_style_black">Чёрная тема</string>
