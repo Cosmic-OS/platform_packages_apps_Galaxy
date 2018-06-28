@@ -64,7 +64,7 @@
 
     <!-- Recents panel settings -->
     <string name="show_clear_all_recents_button_title">Кнопка \"Очистить всё\"</string>
-    <string name="show_clear_all_recents_button_summary">Отображать кнопку \"Очистить всё\"</string>
+    <string name="show_clear_all_recents_button_summary">Показывать кнопку \"Очистить всё\"</string>
     <string name="recents_clear_all_location_title">Расположение кнопки</string>
     <string name="recents_clear_all_location_top_right">Справа сверху</string>
     <string name="recents_clear_all_location_top_left">Слева сверху</string>
@@ -77,7 +77,7 @@
     <string name="incall_vibration_category">Настройка вибрации при звонке</string>
     <string name="incall_vibrate_connect_title">Вибрировать при подключении</string>
     <string name="incall_vibrate_call_wait_title">Вибрировать при ожидании ответа</string>
-    <string name="incall_vibrate_disconnect_title">Вибрировать при отключении</string>
+    <string name="incall_vibrate_disconnect_title">Вибрировать при разрыве звонка</string>
 
     <!-- Wakeup options -->
     <string name="wakeup_when_plugged_unplugged_title">Пробуждение при зарядке</string>
@@ -85,7 +85,7 @@
 
     <!-- Immersive Recents -->
     <string name="immersive_recents_title">Режим погружения недавних</string>
-    <string name="immersive_recents_summary">Смените внешний вид панели недавних</string>
+    <string name="immersive_recents_summary">Сменить внешний вид панели недавних</string>
     <string name="immersive_recents_dialog_title">Выберите вид недавних</string>
     <string name="immersive_recents_default">Стандарт</string>
     <string name="immersive_recents_fullscreen">Полный экран</string>
@@ -93,21 +93,21 @@
     <string name="immersive_recents_navbar">Только панель навигации</string>
 
     <!-- Hide Apps from Recents -->
-    <string name="hide_apps_from_recents_title">Скрытые приложения</string>
+    <string name="hide_apps_from_recents_title">Скрыть приложения</string>
     <string name="hide_from_recents_add_app">Добавить</string>
     <string name="hide_apps_from_recents_summary">Выберите приложение, которое нужно убрать из недавних</string>
 
     <!-- Lockscreen weather -->
     <string name="lock_screen_weather_settings_title">Погода</string>
-    <string name="weather_show_weather_title">Отображать погоду</string>
+    <string name="weather_show_weather_title">Показывать погоду</string>
     <string name="weather_show_weather_summary">Включить отображение погоды</string>
-    <string name="weather_show_location_title">Отображать местоположение</string>
+    <string name="weather_show_location_title">Показывать местоположение</string>
     <string name="weather_show_location_summary">Включить отображение местоположения</string>
     <string name="weather_config_title">Настройки сервиса</string>
     <string name="weather_icon_pack_title">Набор иконок погоды</string>
 
     <!-- Statusbar Tuner -->
-    <string name="statusbar_items_title">Иконки статус бара</string>
+    <string name="statusbar_items_title">Иконки в статус баре</string>
 
     <!-- Power notification controls -->
     <string name="power_notification_title">Power notification controls</string>
@@ -132,7 +132,7 @@
     <!-- Double Tap -->
     <string name="dtts_category_header">Двойное нажатие для сна</string>
     <string name="double_tap_sleep_navbar">Двойное нажатие по панели навигации для сна</string>
-    <string name="double_tap_sleep_navbar_summary">Дважды нажать по панели навигации, чтобы выключить экран</string>
+    <string name="double_tap_sleep_navbar_summary">Дважды нажать на панель навигации, чтобы выключить экран</string>
     <!-- Double Tap Lockscreen to Sleep -->
     <string name="double_tap_to_sleep_lockscreen_title">Экран блокировки</string>
     <string name="double_tap_to_sleep_lockscreen_summary">Дважды нажать сверху или снизу экрана блокировки, чтобы выключить экран</string>
@@ -141,7 +141,7 @@
     <string name="double_tap_to_sleep_summary">Дважды нажать на статус бар, чтобы выключить экран</string>
 
     <!-- Volume button orientation based on current rotation -->
-    <string name="swap_volume_buttons_title">Перевернуть кнопки громкости</string>
+    <string name="swap_volume_buttons_title">Переворачивать кнопки громкости</string>
     <string name="swap_volume_buttons_summary">Менять местами кнопки громкости, зависимо от расположения</string>
 
     <!-- Volume key controls media stream -->
@@ -154,16 +154,16 @@
     <!-- Volume rocker music control -->
     <string name="volumerocker_category">Кнопки громкости</string>
     <string name="volume_rocker_music_controls_title">Управление воспроизведением</string>
-    <string name="volume_rocker_music_controls_summary">Когда экран выключен, треки можно переключать зажатием кнопок</string>
+    <string name="volume_rocker_music_controls_summary">Когда экран выключен, треки можно переключать зажатием кнопок громкости</string>
 
     <!-- Media art -->
     <string name="media_art_title">Медиа обложка</string>
-    <string name="media_art_summary">Медиа обложка на экране блокировки при воспроизведении</string>
+    <string name="media_art_summary">Обложка на экране блокировки при воспроизведении медиа контента</string>
 
     <!-- Torch Power button gestures -->
     <string name="torch_power_button_gesture_title">Фонарик на кнопку питания при откл. экране</string>
     <string name="torch_power_button_gesture_none">Выключен</string>
-    <string name="torch_power_button_gesture_dt">Двойное нажатие на кнопку питания (добавит небольшую задержку на касание)</string>
+    <string name="torch_power_button_gesture_dt">Двойное нажатие на кнопку питания (добавит небольшую задержку на одно нажатие)</string>
     <string name="torch_power_button_gesture_lp">Долгое нажатие на кнопку питания</string>
 
     <!-- QS rows and columns -->
@@ -181,29 +181,29 @@
     <string name="cursor_section_header">Курсор</string>
     <string name="volume_key_cursor_control_title">Управление курсором кнопками громкости</string>
     <string name="volume_key_cursor_control_off">Выключить</string>
-    <string name="volume_key_cursor_control_on">Кнопки вверх/вниз сдвигают влево/вправо</string>
-    <string name="volume_key_cursor_control_on_reverse">Кнопки вверх/вниз сдвигают вправо/влево</string>
+    <string name="volume_key_cursor_control_on">Кнопки вверх/вниз сдвигают курсор влево/вправо</string>
+    <string name="volume_key_cursor_control_on_reverse">Кнопки вверх/вниз сдвигают курсор вправо/влево</string>
 
     <!-- Volume rocker wake -->
-    <string name="volume_rocker_wake_title">Пробуждение кнопками громкости</string>
-    <string name="volume_rocker_wake_summary">Включать экран нажатием кнопок громкости</string>
+    <string name="volume_rocker_wake_title">Пробуждение кнопкой громкости</string>
+    <string name="volume_rocker_wake_summary">Включать экран нажатием кнопки громкости</string>
 
     <!-- UI debug setting: show CPU info? [CHAR LIMIT=25] -->
-    <string name="show_cpu_info">Отображать инфо о ЦПУ</string>
+    <string name="show_cpu_info">Показывать информацию о ЦПУ</string>
     <!-- UI debug setting: show cpu usage summary [CHAR LIMIT=50] -->
-    <string name="show_cpu_info_summary">Слой на экране, который отображает текущую статистику ЦПУ</string>
+    <string name="show_cpu_info_summary">Слой на экране, который показывает текущую статистику ЦПУ</string>
 
     <!-- Smart pulldown-->
     <string name="smart_pulldown_title">Умное смахивание</string>
-    <string name="smart_pulldown_summary">Рпзворачивать быстрые настройки, когда %1$s уведомлений</string>
-    <string name="smart_pulldown_none_summary">Разворачивать быстрые настройки, когда нет уведомлений</string>
-    <string name="smart_pulldown_off">Выключено</string>
+    <string name="smart_pulldown_summary">Разворачивать быстрые настройки сразу, когда %1$s уведомлений</string>
+    <string name="smart_pulldown_none_summary">Разворачивать быстрые настройки сразу, когда нет уведомлений</string>
+    <string name="smart_pulldown_off">Отключено</string>
     <string name="smart_pulldown_none">Нет уведомлений</string>
     <string name="smart_pulldown_dismissable">Нет смахиваемых</string>
     <string name="smart_pulldown_ongoing">Нет постоянных</string>
 
     <!-- Whether to display IME switcher notifcation -->
-    <string name="ime_switcher_notify">Уведомление селектора</string>
+    <string name="ime_switcher_notify">Уведомление селектора ввода</string>
     <string name="ime_switcher_notify_summary">Отображать уведомление со способом ввода</string>
 
     <!-- Battery saver color -->
@@ -215,32 +215,32 @@
     <string name="volume_answer_call_summary">Ответ на звонок нажатием кнопки громкости</string>
 
     <!-- Battery light -->
-    <string name="battery_light_settings">Диод во время зарядки</string>
+    <string name="battery_light_settings">Индикация зарядки</string>
     <string name="battery_light_enable">Включить</string>
-    <string name="battery_light_allow_on_dnd_title">Диод зарядки в режиме "Не беспокоить"</string>
+    <string name="battery_light_allow_on_dnd_title">Индикация зарядки в режиме "Не беспокоить"</string>
     <string name="battery_light_low_blinking_title">Пульсация диода при низком уровне заряда</string>
     <string name="battery_light_cat">Цвет диода во время зарядки</string>
     <string name="battery_light_low_color">Низкий уровень</string>
     <string name="battery_light_medium_color">Средний уровень</string>
     <string name="battery_light_full_color">Почти полный уровень</string>
-    <string name="battery_light_reallyfull_color">Полная зарядка</string>
+    <string name="battery_light_reallyfull_color">Полный уровень</string>
 
     <!-- Statusbar net monitor -->
     <string name="network_traffic_state_title">Сетевой трафик</string>
     <string name="network_traffic_state_summary">Отображать сетевой трафик в статус баре</string>
-    <string name="network_traffic_autohide_threshold_title">Порог автоскрытия трафика (KB/s)</string>
+    <string name="network_traffic_autohide_threshold_title">Порог автоскрытия трафика (kb/s)</string>
 
     <!-- Notification Light -->
     <string name="notification_light_settings">Диод уведомлений</string>
 
     <!-- Heads up -->
     <string name="heads_up_notifications">Всплывающие уведомления</string>
-    <string name="summary_heads_up_enabled">Всплывающие уведомления активны</string>
+    <string name="summary_heads_up_enabled">Всплывающие уведомления включены</string>
     <string name="summary_heads_up_disabled">Всплывающие уведомления отключены</string>
-    <string name="add_heads_up_package">Добавить приложение</string>
-    <string name="add_heads_up_stoplist_summary">Отключить всплывающие уведомления в этих приложениях</string>
-    <string name="add_heads_up_blacklist_summary">Отключить всплывающие уведомления от этих приложений</string>
-    <string name="heads_up_stoplist_title">Стоплист</string>
+    <string name="add_heads_up_package">Добавить приложения</string>
+    <string name="add_heads_up_stoplist_summary">Отключить всплывающие уведомления В этих приложениях</string>
+    <string name="add_heads_up_blacklist_summary">Отключить всплывающие уведомления ОТ этих приложений</string>
+    <string name="heads_up_stoplist_title">Стоп-лист</string>
     <string name="heads_up_blacklist_title">Чёрный список</string>
     <string name="profile_choose_app">Выберите приложение</string>
     <string name="dialog_delete_title">Удалить</string>
