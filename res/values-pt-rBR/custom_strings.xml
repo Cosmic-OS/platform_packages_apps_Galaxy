@@ -637,4 +637,17 @@
     <!-- System default animation -->
     <string name="system_default_animation_title">Android P animação style</string>
     <string name="system_default_animation_summary">Ativar Android P \"Default\" animações</string>
+     
+    <!-- Themes -->
+    <string name="colors_category">Configurações de cores</string>
+    <string name="theme_color">Cores de destaque</string>
+    <string name="theme_base">Base de cores</string>
+
+    <string name="styles_category">Estilos</string>
+
+    <string name="settings_icon_tint_title">Pintar ícones das configurações</string>
+    <string name="settings_icon_tint_summary">Aplicar cores de destaque nos ícones das configurações</string>
+
+    <string name="themes_warning_text">Em casos raros, talvez seja necessário reiniciar o SystemUI para que o tema seja aplicado corretamente (especialmente nas notificações). Você pode fazer isso reiniciando o dispositivo ou fazendo uma reinicialização rápida no menu Reinicialização avançada.</string>
+
 </resources>
