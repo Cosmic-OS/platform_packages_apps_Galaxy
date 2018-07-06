@@ -142,14 +142,14 @@
 
     <!-- Volume button orientation based on current rotation -->
     <string name="swap_volume_buttons_title">Переворачивать кнопки громкости</string>
-    <string name="swap_volume_buttons_summary">Менять местами кнопки громкости, зависимо от расположения</string>
+    <string name="swap_volume_buttons_summary">Менять местами кнопки громкости, зависимо от положения устройства</string>
 
     <!-- Volume key controls media stream -->
     <string name="volume_keys_control_media_stream_title">Кнопки громкости регулируют медиа</string>
     <string name="volume_keys_control_media_stream_summary">Принудительно регулировать медиа канал кнопками громкости</string>
 
     <string name="status_bar_quick_qs_pulldown">Быстрое раскрытие</string>
-    <string name="status_bar_quick_qs_pulldown_summary">Смахнуть правую сторону статус бара, чтобы быстро раскрыть панель быстрых настроек</string>
+    <string name="status_bar_quick_qs_pulldown_summary">Свайп вниз по правой стороне статус бара, чтобы быстро раскрыть панель быстрых настроек</string>
 
     <!-- Volume rocker music control -->
     <string name="volumerocker_category">Кнопки громкости</string>
@@ -194,7 +194,7 @@
     <string name="show_cpu_info_summary">Слой на экране, который показывает текущую статистику ЦПУ</string>
 
     <!-- Smart pulldown-->
-    <string name="smart_pulldown_title">Умное смахивание</string>
+    <string name="smart_pulldown_title">Умное раскрытие</string>
     <string name="smart_pulldown_summary">Разворачивать быстрые настройки сразу, когда %1$s уведомлений</string>
     <string name="smart_pulldown_none_summary">Разворачивать быстрые настройки сразу, когда нет уведомлений</string>
     <string name="smart_pulldown_off">Отключено</string>
@@ -280,7 +280,7 @@
     <string name="choose_action_title">Выбрать действие</string>
     <string name="action_entry_default_action">Стандартное действие</string>
     <string name="action_entry_select_app">Выбрать приложение</string>
-    <string name="action_entry_custom_action">Выбрать своё действие</string>
+    <string name="action_entry_custom_action">Выбрать другое действие</string>
     <string name="action_value_default_action" translatable="false">default</string>
     <string name="action_value_select_app" translatable="false">app</string>
     <string name="action_value_custom_action" translatable="false">custom</string>
@@ -340,7 +340,7 @@
     <string name="fling_ripple_color">Цвет пульсации</string>
     <string name="fling_longpress_timeout_label_left">Задержка меньше</string>
     <string name="fling_longpress_timeout_label_right">Задержка больше</string>
-    <string name="fling_longpress_title">Зажержка долгого нажатия</string>
+    <string name="fling_longpress_title">Задержка долгого нажатия</string>
     <string name="fling_longpress_summary">Увеличить или уменьшить время долгого нажатия</string>
     <string name="fling_keyboard_cursors_title">Динамические действия с курсором</string>
     <string name="fling_keyboard_cursors_summary">Двойное нажатие слева или права перемещает курсор соответственно, если клавиатура открыта</string>
@@ -411,8 +411,8 @@
     <string name="smartbar_config_name_edit_dialog_title">Имя профиля Smartbar</string>
     <string name="smartbar_config_name_edit_dialog_message">Введите имя или оставьте пустым</string>
     <string name="smartbar_config_dialog_title">Профили Smartbar</string>
-    <string name="smartbar_config_backup_success_toast">Smartbar профиль успешно сохранён</string>
-    <string name="smartbar_config_restore_success_toast">Smartbar профиль успешно восстановлен</string>
+    <string name="smartbar_config_backup_success_toast">Профиль Smartbar успешно сохранён</string>
+    <string name="smartbar_config_restore_success_toast">Профиль Smartbar успешно восстановлен</string>
     <string name="smartbar_config_backup_error_toast">Ошибка сохранения профиля Smartbar</string>
     <string name="smartbar_config_restore_error_toast">Ошибка восстановления профиля Smartbar</string>
     <string name="navbar_buttons_alpha_title">Прозрачность кнопки</string>
@@ -500,11 +500,11 @@
 
     <!-- Memory bar -->
     <string name="recents_show_membar_title">Панель ОЗУ</string>
-    <string name="recents_show_membar_summary">Показывать панель с доступной ОЗУ устройства в недавних</string>
+    <string name="recents_show_membar_summary">Показывать панель с количеством доступной ОЗУ в недавних</string>
 
     <!-- Three-fingers-swipe to screenshot -->
     <string name="three_finger_gesture">Жест тремя пальцами</string>
-    <string name="three_finger_gesture_summary">Провести тремя пальцами для скриншота</string>
+    <string name="three_finger_gesture_summary">Провести тремя пальцами вниз для скриншота</string>
 
     <!-- Status bar clock options -->
     <string name="status_bar_clock">Часы и Дата</string>
@@ -615,7 +615,7 @@
     <string name="default_iconpack_title">Стандартные иконки</string>
 
     <!-- Show 4G instead of LTE -->
-    <string name="show_4g_title">Показывать 4G</string>
+    <string name="show_4g_title">Отображать 4G</string>
     <string name="show_4g_summary">Показывать 4G вместо LTE в статус баре</string>
 
     <!-- Lockscreen visualizer -->
@@ -639,16 +639,16 @@
     <string name="system_default_animation_summary">Включить \"Стандартные\" анимации из Android P</string>
 
     <!-- Themes -->
-    <string name="colors_category">Настройки цвета</string>
+    <string name="colors_category">Настройка цвета</string>
     <string name="theme_color">Цвет акцента</string>
     <string name="theme_base">Цвет основы</string>
 
-    <string name="styles_category">Темы</string>
+    <string name="styles_category">Настройка темы</string>
 
     <string name="settings_icon_tint_title">Покрасить иконки настроек</string>
     <string name="settings_icon_tint_summary">Применить цвет акцента к иконкам настроек</string>
 
-    <string name="themes_warning_text">В редких случаях вам может потребоваться перезагрузить System UI, чтобы тема отображалась правильно. Вы можете сделать это, перезагрузив ваше устройство.</string>
+    <string name="themes_warning_text">В редких случаях вам может потребоваться перезагрузка System UI, чтобы тема отображалась правильно. Вы можете сделать это, перезагрузив ваше устройство.</string>
  
     <!-- System theme style -->
     <string name="system_theme_style_title">Системная тема</string>
