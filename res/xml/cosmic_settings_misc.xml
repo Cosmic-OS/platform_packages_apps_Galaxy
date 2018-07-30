@@ -68,4 +68,24 @@
             android:title="@string/incall_vibrate_disconnect_title"
             android:defaultValue="false" />
     </PreferenceCategory>
+
+     <PreferenceCategory
+        android:key="battery_actions"
+        android:title="@string/advanced_doze_settings">
+
+        <Preference
+            android:key="time_in_state"
+            android:title="@string/time_in_state_title"
+            android:icon="@drawable/ic_timer"
+            android:summary="@string/time_in_state_summary"
+            android:fragment="com.cosmic.settings.fragments.TimeInState" />
+
+        <Preference
+            android:key="doze_settings"
+            android:icon="@drawable/ic_timer"
+            android:title="@string/doze_settings_title"
+            android:summary="@string/doze_settings_summary"
+            android:fragment="com.cosmic.settings.fragments.DozeSettings" />
+
+    </PreferenceCategory>
 </PreferenceScreen>
