@@ -110,8 +110,8 @@
         <com.cosmic.settings.preferences.SystemSettingSwitchPreference
             android:key="lockscreen_charging_current"
             android:icon="@drawable/ic_batteryenergy"
-            android:title="@string/lockscreen_charging_current_title"
-            android:summary="@string/lockscreen_charging_current_summary"
+            android:title="@string/lockscreen_battery_info_title"
+            android:summary="@string/lockscreen_battery_info_summary"
             android:defaultValue="true" />
 
         <com.cosmic.settings.preferences.SystemSettingListPreference
