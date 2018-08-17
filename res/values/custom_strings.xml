@@ -98,4 +98,11 @@
     <string name="volume_rocker_music_controls_title">Screen off playback control</string>
     <string name="volume_rocker_music_controls_summary">Hold volume keys to seek audio tracks when screen is off</string>
 
+    <!-- Torch Power button gestures -->
+    <string name="torch_power_button_gesture_title">Toggle torch when screen off</string>
+    <string name="torch_power_button_gesture_none">Disabled</string>
+    <string name="torch_power_button_gesture_dt">Double-tap power button (slower wake response)</string>
+    <string name="torch_power_button_gesture_dt_toast">Jump to camera gesture is now disabled</string>
+    <string name="torch_power_button_gesture_lp">Hold power button</string>
+
 </resources>
