@@ -20,4 +20,17 @@
     android:title="@string/buttons_category"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+    <PreferenceCategory
+        android:title="@string/buttons_software_category">
+
+        <Preference
+            android:title="@string/navbar_tuner_title"
+            android:summary="@string/navbar_tuner_summary">
+            <intent android:action="android.intent.action.MAIN"
+                android:targetPackage="com.android.systemui"
+                android:targetClass="com.android.systemui.tuner.NavBarTunerActivity" />
+        </Preference>
+
+    </PreferenceCategory>
+
 </PreferenceScreen>

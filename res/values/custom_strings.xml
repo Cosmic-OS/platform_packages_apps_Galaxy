@@ -24,6 +24,7 @@
     <string name="buttons_category">Buttons</string>
 
     <string name="lock_screen_security_category">Security</string>
+    <string name="buttons_software_category">Software buttons</string>
 
     <!-- Anonymous Statistics -->
     <!-- About device screen, list item title. Takes the user to the screen about opting in or out of anonymous statistics. -->
@@ -83,5 +84,13 @@
     <!-- Pin scramble -->
     <string name="unlock_scramble_pin_layout_title">Scramble PIN layout</string>
     <string name="unlock_scramble_pin_layout_summary">Scramble PIN layout when unlocking device</string>
+
+    <!-- SystemUI Tuner -->
+    <string name="status_bar_tuner_title">Status bar items</string>
+    <string name="status_bar_tuner_summary">Edit status bar icons and options</string>
+    <string name="navbar_tuner_title">Edit navigation bar</string>
+    <string name="navbar_tuner_summary">Edit the navigation bar layout and buttons</string>
+    <string name="lock_screen_shortcuts_title">Lock screen shortcuts</string>
+    <string name="lock_screen_shortcuts_summary">Manage lock screen bottom shortcuts</string>
 
 </resources>
