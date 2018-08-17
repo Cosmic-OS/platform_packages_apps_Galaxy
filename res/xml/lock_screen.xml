@@ -20,4 +20,15 @@
     android:title="@string/lock_screen_category"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+    <PreferenceCategory
+        android:title="@string/lock_screen_security_category">
+
+        <SwitchPreference
+            android:key="lockscreen_scramble_pin_layout"
+            android:title="@string/unlock_scramble_pin_layout_title"
+            android:summary="@string/unlock_scramble_pin_layout_summary"
+            android:defaultValue="false" />
+
+    </PreferenceCategory>
+
 </PreferenceScreen>

@@ -21,6 +21,8 @@
     <string name="gesture_settings_title">Gestures</string>
     <string name="lock_screen_category">Lockscreen</string>
 
+    <string name="lock_screen_security_category">Security</string>
+
     <!-- Anonymous Statistics -->
     <!-- About device screen, list item title. Takes the user to the screen about opting in or out of anonymous statistics. -->
     <string name="anonymous_statistics_title">Cosmic-OS statistics</string>
@@ -75,5 +77,9 @@
     <string name="global_actions_flashlight">Flashlight</string>
     <string name="global_actions_advanced_reboot_title">Enable advanced restart</string>
     <string name="global_actions_advanced_reboot_summary">Show options for recovery and bootloader</string>
+
+    <!-- Pin scramble -->
+    <string name="unlock_scramble_pin_layout_title">Scramble PIN layout</string>
+    <string name="unlock_scramble_pin_layout_summary">Scramble PIN layout when unlocking device</string>
 
 </resources>
