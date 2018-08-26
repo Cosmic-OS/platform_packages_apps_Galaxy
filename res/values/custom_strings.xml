@@ -763,6 +763,10 @@
     <string name="lockdate_font_size_title">Date font size</string>
     <string name="lockclock_font_size_title">Clock font size</string>
 
+    <!-- Lockscreen charging current indicator  -->
+    <string name="lockscreen_charging_current_title">Charging info</string>
+    <string name="lockscreen_charging_current_summary">Display negociated charger max current and voltage on lockscreen</string>
+
     <!-- Doze settings editor --> 
     <string name="advanced_doze_settings">Advanced Doze</string>
     <string name="doze_settings_title">Doze settings</string> 
