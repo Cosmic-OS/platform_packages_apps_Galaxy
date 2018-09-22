@@ -17,6 +17,13 @@
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
         android:title="@string/cosmic_settings_title" >
 
+        <!-- Display -->
+        <Preference
+            android:key="cosmic_display_settings"
+            android:title="@string/display_settings_title"
+            android:fragment="com.cosmic.settings.fragments.DisplaySettings"
+            android:icon="@drawable/ic_cosmic_display"/>
+
         <!-- Misc -->
         <Preference
             android:key="cosmic_misc_settings"

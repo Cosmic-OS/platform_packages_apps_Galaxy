@@ -17,6 +17,7 @@
 
     <!-- Categories -->
     <string name="misc_settings_title">Miscellaneous</string>
+    <string name="display_settings_title">Display</string>
 
     <!-- Anonymous Statistics -->
     <!-- About device screen, list item title. Takes the user to the screen about opting in or out of anonymous statistics. -->
