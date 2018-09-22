@@ -17,12 +17,12 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-    <!-- Anonymous statistics - (CMStats) -->
+    <!-- Anonymous statistics -->
     <PreferenceScreen
-        android:key="cmstats"
+        android:key="cosmicstats"
         android:title="@string/anonymous_statistics_title"
         android:summary="@string/anonymous_statistics_summary"
-        android:fragment="org.cyanogenmod.cmparts.cmstats.AnonymousStats" >
+        android:fragment="com.cosmic.settings.cosmicstats.AnonymousStats" >
     </PreferenceScreen>
 
 </PreferenceScreen>

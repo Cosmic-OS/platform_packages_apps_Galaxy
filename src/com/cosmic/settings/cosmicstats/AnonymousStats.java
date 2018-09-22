@@ -14,18 +14,21 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.cmparts.cmstats;
+package com.cosmic.settings.cosmicstats;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 
-import org.cyanogenmod.cmparts.R;
-import org.cyanogenmod.cmparts.SettingsPreferenceFragment;
+import com.android.internal.logging.MetricsLogger;
+import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
+
+import com.android.settings.R;
+import com.android.settings.SettingsPreferenceFragment;
 
 public class AnonymousStats extends SettingsPreferenceFragment {
 
-    private static final String PREF_FILE_NAME = "CMStats";
+    private static final String PREF_FILE_NAME = "CosmicStats";
     /* package */ static final String ANONYMOUS_OPT_IN = "pref_anonymous_opt_in";
     /* package */ static final String ANONYMOUS_LAST_CHECKED = "pref_anonymous_checked_in";
 
@@ -40,6 +43,11 @@ public class AnonymousStats extends SettingsPreferenceFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.anonymous_stats);
+    }
+
+    @Override
+    public int getMetricsCategory() {
+        return MetricsEvent.GALAXY;
     }
 
     public static void updateLastSynced(Context context) {
