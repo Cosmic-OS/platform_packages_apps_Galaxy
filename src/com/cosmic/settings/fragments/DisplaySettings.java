@@ -6,7 +6,7 @@ import com.android.settings.cosmic.CustomSettingsPreferenceFragment;
 
 import com.android.settings.SettingsPreferenceFragment;
 
-public class MiscSettings extends CustomSettingsPreferenceFragment {
+public class DisplaySettings extends CustomSettingsPreferenceFragment {
 
     private static final String SMART_PIXELS = "smart_pixels";
 
