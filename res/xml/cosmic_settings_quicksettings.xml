@@ -37,6 +37,13 @@
     <PreferenceCategory
         android:title="@string/qs_panel_tuner_category_title">
 
+        <ListPreference
+            android:key="qs_tile_style"
+            android:title="@string/qs_tile_style_title"
+            android:persistent="false"
+            android:entries="@array/qs_selector_entries"
+            android:entryValues="@array/qs_selector_values" />
+
         <com.cosmic.settings.preferences.CustomSeekBarPreference
             android:key="qs_panel_bg_alpha"
             android:title="@string/qs_panel_alpha_title"
@@ -44,12 +51,12 @@
             settings:min="0"
             settings:units=""
             android:persistent="false" />
-			
+
         <com.cosmic.settings.preferences.SecureSettingSwitchPreference
             android:key="qs_show_info_header"
             android:title="@string/show_info_header_title"
             android:defaultValue="true" />
-     
+
         <com.cosmic.settings.preferences.SecureSettingSwitchPreference
             android:key="qs_show_secure"
             android:title="@string/show_secure_title"
