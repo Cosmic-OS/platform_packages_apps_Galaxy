@@ -17,6 +17,20 @@
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
         android:title="@string/cosmic_settings_title" >
 
+        <!-- Statusbar -->
+        <Preference
+            android:key="cosmic_status_bar"
+            android:title="@string/status_bar_category"
+            android:fragment="com.cosmic.settings.fragments.StatusBar"
+            android:icon="@drawable/ic_cosmic_statusbar"/>
+
+        <!-- Buttons -->
+        <Preference
+            android:key="cosmic_buttons"
+            android:title="@string/buttons_category"
+            android:fragment="com.cosmic.settings.fragments.Buttons"
+            android:icon="@drawable/ic_cosmic_buttons"/>
+
         <!-- Display -->
         <Preference
             android:key="cosmic_display_settings"

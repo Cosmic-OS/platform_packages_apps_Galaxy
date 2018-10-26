@@ -20,6 +20,8 @@
     <string name="display_settings_title">Display</string>
     <string name="gesture_settings_title">Gestures</string>
     <string name="lock_screen_category">Lockscreen</string>
+    <string name="status_bar_category">Status bar</string>
+    <string name="buttons_category">Buttons</string>
 
     <string name="lock_screen_security_category">Security</string>
 
