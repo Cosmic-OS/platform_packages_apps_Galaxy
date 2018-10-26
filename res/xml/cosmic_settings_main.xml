@@ -24,6 +24,13 @@
             android:fragment="com.cosmic.settings.fragments.DisplaySettings"
             android:icon="@drawable/ic_cosmic_display"/>
 
+        <!-- Lockscreen -->
+        <Preference
+            android:key="cosmic_lockscreen_settings"
+            android:title="@string/lock_screen_category"
+            android:fragment="com.cosmic.settings.fragments.LockScreen"
+            android:icon="@drawable/ic_cosmic_lockscreen"/>
+
         <!-- Gestures -->
         <Preference
             android:key="cosmic_gesture_settings"

@@ -19,6 +19,7 @@
     <string name="misc_settings_title">Miscellaneous</string>
     <string name="display_settings_title">Display</string>
     <string name="gesture_settings_title">Gestures</string>
+    <string name="lock_screen_category">Lockscreen</string>
 
     <!-- Anonymous Statistics -->
     <!-- About device screen, list item title. Takes the user to the screen about opting in or out of anonymous statistics. -->
