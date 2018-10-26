@@ -23,11 +23,15 @@ import android.os.Handler;
 import android.os.UserHandle;
 import android.provider.Settings;
 
+import android.support.v7.preference.Preference;
+import android.support.v7.preference.PreferenceScreen;
+
 import com.android.settings.R;
 import com.android.settings.cosmic.CustomSettingsPreferenceFragment;
 
 public class SmartPixels extends CustomSettingsPreferenceFragment {
     private static final String TAG = "SmartPixels";
+    private static final String SMART_PIXELS = "smart_pixels";
     private static final String SMART_PIXELS_ENABLE = "smart_pixels_enable";
     private static final String SMART_PIXELS_ON_POWER_SAVE = "smart_pixels_on_power_save";
 
@@ -44,6 +48,7 @@ public class SmartPixels extends CustomSettingsPreferenceFragment {
         addCustomPreference(findPreference(SMART_PIXELS_ENABLE), SYSTEM_TWO_STATE, STATE_OFF);
         addCustomPreference(findPreference(SMART_PIXELS_ON_POWER_SAVE), SYSTEM_TWO_STATE, STATE_OFF);
         mSmartPixelsObserver = new SmartPixelsObserver(new Handler());
+        updateSmartPixelsPreference();
     }
 
     @Override
@@ -82,6 +87,17 @@ public class SmartPixels extends CustomSettingsPreferenceFragment {
         public void onChange(boolean selfChange) {
             super.onChange(selfChange);
             updateAllCustomPreferences();
+        }
+    }
+
+    private void updateSmartPixelsPreference() {
+        PreferenceScreen prefSet = getPreferenceScreen();
+        boolean enableSmartPixels = getContext().getResources().
+                getBoolean(com.android.internal.R.bool.config_enableSmartPixels);
+        Preference smartPixels = findPreference(SMART_PIXELS);
+
+        if (!enableSmartPixels){
+            prefSet.removePreference(smartPixels);
         }
     }
 }
