@@ -43,7 +43,7 @@
         <com.android.settings.cosmic.CustomSeekBarPreference
             android:key="sysui_rounded_size"
             android:title="@string/corner_radius"
-            android:max="25"
+            android:max="60"
             settings:min="0"
             settings:units=""
             android:persistent="false"
