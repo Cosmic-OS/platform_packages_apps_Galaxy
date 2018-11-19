@@ -84,6 +84,7 @@ public class Animations extends SettingsPreferenceFragment implements OnPreferen
     private static final String SCROLLINGCACHE_PERSIST_PROP = "persist.sys.scrollingcache";
 
     private static final String SCROLLINGCACHE_DEFAULT = "2";
+    private static final String POWER_MENU_ANIMATIONS = "power_menu_animations";
 
     ListPreference mActivityOpenPref;
     ListPreference mActivityClosePref;
@@ -108,6 +109,7 @@ public class Animations extends SettingsPreferenceFragment implements OnPreferen
 
     protected Context mContext;
     protected ContentResolver mContentRes;
+    private ListPreference mPowerMenuAnimations;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -245,6 +247,12 @@ public class Animations extends SettingsPreferenceFragment implements OnPreferen
         mScrollingCachePref.setValue(SystemProperties.get(SCROLLINGCACHE_PERSIST_PROP,
                 SystemProperties.get(SCROLLINGCACHE_PERSIST_PROP, SCROLLINGCACHE_DEFAULT)));
         mScrollingCachePref.setOnPreferenceChangeListener(this);
+
+        mPowerMenuAnimations = (ListPreference) findPreference(POWER_MENU_ANIMATIONS);
+        mPowerMenuAnimations.setValue(String.valueOf(Settings.System.getInt(
+                getContentResolver(), Settings.System.POWER_MENU_ANIMATIONS, 0)));
+        mPowerMenuAnimations.setSummary(mPowerMenuAnimations.getEntry());
+        mPowerMenuAnimations.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -334,6 +342,12 @@ public class Animations extends SettingsPreferenceFragment implements OnPreferen
             if (objValue != null) {
                 SystemProperties.set(SCROLLINGCACHE_PERSIST_PROP, (String) objValue);
             }
+            return true;
+        } else if (preference == mPowerMenuAnimations) {
+            Settings.System.putInt(getContentResolver(), Settings.System.POWER_MENU_ANIMATIONS,
+                    Integer.valueOf((String) objValue));
+            mPowerMenuAnimations.setValue(String.valueOf(objValue));
+            mPowerMenuAnimations.setSummary(mPowerMenuAnimations.getEntry());
             return true;
         }
 	 preference.setSummary(getProperSummary(preference));
