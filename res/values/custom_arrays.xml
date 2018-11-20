@@ -23,7 +23,6 @@
         <item>75</item>
         <item>88</item>
     </string-array>
-
     <string-array name="smart_pixels_percent_values" translatable="false">
         <item>0</item>
         <item>1</item>
@@ -33,7 +32,6 @@
         <item>5</item>
         <item>6</item>
     </string-array>
-
     <string-array name="smart_pixels_shift_times">
         <item>15 seconds</item>
         <item>30 seconds</item>
@@ -45,7 +43,6 @@
         <item>30 minutes</item>
         <item>1 hour</item>
     </string-array>
-
     <string-array name="smart_pixels_shift_values">
         <item>0</item>
         <item>1</item>
