@@ -31,12 +31,12 @@
             android:fragment="com.cosmic.settings.fragments.Buttons"
             android:icon="@drawable/ic_cosmic_buttons"/>
 
-        <!-- Display -->
+        <!-- Display 
         <Preference
             android:key="cosmic_display_settings"
             android:title="@string/display_settings_title"
             android:fragment="com.cosmic.settings.fragments.DisplaySettings"
-            android:icon="@drawable/ic_cosmic_display"/>
+            android:icon="@drawable/ic_cosmic_display"/> -->
 
         <!-- Lockscreen -->
         <Preference
