@@ -91,6 +91,12 @@
     <string name="powermenu_users">Users</string>
     <string name="powermenu_logout">Logout</string>
     <string name="powermenu_torch">Flashlight</string>
+	
+	<!--Navigation -->
+    <string name="navigation_category">Navigation</string>
+    <string name="navigation_summary">Customize navigation bar style and behavior</string>
+    <string name="navbar_tuner_title">Edit navigation bar</string>
+    <string name="navbar_tuner_summary">Edit the navigation bar layout and buttons</string>
 
     <!-- Power plug events -->
     <string name="wake_when_plugged_or_unplugged_title">Wake on plug</string>
