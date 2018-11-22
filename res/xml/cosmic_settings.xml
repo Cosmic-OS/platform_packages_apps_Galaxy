@@ -55,7 +55,7 @@
             android:key="gestures_category"
             android:title="@string/gestures_title" 
             android:fragment="com.cosmic.settings.fragments.CustomGestureSettings"
-            android:icon="@drawable/ic_settings_gestures"/>
+            android:icon="@drawable/ic_settings_gesture"/>
 
         <!-- Lock Screen -->
         <Preference
