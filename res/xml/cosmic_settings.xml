@@ -29,6 +29,13 @@
             android:fragment="com.cosmic.settings.fragments.QuickSettings"
             android:icon="@drawable/ic_settings_quicksettings"/>
 
+        <!-- Interfaces -->
+        <Preference
+            android:key="interfaces_category"
+            android:title="@string/interfaces_title" 
+            android:fragment="com.cosmic.settings.fragments.Interfaces"
+            android:icon="@drawable/ic_settings_inter"/>
+
         <!-- Buttons -->
         <Preference
             android:key="buttonsettings_category"

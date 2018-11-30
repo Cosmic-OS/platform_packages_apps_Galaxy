@@ -20,6 +20,7 @@
     <!-- Categories -->
     <string name="button_title">Buttons</string>
     <string name="gestures_title">Gestures</string>
+	<string name="interfaces_title">Interfaces</string>
     <string name="lockscreen_title">Lock screen</string>
     <string name="misc_title">Miscellaneous</string>
     <string name="navbar_title">Navigation bar</string>
@@ -538,5 +539,15 @@
 	<!-- Charging animation -->
     <string name="charging_animation_title">Charging animation</string>
     <string name="charging_animation_summary">Display an animation when the device is plugged in</string>
+	
+	<!-- Dashboard conditions--> 
+    <string name="dashboard_category">Settings Dashboard</string> 
+	
+	<!-- Settings dashboard icon style -->
+    <string name="theming_settings_dashboard_icons_title">Dashboard icons</string>
+    <string name="theming_settings_dashboard_icons_default">Round</string>
+    <string name="theming_settings_dashboard_icons_default_accent">Round (Accent)</string>
+    <string name="theming_settings_dashboard_icons_plain">Oreo</string>
+    <string name="theming_settings_dashboard_icons_plain_accent">Oreo (Accent)</string>
 
 </resources>
