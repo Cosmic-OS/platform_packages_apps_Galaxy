@@ -116,4 +116,7 @@
     <string name="unlock_quick_unlock_control_title">Quick unlock</string>
     <string name="unlock_quick_unlock_control_summary">Immediately unlock on correct PIN/Password entry</string>
 
+    <!-- Themes -->
+    <string name="accent_color">Accent color</string>
+
 </resources>

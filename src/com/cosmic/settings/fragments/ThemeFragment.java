@@ -16,9 +16,13 @@
 
 package com.cosmic.settings.fragments;
 
+import android.app.Fragment;
 import android.os.Bundle;
+import android.os.ServiceManager;
+import android.os.UserHandle;
 import android.content.Context;
-import android.preference.Preference.OnPreferenceChangeListener;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.provider.SearchIndexableResource;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceCategory;
@@ -30,12 +34,20 @@ import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.search.Indexable;
 import com.android.settings.SettingsPreferenceFragment;
+import com.android.settings.wrapper.OverlayManagerWrapper;
+import com.android.settings.wrapper.OverlayManagerWrapper.OverlayInfo;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class ThemeFragment extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener, Indexable {
+
+    private static final String KEY_ACCENT_PICKER = "accent_picker";
+    private Preference mSystemThemeColor;
+    private Fragment mCurrentFragment = this;
+    private OverlayManagerWrapper mOverlayService;
+    private PackageManager mPackageManager;
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
@@ -46,11 +58,39 @@ public class ThemeFragment extends SettingsPreferenceFragment
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.theme);
+        mSystemThemeColor = (Preference) findPreference(KEY_ACCENT_PICKER);
+
+        // OMS and PMS setup
+        mOverlayService = ServiceManager.getService(Context.OVERLAY_SERVICE) != null ? new OverlayManagerWrapper()
+                : null;
+        mPackageManager = getActivity().getPackageManager();
+        String currentPkg = getTheme();
+        CharSequence label = null;
+        try {
+            label = mPackageManager.getApplicationInfo(currentPkg, 0).loadLabel(mPackageManager);
+        } catch (PackageManager.NameNotFoundException e) {
+            label = currentPkg;
+        }
+        mSystemThemeColor.setSummary(label);
+    }
+
+    public void updateEnableState() {
+        if (mSystemThemeColor == null) {
+            return;
+        }
+        mSystemThemeColor.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+            @Override
+            public boolean onPreferenceClick(Preference preference) {
+                AccentPicker.show(mCurrentFragment, preference);
+                return true;
+            }
+        });
     }
 
     @Override
     public void onResume() {
         super.onResume();
+        updateEnableState();
     }
 
     @Override
@@ -79,5 +119,27 @@ public class ThemeFragment extends SettingsPreferenceFragment
     @Override
     public int getMetricsCategory() {
         return MetricsProto.MetricsEvent.GALAXY;
+    }
+
+    private String getTheme() {
+        List<OverlayInfo> infos = mOverlayService.getOverlayInfosForTarget("android", UserHandle.myUserId());
+        for (int i = 0, size = infos.size(); i < size; i++) {
+            if (infos.get(i).isEnabled() && isTheme(infos.get(i))) {
+                return infos.get(i).packageName;
+            }
+        }
+        return null;
+    }
+
+    private boolean isTheme(OverlayInfo oi) {
+        if (!OverlayInfo.CATEGORY_THEME.equals(oi.category)) {
+            return false;
+        }
+        try {
+            PackageInfo pi = mPackageManager.getPackageInfo(oi.packageName, 0);
+            return pi != null && !pi.isStaticOverlayPackage();
+        } catch (PackageManager.NameNotFoundException e) {
+            return false;
+        }
     }
 }
