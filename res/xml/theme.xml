@@ -24,6 +24,10 @@
         <Preference
             android:key="accent_picker"
             android:title="@string/accent_color" />
+
+        <ListPreference
+            android:key="base_theme"
+            android:title="@string/base_theme" />
     </PreferenceCategory>
 
 </PreferenceScreen>

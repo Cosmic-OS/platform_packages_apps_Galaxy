@@ -118,5 +118,6 @@
 
     <!-- Themes -->
     <string name="accent_color">Accent color</string>
+    <string name="base_theme">Base theme color</string>
 
 </resources>

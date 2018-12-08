@@ -24,6 +24,7 @@ import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.provider.SearchIndexableResource;
+import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceCategory;
 import android.support.v7.preference.PreferenceScreen;
@@ -44,34 +45,61 @@ public class ThemeFragment extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener, Indexable {
 
     private static final String KEY_ACCENT_PICKER = "accent_picker";
+    private static final String KEY_BASE_THEME = "base_theme";
+    private static final String BASE_THEME_CATEGORY = "android.base_theme";
     private Preference mSystemThemeColor;
+    private ListPreference mSystemThemeBase;
     private Fragment mCurrentFragment = this;
     private OverlayManagerWrapper mOverlayService;
     private PackageManager mPackageManager;
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        return false;
+        if (preference == mSystemThemeBase) {
+            String current = getTheme(BASE_THEME_CATEGORY);
+            if (((String) newValue).equals(current))
+                return true;
+            mOverlayService.setEnabledExclusiveInCategory((String) newValue, UserHandle.myUserId());
+            mSystemThemeBase.setSummary(getCurrentTheme(BASE_THEME_CATEGORY));
+        }
+        return true;
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.theme);
-        mSystemThemeColor = (Preference) findPreference(KEY_ACCENT_PICKER);
-
         // OMS and PMS setup
         mOverlayService = ServiceManager.getService(Context.OVERLAY_SERVICE) != null ? new OverlayManagerWrapper()
                 : null;
         mPackageManager = getActivity().getPackageManager();
-        String currentPkg = getTheme();
-        CharSequence label = null;
-        try {
-            label = mPackageManager.getApplicationInfo(currentPkg, 0).loadLabel(mPackageManager);
-        } catch (PackageManager.NameNotFoundException e) {
-            label = currentPkg;
+        setupAccentPicker();
+        setupBasePref();
+    }
+
+    private void setupAccentPicker() {
+        mSystemThemeColor = (Preference) findPreference(KEY_ACCENT_PICKER);
+        mSystemThemeColor.setSummary(getCurrentTheme(OverlayInfo.CATEGORY_THEME));
+    }
+
+    private void setupBasePref() {
+        mSystemThemeBase = (ListPreference) findPreference(KEY_BASE_THEME);
+        mSystemThemeBase.setSummary(getCurrentTheme(BASE_THEME_CATEGORY));
+
+        String[] pkgs = getAvailableThemes(BASE_THEME_CATEGORY);
+        CharSequence[] labels = new CharSequence[pkgs.length];
+        for (int i = 0; i < pkgs.length; i++) {
+            try {
+                labels[i] = mPackageManager.getApplicationInfo(pkgs[i], 0).loadLabel(mPackageManager);
+            } catch (PackageManager.NameNotFoundException e) {
+                labels[i] = pkgs[i];
+            }
         }
-        mSystemThemeColor.setSummary(label);
+
+        mSystemThemeBase.setEntries(labels);
+        mSystemThemeBase.setEntryValues(pkgs);
+        mSystemThemeBase.setValue(getTheme(BASE_THEME_CATEGORY));
+        mSystemThemeBase.setOnPreferenceChangeListener(this);
     }
 
     public void updateEnableState() {
@@ -99,7 +127,6 @@ public class ThemeFragment extends SettingsPreferenceFragment
     }
 
     public static final SearchIndexProvider SEARCH_INDEX_DATA_PROVIDER = new BaseSearchIndexProvider() {
-
         @Override
         public List<SearchIndexableResource> getXmlResourcesToIndex(Context context, boolean enabled) {
             List<SearchIndexableResource> indexables = new ArrayList<>();
@@ -121,18 +148,41 @@ public class ThemeFragment extends SettingsPreferenceFragment
         return MetricsProto.MetricsEvent.GALAXY;
     }
 
-    private String getTheme() {
+    // Theme/OMS handling methods
+    private CharSequence getCurrentTheme(String category) {
+        String currentPkg = getTheme(category);
+        CharSequence label = null;
+        try {
+            label = mPackageManager.getApplicationInfo(currentPkg, 0).loadLabel(mPackageManager);
+        } catch (PackageManager.NameNotFoundException e) {
+            label = currentPkg;
+        }
+        return label;
+    }
+
+    private String[] getAvailableThemes(String category) {
+        List<OverlayInfo> infos = mOverlayService.getOverlayInfosForTarget("android", UserHandle.myUserId());
+        List<String> pkgs = new ArrayList<>(infos.size());
+        for (int i = 0, size = infos.size(); i < size; i++) {
+            if (isTheme(infos.get(i), category)) {
+                pkgs.add(infos.get(i).packageName);
+            }
+        }
+        return pkgs.toArray(new String[pkgs.size()]);
+    }
+
+    private String getTheme(String category) {
         List<OverlayInfo> infos = mOverlayService.getOverlayInfosForTarget("android", UserHandle.myUserId());
         for (int i = 0, size = infos.size(); i < size; i++) {
-            if (infos.get(i).isEnabled() && isTheme(infos.get(i))) {
+            if (infos.get(i).isEnabled() && isTheme(infos.get(i), category)) {
                 return infos.get(i).packageName;
             }
         }
         return null;
     }
 
-    private boolean isTheme(OverlayInfo oi) {
-        if (!OverlayInfo.CATEGORY_THEME.equals(oi.category)) {
+    private boolean isTheme(OverlayInfo oi, String category) {
+        if (!category.equals(oi.category)) {
             return false;
         }
         try {
