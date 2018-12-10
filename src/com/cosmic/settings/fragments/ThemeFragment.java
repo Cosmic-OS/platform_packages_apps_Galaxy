@@ -23,7 +23,9 @@ import android.os.UserHandle;
 import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.content.res.Resources;
 import android.provider.SearchIndexableResource;
+import android.provider.Settings;
 import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceCategory;
@@ -37,6 +39,7 @@ import com.android.settings.search.Indexable;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.wrapper.OverlayManagerWrapper;
 import com.android.settings.wrapper.OverlayManagerWrapper.OverlayInfo;
+import com.android.settings.cosmic.CustomSeekBarPreference;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -47,11 +50,17 @@ public class ThemeFragment extends SettingsPreferenceFragment
     private static final String KEY_ACCENT_PICKER = "accent_picker";
     private static final String KEY_BASE_THEME = "base_theme";
     private static final String BASE_THEME_CATEGORY = "android.base_theme";
+
+    private static final String SYSUI_ROUNDED_SIZE = "sysui_rounded_size";
+    private static final String SYSUI_ROUNDED_CONTENT_PADDING = "sysui_rounded_content_padding";
+
     private Preference mSystemThemeColor;
     private ListPreference mSystemThemeBase;
     private Fragment mCurrentFragment = this;
     private OverlayManagerWrapper mOverlayService;
     private PackageManager mPackageManager;
+    private CustomSeekBarPreference mCornerRadius;
+    private CustomSeekBarPreference mContentPadding;
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
@@ -61,6 +70,12 @@ public class ThemeFragment extends SettingsPreferenceFragment
                 return true;
             mOverlayService.setEnabledExclusiveInCategory((String) newValue, UserHandle.myUserId());
             mSystemThemeBase.setSummary(getCurrentTheme(BASE_THEME_CATEGORY));
+        } else if (preference == mCornerRadius) {
+            Settings.Secure.putInt(getContext().getContentResolver(), Settings.Secure.SYSUI_ROUNDED_SIZE,
+                    ((int) newValue) * 1);
+        } else if (preference == mContentPadding) {
+            Settings.Secure.putInt(getContext().getContentResolver(), Settings.Secure.SYSUI_ROUNDED_CONTENT_PADDING,
+                    ((int) newValue) * 1);
         }
         return true;
     }
@@ -75,6 +90,7 @@ public class ThemeFragment extends SettingsPreferenceFragment
         mPackageManager = getActivity().getPackageManager();
         setupAccentPicker();
         setupBasePref();
+        setupCornerPrefs();
     }
 
     private void setupAccentPicker() {
@@ -100,6 +116,37 @@ public class ThemeFragment extends SettingsPreferenceFragment
         mSystemThemeBase.setEntryValues(pkgs);
         mSystemThemeBase.setValue(getTheme(BASE_THEME_CATEGORY));
         mSystemThemeBase.setOnPreferenceChangeListener(this);
+    }
+
+    private void setupCornerPrefs() {
+        Resources res = null;
+        Context mContext = getContext();
+
+        try {
+            res = mContext.getPackageManager().getResourcesForApplication("com.android.systemui");
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        float displayDensity = getResources().getDisplayMetrics().density;
+
+        // Rounded Corner Radius
+        int resourceIdRadius = res.getIdentifier("com.android.systemui:dimen/rounded_corner_radius", null, null);
+        mCornerRadius = (CustomSeekBarPreference) findPreference(SYSUI_ROUNDED_SIZE);
+        int cornerRadius = Settings.Secure.getInt(mContext.getContentResolver(), Settings.Secure.SYSUI_ROUNDED_SIZE,
+                (int) (res.getDimension(resourceIdRadius) / displayDensity));
+        mCornerRadius.setValue(cornerRadius / 1);
+        mCornerRadius.setOnPreferenceChangeListener(this);
+
+        // Rounded Content Padding
+        int resourceIdPadding = res.getIdentifier("com.android.systemui:dimen/rounded_corner_content_padding", null,
+                null);
+        mContentPadding = (CustomSeekBarPreference) findPreference(SYSUI_ROUNDED_CONTENT_PADDING);
+        int contentPadding = Settings.Secure.getInt(mContext.getContentResolver(),
+                Settings.Secure.SYSUI_ROUNDED_CONTENT_PADDING,
+                (int) (res.getDimension(resourceIdPadding) / displayDensity));
+        mContentPadding.setValue(contentPadding / 1);
+        mContentPadding.setOnPreferenceChangeListener(this);
     }
 
     public void updateEnableState() {
