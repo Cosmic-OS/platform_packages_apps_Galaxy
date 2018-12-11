@@ -119,6 +119,8 @@
     <!-- Themes -->
     <string name="accent_color">Accent color</string>
     <string name="base_theme">Base theme color</string>
+    <string name="prefer_black_themes">Prefer black themes</string>
+    <string name="prefer_black_themes_summary">Use black theme overlays instead of dark ones when possible</string>
 
     <!-- Corners -->
     <string name="corners_category">Corners</string>

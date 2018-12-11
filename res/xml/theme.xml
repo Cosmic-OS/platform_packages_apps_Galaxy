@@ -35,12 +35,18 @@
             android:entries="@array/systemui_theme_entries"
             android:entryValues="@array/systemui_theme_values"
             settings:controller="com.android.settings.display.SystemUiThemePreferenceController" />
+
+        <com.cosmic.settings.preferences.SystemSettingSwitchPreference
+            android:key="prefer_black_themes"
+            android:title="@string/prefer_black_themes"
+            android:summary="@string/prefer_black_themes_summary"
+            android:defaultValue="false" />
     </PreferenceCategory>
 
     <PreferenceCategory
         android:key="corners_category"
         android:title="@string/corners_category" >
-        <com.cosmic.galaxy.preferences.SecureSettingSwitchPreference
+        <com.cosmic.settings.preferences.SecureSettingSwitchPreference
             android:key="sysui_rounded_fwvals"
             android:title="@string/corner_fwvals"
             android:summary="@string/corner_fwvals_summary"
