@@ -31,6 +31,7 @@ import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceCategory;
 import android.support.v7.preference.PreferenceScreen;
 import android.support.v14.preference.PreferenceFragment;
+import android.util.Log;
 
 import com.android.settings.R;
 import com.android.internal.logging.nano.MetricsProto;
@@ -49,6 +50,7 @@ public class ThemeFragment extends SettingsPreferenceFragment
 
     private static final String KEY_ACCENT_PICKER = "accent_picker";
     private static final String KEY_BASE_THEME = "base_theme";
+    private static final String KEY_SYSUI_THEME = "systemui_theme";
     private static final String BASE_THEME_CATEGORY = "android.base_theme";
 
     private static final String SYSUI_ROUNDED_SIZE = "sysui_rounded_size";
@@ -61,6 +63,7 @@ public class ThemeFragment extends SettingsPreferenceFragment
     private PackageManager mPackageManager;
     private CustomSeekBarPreference mCornerRadius;
     private CustomSeekBarPreference mContentPadding;
+    private ListPreference mSystemUiThemePref;
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
@@ -76,6 +79,10 @@ public class ThemeFragment extends SettingsPreferenceFragment
         } else if (preference == mContentPadding) {
             Settings.Secure.putInt(getContext().getContentResolver(), Settings.Secure.SYSUI_ROUNDED_CONTENT_PADDING,
                     ((int) newValue) * 1);
+        } else if (preference == mSystemUiThemePref) {
+            int value = Integer.parseInt((String) newValue);
+            Settings.Secure.putInt(getContext().getContentResolver(), Settings.Secure.THEME_MODE, value);
+            mSystemUiThemePref.setSummary(mSystemUiThemePref.getEntries()[value]);
         }
         return true;
     }
@@ -91,6 +98,7 @@ public class ThemeFragment extends SettingsPreferenceFragment
         setupAccentPicker();
         setupBasePref();
         setupCornerPrefs();
+        setupStylePref();
     }
 
     private void setupAccentPicker() {
@@ -147,6 +155,15 @@ public class ThemeFragment extends SettingsPreferenceFragment
                 (int) (res.getDimension(resourceIdPadding) / displayDensity));
         mContentPadding.setValue(contentPadding / 1);
         mContentPadding.setOnPreferenceChangeListener(this);
+    }
+
+    private void setupStylePref() {
+        mSystemUiThemePref = (ListPreference) findPreference(KEY_SYSUI_THEME);
+        int value = Settings.Secure.getInt(getContext().getContentResolver(), Settings.Secure.THEME_MODE, 0);
+        int index = mSystemUiThemePref.findIndexOfValue(Integer.toString(value));
+        mSystemUiThemePref.setValue(Integer.toString(value));
+        mSystemUiThemePref.setSummary(mSystemUiThemePref.getEntries()[index]);
+        mSystemUiThemePref.setOnPreferenceChangeListener(this);
     }
 
     public void updateEnableState() {
