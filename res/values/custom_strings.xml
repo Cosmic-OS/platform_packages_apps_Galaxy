@@ -335,4 +335,9 @@
     <string name="gesture_action_timeout_title">Swipe trigger timeout</string>
     <string name="gesture_action_timeout_summary">Timeout before the gesture action is started</string>
 
+    <!-- QS panel tuner -->
+    <string name="qs_panel_tuner_category_title">QS panel tuner</string>
+    <string name="show_secure_title">Show security footer</string>
+    <string name="show_info_header_title">Show information header</string>
+
 </resources>
