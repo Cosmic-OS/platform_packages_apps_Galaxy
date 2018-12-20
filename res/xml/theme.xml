@@ -71,4 +71,9 @@
             android:dependency="sysui_rounded_fwvals" />
     </PreferenceCategory>
 
+    <PreferenceCategory
+        android:key="qs_category"
+        android:title="@string/qs_themes_category_title" >
+    </PreferenceCategory>
+
 </PreferenceScreen>
