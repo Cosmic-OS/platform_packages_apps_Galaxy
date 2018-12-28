@@ -18,6 +18,7 @@ package com.cosmic.settings.fragments;
 
 import android.app.Fragment;
 import android.os.Bundle;
+import android.os.Handler;
 import android.os.ServiceManager;
 import android.os.UserHandle;
 import android.content.Context;
@@ -63,6 +64,8 @@ public class ThemeFragment extends SettingsPreferenceFragment
     private static final String QS_PANEL_ALPHA = "qs_panel_alpha";
     private static final String QS_PANEL_COLOR = "qs_panel_color";
 
+    private Handler mHandler;
+
     private Preference mSystemThemeColor;
     private ListPreference mSystemThemeBase;
     private Fragment mCurrentFragment = this;
@@ -74,6 +77,8 @@ public class ThemeFragment extends SettingsPreferenceFragment
     private ListPreference mSystemUiThemePref;
     private CustomSeekBarPreference mQsPanelAlpha;
     private ColorPickerPreference mQsPanelColor;
+    private int mQsPanelAlphaValue;
+    private boolean mChangeQsPanelAlpha = true;
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
@@ -94,10 +99,19 @@ public class ThemeFragment extends SettingsPreferenceFragment
             Settings.Secure.putInt(getContext().getContentResolver(), Settings.Secure.THEME_MODE, value);
             mSystemUiThemePref.setSummary(mSystemUiThemePref.getEntries()[value]);
         } else if (preference == mQsPanelAlpha) {
-            int bgAlpha = (Integer) newValue;
+            mQsPanelAlphaValue = (Integer) newValue;
+            if (!mChangeQsPanelAlpha)
+                return true;
+            mChangeQsPanelAlpha = false;
             Settings.System.putIntForUser(getContentResolver(),
-                    Settings.System.QS_PANEL_BG_ALPHA, bgAlpha,
+                    Settings.System.QS_PANEL_BG_ALPHA, mQsPanelAlphaValue,
                     UserHandle.USER_CURRENT);
+            mHandler.postDelayed(() -> {
+                    Settings.System.putIntForUser(getContentResolver(),
+                            Settings.System.QS_PANEL_BG_ALPHA, mQsPanelAlphaValue,
+                            UserHandle.USER_CURRENT);
+                    mChangeQsPanelAlpha = true;
+                }, 1000);
         } else if (preference == mQsPanelColor) {
             int bgColor = (Integer) newValue;
             Settings.System.putIntForUser(getContentResolver(),
@@ -117,6 +131,7 @@ public class ThemeFragment extends SettingsPreferenceFragment
         mOverlayService = ServiceManager.getService(Context.OVERLAY_SERVICE) != null ? new OverlayManagerWrapper()
                 : null;
         mPackageManager = getActivity().getPackageManager();
+        mHandler = new Handler();
         setupAccentPicker();
         setupBasePref();
         setupCornerPrefs();
