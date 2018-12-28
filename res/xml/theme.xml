@@ -20,7 +20,9 @@
     android:title="@string/themes_category"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-    <PreferenceCategory>
+    <PreferenceCategory
+        android:key="system_colors"
+        android:title="@string/system_colors" >
         <Preference
             android:key="accent_picker"
             android:title="@string/accent_color" />
