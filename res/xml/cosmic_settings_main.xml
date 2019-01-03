@@ -52,6 +52,13 @@
             android:fragment="com.cosmic.settings.fragments.Gestures"
             android:icon="@drawable/ic_cosmic_gesture"/>
 
+        <!-- Themes -->
+        <Preference
+            android:key="cosmic_theme_settings"
+            android:title="@string/themes_category" 
+            android:fragment="com.cosmic.settings.fragments.ThemeFragment"
+            android:icon="@drawable/ic_cosmic_themes"/>
+
         <!-- Misc -->
         <Preference
             android:key="cosmic_misc_settings"
