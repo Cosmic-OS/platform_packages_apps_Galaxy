@@ -71,6 +71,13 @@
             android:fragment="com.cosmic.settings.fragments.NotificationSettings"
             android:icon="@drawable/ic_settings_notifications"/>
 
+        <!-- Animations -->
+        <Preference
+            android:key="animations_category"
+            android:title="@string/animations_title"
+            android:fragment="com.cosmic.settings.fragments.Animations"
+            android:icon="@drawable/ic_settings_animations"/>
+
         <!-- Misc -->
         <Preference
             android:key="misc_category"
