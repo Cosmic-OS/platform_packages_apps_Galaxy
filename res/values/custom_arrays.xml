@@ -478,11 +478,13 @@
         <item>@string/lockscreen_clock_selection_digital</item>
         <item>@string/lockscreen_clock_selection_digital_bold</item>
         <item>@string/lockscreen_clock_selection_analog</item>
+        <item>@string/lockscreen_clock_selection_spectrum</item>
+        <item>@string/lockscreen_clock_selection_sneeky</item>
         <item>@string/lockscreen_clock_selection_sammy</item>
         <item>@string/lockscreen_clock_selection_sammy_bold</item>
         <item>@string/lockscreen_clock_selection_sammy_accent</item>
         <item>@string/lockscreen_clock_selection_sammy_accent_alt</item>
-	<item>@string/lockscreen_clock_selection_spidey</item>
+      	<item>@string/lockscreen_clock_selection_spidey</item>
         <item>@string/lockscreen_clock_selection_shishu_dreams</item>
         <item>@string/lockscreen_clock_selection_shishu_immensity</item>
         <item>@string/lockscreen_clock_selection_shishu_nerves</item>
@@ -497,11 +499,13 @@
         <item>0</item>
         <item>1</item>
         <item>2</item>
+        <item>16</item>
+        <item>17</item>
         <item>3</item>
         <item>4</item>
         <item>5</item>
         <item>6</item>
-		<item>15</item>
+	    	<item>15</item>
         <item>7</item>
         <item>8</item>
         <item>9</item>
@@ -812,7 +816,7 @@
         <item>3</item>
         <item>4</item>
     </string-array>
-	
+
 	<!-- Custom headers -->
     <string-array name="custom_header_provider_entries" translatable="false">
         <item>@string/daylight_header_provider_title</item>
