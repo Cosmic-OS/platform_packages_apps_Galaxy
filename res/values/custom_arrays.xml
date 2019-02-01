@@ -482,6 +482,7 @@
         <item>@string/lockscreen_clock_selection_sammy_bold</item>
         <item>@string/lockscreen_clock_selection_sammy_accent</item>
         <item>@string/lockscreen_clock_selection_sammy_accent_alt</item>
+	<item>@string/lockscreen_clock_selection_spidey</item>
         <item>@string/lockscreen_clock_selection_shishu_dreams</item>
         <item>@string/lockscreen_clock_selection_shishu_immensity</item>
         <item>@string/lockscreen_clock_selection_shishu_nerves</item>
@@ -500,6 +501,7 @@
         <item>4</item>
         <item>5</item>
         <item>6</item>
+		<item>15</item>
         <item>7</item>
         <item>8</item>
         <item>9</item>
