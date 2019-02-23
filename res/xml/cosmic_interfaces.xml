@@ -27,6 +27,12 @@
             android:persistent="false" />
 
 	</PreferenceCategory>
+	
+	<Preference
+        android:key="custom_header"
+        android:fragment="com.cosmic.settings.fragments.CustomHeaders"
+        android:title="@string/custom_headers_title"
+        android:summary="@string/custom_headers_summary" />
 		
 <PreferenceCategory 
         android:key="dashboard_category" 
