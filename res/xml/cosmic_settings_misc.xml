@@ -25,6 +25,13 @@
         android:summary="@string/wake_when_plugged_or_unplugged_summary"
         android:defaultValue="false" />
 
+    <com.cosmic.settings.preferences.SystemSettingSwitchPreference
+        android:key="sensor_block"
+        android:icon="@drawable/ic_lockdown"
+        android:title="@string/sensor_block_title"
+        android:summary="@string/sensor_block_summary"
+        android:defaultValue="false" />
+
     <PreferenceCategory
         android:title="@string/dashboard_category">
 
