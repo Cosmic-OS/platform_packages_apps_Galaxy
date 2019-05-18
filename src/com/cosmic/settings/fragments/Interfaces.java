@@ -18,13 +18,24 @@
 
 package com.cosmic.settings.fragments;
 
+import android.app.ActivityManager;
+import android.app.IActivityManager;
+import android.app.Fragment;
 import android.content.ContentResolver;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.content.Context;
-import android.content.res.Resources;
+import android.graphics.Color;
+import android.os.AsyncTask;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Process;
+import android.os.ServiceManager;
 import android.os.UserHandle;
+import android.os.SystemProperties;
+import android.provider.SearchIndexableResource;
 import android.os.Vibrator;
 import android.support.v7.preference.PreferenceCategory;
 import android.support.v7.preference.ListPreference;
@@ -33,22 +44,41 @@ import android.support.v7.preference.PreferenceScreen;
 import android.support.v7.preference.Preference.OnPreferenceChangeListener;
 import android.support.v14.preference.SwitchPreference;
 import android.provider.Settings;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import com.android.settings.R;
 
 import com.android.settings.SettingsPreferenceFragment;
+import com.android.settings.SettingsPreferenceFragment;
+import com.android.settings.wrapper.OverlayManagerWrapper;
+import com.android.settings.wrapper.OverlayManagerWrapper.OverlayInfo;
+import com.android.settings.SettingsPreferenceFragment;
 import com.cosmic.settings.preferences.CustomSeekBarPreference;
 import com.cosmic.settings.preferences.SecureSettingSwitchPreference;
-
 import com.android.internal.logging.nano.MetricsProto;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
 public class Interfaces extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener{
 			
-	private static final String SYSUI_ROUNDED_SIZE = "sysui_rounded_size";
+    private static final String SYSUI_ROUNDED_SIZE = "sysui_rounded_size";
     private static final String SYSUI_ROUNDED_CONTENT_PADDING = "sysui_rounded_content_padding";
     private static final String SYSUI_ROUNDED_FWVALS = "sysui_rounded_fwvals";
+    private static final String ACCENT_COLOR = "accent_color";
+    private static final String ACCENT_COLOR_PROP = "persist.sys.theme.accentcolor";
 
+    private Handler mHandler;
+
+    private ColorPickerPreference mThemeColor;
+    private Fragment mCurrentFragment = this;
+    private OverlayManagerWrapper mOverlayService;
+    private PackageManager mPackageManager;
     private CustomSeekBarPreference mCornerRadius;
     private CustomSeekBarPreference mContentPadding;
     private SecureSettingSwitchPreference mRoundedFwvals;
@@ -59,6 +89,13 @@ public class Interfaces extends SettingsPreferenceFragment implements
         addPreferencesFromResource(R.xml.cosmic_interfaces);
 
         final PreferenceScreen prefScreen = getPreferenceScreen();
+        mOverlayService = ServiceManager.getService(Context.OVERLAY_SERVICE) != null ? new OverlayManagerWrapper()
+                : null;
+        mPackageManager = getActivity().getPackageManager();
+	mHandler = new Handler();
+        ContentResolver resolver = getActivity().getContentResolver();
+
+        setupAccentPref();
 		
 		Resources res = null;
         Context ctx = getContext();
@@ -94,6 +131,16 @@ public class Interfaces extends SettingsPreferenceFragment implements
 
     }
 
+    private void setupAccentPref() {
+        mThemeColor = (ColorPickerPreference) findPreference(ACCENT_COLOR);
+        String colorVal = SystemProperties.get(ACCENT_COLOR_PROP, "-1");
+        int color = "-1".equals(colorVal)
+                ? Color.WHITE
+                : Color.parseColor("#" + colorVal);
+        mThemeColor.setNewPreviewColor(color);
+        mThemeColor.setOnPreferenceChangeListener(this);
+    }
+
     private void restoreCorners() {
         Resources res = null;
         float density = Resources.getSystem().getDisplayMetrics().density;
@@ -124,6 +171,14 @@ public class Interfaces extends SettingsPreferenceFragment implements
         } else if (preference == mRoundedFwvals) {
             restoreCorners();
 		return true;
+        } else if (preference == mThemeColor) {
+            int color = (Integer) newValue;
+            String hexColor = String.format("%08X", (0xFFFFFFFF & color));
+            SystemProperties.set(ACCENT_COLOR_PROP, hexColor);
+            mOverlayService.reloadAndroidAssets(UserHandle.USER_CURRENT);
+            mOverlayService.reloadAssets("com.android.settings", UserHandle.USER_CURRENT);
+            mOverlayService.reloadAssets("com.android.systemui", UserHandle.USER_CURRENT); 
+         return true;
         }
         return false;
     }
@@ -133,4 +188,25 @@ public class Interfaces extends SettingsPreferenceFragment implements
         return MetricsProto.MetricsEvent.COSMIC_SETTINGS;
     }
 
+@Override
+    public void onResume() {
+        super.onResume();
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+    }
+
+    private boolean isTheme(OverlayInfo oi) {
+        if (!OverlayInfo.CATEGORY_THEME.equals(oi.category)) {
+            return false;
+        }
+        try {
+            PackageInfo pi = mPackageManager.getPackageInfo(oi.packageName, 0);
+            return pi != null && !pi.isStaticOverlayPackage();
+        } catch (PackageManager.NameNotFoundException e) {
+            return false;
+        }
+    }
 }

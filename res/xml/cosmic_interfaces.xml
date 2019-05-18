@@ -14,8 +14,21 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:title="@string/interfaces_title"
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+
+
+<PreferenceCategory
+        android:key="system_colors"
+        android:title="@string/system_colors" >
+
+        <net.margaritov.preference.colorpicker.ColorPickerPreference
+            android:key="accent_color"
+            android:title="@string/accent_color"
+            android:defaultValue="0xffffff"
+            android:persistent="false" />
+
+	</PreferenceCategory>
 		
-	<PreferenceCategory 
+<PreferenceCategory 
         android:key="dashboard_category" 
         android:title="@string/dashboard_category">
 
@@ -26,7 +39,7 @@
             android:entryValues="@array/theming_settings_dashboard_icons_values"
             android:defaultValue="0" />
     </PreferenceCategory>
-
+			
         <PreferenceCategory
         android:key="corners_category"
         android:title="@string/corners_category" >
