@@ -4,9 +4,7 @@
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
      You may obtain a copy of the License at
-
           http://www.apache.org/licenses/LICENSE-2.0
-
      Unless required by applicable law or agreed to in writing, software
      distributed under the License is distributed on an "AS IS" BASIS,
      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -22,7 +20,7 @@
             android:key="statusbar_category"
             android:title="@string/statusbar_title"
             android:fragment="com.cosmic.settings.fragments.StatusBarSettings" 
-            android:icon="@drawable/ic_settings_statusbar"/>
+            android:icon="@drawable/ic_settings_status_bar"/>
 
         <!-- Quick Settings panel -->
         <Preference
@@ -43,18 +41,18 @@
             android:key="gestures_category"
             android:title="@string/gestures_title" 
             android:fragment="com.cosmic.settings.fragments.GestureSettings"
-            android:icon="@drawable/ic_settings_gestures"/>
+            android:icon="@drawable/ic_settings_gesture"/>
 
         <!-- Lock Screen -->
         <Preference
             android:key="lockscreen_category"
             android:title="@string/lockscreen_title" 
             android:fragment="com.cosmic.settings.fragments.LockScreenSettings"
-            android:icon="@drawable/ic_settings_lockscreens"/>
+            android:icon="@drawable/ic_settings_lockscreen"/>
 
         <!-- Power Menu -->
         <Preference
-            android:key="powermenu__category"
+            android:key="powermenu_category"
             android:title="@string/powermenu_title" 
             android:fragment="com.cosmic.settings.fragments.PowerMenuSettings"
             android:icon="@drawable/ic_settings_powermenu"/>
