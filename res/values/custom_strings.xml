@@ -534,5 +534,9 @@
     <string name="lock_owner_font_title">Owner font options</string>
     <string name="lock_owner_font_summary">Change the default font of the lockscreen owner info</string>
     <string name="lock_owner_font_dialog_title">Select lock owner font</string>
+	
+	<!-- Charging animation -->
+    <string name="charging_animation_title">Charging animation</string>
+    <string name="charging_animation_summary">Display an animation when the device is plugged in</string>
 
 </resources>

@@ -74,6 +74,12 @@
             android:title="@string/lockscreen_info_title"
             android:summary="@string/lockscreen_info_summary"
             android:defaultValue="true" />
+			
+	<com.cosmic.settings.preferences.SystemSettingSwitchPreference
+          android:key="charging_animation"
+          android:title="@string/charging_animation_title"
+          android:summary="@string/charging_animation_summary"
+          android:defaultValue="true" />
 
         <com.cosmic.settings.preferences.SystemSettingListPreference
             android:key="lockscreen_date_selection"
