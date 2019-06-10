@@ -372,4 +372,8 @@
     <string name="cosmic_logo_title">Logo</string>
     <string name="cosmic_logo_summary">Let everyone know that you\'re using Cosmic-OS when they see your screen</string>
     <string name="status_bar_logo_style_title">Custom logo style</string>
+
+    <!-- QuickSettings Panel Transparency -->
+    <string name="qs_panel_alpha_title">Opacity</string>
+
 </resources>
