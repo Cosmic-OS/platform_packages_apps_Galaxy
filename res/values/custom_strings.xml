@@ -368,4 +368,8 @@
     <string name="lockscreen_cover_filter_blur">Blur</string>
     <string name="lockscreen_cover_filter_grayblur">Grayscale and blurred</string>
 
+    <!--logo -->
+    <string name="cosmic_logo_title">Logo</string>
+    <string name="cosmic_logo_summary">Let everyone know that you\'re using Cosmic-OS when they see your screen</string>
+    <string name="status_bar_logo_style_title">Custom logo style</string>
 </resources>
