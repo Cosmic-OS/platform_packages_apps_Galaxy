@@ -457,6 +457,11 @@
     <string name="qstile_gear">Gear</string>
     <string name="qstile_badge">Badge</string>
     <string name="qstile_badgetwo">Badge two</string>
+	<string name="qstile_neonlike">Neon like</string>
+    <string name="qstile_oos">Oxygen</string>
+    <string name="qstile_triangles">Triangles</string>
+    <string name="qstile_divided">Divided</string>
+    <string name="qstile_cosmos">Cosmos</string>
 
     <!-- Lock Clock Fonts -->
     <string name="lock_clock_font_title">Clock font options</string>

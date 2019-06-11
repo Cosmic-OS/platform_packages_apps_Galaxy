@@ -566,6 +566,11 @@
         <item>@string/qstile_gear</item>
         <item>@string/qstile_badge</item>
         <item>@string/qstile_badgetwo</item>
+		<item>@string/qstile_neonlike</item>
+        <item>@string/qstile_oos</item>
+        <item>@string/qstile_triangles</item>
+        <item>@string/qstile_divided</item>
+        <item>@string/qstile_cosmos</item>
     </string-array>
     <string-array name="qs_selector_values" translatable="false">
         <item>0</item>
@@ -595,6 +600,11 @@
         <item>24</item>
         <item>25</item>
         <item>26</item>
+		<item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
     </string-array>
 
     <!-- Lock Clock Fonts -->
