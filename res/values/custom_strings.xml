@@ -368,6 +368,7 @@
     <string name="lockscreen_cover_filter_tint">Accent tinted</string>
     <string name="lockscreen_cover_filter_blur">Blur</string>
     <string name="lockscreen_cover_filter_grayblur">Grayscale and blurred</string>
+    <string name="lockscreen_cover_filter_tinted_blur">Accent Tinted and blurred</string>
 
     <!--logo -->
     <string name="cosmic_logo_title">Logo</string>
@@ -558,5 +559,10 @@
     <string name="content_padding">Corner content padding</string>
     <string name="corner_fwvals">Use framework values</string>
     <string name="corner_fwvals_summary">Useful if the device actually has rounded corners</string>
+
+    <!-- Powermunu Background -->
+    <string name="power_menu_bg_title">Background Filter</string>
+    <string name="power_menu_bg_summary">Enables Custom filter when powermenu is active</string>
+    <string name="power_menu_bg_style_title">Filter Type</string>
 
 </resources>
