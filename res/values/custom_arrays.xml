@@ -376,6 +376,7 @@
         <item>@string/lockscreen_cover_filter_tint</item>
         <item>@string/lockscreen_cover_filter_blur</item>
         <item>@string/lockscreen_cover_filter_grayblur</item>
+        <item>@string/lockscreen_cover_filter_tinted_blur</item>
     </string-array>
 
     <string-array name="lockscreen_cover_filter_values" translatable="false">
@@ -384,6 +385,7 @@
         <item>2</item>
         <item>3</item>
         <item>4</item>
+        <item>5</item>
     </string-array>
 
     <!-- Statusbar Logos -->
