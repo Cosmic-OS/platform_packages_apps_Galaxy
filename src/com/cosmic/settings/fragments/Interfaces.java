@@ -30,7 +30,8 @@ import android.graphics.Color;
 import android.os.AsyncTask;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.os.Bundle;
-import android.os.Handler;
+import android.content.Context;
+import android.os.Bundle;
 import android.os.Process;
 import android.os.ServiceManager;
 import android.os.UserHandle;
@@ -51,7 +52,9 @@ import android.view.ViewGroup;
 import com.android.settings.R;
 
 import com.android.settings.SettingsPreferenceFragment;
-import com.android.settings.SettingsPreferenceFragment;
+import com.android.settings.search.BaseSearchIndexProvider;
+import com.android.settings.search.Indexable;
+
 import com.android.settings.wrapper.OverlayManagerWrapper;
 import com.android.settings.wrapper.OverlayManagerWrapper.OverlayInfo;
 import com.android.settings.SettingsPreferenceFragment;
@@ -65,8 +68,8 @@ import java.util.List;
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
 public class Interfaces extends SettingsPreferenceFragment implements
-        Preference.OnPreferenceChangeListener{
-			
+        Preference.OnPreferenceChangeListener, Indexable {
+
     private static final String SYSUI_ROUNDED_SIZE = "sysui_rounded_size";
     private static final String SYSUI_ROUNDED_CONTENT_PADDING = "sysui_rounded_content_padding";
     private static final String SYSUI_ROUNDED_FWVALS = "sysui_rounded_fwvals";
@@ -100,7 +103,7 @@ public class Interfaces extends SettingsPreferenceFragment implements
         ContentResolver resolver = getActivity().getContentResolver();
 
         setupAccentPref();
-		
+
 		Resources res = null;
         Context ctx = getContext();
         float density = Resources.getSystem().getDisplayMetrics().density;
@@ -205,7 +208,7 @@ public class Interfaces extends SettingsPreferenceFragment implements
             SystemProperties.set(ACCENT_COLOR_PROP, hexColor);
             mOverlayService.reloadAndroidAssets(UserHandle.USER_CURRENT);
             mOverlayService.reloadAssets("com.android.settings", UserHandle.USER_CURRENT);
-            mOverlayService.reloadAssets("com.android.systemui", UserHandle.USER_CURRENT); 
+            mOverlayService.reloadAssets("com.android.systemui", UserHandle.USER_CURRENT);
          return true;
         }
         return false;
@@ -237,4 +240,22 @@ public class Interfaces extends SettingsPreferenceFragment implements
             return false;
         }
     }
+
+    public static final SearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
+            new BaseSearchIndexProvider() {
+                 @Override
+                public List<SearchIndexableResource> getXmlResourcesToIndex(Context context,
+                        boolean enabled) {
+                    final ArrayList<SearchIndexableResource> result = new ArrayList<>();
+                     final SearchIndexableResource sir = new SearchIndexableResource(context);
+                    sir.xmlResId = R.xml.cosmic_interfaces;
+                    result.add(sir);
+                    return result;
+                }
+                 @Override
+                public List<String> getNonIndexableKeys(Context context) {
+                    final List<String> keys = super.getNonIndexableKeys(context);
+                    return keys;
+                }
+    };
 }

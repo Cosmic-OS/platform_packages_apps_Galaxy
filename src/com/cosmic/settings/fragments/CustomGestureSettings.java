@@ -15,9 +15,9 @@
  */
 
 package com.cosmic.settings.fragments;
-
 import java.util.ArrayList;
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
@@ -29,6 +29,7 @@ import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceCategory;
 import android.support.v7.preference.PreferenceScreen;
 import android.support.v7.preference.Preference.OnPreferenceChangeListener;
+import android.provider.SearchIndexableResource;
 import android.provider.Settings;
 import android.util.DisplayMetrics;
 import android.util.TypedValue;
@@ -36,10 +37,15 @@ import android.util.TypedValue;
 import com.android.settings.SettingsPreferenceFragment;
 import com.cosmic.settings.preferences.CustomSeekBarPreference;
 import com.cosmic.settings.preferences.SystemSettingSwitchPreference;
+import com.android.settings.search.BaseSearchIndexProvider;
+import com.android.settings.search.Indexable;
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.R;
 
-public class GestureSettings extends SettingsPreferenceFragment implements Preference.OnPreferenceChangeListener {
+import java.util.ArrayList;
+import java.util.List;
+
+public class CustomGestureSettings extends SettingsPreferenceFragment implements Preference.OnPreferenceChangeListener, Indexable {
 
     private static final String KEY_SWIPE_LENGTH = "gesture_swipe_length";
     private static final String KEY_SWIPE_TIMEOUT = "gesture_swipe_timeout";
@@ -96,4 +102,21 @@ public class GestureSettings extends SettingsPreferenceFragment implements Prefe
         return MetricsProto.MetricsEvent.COSMIC_SETTINGS;
     }
 
+    public static final SearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
+            new BaseSearchIndexProvider() {
+                 @Override
+                public List<SearchIndexableResource> getXmlResourcesToIndex(Context context,
+                        boolean enabled) {
+                    final ArrayList<SearchIndexableResource> result = new ArrayList<>();
+                     final SearchIndexableResource sir = new SearchIndexableResource(context);
+                    sir.xmlResId = R.xml.cosmic_settings_gestures;
+                    result.add(sir);
+                    return result;
+                }
+                 @Override
+                public List<String> getNonIndexableKeys(Context context) {
+                    final List<String> keys = super.getNonIndexableKeys(context);
+                    return keys;
+                }
+    };
 }
