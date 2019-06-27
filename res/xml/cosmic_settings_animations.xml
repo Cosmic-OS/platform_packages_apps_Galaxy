@@ -11,7 +11,7 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<PreferenceScreen 
+<PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/animations_title">
@@ -21,6 +21,7 @@
 
 	<ListPreference
 	    android:key="pref_scrollingcache"
+      android:icon="@drawable/ic_scroll"
 	    android:dialogTitle="@string/pref_scrollingcache_title"
 	    android:title="@string/pref_scrollingcache_title"
 	    android:summary="@string/pref_scrollingcache_summary"
@@ -83,6 +84,7 @@
 
         <ListPreference
             android:key="listview_animation"
+            android:icon="@drawable/ic_list"
             android:dialogTitle="@string/listview_animation_title"
             android:title="@string/listview_animation_title"
             android:entries="@array/listview_animation_entries"
@@ -91,6 +93,7 @@
 
         <ListPreference
             android:key="listview_interpolator"
+            android:icon="@drawable/ic_list"
             android:dialogTitle="@string/listview_interpolator_title"
             android:title="@string/listview_interpolator_title"
             android:entries="@array/listview_interpolator_entries"
@@ -99,12 +102,13 @@
 
       </PreferenceCategory>
 
-      <PreferenceCategory 
+      <PreferenceCategory
          android:title="@string/power_menu_animation_title"
          android:key="power_animation">
 
      <ListPreference
         android:key="power_menu_animations"
+        android:icon="@drawable/ic_power"
         android:title="@string/power_menu_animation_title"
         android:dialogTitle="@string/power_menu_animation_dialog_title"
         android:entries="@array/power_menu_animations_entries"
@@ -114,6 +118,7 @@
 
      <ListPreference
         android:key="screen_off_animation"
+        android:icon="@drawable/ic_power"
         android:title="@string/screen_off_animation_title"
         android:entries="@array/screen_off_animation_entries"
         android:entryValues="@array/screen_off_animation_values" />
@@ -125,6 +130,7 @@
 
         <ListPreference
             android:key="toast_animation"
+            android:icon="@drawable/ic_toast"
             android:title="@string/toast_animation_title"
             android:entries="@array/toast_animation_entries"
             android:entryValues="@array/toast_animation_values"

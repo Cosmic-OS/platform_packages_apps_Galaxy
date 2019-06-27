@@ -1,0 +1,11 @@
+<vector android:height="24dp" android:viewportHeight="512"
+    android:viewportWidth="512" android:width="24dp" xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="?android:attr/colorControlNormal" android:pathData="m166,76c0,5.523 -4.477,10 -10,10s-10,-4.477 -10,-10 4.477,-10 10,-10 10,4.477 10,10zM166,76"/>
+    <path android:fillColor="?android:attr/colorControlNormal" android:pathData="m126,76c0,5.523 -4.477,10 -10,10s-10,-4.477 -10,-10 4.477,-10 10,-10 10,4.477 10,10zM126,76"/>
+    <path android:fillColor="?android:attr/colorControlNormal" android:pathData="m86,76c0,5.523 -4.477,10 -10,10s-10,-4.477 -10,-10 4.477,-10 10,-10 10,4.477 10,10zM86,76"/>
+    <path android:fillColor="?android:attr/colorControlNormal" android:pathData="m436,166h-360c-5.523,0 -10,4.477 -10,10v60c0,5.523 4.477,10 10,10h360c5.523,0 10,-4.477 10,-10v-60c0,-5.523 -4.477,-10 -10,-10zM426,226h-340v-40h340zM426,226"/>
+    <path android:fillColor="?android:attr/colorControlNormal" android:pathData="m256,286h-180c-5.523,0 -10,4.477 -10,10v120c0,5.523 4.477,10 10,10h180c5.523,0 10,-4.477 10,-10v-120c0,-5.523 -4.477,-10 -10,-10zM246,406h-160v-100h160zM246,406"/>
+    <path android:fillColor="?android:attr/colorControlNormal" android:pathData="m436,286h-120c-5.523,0 -10,4.477 -10,10v120c0,5.523 4.477,10 10,10h120c5.523,0 10,-4.477 10,-10v-120c0,-5.523 -4.477,-10 -10,-10zM426,406h-100v-100h100zM426,406"/>
+    <path android:fillColor="?android:attr/colorControlNormal" android:pathData="m266,36c0,5.523 -4.477,10 -10,10s-10,-4.477 -10,-10 4.477,-10 10,-10 10,4.477 10,10zM266,36"/>
+    <path android:fillColor="?android:attr/colorControlNormal" android:pathData="m482,26h-181c-5.523,0 -10,4.477 -10,10s4.477,10 10,10h181c5.516,0 10,4.484 10,10v50h-472v-50c0,-5.516 4.484,-10 10,-10h181c5.523,0 10,-4.477 10,-10s-4.477,-10 -10,-10h-181c-16.543,0 -30,13.457 -30,30v400c0,16.543 13.457,30 30,30h452c16.543,0 30,-13.457 30,-30v-400c0,-16.543 -13.457,-30 -30,-30zM482,466h-452c-5.516,0 -10,-4.484 -10,-10v-330h472v330c0,5.516 -4.484,10 -10,10zM482,466"/>
+</vector>

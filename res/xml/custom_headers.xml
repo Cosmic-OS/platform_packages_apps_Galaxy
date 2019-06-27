@@ -24,6 +24,7 @@
 
         <com.cosmic.settings.preferences.SystemSettingSwitchPreference
             android:key="status_bar_custom_header"
+            android:icon="@drawable/ic_header"
             android:title="@string/status_bar_custom_header_title"
             android:defaultValue="false" />
 
@@ -37,6 +38,7 @@
 
         <ListPreference
             android:key="daylight_header_pack"
+            android:icon="@drawable/ic_sunset"
             android:title="@string/daylight_header_pack_title"
             android:persistent="false"
             android:dependency="status_bar_custom_header" />
@@ -54,6 +56,7 @@
 
         <Preference
             android:key="file_header_select"
+            android:icon="@drawable/ic_qs"
             android:title="@string/file_header_select_title"
             android:summary="@string/file_header_select_summary"
             android:persistent="false"
@@ -67,7 +70,7 @@
             android:max="100"
             android:min="0"
             android:persistent="false"
-            android:defaultValue="0" 
+            android:defaultValue="0"
             android:dependency="status_bar_custom_header" />
 
     </PreferenceCategory>

@@ -18,6 +18,7 @@
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
     <com.cosmic.settings.preferences.SystemSettingSwitchPreference
+        android:icon="@drawable/ic_music"
         android:key="force_ambient_for_media"
         android:title="@string/force_ambient_for_media_title"
         android:defaultValue="true" />

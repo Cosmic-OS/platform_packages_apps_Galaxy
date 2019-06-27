@@ -22,12 +22,14 @@
 
     <com.cosmic.settings.preferences.SystemSettingSwitchPreference
         android:key="network_traffic_state"
+        android:icon="@drawable/ic_network_traffic"
         android:title="@string/network_traffic_state_title"
         android:summary="@string/network_traffic_state_summary"
         android:defaultValue="false" />
 
     <com.cosmic.settings.preferences.SystemSettingSwitchPreference
         android:key="network_traffic_hidearrow"
+        android:icon="@drawable/ic_priority"
         android:title="@string/network_traffic_hidearrow"
         android:summary="@string/network_traffic_hidearrow_summary"
         android:dependency="network_traffic_state"
@@ -35,6 +37,7 @@
 
     <com.cosmic.settings.preferences.CustomSeekBarPreference
         android:key="network_traffic_autohide_threshold"
+        android:icon="@drawable/ic_net_hide"
         android:title="@string/network_traffic_autohide_threshold_title"
         android:dependency="network_traffic_state"
         android:max="10"
@@ -46,6 +49,7 @@
     <com.cosmic.settings.preferences.SystemSettingListPreference
         android:key="network_traffic_view_location"
         android:title="@string/network_traffic_location_title"
+        android:icon="@drawable/ic_location"
         android:summary="@string/network_traffic_location_summary"
         android:entries="@array/network_traffic_location_entries"
         android:entryValues="@array/network_traffic_location_values"

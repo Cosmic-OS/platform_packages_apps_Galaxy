@@ -17,6 +17,7 @@
 
     <com.cosmic.settings.preferences.GlobalSettingSwitchPreference
         android:key="heads_up_notifications_enabled"
+				android:icon="@drawable/ic_active"
         android:title="@string/heads_up_title"
         android:summaryOn="@string/heads_up_summary_enabled"
         android:summaryOff="@string/heads_up_summary_disabled"
@@ -24,6 +25,7 @@
 
     <ListPreference
         android:key="heads_up_time_out"
+				android:icon="@drawable/ic_time"
         android:title="@string/heads_up_time_out_title"
         android:entries="@array/heads_up_time_out_entries"
         android:entryValues="@array/heads_up_time_out_values"
@@ -31,6 +33,7 @@
 
     <ListPreference
         android:key="heads_up_snooze_time"
+				android:icon="@drawable/ic_timeout"
         android:title="@string/heads_up_snooze_title"
         android:entries="@array/heads_up_snooze_entries"
         android:entryValues="@array/heads_up_snooze_values"
@@ -68,24 +71,28 @@
 
         <com.cosmic.settings.preferences.SystemSettingSwitchPreference
             android:key="notification_guts_kill_app_button"
+						android:icon="@drawable/ic_kill"
             android:title="@string/notification_guts_kill_app_button_title"
             android:summary="@string/notification_guts_kill_app_button_summary"
             android:defaultValue="false" />
 
         <com.cosmic.settings.preferences.SystemSettingSwitchPreference
             android:key="less_boring_heads_up"
+						android:icon="@drawable/ic_notification1"
             android:title="@string/less_boring_heads_up_title"
             android:summary="@string/less_boring_heads_up_summary"
             android:defaultValue="false" />
 
         <com.cosmic.settings.preferences.SystemSettingSwitchPreference
             android:key="notification_sound_vib_screen_on"
+						android:icon="@drawable/ic_notification"
             android:title="@string/notification_sound_vib_screen_on_title"
             android:summary="@string/notification_sound_vib_screen_on_summary"
             android:defaultValue="true" />
 
         <ListPreference
             android:key="less_notification_sounds"
+						android:icon="@drawable/ic_bell"
             android:title="@string/less_notification_sounds_title"
             android:summary="@string/less_notification_sounds_summary"
             android:entries="@array/less_notification_sounds_entries"
@@ -93,12 +100,14 @@
 
         <com.cosmic.settings.preferences.SystemSettingSwitchPreference
             android:key="incall_notifications_vibrate"
+						android:icon="@drawable/ic_less"
             android:title="@string/incall_notifications_vibrate"
             android:summary="@string/incall_notifications_vibrate_summary"
             android:defaultValue="false" />
 
         <com.cosmic.settings.preferences.SystemSettingSwitchPreference
             android:key="force_expanded_notifications"
+						android:icon="@drawable/ic_viral"
             android:title="@string/force_expanded_notifications_title"
             android:summary="@string/force_expanded_notifications_summary"
             android:defaultValue="false" />

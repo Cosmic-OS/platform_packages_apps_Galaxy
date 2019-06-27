@@ -5,6 +5,7 @@
 
         <ListPreference
                 android:key="volume_steps_alarm"
+                android:icon="@drawable/ic_alarm"
                 android:title="@string/volume_steps_alarm_title"
                 android:entries="@array/volume_steps_entries"
                 android:entryValues="@array/volume_steps_entries" />
@@ -12,35 +13,41 @@
         <ListPreference
                 android:key="volume_steps_dtmf"
                 android:title="@string/volume_steps_dtmf_title"
+                android:icon="@drawable/ic_qs"
                 android:entries="@array/volume_steps_entries"
                 android:entryValues="@array/volume_steps_entries" />
 
         <ListPreference
                 android:key="volume_steps_music"
                 android:title="@string/volume_steps_music_title"
+                android:icon="@drawable/ic_music"
                 android:entries="@array/volume_steps_entries"
                 android:entryValues="@array/volume_steps_entries" />
 
         <ListPreference
                 android:key="volume_steps_notification"
+                android:icon="@drawable/ic_notification"
                 android:title="@string/volume_steps_notification_title"
                 android:entries="@array/volume_steps_entries"
                 android:entryValues="@array/volume_steps_entries" />
 
         <ListPreference
                 android:key="volume_steps_ring"
+                android:icon="@drawable/ic_ring"
                 android:title="@string/volume_steps_ring_title"
                 android:entries="@array/volume_steps_entries"
                 android:entryValues="@array/volume_steps_entries" />
 
         <ListPreference
                 android:key="volume_steps_system"
+                android:icon="@drawable/ic_step"
                 android:title="@string/volume_steps_system_title"
                 android:entries="@array/volume_steps_entries"
                 android:entryValues="@array/volume_steps_entries" />
 
         <ListPreference
                 android:key="volume_steps_voice_call"
+                android:icon="@drawable/ic_voice"
                 android:title="@string/volume_steps_voice_call_title"
                 android:entries="@array/volume_steps_entries"
                 android:entryValues="@array/volume_steps_entries" />

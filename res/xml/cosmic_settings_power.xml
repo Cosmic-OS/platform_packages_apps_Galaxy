@@ -17,6 +17,7 @@
 
     <com.cosmic.settings.preferences.SecureSettingSwitchPreference
         android:key="lockscreen_power_menu_disabled"
+        android:icon="@drawable/ic_lockdown"
         android:title="@string/lockscreen_power_menu_disabled_title"
         android:summary="@string/lockscreen_power_menu_disabled_summary"
         android:defaultValue="false" />
@@ -24,12 +25,14 @@
     
     <com.cosmic.settings.preferences.SystemSettingSwitchPreference
        android:key="power_menu_bg"
+       android:icon="@drawable/ic_blur"
        android:title="@string/power_menu_bg_title"
        android:summary="@string/power_menu_bg_summary"
        android:defaultValue="false" />
 
     <com.cosmic.settings.preferences.SystemSettingListPreference
         android:key="power_menu_bg_style"
+        android:icon="@drawable/ic_blur_settings"
         android:title="@string/power_menu_bg_style_title"
         android:entries="@array/power_menu_bg_style_entries"
         android:entryValues="@array/power_menu_bg_style_values"
@@ -41,52 +44,56 @@
 
          <com.cosmic.settings.preferences.SystemSettingSwitchPreference
             android:key="powermenu_power"
+            android:icon="@drawable/ic_power"
             android:title="@string/powermenu_power"
             android:defaultValue="true" />
 
          <com.cosmic.settings.preferences.SystemSettingSwitchPreference
             android:key="powermenu_restart"
+            android:icon="@drawable/ic_restart"
             android:title="@string/powermenu_restart"
             android:defaultValue="true" />
 
          <com.cosmic.settings.preferences.SystemSettingSwitchPreference
             android:key="powermenu_restart_recovery"
+            android:icon="@drawable/ic_recovery"
             android:title="@string/powermenu_restart_recovery"
             android:defaultValue="true" />
 
          <com.cosmic.settings.preferences.SystemSettingSwitchPreference
             android:key="powermenu_screenshot"
+            android:icon="@drawable/ic_screenshot"
             android:title="@string/powermenu_screenshot"
             android:defaultValue="true" />
 
          <SwitchPreference
             android:key="powermenu_torch"
+            android:icon="@drawable/ic_torch"
             android:title="@string/powermenu_torch"
             android:persistent="false" />
 
          <com.cosmic.settings.preferences.SystemSettingSwitchPreference
             android:key="powermenu_airplane"
+            android:icon="@drawable/ic_plane"
             android:title="@string/powermenu_airplane"
             android:defaultValue="false" />
 
          <com.cosmic.settings.preferences.SystemSettingSwitchPreference
             android:key="powermenu_settings"
+            android:icon="@drawable/ic_power"
             android:title="@string/powermenu_settings"
             android:defaultValue="false" />
 
          <com.cosmic.settings.preferences.SystemSettingSwitchPreference
             android:key="powermenu_lockdown"
+            android:icon="@drawable/ic_lockdown"
             android:title="@string/powermenu_lockdown"
             android:defaultValue="false" />
 
          <com.cosmic.settings.preferences.SystemSettingSwitchPreference
             android:key="powermenu_users"
+            android:icon="@drawable/ic_users"
             android:title="@string/powermenu_users"
-            android:defaultValue="false" />
-
-         <com.cosmic.settings.preferences.SystemSettingSwitchPreference
-            android:key="powermenu_logout"
-            android:title="@string/powermenu_logout"
             android:defaultValue="false" />
 
     </PreferenceCategory>

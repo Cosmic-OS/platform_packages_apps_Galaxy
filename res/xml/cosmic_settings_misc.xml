@@ -20,6 +20,7 @@
 
     <com.cosmic.settings.preferences.SystemSettingSwitchPreference
         android:key="wake_when_plugged_or_unplugged"
+        android:icon="@drawable/ic_plug"
         android:title="@string/wake_when_plugged_or_unplugged_title"
         android:summary="@string/wake_when_plugged_or_unplugged_summary"
         android:defaultValue="false" />
@@ -29,6 +30,7 @@
 
         <com.cosmic.settings.preferences.SystemSettingSwitchPreference
             android:key="enable_conditions"
+            android:icon="@drawable/ic_dashboard"
             android:title="@string/dashboard_conditions_title"
             android:summaryOn="@string/summary_dashboard_conditions_enabled"
             android:summaryOff="@string/summary_dashboard_conditions_disabled"
@@ -36,6 +38,7 @@
 
         <com.cosmic.settings.preferences.SystemSettingSwitchPreference
             android:key="enable_suggestions"
+            android:icon="@drawable/ic_browser"
             android:title="@string/dashboard_suggestions_title"
             android:summaryOn="@string/summary_dashboard_suggestions_enabled"
             android:summaryOff="@string/summary_dashboard_suggestions_disabled"
@@ -49,19 +52,19 @@
 
         <com.cosmic.settings.preferences.SystemSettingSwitchPreference
             android:key="vibrate_on_connect"
-            android:icon="@drawable/ic_vibrate"
+            android:icon="@drawable/ic_vibrator"
             android:title="@string/incall_vibrate_connect_title"
             android:defaultValue="false" />
 
         <com.cosmic.settings.preferences.SystemSettingSwitchPreference
             android:key="vibrate_on_callwaiting"
-            android:icon="@drawable/ic_vibrate"
+            android:icon="@drawable/ic_vibrator"
             android:title="@string/incall_vibrate_call_wait_title"
             android:defaultValue="false" />
 
         <com.cosmic.settings.preferences.SystemSettingSwitchPreference
             android:key="vibrate_on_disconnect"
-            android:icon="@drawable/ic_vibrate"
+            android:icon="@drawable/ic_vibrator"
             android:title="@string/incall_vibrate_disconnect_title"
             android:defaultValue="false" />
     </PreferenceCategory>

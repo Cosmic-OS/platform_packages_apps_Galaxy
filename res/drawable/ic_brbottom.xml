@@ -1,0 +1,17 @@
+<vector android:height="24dp" android:viewportHeight="512"
+    android:viewportWidth="512" android:width="24dp" xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="?android:attr/colorControlNormal" android:pathData="M254.125,256c28.949,0 52.5,-23.551 52.5,-52.5s-23.551,-52.5 -52.5,-52.5s-52.5,23.551 -52.5,52.5S225.176,256 254.125,256zM254.125,166c20.678,0 37.5,16.822 37.5,37.5s-16.822,37.5 -37.5,37.5s-37.5,-16.822 -37.5,-37.5S233.447,166 254.125,166z"/>
+    <path android:fillColor="?android:attr/colorControlNormal" android:pathData="M248.5,76h15v45h-15z"/>
+    <path android:fillColor="?android:attr/colorControlNormal" android:pathData="M171.147,108.039l31.819,31.819l-10.606,10.606l-31.819,-31.819z"/>
+    <path android:fillColor="?android:attr/colorControlNormal" android:pathData="M128.5,196h45v15h-45z"/>
+    <path android:fillColor="?android:attr/colorControlNormal" android:pathData="M171.146,298.962l-10.606,-10.606l31.819,-31.819l10.606,10.606z"/>
+    <path android:fillColor="?android:attr/colorControlNormal" android:pathData="M248.5,286h15v45h-15z"/>
+    <path android:fillColor="?android:attr/colorControlNormal" android:pathData="M319.639,256.529l31.819,31.819l-10.606,10.606l-31.819,-31.819z"/>
+    <path android:fillColor="?android:attr/colorControlNormal" android:pathData="M338.5,196h45v15h-45z"/>
+    <path android:fillColor="?android:attr/colorControlNormal" android:pathData="M340.851,108.038l10.606,10.606l-31.819,31.819l-10.606,-10.606z"/>
+    <path android:fillColor="?android:attr/colorControlNormal" android:pathData="M0,420.448h358.625v15h-358.625z"/>
+    <path android:fillColor="?android:attr/colorControlNormal" android:pathData="M381.125,421h15v15h-15z"/>
+    <path android:fillColor="?android:attr/colorControlNormal" android:pathData="M418.25,421h15v15h-15z"/>
+    <path android:fillColor="?android:attr/colorControlNormal" android:pathData="M457.625,421h15v15h-15z"/>
+    <path android:fillColor="?android:attr/colorControlNormal" android:pathData="M497,421h15v15h-15z"/>
+</vector>

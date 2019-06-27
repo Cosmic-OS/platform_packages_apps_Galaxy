@@ -24,25 +24,29 @@
     <com.android.settings.custom.preference.SystemSettingSwitchPreference
         android:key="status_bar_locked_on_secure_keyguard"
         android:title="@string/lockscreen_qs_disabled_title"
+        android:icon="@drawable/ic_disabled"
         android:summary="@string/lockscreen_qs_disabled_summary"
         android:defaultValue="false" />
 
     <Preference
         android:key="clock_settings"
+        android:icon="@drawable/ic_clock"
         android:title="@string/status_bar_clock"
         android:summary="@string/status_bar_clock_summary"
         android:fragment="com.cosmic.settings.fragments.ClockDateSettings" />
 
     <Preference
         android:key="traffic_settings"
+        android:icon="@drawable/ic_network_traffic"
         android:title="@string/traffic_title"
-	android:summary="@string/traffic_summary"
+        android:summary="@string/traffic_summary"
         android:fragment="com.cosmic.settings.fragments.TrafficSettings" />
 
     <Preference
         android:key="carrierlabel_settings"
+        android:icon="@drawable/ic_carrierlabel"
         android:title="@string/carrier_category"
-	android:summary="@string/carrier_label_settings_summary"
+      	android:summary="@string/carrier_label_settings_summary"
         android:fragment="com.cosmic.settings.fragments.CarrierSettings" />
 
     <PreferenceCategory
@@ -50,6 +54,7 @@
 
         <PreferenceScreen
             android:key="status_bar_icons"
+            android:icon="@drawable/ic_lockdown"
             android:title="@string/status_bar_system_icons_title"
             android:summary="@string/status_bar_system_icons_summary">
             <intent android:action="com.android.settings.action.STATUS_BAR_TUNER" />
@@ -58,6 +63,7 @@
 
         <com.cosmic.settings.preferences.SystemSettingSwitchPreference
             android:key="roaming_indicator_icon"
+            android:icon="@drawable/ic_roaming"
             android:title="@string/roaming_indicator_icon_title"
             android:summary="@string/roaming_indicator_icon_summary"
             android:defaultValue="false"/>
@@ -70,6 +76,7 @@
 
         <SwitchPreference
             android:key="status_bar_logo"
+            android:icon="@drawable/ic_cosmic"
             android:title="@string/cosmic_logo_title"
             android:summary="@string/cosmic_logo_summary"
             android:defaultValue="false" />
@@ -84,23 +91,27 @@
 
         <com.cosmic.settings.preferences.SystemSettingSwitchPreference
             android:key="use_old_mobiletype"
+            android:icon="@drawable/ic_network"
             android:title="@string/use_old_mobiletype_title"
             android:summary="@string/use_old_mobiletype_summary"
             android:defaultValue="false" />
 
         <Preference
             android:key="battery_settings"
+            android:icon="@drawable/ic_battery_styles"
             android:title="@string/battery_style_category_title"
             android:summary="@string/battery_style_category_summary"
             android:fragment="com.cosmic.settings.fragments.BatteryCategory" />
-		
+
 	<Preference
             android:key="battery_bar_category"
+            android:icon="@drawable/ic_battery_bar"
             android:fragment="com.cosmic.settings.fragments.BatteryBar"
             android:title="@string/battery_bar_title" />
 
         <com.cosmic.settings.preferences.SystemSettingSwitchPreference
             android:key="bluetooth_show_battery"
+            android:icon="@drawable/ic_bluetooth"
             android:title="@string/bluetooth_battery_title"
             android:summary="@string/bluetooth_battery_summary"
             android:defaultValue="true"/>

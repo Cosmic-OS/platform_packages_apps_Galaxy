@@ -21,37 +21,41 @@
         android:title="@string/system_colors" >
 
         <net.margaritov.preference.colorpicker.ColorPickerPreference
+            android:icon="@drawable/ic_paint"
             android:key="accent_color"
             android:title="@string/accent_color"
             android:defaultValue="0xffffff"
             android:persistent="false" />
 
 	</PreferenceCategory>
-	
+
 	<Preference
         android:key="custom_header"
         android:fragment="com.cosmic.settings.fragments.CustomHeaders"
+        android:icon="@drawable/ic_header"
         android:title="@string/custom_headers_title"
         android:summary="@string/custom_headers_summary" />
-		
-<PreferenceCategory 
-        android:key="dashboard_category" 
+
+<PreferenceCategory
+        android:key="dashboard_category"
         android:title="@string/dashboard_category">
 
         <com.cosmic.settings.preferences.SystemSettingListPreference
             android:key="theming_settings_dashboard_icons"
+            android:icon="@drawable/ic_layout"
             android:title="@string/theming_settings_dashboard_icons_title"
             android:entries="@array/theming_settings_dashboard_icons_entries"
             android:entryValues="@array/theming_settings_dashboard_icons_values"
             android:defaultValue="0" />
     </PreferenceCategory>
-			
+
         <PreferenceCategory
         android:key="corners_category"
         android:title="@string/corners_category" >
 
         <com.cosmic.settings.preferences.SecureSettingSwitchPreference
             android:key="sysui_rounded_fwvals"
+            android:icon="@drawable/ic_rounded"
             android:title="@string/corner_fwvals"
             android:summary="@string/corner_fwvals_summary"
             android:defaultValue="true"

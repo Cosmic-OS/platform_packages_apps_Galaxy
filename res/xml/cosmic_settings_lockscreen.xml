@@ -19,17 +19,20 @@
     <Preference
         android:key="force_ambient_for_media_pref"
         android:fragment="com.cosmic.settings.fragments.AmbientTicker"
+        android:icon="@drawable/ic_music"
         android:title="@string/force_ambient_for_media_pref_title"
         android:summary="@string/force_ambient_for_media_pref_summary" />
 
     <com.android.settings.custom.preference.SystemSettingSwitchPreference
         android:key="lockscreen_media_metadata"
         android:title="@string/media_art_title"
+        android:icon="@drawable/ic_media"
         android:summary="@string/media_art_summary"
         android:defaultValue="true" />
 
     <com.cosmic.settings.preferences.SystemSettingListPreference
         android:key="lockscreen_album_art_filter"
+        android:icon="@drawable/ic_cd"
         android:title="@string/lockscreen_cover_filter_title"
         android:entries="@array/lockscreen_cover_filter_entries"
         android:entryValues="@array/lockscreen_cover_filter_values"
@@ -41,18 +44,21 @@
 
         <com.cosmic.settings.preferences.SystemSettingSwitchPreference
             android:key="hide_lockscreen_status_bar"
+            android:icon="@drawable/ic_back"
             android:title="@string/hide_lockscreen_status_bar_title"
             android:summary="@string/hide_lockscreen_status_bar_summary"
             android:defaultValue="false" />
 
         <com.cosmic.settings.preferences.SystemSettingSwitchPreference
             android:key="lockscreen_clock"
+            android:icon="@drawable/ic_lsclock"
             android:title="@string/lockscreen_clock_title"
             android:summary="@string/lockscreen_clock_summary"
             android:defaultValue="true" />
 
         <com.cosmic.settings.preferences.SystemSettingListPreference
             android:key="lockscreen_clock_selection"
+            android:icon="@drawable/ic_active"
             android:title="@string/lockscreen_clock_selection_title"
             android:entries="@array/lockscreen_clock_selection_entries"
             android:entryValues="@array/lockscreen_clock_selection_values"
@@ -61,6 +67,7 @@
 
         <ListPreference
             android:key="lock_clock_fonts"
+            android:icon="@drawable/ic_font"
             android:title="@string/lock_clock_font_title"
             android:dialogTitle="@string/lock_clock_font_dialog_title"
             android:entries="@array/lock_clock_fonts_entries"
@@ -71,6 +78,7 @@
 
         <com.cosmic.settings.preferences.SystemSettingSeekBarPreference
             android:key="lockclock_font_size"
+            android:icon="@drawable/ic_fontsize"
             android:title="@string/lockclock_font_size_title"
             android:max="120"
             android:min="50"
@@ -80,24 +88,28 @@
 
         <com.cosmic.settings.preferences.SystemSettingSwitchPreference
             android:key="lockscreen_info"
+            android:icon="@drawable/ic_settings"
             android:title="@string/lockscreen_info_title"
             android:summary="@string/lockscreen_info_summary"
             android:defaultValue="true" />
 
 	<com.cosmic.settings.preferences.SystemSettingSwitchPreference
             android:key="charging_animation"
+            android:icon="@drawable/ic_flash"
             android:title="@string/charging_animation_title"
             android:summary="@string/charging_animation_summary"
             android:defaultValue="true" />
 
         <com.cosmic.settings.preferences.SystemSettingSwitchPreference
             android:key="lockscreen_battery_info"
+            android:icon="@drawable/ic_batteryenergy"
             android:title="@string/lockscreen_charging_current_title"
             android:summary="@string/lockscreen_charging_current_summary"
             android:defaultValue="true" />
 
         <com.cosmic.settings.preferences.SystemSettingListPreference
             android:key="lockscreen_date_selection"
+            android:icon="@drawable/ic_event"
             android:title="@string/lockscreen_date_selection_title"
             android:entries="@array/lockscreen_date_selection_entries"
             android:entryValues="@array/lockscreen_date_selection_values"
@@ -106,6 +118,7 @@
 
         <ListPreference
             android:key="lock_date_fonts"
+            android:icon="@drawable/ic_calendar"
             android:title="@string/lock_date_font_title"
             android:dialogTitle="@string/lock_date_font_dialog_title"
             android:entries="@array/lock_date_fonts_entries"
@@ -116,6 +129,7 @@
 
         <com.cosmic.settings.preferences.SystemSettingSeekBarPreference
             android:key="lockdate_font_size"
+            android:icon="@drawable/ic_fontsize"
             android:title="@string/lockdate_font_size_title"
             android:max="40"
             android:min="10"
@@ -125,6 +139,7 @@
 
         <ListPreference
             android:key="lock_owner_fonts"
+            android:icon="@drawable/ic_font"
             android:title="@string/lock_owner_font_title"
             android:dialogTitle="@string/lock_owner_font_dialog_title"
             android:entries="@array/lock_owner_fonts_entries"
@@ -140,12 +155,14 @@
 
         <com.cosmic.settings.preferences.SecureSettingSwitchPreference
              android:key="lockscreen_visualizer"
+             android:icon="@drawable/ic_visualizer"
              android:title="@string/lockscreen_visualizer_title"
              android:summary="@string/lockscreen_visualizer_summary"
              android:defaultValue="false"/>
 
         <com.cosmic.settings.preferences.SystemSettingSwitchPreference
              android:key="lock_screen_visualizer_use_custom_color"
+             android:icon="@drawable/ic_xx"
              android:title="@string/lockscreen_visualizer_enable_custom"
              android:summary="@string/lockscreen_visualizer_enable_custom_summary"
              android:dependency="lockscreen_visualizer"
@@ -153,6 +170,7 @@
 
         <net.margaritov.preference.colorpicker.ColorPickerPreference
              android:key="lock_screen_visualizer_custom_color"
+             android:icon="@drawable/ic_colorv"
              android:title="@string/lockscreen_visualizer_custom_color"
              android:dependency="lock_screen_visualizer_use_custom_color"
              android:defaultValue="0xffffffff"
@@ -160,6 +178,7 @@
 
         <com.cosmic.settings.preferences.SecureSettingSwitchPreference
              android:key="ambient_visualizer"
+             android:icon="@drawable/ic_visualizer"
              android:title="@string/ambient_visualizer_title"
              android:summary="@string/ambient_visualizer_summary"
              android:dependency="lockscreen_visualizer"
