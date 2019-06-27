@@ -28,6 +28,15 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        android:key="button_backlight_cat"
+        android:title="@string/button_backlight_title">
+        <Preference
+            android:key="button_backlight"
+            android:title="@string/button_backlight_title"
+            android:fragment="com.android.settings.custom.buttons.ButtonSettings" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:key="back_key"
         android:title="@string/hardware_keys_back_key_title" >
 
