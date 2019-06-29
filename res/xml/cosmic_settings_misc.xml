@@ -35,7 +35,7 @@
     <Preference
         android:key="gaming_mode"
         android:fragment="com.cosmic.settings.fragments.GamingMode"
-        android:icon="@drawable/ic_gaming_mode"
+        android:icon="@drawable/ic_gaming"
         android:title="@string/gaming_mode_title"
         android:summary="@string/gaming_mode_summary" />
 
