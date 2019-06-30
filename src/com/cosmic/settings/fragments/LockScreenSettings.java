@@ -175,7 +175,7 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
                         boolean enabled) {
                     final ArrayList<SearchIndexableResource> result = new ArrayList<>();
                      final SearchIndexableResource sir = new SearchIndexableResource(context);
-                    sir.xmlResId = R.xml.evolution_settings_lockscreen;
+                    sir.xmlResId = R.xml.cosmic_settings_lockscreen;
                     result.add(sir);
                     return result;
                 }

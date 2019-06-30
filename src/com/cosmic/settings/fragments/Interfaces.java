@@ -35,6 +35,7 @@ import android.os.Bundle;
 import android.os.Process;
 import android.os.ServiceManager;
 import android.os.UserHandle;
+import android.os.Handler;
 import android.os.SystemProperties;
 import android.provider.SearchIndexableResource;
 import android.os.Vibrator;
