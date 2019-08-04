@@ -16,7 +16,7 @@
         android:key="gaming_mode_enabled"
         android:title="@string/gaming_mode_master_title"
         android:summary="@string/gaming_mode_master_summary"
-        android:defaultValue="true" />
+        android:defaultValue="false" />
 
     <!-- HeadsUP -->
     <com.cosmic.settings.preferences.SystemSettingSwitchPreference
